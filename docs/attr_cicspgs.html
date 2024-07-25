@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Program Definition Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Program Definition Summary attribute group</title>
+</head>
+<body id="attr_cicspgs"><main role="main"><article role="article" aria-labelledby="d74005e10">
+<h1 class="topictitle1" id="d74005e10">CICSplex Program Definition Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicspgs__CICSPGS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Program Definition Summary attributes report key information about
+how a program is defined to CICS.</span></p>
+
+<p>The CICSplex Program Definition Summary attribute group cannot
+be used for historical data collection.</p>
+
+<p id="attr_cicspgs__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicspgs__CONCURR"><strong>Concurrency</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether the program is quasi-reentrant
+or threadsafe.</span></p>
+
+<p id="attr_cicspgs__CURRCPYS"><strong>Current Copies</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of copies of the program currently
+in storage.</span></p>
+
+<p id="attr_cicspgs__CURRUSE"><strong>Current Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">The sum of the number of tasks currently using
+this program and the number of current copies that are loaded.</span></p>
+
+<p id="attr_cicspgs__PROGLANG"><strong>Language</strong> <span class="ph" data-hd-otherprops="flyover_string">The language of the program used by CICS.</span> 
+If a program has been defined to use JVM then it is used, otherwise
+the deduced language value is used. If the deduced language has not
+been determined, the defined language is used.</p>
+
+<p id="attr_cicspgs__PRLENGTH"><strong>Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+length of the program as determined by CICS.</span></p>
+
+<p id="attr_cicspgs__LOADFROM"><strong>Loaded From</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates from where the program loaded; the
+CICS region or library.</span></p>
+
+<p id="attr_cicspgs__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicspgs__PROGLOC"><strong>Program Location</strong> <span class="ph" data-hd-otherprops="flyover_string">The area of the CICS address space where the
+program resides.</span></p>
+
+<p id="attr_cicspgs__PGMID"><strong>Program Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The eight-character name that uniquely identifies
+this program to CICS.</span></p>
+
+<p id="attr_cicspgs__PRSTATUS"><strong>Program Status</strong> <span class="ph" data-hd-otherprops="flyover_string">The status of the program; this status can
+be enabled or disabled.</span></p>
+
+<p id="attr_cicspgs__REMAPPLID"><strong>Remote APPLID </strong> <span class="ph" data-hd-otherprops="flyover_string">The APPLID of the CICS region where the remote
+program is defined.</span> This APPLID is an alphanumeric string of
+up to eight characters in length.</p>
+
+<p id="attr_cicspgs__REMPGM"><strong>Remote Program ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of this program in the remote system.</span></p>
+
+<p id="attr_cicspgs__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicspgs__USECOUNT"><strong>Statistics Use Count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the use count since statistics were reset.</span> A value of
+-1 indicates n/a.</p>
+
+<p id="attr_cicspgs__TOTUSE"><strong>Total Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the total number of times the program
+has been used since CICS was started.</span></p>
+
+</div>
+</article></main></body></html>

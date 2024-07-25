@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Response Time Elements">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Response Time Elements attribute group</title>
+</head>
+<body id="attr_cicsrte"><main role="main"><article role="article" aria-labelledby="d25048e10">
+<h1 class="topictitle1" id="d25048e10">CICSplex Response Time Elements attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsrte__CICSRTE"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Response Time Elements attributes
+help you determine response times for all members of either a single
+OMEGAMON group, or for all defined groups.</span> Data displays for
+only those groups that have registered activity within the last nine
+minutes. Use the CICSplex Response Time Elements attributes in situations
+to customize the display of critical and warning lights based on specified
+response time thresholds.</p>
+
+<p>These attributes provide data for the Response Time Elements table
+views.</p>
+
+<p id="attr_cicsrte__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsrte__ELEMID"><strong>Element Identifier</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name assigned to a terminal, to a program, to a transaction, or
+to a logical unit.</span> The valid format is an alphanumeric string,
+with a maximum of eight characters.</p>
+
+<p id="attr_cicsrte__ELEMTYP"><strong>Element Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the resource associated with the element.</span> These are the valid
+values:</p>
+
+<ul>
+<li>Terminal</li>
+
+<li>Logical Unit</li>
+
+<li>Program</li>
+
+<li>Transaction</li>
+
+</ul>
+
+<p id="attr_cicsrte__ELEMEXC"><strong>Exceeds RTA Threshold</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether or not the response
+time threshold stored in the OMEGAMON group definition has been exceeded.</span> These
+are the enumerated values: Yes and No.</p>
+
+<p id="attr_cicsrte__GROUPNUM"><strong>Group Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the numeric identifier of the OMEGAMON group.</span> The valid format
+is an integer, with a maximum of two digits.</p>
+
+<p id="attr_cicsrte__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsrte__RESPCOMP"><strong>Response Component </strong> <span class="ph" data-hd-otherprops="flyover_string">Is the type of response time measurement
+used for the element.</span> Transactions, programs, and terminals display
+the internal CICS response time, while logical units, broken down
+into host and network figures, present the end-to-end response time.
+These are the valid values:</p>
+
+<ul>
+<li>CICS</li>
+
+<li>End-to-End</li>
+
+<li>Host</li>
+
+<li>Network</li>
+
+</ul>
+
+<p id="attr_cicsrte__ELEMCUR"><strong>Response Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the average element response time for the current one-minute interval.</span> The
+value is measured to two decimal places. The value can be entered
+in the HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD,
+for example, 1200.56.  If you are using variable substitution, the
+value in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM1MA"><strong>Response Time 1 Minute Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the previous one-minute interval.</span> The value is measured to two
+decimal places. The value can be entered in the HH:MM:SS.DD format,
+for example, 00:20:00.56 or as SSSSSSS.DD, for example, 1200.56. 
+If you are using variable substitution, the value in this example
+would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM2MA"><strong>Response Time 2 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired two minutes ago.</span>  The value
+is measured to two decimal places. The value can be entered in the
+HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD, for
+example, 1200.56. If you are using variable substitution, the value
+in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM3MA"><strong>Response Time 3 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired three minutes ago.</span> The value
+is measured to two decimal places. The value can be entered in the
+HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD, for
+example, 1200.56.  If you are using variable substitution, the value
+in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM4MA"><strong>Response Time 4 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired four minutes ago.</span> The value
+is measured to two decimal places. The value can be entered in the
+HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD, for
+example, 1200.56.  If you are using variable substitution, the value
+in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM5MA"><strong>Response Time 5 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired five minutes ago.</span>  The value
+is measured to two decimal places. The value can be entered in the
+HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD, for
+example, 1200.56.  If you are using variable substitution, the value
+in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM6MA"><strong>Response Time 6 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired six minutes ago.</span>  The value
+is measured to two decimal places. The value can be entered in the
+HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD, for
+example, 1200.56.  If you are using variable substitution, the value
+in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM7MA"><strong>Response Time 7 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired seven minutes ago.</span>  The
+value is measured to two decimal places. The value can be entered
+in the HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD,
+for example, 1200.56.  If you are using variable substitution, the
+value in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM8MA"><strong>Response Time 8 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired eight minutes ago.</span>  The
+value is measured to two decimal places. The value can be entered
+in the HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD,
+for example, 1200.56.  If you are using variable substitution, the
+value in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__ELEM9MA"><strong>Response Time 9 Minutes Ago</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average element response time for
+the one-minute interval that expired nine minutes ago.</span>  The value
+is measured to two decimal places. The value can be entered in the
+HH:MM:SS.DD format, for example, 00:20:00.56 or as SSSSSSS.DD, for
+example, 1200.56.  If you are using variable substitution, the value
+in this example would display as 120056.</p>
+
+<p id="attr_cicsrte__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the SMF identifier that uniquely identifies an active z/OS operating
+system.</span> The valid format is an alphanumeric string, with a maximum
+of four characters.</p>
+
+</div>
+
+</article></main></body></html>

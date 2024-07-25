@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor the Task Class Analysis attributes.">
+<meta name="keywords" content="situations, Task Class Analysis, CICSplex_ClassMax_Warning, CICSplex_ClassMax_Critical, CICSplex_AtClassMax_Warning, CICSplex_AtClassMax_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Task Class Analysis situations</title>
+</head>
+<body id="sit_tcl"><main role="main"><article role="article" aria-labelledby="d7999e11">
+<h1 class="topictitle1" id="d7999e11">Task Class Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor the
+Task Class Analysis attributes.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_Task_Class_Analysis except where stated.</div>
+<dl>
+
+<dt class="dlterm">CICSplex_ClassMax_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for class MAXTASK. <p>Generally, your application must add
+transactions to a transaction class to restrict access to resources in CICS®. If response time is not acceptable, it can be necessary to reevaluate
+why the task has been placed in a transaction class. If you determine that the class MAXTASK value
+is too low, you can change it with either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_of_Limit is greater than 80 and the value of
+Percent_of_Limit is less than or equal to 90 then situation CICSplex_ClassMax_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_ClassMax_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for class MAXTASK. <p>Generally, your application must add
+transactions to a transaction class to restrict access to resources in CICS. If response time is not acceptable, it can be necessary to reevaluate
+why the task has been placed in a transaction class. If you determine that the class MAXTASK value
+is too low, you can change it with either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_of_Limit is greater than 90 then situation
+CICSplex_ClassMax_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_AtClassMax_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for class MAXTASK limit. <p>When the limit is reached for a class, a
+new task belonging to the same class cannot be run until an old task has terminated. Use the
+Transaction Analysis workspace to determine whether a problem is preventing tasks within the
+specified class from completing in a timely manner. For example, tasks can be waiting for an
+enqueue, or CICS itself can be short-on-storage. If you find
+that the class MAXTASK value is too low, you might change it with either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_of_Limit is greater than or equal to 100 then situation
+CICSplex_AtClassMax_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_AtClassMax_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for class MAXTASK limit. <p>When the limit is reached for a class, a
+new task belonging to the same class cannot be run until an old task has terminated. Use the
+Transaction Analysis table view to determine whether a problem is preventing tasks within the
+specified class from completing in a timely manner. For example, tasks can be waiting for an
+enqueue, or CICS itself can be short on storage. If you find
+that the class max task value is too low, you might change it with either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_of_Limit is greater than or equal to 100 then situation
+CICSplex_AtClassMax_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_cicstca.html#attr_cicstca">CICSplex Task Class Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

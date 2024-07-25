@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction Times for Task">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction Times for Task attribute group</title>
+</head>
+<body id="attr_cicsttt"><main role="main"><article role="article" aria-labelledby="d22938e10">
+<h1 class="topictitle1" id="d22938e10">CICSplex Transaction Times for Task attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsttt__CICSTTT"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transaction Times for Task
+attributes report where the time was spent during the life of this
+transaction, based on data collected by the CICS Monitoring Facility.</span></p>
+
+<p id="attr_cicsttt__FDELAY"><strong>1st Dispatch Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (in seconds) that this transaction waited prior to
+first dispatch.</span></p>
+
+<p id="attr_cicsttt__PTPWAIT"><strong>3270 Partner Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) for which this transaction waited for the 3270 bridge partner
+transaction to complete.</span></p>
+
+<p id="attr_cicsttt__SECPUT"><strong>CPU Elig. For Specialty</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of processor time (in seconds) that this
+transaction was eligible for the CICS Specialty processor.</span></p>
+
+<p id="attr_cicsttt__GPCPUT"><strong>CPU On General Purpose</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of processor time (in seconds) that this
+transaction was dispatched on the CICS General Purpose processor.</span></p>
+
+<p id="attr_cicsttt__SPCPUT"><strong>CPU On Specialty</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of processor time (in seconds) that this
+transaction was dispatched on the CICS Specialty processor.</span></p>
+
+<p id="attr_cicsttt__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name that identifies a CICS region.</span> The format is an eight-character
+string.</p>
+
+<p id="attr_cicsttt__CPUTIME"><strong>CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of accumulated CPU time (in seconds) used by this task.</span></p>
+
+<p id="attr_cicsttt__DB2CONWT"><strong>DB2 Connection Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time (in seconds) that
+this transaction waited for a DB2 connection.</span></p>
+
+<p id="attr_cicsttt__DB2RDYQW"><strong>DB2 Readyq Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time (in seconds) that
+this transaction waited for a DB2 thread to become available.</span></p>
+
+<p id="attr_cicsttt__DB2WAIT"><strong>DB2 Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) for DB2 to service the requests issued
+by this transaction.</span></p>
+
+<p id="attr_cicsttt__DISPTIME"><strong>Dispatch Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction spent dispatched
+on a CICS TCB.</span> The value includes QR TCB Elapsed Time and Other
+TCBs Elapsed Time.</p>
+
+<p id="attr_cicsttt__DISPWAIT"><strong>Dispatchable Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited as a result of giving up control to another
+task.</span></p>
+
+<p id="attr_cicsttt__ELAPTIME"><strong>Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) this transaction had been executing
+at the time this information was collected (current time minus transaction
+start time).</span></p>
+
+<p id="attr_cicsttt__EXCEPT"><strong>Exception Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the accumulated time (in seconds) that this transaction waited on
+exception conditions.</span></p>
+
+<p id="attr_cicsttt__FCIOWTT"><strong>File I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the accumulated time (in seconds) that this transaction waited for
+file I/O.</span></p>
+
+<p id="attr_cicsttt__GNQDELAY"><strong>Global ENQ Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction waited for a
+CICS Task Control global ENQ.</span></p>
+
+<p id="attr_cicsttt__IMSWAIT"><strong>IMS Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) for DBCTL to service the IMS requests
+issued by this transaction.</span></p>
+
+<p id="attr_cicsttt__ICWAIT"><strong>Interval Control Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited as a result of using the EXEC CICS DELAY
+command (for a time interval or a specific time of day) or the EXEC
+CICS RETRIEVE command with the WAIT option.</span></p>
+
+<p id="attr_cicsttt__J9CPUT"><strong>J9 TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the processor time (in seconds) during which this transaction was
+dispatched by the CICS dispatcher domain on a CICS J9 mode TCB.</span></p>
+
+<p id="attr_cicsttt__JCIOWTT"><strong>JC I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction waited for journal
+or MVS logger I/O requests to complete.</span></p>
+
+<p id="attr_cicsttt__JVMELAPS"><strong>JVM Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of time (in seconds) that this transaction spent in a Java
+Virtual Machine.</span></p>
+
+<p id="attr_cicsttt__JVMITIME"><strong>JVM Initialization Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the elapsed time (in seconds)
+spent initializing the JVM environment.</span></p>
+
+<p id="attr_cicsttt__JVMRTIME"><strong>JVM Reset Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the elapsed time (in seconds) spent in JVM cleanup between uses of
+the JVM by Java programs.</span></p>
+
+<p id="attr_cicsttt__JVMTHDWT"><strong>JVM Server Thread Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the elapsed time (in seconds)
+that this transaction waited to obtain a JVM server thread because
+the CICS system had reached the thread limit for a JVM server in the
+CICS region.</span></p>
+
+<p id="attr_cicsttt__JVMSUSP"><strong>JVM Suspend Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the elapsed time (in seconds) for which this transaction was suspended
+by the CICS dispatcher while running in the JVM.</span></p>
+
+<p id="attr_cicsttt__J8CPUT"><strong>JVM(J8) TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the processor time (in seconds)
+during which this transaction was dispatched by the CICS dispatcher
+domain on a CICS J8 mode TCB.</span></p>
+
+<p id="attr_cicsttt__KY8CPUT"><strong>Key 8 TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the processor time (in seconds) during which this transaction was
+dispatched by the CICS dispatcher on a CICS Key 8 mode TCB.</span></p>
+
+<p id="attr_cicsttt__KY8DISPT"><strong>Key 8 TCB Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the total elapsed time (in seconds)
+during which this transaction was dispatched by the CICS dispatcher
+on a CICS Key 8 mode TCB.</span></p>
+
+<p id="attr_cicsttt__KY9CPUT"><strong>Key 9 TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the processor time (in seconds) during which this transaction was
+dispatched by the CICS dispatcher on a CICS Key 9 mode TCB.</span></p>
+
+<p id="attr_cicsttt__KY9DISPT"><strong>Key 9 TCB Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the total elapsed time (in seconds)
+during which this transaction was dispatched by the CICS dispatcher
+on a CICS Key 9 mode TCB.</span></p>
+
+<p id="attr_cicsttt__L8CPUT"><strong>LE(L8) TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the processor time (in seconds) during which this transaction was
+dispatched by the CICS dispatcher domain on a CICS L8 mode TCB.</span></p>
+
+<p id="attr_cicsttt__LENQ"><strong>Local ENQ Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction waited for a
+CICS Task Control ENQ.</span></p>
+
+<p id="attr_cicsttt__LOCKMAN"><strong>Lock Manager Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction waited to acquire
+a lock on a resource.</span></p>
+
+<p id="attr_cicsttt__LU61WTT"><strong>LU 6.1 Terminal I/O Wait</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds) that this transaction
+waited for control at this end of an LU 6.1 link.</span></p>
+
+<p id="attr_cicsttt__LU62WTT"><strong>LU 6.2 Terminal I/O Wait</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds) that this transaction
+waited for control at this end of an LU 6.2 link.</span></p>
+
+<p id="attr_cicsttt__MXTDELAY"><strong>Max tasks delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (in seconds) waiting for the first dispatch,
+which was delayed because of the limits set by the the system parameter,
+MXT, being reached.</span></p>
+
+<p id="attr_cicsttt__MAXOTCB"><strong>MAXOPENTCBS Delay Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited to obtain a CICS TCB, because the region
+had reached the limit set by the system parameter.</span></p>
+
+<p id="attr_cicsttt__IRIOWTT"><strong>MRO Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (in seconds) that this transaction waited
+for control at this end of an MRO link.</span></p>
+
+<p id="attr_cicsttt__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+format is a string.</p>
+
+<p id="attr_cicsttt__OTCBCPU"><strong>Other TCBs CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of processor time
+(in seconds) that this transaction was dispatched on each CICS TCB.</span></p>
+
+<p id="attr_cicsttt__OTHTCBS"><strong>Other TCBs Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time (in seconds) that
+this transaction spent dispatched on CICS TCBs other than the QR TCB.</span></p>
+
+<p id="attr_cicsttt__PCLOADTM"><strong>Program fetches wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) in which this transaction waited for fetches from DFHRPL
+or dynamic LIBRARY concatenations.</span></p>
+
+<p id="attr_cicsttt__QRCPUT"><strong>QR TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of processor time (in seconds) that this transaction was
+dispatched on the CICS QR TCB.</span></p>
+
+<p id="attr_cicsttt__QRELAPS"><strong>QR TCB Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the elapsed time (in seconds) that
+this transaction spent dispatched on the CICS QR TCB.</span></p>
+
+<p id="attr_cicsttt__QRMODDLY"><strong>QR TCB wait-for-dispatch</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) that this transaction waited for redispatch on the CICS QR
+TCB.</span></p>
+
+<p id="attr_cicsttt__REDISP"><strong>Re-Dispatch Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time (in seconds) that
+this transaction waited between the completion of a request and being
+redispatched by CICS.</span></p>
+
+<p id="attr_cicsttt__RLSCPU"><strong>RLS CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of SRB CPU time (in seconds) that this transaction spent
+processing VSAM Record Level Sharing file requests.</span></p>
+
+<p id="attr_cicsttt__RLSIOW"><strong>RLS File I/O Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction waited for RLS
+file I/O to complete.</span></p>
+
+<p id="attr_cicsttt__RMIELAPS"><strong>RMI Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total amount of time (in seconds) that this transaction spent
+in all task-related user exits (TRUEs) invoked by this transaction
+using the Resource Manager Interface (RMI).</span></p>
+
+<p id="attr_cicsttt__RMISUSP"><strong>RMI Suspend Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the total elasped time (in seconds) that this transaction was suspended
+by the CICS dispatcher while in the CICS Resource Manager Interface
+(RMI).</span></p>
+
+<p id="attr_cicsttt__ROCPUT"><strong>RO TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the processor time (in seconds) during which this transaction was
+dispatched by the CICS dispatcher on the CICS RO mode TCB.</span> The
+CICS RO mode TCB is used for opening and closing CICS data sets, loading
+programs, issuing RACF calls, and other functions. This field is a
+component of the task CPU time field and the task miscellaneous TCB
+CPU time field.</p>
+
+<p id="attr_cicsttt__RODISPT"><strong>RO TCB Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) during which this transaction was dispatched by the CICS
+dispatcher on the CICS RO mode TCB.</span></p>
+
+<p id="attr_cicsttt__RRMSWAIT"><strong>RRMS/MVS Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) in which this transaction waited indoubt using resource recovery
+services for EXCI.</span></p>
+
+<p id="attr_cicsttt__SHTSIOW"><strong>Shared TS I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited for asynchronous shared temporary storage
+requests to complete.</span></p>
+
+<p id="attr_cicsttt__SOIOW"><strong>Socket I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in seconds) that this transaction waited for socket
+I/O activities to complete.</span></p>
+
+<p id="attr_cicsttt__SOOIOWTT"><strong>SOCKET Outbound Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited on outbound sockets.</span></p>
+
+<p id="attr_cicsttt__ISIOWTT"><strong>SOCKET receive wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) that this transaction waited for control at this end of an
+IPIC connection.</span></p>
+
+<p id="attr_cicsttt__S8CPUT"><strong>SS(S8) TCB CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the processor time (in seconds) during which this transaction was
+dispatched by the CICS dispatcher domain on a CICS S8 mode TCB.</span></p>
+
+<p id="attr_cicsttt__SYNCTIME"><strong>Syncpoint elapsed time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) that this transaction was dispatched and was processing syncpoint
+requests.</span></p>
+
+<p id="attr_cicsttt__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+four-character name that uniquely identifies an active MVS operating
+system within a given CICSplex.</span></p>
+
+<p id="attr_cicsttt__T8CPUT"><strong>T8 TCB CPU time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of processor time (in seconds) that this transaction was
+dispatched by the CICS dispatcher domain on a CICS T8 mode TCB.</span></p>
+
+<p id="attr_cicsttt__MAXTTDLY"><strong>T8 TCB obtain delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) that this transaction waited to obtain a T8 TCB, because
+the CICS system reached the limit of available threads.</span></p>
+
+<p id="attr_cicsttt__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number sequentially assigned by CICS to uniquely identify each
+task.</span></p>
+
+<p id="attr_cicsttt__TCIOWTT"><strong>TC I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the elapsed time in seconds) for which this transaction waited for
+input from the terminal operator, after issuing a RECEIVE request.</span></p>
+
+<p id="attr_cicsttt__DSCHMDLY"><strong>TCB Change Mode Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the elapsed time (in seconds)
+that this transaction waited for redispatch after a CICS Dispatcher
+change-TCB mode request was issued by or on behalf of this transaction.</span></p>
+
+<p id="attr_cicsttt__DSMMSCWT"><strong>TCB create delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (in seconds) that this transaction spent
+waiting because no TCB was available and a TCB was not created because
+of MVS storage constraints.</span></p>
+
+<p id="attr_cicsttt__DSTCBMWT"><strong>TCB Mismatch Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the elapsed time (in seconds) that this transaction spent in TCB mismatch
+waits.</span></p>
+
+<p id="attr_cicsttt__SUSPTIME"><strong>Total Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total amount of time (in seconds) that this transaction spent
+waiting (suspended).</span> It includes the times reported in the attributes:
+1st Dispatch Delay, Re-Dispatch Wait Time, Total I/O Wait Times, and
+Total Other Wait Times.</p>
+
+<p id="attr_cicsttt__TCLDELAY"><strong>Transaction class delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) waiting for first dispatch, which was delayed because of
+the limits set for the transaction class of this transaction, TCLSNAME
+(166), being reached.</span></p>
+
+<p id="attr_cicsttt__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the four-character name of the transaction.</span></p>
+
+<p id="attr_cicsttt__TDIOW"><strong>Transient Data I/O Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited for VSAM transient data I/O activities
+to complete.</span></p>
+
+<p id="attr_cicsttt__TSIOWTT"><strong>TS VSAM I/O wait time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) that this transaction waited for VSAM temporary storage I/O.</span></p>
+
+<p id="attr_cicsttt__EXTERNAL"><strong>WAIT EXTERNAL Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited for one or more ECBs as a result of using
+the EXEC CICS WAIT EXTERNAL ECBLIST command.</span></p>
+
+<p id="attr_cicsttt__MAXJTDLY"><strong>Wait for a JVM TCB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (in
+seconds) that this transaction waited to obtain a CICS JVM TCB (J8
+or J9 mode), because the CICS system reached the limit set by the
+system parameter, MAXJVMTCBS.</span></p>
+
+<p id="attr_cicsttt__EVENT"><strong>WAITCICS and WAIT EVENT</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds)
+that this transaction waited for one or more ECBs (as a result of
+using the EXEC CICS WAITCICS ECBLIST command) or for the completion
+of an event by the same or another task (usually as a result of using
+the EXEC CICS WAIT EVENT command).</span></p>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex JVM Server Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex JVM Server Analysis attribute group</title>
+</head>
+<body id="attr_cicsjvs"><main role="main"><article role="article" aria-labelledby="d50000e10">
+<h1 class="topictitle1" id="d50000e10">CICSplex JVM Server Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsjvs__CICSJVS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex JVM Server Analysis attribute
+group reports on all the details that represent the CICS JVM server
+runtime environment.</span></p>
+
+<p id="attr_cicsjvs__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsjvs__TCURUSE"><strong>Current Threads</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+current number of threads that are attached to T8 TCBs in the JVM
+server.</span> This value is an integer.</p>
+
+<p id="attr_cicsjvs__TCURWAIT"><strong>Current Thread Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The current number of threads that are
+waiting for a free T8 TCB to attach a thread.</span> This value is an
+integer.</p>
+
+<p id="attr_cicsjvs__PROFILE"><strong>JVM Profile</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+eight character name of the JVM Profile that was used to initialize
+the JVM Server.</span></p>
+
+<p id="attr_cicsjvs__JVMSERVER"><strong>JVM Server Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the JVM Server.</span> This name is an alphanumeric string,
+with a maximum of eight characters.</p>
+
+<p id="attr_cicsjvs__STATUS"><strong>JVM Server Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the current status of the JVM Server.</span> These are the valid values:</p>
+
+<ul>
+<li>ENABLED 1</li>
+
+<li>ENABLING 2</li>
+
+<li>DISABLED 3</li>
+
+<li>DISABLING 4</li>
+
+<li>DISCARDING 5</li>
+
+
+</ul>
+
+<p id="attr_cicsjvs__THWMUSE"><strong>Maximum Threads in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of threads that were attached
+using T8 TCBs in the JVM server.</span> This value is an integer.</p>
+
+<p id="attr_cicsjvs__THWMWAIT"><strong>Maximum Thread Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of tasks that waited for
+a free T8 TCB to attach a thread.</span> This value is an integer.</p>
+
+<p id="attr_cicsjvs__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID) and CICS
+region.</span></p>
+
+<p id="attr_cicsjvs__OPTIONS"><strong>Runtime Options</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+name of the Language Environment runtime options program that is specified
+on the JVMSERVER resource.</span> The runtime option name is an alphanumeric
+string, with a maximum of eight characters.</p>
+
+<p id="attr_cicsjvs__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsjvs__TLIMIT"><strong>Thread Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+maximum number of threads that can be attached using a T8 TCB in the
+JVM server.</span> This value is an integer.</p>
+
+<p id="attr_cicsjvs__TWAIT"><strong>Thread Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+number of tasks that waited for a free T8 TCB to attach a thread.</span> This
+value is an integer.</p>
+
+<p id="attr_cicsjvs__TWAITTIM"><strong>Thread Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+total amount of time that tasks waited for a free T8 TCB to attach
+a thread.</span> This value is an integer.</p>
+
+</div>
+
+</article></main></body></html>

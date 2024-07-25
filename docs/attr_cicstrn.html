@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction Definition Information">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction Definition Information attribute group</title>
+</head>
+<body id="attr_cicstrn"><main role="main"><article role="article" aria-labelledby="d29455e10">
+<h1 class="topictitle1" id="d29455e10">CICSplex Transaction Definition Information attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstrn__CICSTRN"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Transaction Definition Information attributes show the attributes
+used to define the transaction to CICS.</span> Use these attributes
+to confirm the definition of a transaction if you are experiencing
+incorrect output or abnormal task termination. If the storage violation
+field is not zero, you might want to disable this transaction through
+CEMT until the cause is determined.</p>
+
+<p data-hd-otherprops="560" id="attr_cicstrn__ABENDCT"><strong>Abend Count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of times the transaction has abended.</span></p>
+
+<p id="attr_cicstrn__BRIDGEX"><strong>Bridge Exit</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the default bridge exit associated with
+this transaction.</span></p>
+
+<p id="attr_cicstrn__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicstrn__CLASNAME"><strong>Class Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the transaction class associated
+with this transaction.</span></p>
+
+<p id="attr_cicstrn__DATAKEY"><strong>Data Key</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the storage key of the storage allocated during initialization for
+this transaction.</span></p>
+
+<p id="attr_cicstrn__DATALOC"><strong>Data Location</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the key of the storage allocated
+for this transaction.</span></p>
+
+<p id="attr_cicstrn__DTIMOUT"><strong>Deadlock timeout</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the length of time (in seconds) after which
+this transaction is considered deadlocked and terminated by CICS.</span></p>
+
+<p id="attr_cicstrn__DUMP"><strong>Dump</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether a dump must be produced should this transaction terminate.</span></p>
+
+<p id="attr_cicstrn__DYNROUTE"><strong>Dynamic Routing</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether this transaction is eligible
+for dynamic routing.</span></p>
+
+<p id="attr_cicstrn__FACLIKE"><strong>Facilitylike</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of a real terminal that is used
+as a template for the bridge facility.</span></p>
+
+<p id="attr_cicstrn__ISOLATE"><strong>Isolate</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the user key storage allocated for this transaction is protected
+from other transactions using user key storage.</span></p>
+
+<p id="attr_cicstrn__LDYNRCNT"><strong>Local Dynamic Route Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of times the dynamic routing
+program was invoked and a local transaction subsequently attached.</span></p>
+
+<p id="attr_cicstrn__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> This is the value format is an alphanumeric
+string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstrn__PARTNAME"><strong>Partition Dataset Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the PARTITIONSET this transaction
+uses.</span></p>
+
+<p id="attr_cicstrn__PRIORITY"><strong>Priority</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the priority of the transaction,
+used to affect the dispatching order of tasks.</span></p>
+
+<p id="attr_cicstrn__PROFNAME"><strong>Profile Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the profile with processing
+options for this transaction.</span></p>
+
+<p id="attr_cicstrn__PGMID"><strong>Program Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the program that is executed
+when this transaction is first attached.</span></p>
+
+<p data-hd-otherprops="560" id="attr_cicstrn__PURTRNCL"><strong>Purged for Tran Class</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of times the transaction was purged immediately because
+the queue reached the purge threshold for the transaction class.</span></p>
+
+<p id="attr_cicstrn__RTIMOUT"><strong>Read Time out</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the time interval, in seconds, after which
+the transaction is terminated if no input is received from the terminal.</span></p>
+
+<p id="attr_cicstrn__RDYNRCNT"><strong>Remote Dynamic Route Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of times the dynamic routing
+program was started and a remote transaction subsequently attached.</span></p>
+
+<p id="attr_cicstrn__REMNAME"><strong>Remote Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the identifier of this transaction in the
+remote system.</span></p>
+
+<p id="attr_cicstrn__REMSYS"><strong>Remote System</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the four character identifier of the CICS
+system where the attach request for this transaction is sent.</span></p>
+
+<p id="attr_cicstrn__REMAPPLID"><strong>Remote System Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">The eight character identifier of the APPLID
+for the remote CICS system where the attach request for this transaction
+is sent.</span></p>
+
+<p id="attr_cicstrn__RESCOUNT"><strong>Restart Count</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of times this transaction was restarted
+after terminating abnormally and being backed out.</span></p>
+
+<p id="attr_cicstrn__RESTART"><strong>Restart</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether this transaction is automatically restarted after an abend
+and subsequent backout.</span></p>
+
+<p id="attr_cicstrn__SRUNVALU"><strong>Runaway Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time, in seconds, that this
+transaction has control of the processor before it is assumed to be
+in a loop and terminated by CICS.</span></p>
+
+<p id="attr_cicstrn__SCREEN"><strong>Screen Selection</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether the PRIMARY (DEFAULT) or
+ALTERNATE buffer size for a 3270 screen or printer is used whenever
+a terminal output request is issued with the ERASE option.</span></p>
+
+<p id="attr_cicstrn__SPURGE"><strong>Stall Purge</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether this transaction is purged
+by CICS during a system stall.</span></p>
+
+<p id="attr_cicstrn__STGCLEAR"><strong>Storage Clear</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether storage released by this
+transaction should be cleared by CICS.</span></p>
+
+<p id="attr_cicstrn__STGVIOL"><strong>Storage Violations</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of storage violations that
+CICS has detected in storage areas owned by this transaction.</span> The
+corruption might not have been caused by this transaction.</p>
+
+<p id="attr_cicstrn__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstrn__TPURGE"><strong>Terminal Purge</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether this transaction, if it is
+associated with a non VTAM terminal, can or cannot be purged because
+of a terminal error.</span></p>
+
+<p id="attr_cicstrn__TRACE"><strong>Trace</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the activity of this transaction should be traced.</span></p>
+
+<p id="attr_cicstrn__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the four character name of the transaction.</span></p>
+
+<p id="attr_cicstrn__TRSTATUS"><strong>Transaction Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether this transaction is enabled
+or disabled.</span></p>
+
+<p id="attr_cicstrn__TWASIZE"><strong>TWA Size</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the size, in bytes, of the work area required by this transaction
+at initialization time.</span></p>
+
+<p id="attr_cicstrn__USECOUNT"><strong>Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of times this transaction
+has been invoked since CICS was initialized.</span></p>
+
+</div>
+</article></main></body></html>

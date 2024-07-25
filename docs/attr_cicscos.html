@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Connections Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Connections Summary attribute group</title>
+</head>
+<body id="attr_cicscos"><main role="main"><article role="article" aria-labelledby="d13502e10">
+<h1 class="topictitle1" id="d13502e10">CICSplex Connections Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicscos__CICSCOS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Connections Summary attributes
+helps you analyze the efficiency of multiregion operation (MRO), intersystem
+communication (ISC), and IP interconnections (IPCONN) links and detect
+capacity constraints that could cause bottlenecks.</span>          
+                                                                 
+                       </p>
+
+<p id="attr_cicscos__ALLOTOT"><strong>Allocation Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total count of allocate requests for this type of connection.</span> The
+maximum number of requests that originate in this region that can
+be queued.</p>
+
+<p id="attr_cicscos__ALLORATP"><strong>Allocation Percentage</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of link allocations
+across connections of this type.</span></p>
+
+<p id="attr_cicscos__ALLORATE"><strong>Allocation Rate</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the rate per minute at which link allocations are occurring across
+connections of this type.</span></p>
+
+<p id="attr_cicscos__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters. CICS
+region names are always in uppercase characters.</p>
+
+<p id="attr_cicscos__VTAMAPPL"><strong>CICS Region VTAM Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the eight character name for the specific
+VTAM applid of the CICS region.</span></p>
+
+<p> A CICS system's specific applid is used to distinguish between
+the pair of XRF systems. It is the name quoted on  a VTAM APPL statement,
+to identify this CICS to VTAM. </p>
+
+<p id="attr_cicscos__VTAMGAPL"><strong>CICS Region VTAM Generic Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the eight character name for the generic
+CICS VTAM Applid of the CICS region.</span>CICS systems that use XRF
+can have a generic name. The name is specified on the  APPLID(=generic-applid)
+system initialization parameter. The active and alternate CICS systems
+must have the same generic applid and different specific applids.
+For XRF, a CICS system's generic applid is defined on the APPLID system
+initialization parameter and is the name by which that CICS is known
+in the network. It is the name quoted by remote CICS systems, on 
+the NETNAME option of CONNECTION definitions or the APPLID option
+of IPCONN definitions, to identify this CICS.</p>
+
+<p id="attr_cicscos__CONNTYPE"><strong>Connection Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+type of connection between CICS regions; can be ISC, MRO, or IPCONN.</span></p>
+
+<p id="attr_cicscos__RECMAXU"><strong>Maximum Receive Sessions in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of receive sessions
+in use on this connection at any one time since CICS started or since
+statistics were last reset.</span></p>
+
+<p id="attr_cicscos__SENMAXU"><strong>Maximum Send Sessions in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of send sessions in
+use on this connection at any one time since CICS started or since
+statistics were last reset.</span></p>
+
+<p id="attr_cicscos__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+
+<p id="attr_cicscos__RECMAXUP"><strong>Percent of Maximum Receive Sessions in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of the maximum number
+of receive sessions that are in use based on the negotiated receive
+sessions.</span></p>
+
+
+<p id="attr_cicscos__SENMAXUP"><strong>Percent of Maximum Send Sessions in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of the maximum number
+of send sessions that are in use based on the negotiated send sessions.</span></p>
+
+<p id="attr_cicscos__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters. z/OS System IDs are always in uppercase
+characters.</p>
+
+<p id="attr_cicscos__CONTOT"><strong>Total Number of Connections</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of connections of
+the type indicated under Connection Type.</span></p>
+
+
+<p id="attr_cicscos__RECTOTU"><strong>Total Receive Sessions in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of sessions of this
+type that are currently used.</span></p>
+
+
+<p id="attr_cicscos__SENTOTU"><strong>Total Send Sessions in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of sessions of this
+type that are currently used.</span></p>
+
+</div>
+
+</article></main></body></html>

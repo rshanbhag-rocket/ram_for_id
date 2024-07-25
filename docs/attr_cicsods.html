@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Task History Status">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Task History Status attribute group</title>
+</head>
+<body id="attr_cicsods"><main role="main"><article role="article" aria-labelledby="d7024e10">
+<h1 class="topictitle1" id="d7024e10">CICSplex Task History Status attribute group</h1>
+
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsods__CICSODS"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex Task History Status attributes provide information
+about the status of the Task History collector.</span></p>
+
+<p id="attr_cicsods__BDRYADJ"><strong>Boundary Adjustments</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of times the index allocation has changed since the task
+history collector was started.</span></p>
+
+<p id="attr_cicsods__CICSNAME"><strong>CICS Region Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Identifies the name of the CICS region that is being
+monitored.</span></p>
+
+<p id="attr_cicsods__XMPOST"><strong>Cross Memory Posts</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of times the CICS region has detected that the Cross Memory
+Buffer is becoming full and prompted the task history collector to catch up.</span> This value is
+accumulated since task history was started. A high value may indicate the XM_BUFFER_RECORDS value is
+too small.</p>
+
+<p id="attr_cicsods__IDXALOC"><strong>Current Index Allocation</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the current percentage of Data Store index
+allocation.</span> An initial value of 40.0% indicates that the datastore has not yet wrapped. This
+value automatically adjusts to maximize the utilization of the data store.</p>
+
+<p id="attr_cicsods__CYCLTIM"><strong>Cycle Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Cycle time in seconds.</span></p>
+
+<p id="attr_cicsods__DATFLOG"><strong>Data First Logical</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The first logical address of Data record.</span></p>
+
+<p id="attr_cicsods__DATFPHY"><strong>Data First Physical</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The first physical address of Data record.</span></p>
+
+<p id="attr_cicsods__DATLLOG"><strong>Data Last Logical</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The last logical address of Data record.</span></p>
+
+<p id="attr_cicsods__DATSPAN"><strong>Data Span</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The span of Data.</span></p>
+
+<p id="attr_cicsods__DSRECS"><strong>Data Store Records</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the the current number of transactions contained in the
+datastore.</span></p>
+
+<p id="attr_cicsods__DSSIZE"><strong>Data Store Size</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Physical size of Task History Data Store.</span></p>
+
+<p id="attr_cicsods__DSTYPE"><strong>Data Store Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Type of Data Store used by Task History collector.</span> Valid
+values: DataSpace=D, File=F</p>
+
+<p id="attr_cicsods__DSWRAP"><strong>Data Store Wraparound</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of times Data portion has wrapped since the task history
+collector was started.</span></p>
+
+<p id="attr_cicsods__DSPREQS"><strong>Display Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of user display requests.</span></p>
+
+<p id="attr_cicsods__IDXFLOG"><strong>Index First Logical</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The first logical address of Index record.</span></p>
+
+<p id="attr_cicsods__IDXLLOG"><strong>Index Last Logical</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The last logical address of Index record.</span></p>
+
+<p id="attr_cicsods__IDXWRAP"><strong>Index Wraparounds</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of times index portion has wrapped since the task history
+collector was started.</span></p>
+
+  <p id="attr_cicsods__ONGBVER"><strong>ONDV Global Version</strong><span class="ph" data-hd-otherprops="flyover_string"> Indicates the internal
+        version of the ONDV Global control block.</span></p>
+
+<p id="attr_cicsods__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID) and CICS region
+name.</span> The value format is a case-sensitive, alphanumeric string, maximum 32 bytes</p>
+
+  <p id="attr_cicsods__ONPAUSE"><strong>Pause</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">Date and time when Task History collector was last
+   paused.</span></p>
+
+    <p id="attr_cicsods__PROCMODE"><strong>Processing Mode</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">Indicates the processing Mode that Task History is using. SRB
+        indicates the processing is eligible for zIIP if available.</span></p>
+
+<p id="attr_cicsods__PRMRECS"><strong>Primary Records</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of transaction records in the Data Store.</span></p>
+
+<p id="attr_cicsods__RSVDSIZE"><strong>Reserved Size</strong>
+<span class="ph" data-hd-otherprops="flyover_string">(Dataspace Only) Specifies the portion of the data space (from 0 to
+50 percent) reserved for file, database clock and counter statistics, and Application Trace
+records.</span> You must specify a number greater than 0 or statistics by filename and or Application
+Trace records will not be available from the task history collector.</p>
+
+  <p id="attr_cicsods__ONRESUM"><strong>Resume</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">Date and time when Task History collector was last
+   resumed.</span></p>
+
+<p id="attr_cicsods__SECRECS"><strong>Secondary Records</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Number of segments of data used for statistics for file or database
+requests or application trace data in the data store.</span></p>
+
+<p id="attr_cicsods__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Four-character name that uniquely identifies an active z/OS
+operating system within a given CICSplex.</span></p>
+
+<p id="attr_cicsods__START"><strong>Start</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Date and time when Task History collector started.</span></p>
+
+<p id="attr_cicsods__STATUS"><strong>Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Current status of Task History collector.</span> A value of Unknown
+may indicate that either the OMEGAMON component in the CICS region is not initialized or the
+OMEGAMON CICS classic address space is not active.</p>
+
+    <p id="attr_cicsods__TASKRECS"><strong>Task Records</strong> Indicates the number of task records in the datastore.</p>
+
+    <p id="attr_cicsods__DATARECS"><strong>Task Data Records</strong> Indicates the number of segments of data used for
+      statistics for file or database requests or application trace data in the data store.</p>
+
+<p id="attr_cicsods__ETODLLOG"><strong>Time Newest Transaction</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Date and time of newest transaction in the Data Store.</span></p>
+
+<p id="attr_cicsods__ETODFLOG"><strong>Time Oldest Transaction</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Date and time of oldest transaction in the Data Store.</span></p>
+
+<p id="attr_cicsods__TIMESPAN"><strong>Time Span</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Time between the oldest and newest records in Data Store.</span></p>
+
+<p id="attr_cicsods__DSRECV"><strong>Transaction Records Received</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Total number of transaction records received since the task history
+collector was started.</span></p>
+
+<p id="attr_cicsods__VSAMDSN"><strong>VSAM Dataset</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Data set name of the VSAM file.</span></p>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex ICE Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex ICE Analysis attribute group</title>
+</head>
+<body id="attr_cicsice"><main role="main"><article role="article" aria-labelledby="d49782e10">
+<h1 class="topictitle1" id="d49782e10">CICSplex ICE Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsice__CICSICE"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex ICE Analysis attributes allows
+you to identify scheduled work in the system.</span> You can analyze
+Interval Control Elements (ICE) problems, display a summary list of
+all ICEs in the system, display detailed information about a specific
+ICE, or request that an ICE be removed from the system.</p>
+
+<p>Interval Control Elements (ICEs) represent tasks that CICS is scheduled
+to start after a specified time interval or at a certain time of day.
+Upon expiration of this interval, CICS starts the task or creates
+an AID, pending the availability of some resource.</p>
+
+<p id="attr_cicsice__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsice__ICEDESTID"><strong>Destination ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the system at which the specified transaction is executed
+upon the expiration of this ICE.</span></p>
+
+<p id="attr_cicsice__ICEEXPIRE"><strong>Expiry Date and Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the date and time at which this ICE
+expires.</span></p>
+
+<p id="attr_cicsice__ICEADDRES"><strong>ICE Address</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the address, in CICS storage, of this ICE.</span></p>
+
+<p id="attr_cicsice__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsice__ICEREQID"><strong>Request ID</strong> <span class="ph" data-hd-otherprops="flyover_string">is
+a value associated with this ICE at the time it was created.</span> You
+can supply a request identifier in the REQID field of a START request.
+If a request identifier is not specified the field is blank.</p>
+
+<p id="attr_cicsice__ICESTATUS"><strong>Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the current status of the ICE.</span> These are the valid values:</p>
+
+<ul>
+<li>ICE is a DWE</li>
+
+<li>Awaiting DS Resume</li>
+
+<li>Cancelled by other task</li>
+
+<li>Expired</li>
+
+<li>Awaiting expiration</li>
+
+</ul>
+
+<p id="attr_cicsice__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsice__ICETERMID"><strong>Terminal ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the terminal specified on a START command.</span> If a terminal
+was not specified the field is blank.</p>
+
+<p id="attr_cicsice__ICETRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the transaction to be executed on completion of this ICE.</span></p>
+
+<p id="attr_cicsice__ICETYPE"><strong>Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The kind
+of ICE that is displayed.</span> These are the valid values:</p>
+
+<ul>
+<li>TDP Scheduled</li>
+
+<li>ICP Scheduled</li>
+
+<li>IC Initialized</li>
+
+<li>BMS Scheduled</li>
+
+<li>ISC Scheduled</li>
+
+<li>Wait</li>
+
+<li>Post</li>
+
+</ul>
+
+<p id="attr_cicsice__ICEUSERID"><strong>User ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the user identifier under which the specified transaction is executed.</span> If
+a user identifier is not supplied the field is blank.</p>
+
+<p id="attr_cicsice__ICEWTASKN"><strong>Waiting Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the task number of the task which is
+waiting for this ICE to expire.</span> If no task is waiting, this appears
+as blanks.</p>
+
+</div>
+
+</article></main></body></html>

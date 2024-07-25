@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex URIMAP Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex URIMAP Summary attribute group</title>
+</head>
+<body id="attr_cicsurs"><main role="main"><article role="article" aria-labelledby="d46951e10">
+<h1 class="topictitle1" id="d46951e10">CICSplex URIMAP Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsurs__CICSURS"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex URIMAP Summary attributes summarize URIMAP definitions,
+which are resource definitions that match the URIs of HTTP or Web service requests; they provide
+information on how to process the requests.</span></p>
+
+<p id="attr_cicsurs__CICSNAME"><strong>CICS Region Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the CICS region being
+monitored.</span> Each CICS region in a z/OS operating system has a unique name. This name is an
+alphanumeric string, with a maximum of eight characters, and case-sensitive. CICS region names are
+always in uppercase characters.</p>
+
+<p id="attr_cicsurs__MATCHDISAB"><strong>Disabled count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the URIMAP host or path match has been
+disabled.</span></p>
+
+<p id="attr_cicsurs__ENABSTATUS"><strong>Enable status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Specifies whether the URIMAP definition is to be installed in an
+enabled or disabled state.</span> The default is enabled. These are the valid values: Enabled,
+Disabled, and Disabled host.</p>
+
+<p id="attr_cicsurs__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID) and CICS region
+name.</span> The value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name in the attribute to the names
+of managed systems assigned to the item. If the origin node name matches the name of a managed
+system, the status of the item changes accordingly. If the names of the origin node and the managed
+systems do not match, the status of the item remains unchanged.</p>
+
+<p id="attr_cicsurs__MATCHREDIR"><strong>Redirect count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the URIMAP's host or path has been
+redirected.</span></p>
+
+<p id="attr_cicsurs__REFCOUNT"><strong>Reference count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times a search for a matching URIMAP definition was
+made.</span></p>
+
+<p id="attr_cicsurs__SCHEME"><strong>Scheme</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Specifies the scheme component of the URI to which the URIMAP
+definition applies.</span> These are the values:</p>
+
+<dl>
+
+<dt class="dlterm">HTTP</dt>
+
+<dd class="dlentry">Without SSL</dd>
+
+
+
+<dt class="dlterm">HTTPS</dt>
+
+<dd class="dlentry">With SSL</dd>
+
+
+</dl>
+
+<p id="attr_cicsurs__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely identifies an active
+z/OS operating system within a given CICSplex.</span> The value format is an alphanumeric string,
+maximum four characters, and case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicsurs__TCPIPS"><strong>TCP/IP Service</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name of the TCPIPSERVICE resource definition.</span> It is a 1-
+to 8 character name in length, of a TCPIPSERVICE resource definition, with PROTOCOL(HTTP), that
+defines an inbound port to which this URIMAP definition relates. If this attribute is not specified,
+the URIMAP definition applies to a request on any inbound ports.</p>
+
+<p id="attr_cicsurs__URINAME"><strong>URIMAP Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Specifies the name of this URIMAP definition.</span> The name is up to
+eight characters in length. The attribute is specified in mixed case, and the case is preserved in
+the URIMAP definition.</p>
+
+<p id="attr_cicsurs__USAGE"><strong>Usage</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Specifies whether this URIMAP definition is for CICS, HTTP server,
+HTTP client, Pipeline, Atom service, or JVM Server.</span>
+</p>
+
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction EIB Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction EIB Summary attribute group</title>
+</head>
+<body id="attr_cicstre"><main role="main"><article role="article" aria-labelledby="d74726e10">
+<h1 class="topictitle1" id="d74726e10">CICSplex Transaction EIB Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstre__CICSTRE"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Transaction EIB Summary attributes report on the information stored
+in the EXEC Interface Block created by CICS to satisfy the application
+program's EXEC CICS command.</span> Use the CICSplex Transaction EIB
+Summary attributes to help identify a looping transaction. For example,
+a constant program name and offset combination for a single EXEC CICS
+command signifies a looping transaction.</p>
+
+<p id="attr_cicstre__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicstre__EIBSTAMP"><strong>EIB Date and Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the date and time at which the current
+or last EXEC CICS command was issued from the application program.</span></p>
+
+<p id="attr_cicstre__EIBRESD"><strong>EIBRESP Description</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the meaning of the value in the EIBRESP
+attribute.</span></p>
+
+<p id="attr_cicstre__EIBRESP"><strong>EIBRESP Value</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates, together with the EIBRESP2 attribute,
+the resulting condition of the last executed command by the transaction.</span></p>
+
+<p id="attr_cicstre__EIBRESP2"><strong>EIBRESP2 Value</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates, together with the EIBRESP attribute,
+the resulting condition of the last executed command by the transaction.</span></p>
+
+<p id="attr_cicstre__EXECCMD"><strong>EXEC CICS Command</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the EXEC CICS command currently in use.</span></p>
+
+<p id="attr_cicstre__EIBFUNCD"><strong>Function Code</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the function code of the current or last
+EXEC CICS command issued by the transaction.</span></p>
+
+<p id="attr_cicstre__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstre__EIBPGM"><strong>Program Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the application program from
+which the EXEC CICS command was issued.</span></p>
+
+<p id="attr_cicstre__EIBPGMOF"><strong>Program Offset</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the hexadecimal offset within the
+program where the EXEC CICS command was issued.</span></p>
+
+<p id="attr_cicstre__EIBRNAME"><strong>Resource Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The symbolic identifier of the resource being
+accessed by the current or last EXEC CICS command.</span></p>
+
+<p id="attr_cicstre__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstre__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number sequentially assigned by CICS
+to uniquely identify each task.</span></p>
+
+<p id="attr_cicstre__EIBTERM"><strong>Terminal ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the terminal ID of the principal
+facility (terminal or logical unit) associated with the transaction.</span></p>
+
+<p id="attr_cicstre__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the four character name of the transaction.</span></p>
+
+</div>
+</article></main></body></html>

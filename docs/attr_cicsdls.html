@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex DBCTL Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex DBCTL Summary attribute group</title>
+</head>
+<body id="attr_cicsdls"><main role="main"><article role="article" aria-labelledby="d10295e10">
+<h1 class="topictitle1" id="d10295e10">CICSplex DBCTL Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsdls__CICSDLS"></span> <span class="ph" data-hd-otherprops="flyover_string">The DBCTL Summary
+attributes report on the status of the CICS database control (DBCTL)
+interface for each monitored CICS region.</span></p>
+
+<p>Use the DBCTL Summary attributes in situations to determine if
+DBCTL is active. These attributes provide data for the DBCTL Summary
+table view.</p>
+
+<p id="attr_cicsdls__DBCDRMCT"><strong>Active Thread RMI Calls</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of active threads that are processing
+DBCTL Resource Manager Interface (RMI) calls.</span></p>
+
+<p id="attr_cicsdls__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight  characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicsdls__DBCCONST"><strong>Connection Status</strong> <span class="ph" data-hd-otherprops="flyover_string">The status of the DBCTL connection: connected
+or unconnected.</span></p>
+
+<p id="attr_cicsdls__DBCCTIME"><strong>Connect Time</strong> <span class="ph" data-hd-otherprops="flyover_string">The timestamp of when CICS connected to DBCTL.</span></p>
+
+<p id="attr_cicsdls__DBCTLACT"><strong>DBCTL Active</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether or not the CICS Database
+Control facility for IMS (DBCTL) is active.</span></p>
+
+<p id="attr_cicsdls__DBCJOBNM"><strong>DBCTL Job name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the DBCTL job that is connected
+to CICS.</span></p>
+
+<p id="attr_cicsdls__DBCJOBI"><strong>DBCTL Job number</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of the DBCTL job that is connected
+to CICS.</span></p>
+
+<p id="attr_cicsdls__DBCRSENM"><strong>DBCTL RSE name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the Recoverable Service Element
+(RSE) DBCTL job.</span></p>
+
+<p id="attr_cicsdls__DBCTLID"><strong>DBCTL Subsystem Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The subsystem identifier associated with DBCTL.</span> The
+value format is an alphanumeric string, maximum four bytes.</p>
+
+<p id="attr_cicsdls__DBMONACT"><strong>DLI DB Monitor Active</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether or not the DL/I Database
+Monitor is active.</span> The DB Monitor has high overhead and can potentially
+impact both DL/I and CICS performance.</p>
+
+<p id="attr_cicsdls__DMBPCT"><strong>DLI Percent DMB Pool Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Percentage used of the Data Management Block
+(DMB) storage pool.</span> The DMB pool is acquired from the CICS dynamic
+storage area and should be set large enough to accommodate all DMBs
+used in CICS, including shared databases. If the pool is not large
+enough, operating system close/open of databases can become necessary
+to service new database requests. The value format is a percentage
+in the range 0 - 100.</p>
+
+<p id="attr_cicsdls__ENQPCT"><strong>DLI Percent ENQ Pool Use</strong> <span class="ph" data-hd-otherprops="flyover_string">DL/I enqueue pool usage expressed as a percentage.</span> The
+maximum amount of storage that can be used is set by the ENQPL parameter
+of the SIT. PI enqueue pool storage is GETMAINed out of OSCOR, and
+a transaction that cannot be serviced because of an OSCOR shortage
+or because the ENQPL maximum has been reached is terminated with a
+U0775 abend. The value format is a percentage in the range 0 - 100.</p>
+
+<p id="attr_cicsdls__PSBPCT"><strong>DLI Percent PSB Pool Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Percentage used of the Program Specification
+Block (PSB) storage pool.</span> The PSB pool is acquired from the CICS
+dynamic storage area and should be set large enough to accommodate
+all PSBs used in CICS, including shared databases. If the pool is
+not large enough, operating system close/open of databases can become
+necessary to service new database requests. The value format is a
+percentage in the range 0 - 100.</p>
+
+<p id="attr_cicsdls__THRPCT"><strong>DLI Percent Thread Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Percentage of IMS DL/I threads in use.</span> When
+this value reaches 100%, tasks are placed in a wait condition until
+threads become available. The value format is a percentage in the
+range 0 - 100.</p>
+
+<p id="attr_cicsdls__DBCELMAX"><strong>Elapsed Time at Maximum Threads</strong> <span class="ph" data-hd-otherprops="flyover_string">The elapsed time the connection was at the
+maximum thread level during the last session.</span></p>
+
+<p id="attr_cicsdls__DBCMATHD"><strong>Maximum Threads</strong> <span class="ph" data-hd-otherprops="flyover_string">The maximum number of threads available for
+DBCTL processing.</span></p>
+
+<p id="attr_cicsdls__DBCMATHH"><strong>Maximum Thread Hits</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of times the maximum thread
+level was hit during the last session.</span></p>
+
+<p id="attr_cicsdls__DBCMITHD"><strong>Minimum Threads</strong> <span class="ph" data-hd-otherprops="flyover_string">The minimum number of threads available for
+DBCTL processing.</span></p>
+
+<p id="attr_cicsdls__DBCMITHH"><strong>Minimum Thread Hits</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of times the minimum thread
+level was hit during the last session.</span></p>
+
+<p id="attr_cicsdls__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The combination of CICS z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsdls__DBCPTCBS"><strong>Peak Number of Threads</strong> <span class="ph" data-hd-otherprops="flyover_string">The high water mark allocated for DBCTL processing
+during the session.</span></p>
+
+<p id="attr_cicsdls__DBCRMIST"><strong>RMI Adapter Status</strong> <span class="ph" data-hd-otherprops="flyover_string">The status of the DBCTL Resource Manager Interface
+(RMI) adapter.</span> The status can be active (Y) or inactive (N).</p>
+
+<p id="attr_cicsdls__DBCSTSU"><strong>Startup Table Suffix</strong> <span class="ph" data-hd-otherprops="flyover_string">The suffix of the DBCTL startup table used
+for the current session.</span></p>
+
+<p id="attr_cicsdls__DBCPSBSU"><strong>Successful PSB Schedules</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of successful PSB schedules issued
+by tasks using the DBCTL connection during this session.</span> </p>
+
+<p id="attr_cicsdls__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. CICS z/OS System IDs are always in uppercase characters.</p>
+
+</div>
+</article></main></body></html>

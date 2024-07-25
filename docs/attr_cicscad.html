@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Association Data Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Association Data Details attribute group</title>
+</head>
+<body id="attr_cicscad"><main role="main"><article role="article" aria-labelledby="d41977e10">
+<h1 class="topictitle1" id="d41977e10">CICSplex Association Data Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicscad__CICSCAD"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Association Data Details attribute group allows you to display the
+association data related to an individual transaction.</span> The data
+enables you to determine the starting point for a transaction in an
+IPIC (IP Inter connectivity) network, and also includes any user data
+that has been added. For the first transaction, in a related set,
+the originating data fields match the current data fields. For those
+tasks, which were started as a result of a Distributed Program Link
+(DPL) request, the originating data fields represent the initial transaction.
+ </p>
+
+<p id="attr_cicscad__APPL_SOCK"><strong>Application Data Network Protocol</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the network protocol.</span> These
+are the valid values: ECI, HTTP, IIOP, IPIC, and USER.</p>
+
+<p id="attr_cicscad__APPL_STAT"><strong>Application Data Socket Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the status of the socket, as determined
+by the socket's domain.</span> The valid values are Inbound and Outbound.</p>
+
+<p id="attr_cicscad__APPL_TRAN"><strong>Application Data Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the ID of the transaction that created the
+socket.</span></p>
+
+<p id="attr_cicscad__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. The CICS region
+names are always uppercase characters.</p>
+
+<p id="attr_cicscad__CLIENT_IP"><strong>Client IP Address</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the IP address of the client that requested
+this task.</span></p>
+
+<p id="attr_cicscad__CLPORT"><strong>Client Port</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the port used to send the request that executed
+this task.</span></p>
+
+<p id="attr_cicscad__FACILN"><strong>Facility Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the CICS facility executing the current
+task.</span></p>
+
+<p id="attr_cicscad__PROGRAM"><strong>Initial Program ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the program that was initially
+executed by this task.</span></p>
+
+<p id="attr_cicscad__IPCONN"><strong>IP Connection Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the IP connection used to route
+this request.</span></p>
+
+<p id="attr_cicscad__LUNAME"><strong>LUName</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the logical unit (that is, the device name) where this
+transaction is executing.</span></p>
+
+<p id="attr_cicscad__MVSIMAGE"><strong>MVS Image</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the z/OS operating system  that
+is associated with the TCPIPSERVICE that started the request.</span></p>
+
+<p id="attr_cicscad__NETID"><strong>Network ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the network ID of the originating CICS system.</span></p>
+
+<p id="attr_cicscad__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicscad__ODCLIENTIP"><strong>Originating Client IP</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the IP address of the client which requested
+the original task.</span></p>
+
+<p id="attr_cicscad__CLIENTPORT"><strong>Originating Client Port</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the port number of the client that requested
+the original task.</span></p>
+
+<p id="attr_cicscad__ODFACIL"><strong>Originating Facility</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the facility associated with the task that
+started this task.</span></p>
+
+<p id="attr_cicscad__ODLUNAME"><strong>Originating LU name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the logical unit name associated with the
+task that started this task.</span></p>
+
+<p id="attr_cicscad__ODNETW"><strong>Originating Network</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the logical unit name associated with the
+task that started this task (the network ID where the original transaction
+was executed).</span></p>
+
+<p id="attr_cicscad__ODNETID"><strong>Originating Network ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the network ID associated with the task
+that started this task.</span></p>
+
+<p id="attr_cicscad__ODNUMBER"><strong>Originating Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the task number associated with the task
+that started this task.</span></p>
+
+<p id="attr_cicscad__ODTRANID"><strong>Originating Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the transaction ID associated with the task
+that started this task.</span></p>
+
+<p id="attr_cicscad__ODUSER"><strong>Originating Userid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the user ID associated with the task that
+started this task.</span></p>
+
+<p id="attr_cicscad__SERVER_IP"><strong>Server IP Address</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the IP address of the server that scheduled
+this task.</span></p>
+
+<p id="attr_cicscad__SRVPORT"><strong>Server Port</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the port used by the TCPIPSERVICE to receive
+the request that is currently processing.</span></p>
+
+<p id="attr_cicscad__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. The z/OS System IDs are always uppercase characters.</p>
+
+<p id="attr_cicscad__NUMBER"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the unique number of the currently executing
+task.</span></p>
+
+<p id="attr_cicscad__TCPIPJOB"><strong>TCPIP Jobname</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the TCP/IP job associated with
+the IP connection that attached this task.</span></p>
+
+<p id="attr_cicscad__TCPIPSRV"><strong>TCPIP Service Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the TCP/IP service used by this
+transaction.</span></p>
+
+<p id="attr_cicscad__TCPIPZONE"><strong>TCPIP Zone</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the TCP/IP security zone associated
+with the IP connection that started this task.</span></p>
+
+<p id="attr_cicscad__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the currently executing task.</span></p>
+
+<p id="attr_cicscad__USERID"><strong>Userid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the Userid associated with the task that is currently executing.</span></p>
+
+<p id="attr_cicscad__UDATA"><strong>XAPADMGR User Data</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the user data provided to this task by the
+XAPADMGR global user exit.</span></p>
+
+</div>
+</article></main></body></html>

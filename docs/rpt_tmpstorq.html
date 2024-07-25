@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined Temporary Storage Queues workspace provides data on the number of items in the temporary storage queue, by queue identifier and lists the temporary storage pools and queues that exist in the monitored CICS system.">
+<meta name="keywords" content="workspaces, Temporary Storage Queues, Temporary Storage Queues in 3270 link">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Temporary Storage Queues workspace</title>
+</head>
+<body id="rpt_tmpstorq"><main role="main"><article role="article" aria-labelledby="d38349e11">
+<h1 class="topictitle1" id="d38349e11">Temporary Storage Queues workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined Temporary Storage Queues workspace provides
+data on the number of items in the temporary storage queue, by queue
+identifier and lists the temporary storage pools and queues that exist
+in the monitored CICS® system.</p>
+
+<div class="section"><p>The predefined Temporary Storage Queues workspace contains
+the following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Temporary Storage Queue Distribution bar chart </li>
+
+<li>The Temporary Storage Queue table view</li>
+
+</ul>
+</div>
+
+<div class="section"><p>The table view shows the size of the items, the temporary
+storage model name, prefix string, and, if the shared temporary storage
+queue is accessible from the CICS region; it also identifies the transaction
+that created the queue.</p>
+<p>You can link to the Coupling Facility
+Structures Data for Sysplex workspace provided by the <span class="keyword">OMEGAMON for z/OS</span> product.</p>
+</div>
+
+<div class="section"><p>It also provides a link to the Temporary Storage Queues
+in 3270 view of the 3270 OMEGAMON interface. When you right-click
+a link icon in the Temporary Storage Queues table view and select
+Temporary Storage Queues in 3270, you must enter your terminal session
+user credentials in the dialog and click <strong>OK</strong>. A 3270 view is
+displayed within the workspace, with the appropriate details.</p>
+</div>
+
+<div class="section"><p>Note that this predefined workspace link to a 3270 session
+has an associated sample script. You should review the script prior
+to using it in your environment.</p>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicstsd.html#attr_cicstsd">CICSplex Temporary Storage Detail attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

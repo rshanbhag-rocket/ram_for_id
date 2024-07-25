@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Dispatcher TCB Modes">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Dispatcher TCB Modes attribute group</title>
+</head>
+<body id="attr_cicscdm"><main role="main"><article role="article" aria-labelledby="d71853e10">
+<h1 class="topictitle1" id="d71853e10">CICSplex Dispatcher TCB Modes attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicscdm__CICSCDM"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Dispatcher TCB Mode attributes
+report CICS dispatcher TCB mode information in an active system that
+is being managed by CICSPlex SM.</span></p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex Dispatcher TCB Modes group
+are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicscdm__CDMTWT"><strong>Accumulated time spent in z/OS Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the accumulated real time, accurate
+to three decimal places that the CICS region was in a z/OS wait.</span> The
+total time used between a z/OS wait issued by the dispatcher and the
+return from the z/OS wait. The value can be entered in the HH:MM:SS.DDD
+format, for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicscdm__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicscdm__CDMTCT"><strong>CPU Time for dispatcher task</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the accumulated CPU time taken for
+this DS task, accurate to three decimal places.</span> The processor
+time used by this TCB while executing the default dispatcher task
+(DSTCB). The value can be entered in the HH:MM:SS.DDD format, for
+example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.  If
+you are using variable substitution, the value in this example would
+display as 1200567.</p>
+
+<p id="attr_cicscdm__CDMTCBCA"><strong>Current TCBs Attached</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of z/OS TCBs attached
+in this CICS dispatcher TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBCU"><strong>Current TCBs in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of z/OS TCBs in
+use in this CICS dispatcher TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBDX"><strong>Number of excess detaches</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of CICS TCBs that have been,
+or are in the process of being, detached from this CICS dispatcher
+TCB mode because of the dispatcher excess TCB management processing.</span></p>
+
+<p id="attr_cicscdm__CDMTCBDO"><strong>Number of other detaches</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of z/OS TCBs that have been,
+or are in the process of being, detached from this CICS dispatcher
+TCB mode.</span> This might be because, for example, the limit for the
+number of TCBs allowed in the TCB pool has been lowered, or there
+are too many TCBs attached in relation to the number of TCBs in use.</p>
+
+<p id="attr_cicscdm__CDMTCBDS"><strong>Number of stolen detaches</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of z/OS TCBs that have been,
+or are in the process of being, stolen from this CICS dispatcher TCB
+mode because it is required by another TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBDU"><strong>Number of unclean detaches</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of z/OS TCBs that have been,
+or are in the process of being, detached from this CICS dispatcher
+TCB mode because the CICS transaction that was associated with the
+TCB has terminated.</span></p>
+
+<p id="attr_cicscdm__CDMSYSW"><strong>Number of partition exits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of partition exits that
+have occurred for this TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBMM"><strong>Number of TCB mismatches</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of z/OS TCB mismatches that
+have occurred for this TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBST"><strong>Number of TCB steals</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of z/OS TCBs that have been
+stolen from other TCB modes.</span></p>
+
+<p id="attr_cicscdm__CDMTCBMD"><strong>Open Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the CICS dispatcher TCB mode is Open, Not open or Unknown.</span> A
+CICS dispatcher TCB mode of type Unknown indicates that this TCB mode
+has not been activated.</p>
+
+<p id="attr_cicscdm__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicscdm__CDMTCBPA"><strong>Peak TCB Attached</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the peak number of z/OS TCBs attached in this CICS dispatcher TCB
+mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBPU"><strong>Peak TCBs in use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the peak number of z/OS TCBs in use in this CICS dispatcher TCB mode.</span></p>
+
+<p id="attr_cicscdm__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicscdm__CDMTCBAF"><strong>TCB Attach Failures</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of z/OS TCB attach failures
+that have occurred in this CICS dispatcher TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMNTCBA"><strong>TCB Attaches</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of z/OS TCBs that have been attached in this CICS dispatcher
+TCB mode.</span></p>
+
+<p id="attr_cicscdm__CDMTCBNM"><strong>TCB Mode Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the two-character name of the CICS Dispatcher TCB mode, either QR,
+RO, CO, SZ, RP, FO, SL, SO, S8, D2, JM, L8, J8 or J9.</span></p>
+
+<p id="attr_cicscdm__CDMTCBMP"><strong>TCB Mode Pool</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the CICS TCB pool, either Open, Hot-Pooling, XPLink, JVM,
+SSL, Threaded or n/a.</span></p>
+
+<p id="attr_cicscdm__CDMTCBAL"><strong>TCBs Allocated</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of times that a TCB was allocated to a task.</span></p>
+
+<p id="attr_cicscdm__CDMACT"><strong>Total CPU time used by this TCB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the accumulated CPU time taken for
+this TCB, accurate to three decimal places.</span> The total time that
+this TCB has been in execution. The value can be entered in the HH:MM:SS.DDD
+format, for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicscdm__CDMTDT"><strong>Total time TCB has been dispatched by z/OS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the accumulated real time that this
+TCB has been dispatched by the z/OS system, accurate to three decimal
+places.</span> The total time used between a z/OS wait issued by the
+dispatcher and the subsequent wait issued by the dispatcher. The value
+can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+</div>
+
+</article></main></body></html>

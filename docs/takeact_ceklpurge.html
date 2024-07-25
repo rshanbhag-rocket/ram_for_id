@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The CEKL Purge predefined Take Action command requests the cancellation of a user task.">
+<meta name="keywords" content="Take Action commands, CEKL Purge">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="Start" href="takeact_overview.html">
+<title>CEKL Purge</title>
+</head>
+<body id="takeact_ceklpurge"><main role="main"><article role="article" aria-labelledby="d25754e11">
+<h1 class="topictitle1" id="d25754e11">CEKL Purge</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The <strong>CEKL Purge</strong> predefined Take Action command requests
+the cancellation of a user task.</p>
+
+<div class="section"><p><strong>Formula:</strong></p>
+</div>
+
+<div class="example"> <pre class="codeblock"><code>F &amp;CICSplex_Transaction_Analysis.CICS_Name,CEKL
+ SET TASK(&amp;CICSplex_Transaction_Analysis.Task_Number) PURGE</code></pre><p>This
+command issues a z/OS® CEKL
+console command to purge the task identified by the Task Number attribute
+from the CICS® region identified
+by the CICS Name attribute;
+both attributes are from the <a href="attr_tran.html#attr_tran">CICSplex Transaction Analysis attribute group</a>.</p>
+</div>
+
+<section class="section" role="region" aria-labelledby="d25754e73"><h2 class="sectiontitle" id="d25754e73">Security considerations</h2><p>Your ability to
+use the CEKL purge command is determined by the general Take Action
+security environment your site set up through the NetView® product.</p>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d25754e11"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="takeact_overview.html" title="The Take Action command feature enables you to enter a command or stop or start a process at any CICS region in your network where one or more Tivoli Enterprise Monitoring Agents are running.">Take Action commands</a></div>
+</div>
+</nav></aside></article></main></body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Subpool Details workspace is provided to aid you in all aspects of storage management.">
+<meta name="keywords" content="workspaces, Subpool Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Subpool Details workspace</title>
+</head>
+<body id="rpt_cicssdp"><main role="main"><article role="article" aria-labelledby="d67547e11">
+<h1 class="topictitle1" id="d67547e11">Subpool Details workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Subpool Details workspace is provided to aid you in
+all aspects of storage management.</p>
+
+<div class="section"><p>Use the Subpool Details workspace in conjunction with
+the <a href="rpt_cicsstor.html#rpt_cicsstor" title="The predefined Storage Analysis workspace shows an overview of the dynamic storage area being used for a single CICS region, the percentages of dynamic storage and the extended dynamic storage areas being used and a comparison of how much storage is in use for DSA and EDSA.">Storage Analysis workspace</a>, the <a href="rpt_cicscsd.html#rpt_cicscsd" title="The predefined Dynamic Storage Detail workspace allows you to investigate any of the DSAs that can be heavily loaded.">Dynamic Storage Detail workspace</a>, and the <a href="rpt_cicspph.html#rpt_cicspph" title="The Pagepool Summary workspace reports the status of storage areas in your CICS regions. There are a large number of attributes associated with the views and they all provide good tuning opportunities. If you need more information about specific details, use the Pagepool Details table view.">Pagepool Summary workspace</a>.</p>
+</div>
+
+<div class="section"><p>The predefined Subpool Details workspace contains the
+following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Subpool allocation request stacked bar chart compares the
+GETMAIN with the FREEMAIN requests for each subpool.</li>
+
+<li>The Subpools Details table view contains the DSA name, index,
+fixed length, boundary, access type, and location of each subpool.
+In addition, the number of GETMAIN and FREEMAIN requests for each
+subpool is reported. Also, the current page storage,  the name of
+a specific DSA, EDSA, or GDSA, subpool type (domain or task), the
+unique number of the task, element count, and high water mark (in
+both KB and MB). </li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicssdp.html#attr_cicssdp">CICSplex Subpool Details attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

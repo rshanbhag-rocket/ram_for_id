@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Web Service Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Web Service Summary attribute group</title>
+</head>
+<body id="attr_cicswbs"><main role="main"><article role="article" aria-labelledby="d35965e10">
+<h1 class="topictitle1" id="d35965e10">CICSplex Web Service Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicswbs__CICSWBS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Web Service Summary attribute
+group summarizes information about an installed WEBSERVICE resource.</span></p>
+
+<p id="attr_cicswbs__REQBDYLEN"><strong>Average Request Body Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The current average request body length
+for the Web Service requests.</span> The value format is a positive
+integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__RSPBDYLEN"><strong>Average Response Body Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The current average response body length
+for the Web Service requests.</span> The value format is a positive
+integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__RESPTIME"><strong>Average Response Time</strong> <span class="ph" data-hd-otherprops="flyover_string">The current average response time for
+the Web Service requests in milliseconds.</span> The value format is
+a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__TOTBDYLEN"><strong>Average Total Body Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The current average total request and
+response body lengths for the Web Service requests.</span> The value
+format is a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__CONTAINER"><strong>Container Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the container used if PGMINTERFACE resource returns a
+value of CHANNEL.</span> The name can be up to 16 characters in length.</p>
+
+<p id="attr_cicswbs__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicswbs__FAULTRAT"><strong>Current Fault Percent</strong> <span class="ph" data-hd-otherprops="flyover_string">The percentage of the current requests
+that had a fault associated with them.</span> The value format is an
+integer with a maximum of two characters.</p>
+
+<p id="attr_cicswbs__REQRATE"><strong>Current Request Rate</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of requests per minute in the
+last one to two minute span.</span> The value format is an integer with
+a maximum of two characters.</p>
+
+<p id="attr_cicswbs__TIMOUTRAT"><strong>Current Timeout Percent</strong> <span class="ph" data-hd-otherprops="flyover_string">The percentage of the current requests
+that had a timeout associated with them.</span> The value format is
+an integer with a maximum of two characters.</p>
+
+<p id="attr_cicswbs__HREQBDYLN"><strong>HWM of Request Body Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The high water mark of the current request
+body length for a Web Service request.</span> The value format is a
+positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__HRSPBDYLN"><strong>HWM of Response Body Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The high water mark of the current response
+body length for a Web Service request.</span> The value format is a
+positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__HRESPTIME"><strong>HWM of Response Time</strong> <span class="ph" data-hd-otherprops="flyover_string">The high water mark of the current response
+time for a Web Service request in milliseconds.</span> The value format
+is a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__HTOTBDYLN"><strong>HWM of Total Body Length</strong> <span class="ph" data-hd-otherprops="flyover_string">The high water mark of the current total
+request and response body lengths for a Web Service request.</span> The
+value format is a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicswbs__PIPELINE"><strong>Pipeline Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+name of the PIPELINE in which the WEBSERVICE resource is installed.</span> For
+example, the name of the PIPELINE resource that contains this WEBSERVICE
+resource. The name can be up to eight characters in length.</p>
+
+<p id="attr_cicswbs__INTRFACE"><strong>Program Interface</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the CICS program that implements the Web Service resource
+expects an input in a channel or in a COMMAREA.</span> These are the
+values:</p>
+
+<dl>
+<dt class="dlterm">CHANNEL</dt>
+
+<dd class="dlentry">The program expects input in a channel.</dd>
+
+
+<dt class="dlterm">COMMAREA</dt>
+
+<dd class="dlentry">The program expects input in a CICS common area.</dd>
+
+</dl>
+
+<p id="attr_cicswbs__PROGRAM"><strong>Program Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of a CICS program that implements the Web Service resource.</span> If
+this WEBSERVICE represents a remote Web Service (for example, CICS
+is not the service provider), the PROGRAM is empty. The name can be
+up to eight characters in length.</p>
+
+<p id="attr_cicswbs__STATUS"><strong>Status</strong> <span class="ph" data-hd-otherprops="flyover_string">The current
+Web service resource status.</span> These are the valid values: Discarding,
+Initiating, Inservice, and Unusable.</p>
+
+<p id="attr_cicswbs__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. The z/OS System
+IDs are always in uppercase characters.</p>
+
+<p id="attr_cicswbs__TOTFAULT"><strong>Total Number of Faults</strong> <span class="ph" data-hd-otherprops="flyover_string">The total number of requests with an associated
+fault since the statistics were reset.</span> The value format is a
+positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__TOTTIMOUT"><strong>Total Number of Timeouts</strong> <span class="ph" data-hd-otherprops="flyover_string">The total number of requests which have
+timed out since the statistics were reset.</span> The value format is
+a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicswbs__TYPE"><strong>Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether CICS is the provider of the Web service or the requestor of
+the Web service.</span> The values are:</p>
+
+<ul>
+<li>Provider</li>
+
+<li>Requestor</li>
+
+</ul>
+
+<p id="attr_cicswbs__URIMAP"><strong>URIMAP Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+name of a dynamically installed URIMAP.</span></p>
+
+<p id="attr_cicswbs__USECOUNT"><strong>Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+usage count for the current Web service resource.</span></p>
+
+<p id="attr_cicswbs__NAME"><strong>Web Service Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+name of the WEBSERVICE resource.</span> The name can be up to 32 characters
+in length.</p>
+
+</div>
+
+</article></main></body></html>

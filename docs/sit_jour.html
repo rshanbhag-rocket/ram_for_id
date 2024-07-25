@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor journals.">
+<meta name="keywords" content="situations, Journal Analysis, CICSplex_JournalDis_Warning, CICSplex_JournalDis_Critical, CICSplex_JournalFail_Warning, CICSplex_JournalFail_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Journal Analysis situations</title>
+</head>
+<body id="sit_jour"><main role="main"><article role="article" aria-labelledby="d12502e11">
+<h1 class="topictitle1" id="d12502e11">Journal Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor journals.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_Journal_Analysis. except where stated.</div>
+<dl>
+<dt class="dlterm">CICSplex_JournalDis_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for disabled journal. <p>A disabled journal cannot be used until it
+is re-enabled. Either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS® CEMT transaction can be used to enable a disabled
+journal.</p>
+
+<p><strong>Formula:</strong> If the value of Journal_Status equals Disabled then situation
+CICSplex_JournalDis_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_JournalDis_Critical</dt>
+
+<dd class="dlentry">This is the critical threshold exceeded for disabled journal. <p>A disabled journal cannot be
+used until it is re-enabled. Either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction can be used to enable a
+disabled journal.</p>
+
+<p><strong>Formula:</strong> If the value of Journal_Status equals Disabled then situation
+CICSplex_JournalDis_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_JournalFail_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for journal failure. <p>A journal that has experienced a log stream
+failure cannot be used until it is re-enabled, or until CICS
+is restarted. The cause of the failure can be determined using the journal views. Either <span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction can be used to enable a journal that has a status of 'failed'.</p>
+
+<p><strong>Formula:</strong> If the value of Journal_Status equals Failed then situation
+CICSplex_JournalFail_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_JournalFail_Critical</dt>
+
+<dd class="dlentry">This is the critical threshold exceeded for journal failure. <p>A journal that has experienced a
+log stream failure cannot be used until it is re-enabled, or until CICS is restarted. The cause of the failure can be determined using the journal views. Either
+<span class="keyword">IBM Z OMEGAMON for CICS</span> or the CICS CEMT transaction can be used to enable a journal that has a status of
+'failed'.</p>
+
+<p><strong>Formula:</strong> If the value of Journal_Status equals Failed then situation
+CICSplex_JournalFail_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_cicsjat.html#attr_cicsjat">CICSplex Journal Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Transaction I/O Waits Analysis workspace is accessed as a link from the Transaction Timings workspace. This information is derived from two attributes groups: The Transaction I/O Waits attribute group and the Transaction I/O Other Waits attribute group; it allows you to examine in more detail the causes for a long wait by a particular task.">
+<meta name="keywords" content="workspaces, Transaction I/O Waits Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transaction I/O Waits Analysis workspace</title>
+</head>
+<body id="rpt_cicstr2"><main role="main"><article role="article" aria-labelledby="d67662e11">
+<h1 class="topictitle1" id="d67662e11">Transaction I/O Waits Analysis workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Transaction I/O Waits Analysis workspace is accessed
+as a link from the Transaction Timings workspace. This information
+is derived from two attributes groups: The Transaction I/O Waits attribute
+group and the Transaction I/O Other Waits attribute group; it allows
+you to examine in more detail the causes for a long wait by a particular
+task.</p>
+
+<div class="section"><p>The predefined Transaction I/O Waits Analysis workspace
+contains the following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The I/O Waits Distribution pie chart displays the I/O waits for
+the following resources: temporary storage, transient data, files,
+journals, terminals, interregion (MRO), LU 6.1 and 6.2, FEPI, RLS
+files, shared temporary storage, and socket I/O.</li>
+
+<li>The Other Waits Distribution pie chart displays waits for Re-dispatch,
+First dispatch, Local ENQ delays, local manager dispatch, WAIT EXTERNAL,
+WAIT CICS®, Interval Control
+elements, dispatchable, Global ENQ, RRMS/z/OS waits, CICS MAXOPEN, and JVM suspend time. </li>
+
+<li>The I/O Waits Details for transaction <strong>tranid</strong> table displays
+the I/O wait times for temporary storage, transient data, files, journals,
+terminals, interregion (MRO), LU 6.1 and 6.2, FEPI, RLS files, shared
+temporary storage, and socket I/O. </li>
+
+<li>The Other Waits Details table view displays the wait times for
+Re-Dispatch, 1st Dispatch Delay, Local ENQ Delay, Lock Manager Delay,
+WAIT EXTERNAL Time, WAITCICS and WAIT EVENT, Interval Control Delay,
+Dispatchable Wait Time, Global ENQ Delay, RRMS/z/OS, CICS MAXOPENTCBS Delay and JVM Suspend.</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicstr2.html#attr_cicstr2">CICSplex Transaction I/O Waits Analysis attribute group</a></li>
+
+<li><a href="attr_cicstr3.html#attr_cicstr3">CICSplex Transaction Wait Other Analysis attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

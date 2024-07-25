@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex File Control Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex File Control Summary attribute group</title>
+</head>
+<body id="attr_cicsfcs"><main role="main"><article role="article" aria-labelledby="d70639e10">
+<h1 class="topictitle1" id="d70639e10">CICSplex File Control Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsfcs__CICSFCS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex File Control Summary attribute
+group provides a summary of the key attributes related to files.</span> Using
+this data you can, for example, monitor the number of active strings
+and compare them with the number of available strings.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex File Control Summary group
+are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicsfcs__ACTSTRNG"><strong>Active Strings</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the current number of updates against the file.</span></p>
+
+<p id="attr_cicsfcs__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight  characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsfcs__ENASTA"><strong>Enable Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies
+whether application programs can access the file.</span> These are the
+values:</p>
+
+<dl>
+<dt class="dlterm">DISABLED</dt>
+
+<dd class="dlentry">The file is not available for use by transactions except for those
+that are currently using it. If there are any such users, 'BEING DISABLED'
+is also displayed. The file can be re-enabled by a SET FILE ENABLED
+command. It is not possible to disable a remote file.</dd>
+
+
+<dt class="dlterm">ENABLED</dt>
+
+<dd class="dlentry">The file is available for use by transactions and, if closed,
+it is opened on the first request.</dd>
+
+
+<dt class="dlterm">UNENABLED</dt>
+
+<dd class="dlentry">The file is not available for use by transactions except for those
+that are currently using it. If there are any such users, 'BEING CLOSED'
+is also displayed. This status is the same as DISABLED except that
+it occurs implicitly when a SET FILE CLOSE is requested. The file
+is enabled implicitly by a SET FILE OPEN command.</dd>
+
+</dl>
+
+<p id="attr_cicsfcs__FILEACCE"><strong>File Access Method</strong> <span class="ph" data-hd-otherprops="flyover_string">Returns a value identifying the access
+method used with this data set.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">BDAM</dt>
+
+<dd class="dlentry">The access method is BDAM.</dd>
+
+
+<dt class="dlterm">NOTAPPLIC</dt>
+
+<dd class="dlentry">The data set has not been opened by the CICS region in which the
+command is issued.</dd>
+
+
+<dt class="dlterm">VSAM</dt>
+
+<dd class="dlentry">The access method is VSAM. Access to a data table (except while
+it is being loaded or, for a CICS-maintained data table, when the
+source data set is being updated or searched for a record that is
+not in the table), is through CICS data table services. Because this
+access is still based on VSAM keys, CICS returns VSAM as the access
+method for any kind of data table.</dd>
+
+
+<dt class="dlterm">Data Table</dt>
+
+<dd class="dlentry">This files represents a data table.</dd>
+
+
+<dt class="dlterm">Remote</dt>
+
+<dd class="dlentry">The file is defined as remote, and therefore the access method
+is not known to the local CICS system.</dd>
+
+</dl>
+
+<p id="attr_cicsfcs__FILEATTR"><strong>File Attributes</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies
+whether the file is to be accessed in RLS mode.</span> The file must
+be closed, and either disabled or unenabled, to change the access
+mode to RLS access or to non-RLS access. The non-RLS mode becomes
+either LSR or NSR, depending on the value specified for LSRPOOLID
+in the file resource definition.</p>
+
+<p id="attr_cicsfcs__FILEID"><strong>File Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the file.</span></p>
+
+<p id="attr_cicsfcs__FILERECF"><strong>File Record Format</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the format of the records on the file.</span> These
+are the values:</p>
+
+<dl>
+<dt class="dlterm">FB</dt>
+
+<dd class="dlentry">The records are of fixed length.</dd>
+
+
+<dt class="dlterm">U</dt>
+
+<dd class="dlentry">The format of records on the file is undefined. The Undefined
+value is possible for BDAM data sets only.</dd>
+
+
+<dt class="dlterm">VB</dt>
+
+<dd class="dlentry">The records are of variable length. If the file is associated
+with a user-maintained data table, the record format is always variable
+length, even if the source data set contains fixed-length records.</dd>
+
+</dl>
+
+<p id="attr_cicsfcs__STRNGWAI"><strong>Number of String Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of waits for strings
+against the file.</span></p>
+
+<p id="attr_cicsfcs__MAXSTRNG"><strong>Number of Strings</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the number of strings (concurrent operations) specified for the file
+in its FILE definition.</span></p>
+
+<p id="attr_cicsfcs__OPNSTA"><strong>Open Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Returns
+a value identifying whether the file is open, closed, or in a transitional
+state.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">Close</dt>
+
+<dd class="dlentry">The file is closed.</dd>
+
+
+<dt class="dlterm">Close in progress</dt>
+
+<dd class="dlentry">The file is in the process of being closed. Closing a file can
+require dynamic deallocation of data sets and deletion of shared resources,
+in which case close processing can last a significant length of time.</dd>
+
+
+<dt class="dlterm">Notapplic</dt>
+
+<dd class="dlentry">The OPENSTATUS value does not apply to this type of file. For
+example, it does not apply to a remote file.</dd>
+
+
+<dt class="dlterm">Open</dt>
+
+<dd class="dlentry">The file is open.</dd>
+
+
+<dt class="dlterm">Open in progress</dt>
+
+<dd class="dlentry">The file is in the process of being opened.</dd>
+
+</dl>
+
+<p id="attr_cicsfcs__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsfcs__REMSYSID"><strong>Remote System</strong> <span class="ph" data-hd-otherprops="flyover_string">Returns
+the name of the CICS region in which the file is defined (from the
+REMOTESYSTEM value in the FILE definition).</span> Blanks are returned
+if the file is not remote.</p>
+
+<p id="attr_cicsfcs__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+</div>
+
+</article></main></body></html>

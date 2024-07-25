@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor the efficiency of MRO and ISC links between regions of a CICSplex and resources of CICS regions. These resources include storage, files, queues, and enqueues.">
+<meta name="keywords" content="situations, Connection Analysis, CICSplex_Sympathy_Sickness, CICSplex_MROPctLink_Warning, CICSplex_MROPctLink_Critical, CICSplex_MROAIDs_Warning, CICSplex_MROAIDs_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Connection Analysis situations</title>
+</head>
+<body id="sit_con"><main role="main"><article role="article" aria-labelledby="d48917e11">
+<h1 class="topictitle1" id="d48917e11">Connection Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor the
+efficiency of MRO and ISC links between regions of a CICSplex and
+resources of CICS® regions.
+These resources include storage, files, queues, and enqueues.</p>
+
+<div class="section"> <dl>
+<dt class="dlterm" id="sit_con__sitmross">CICSplex_Sympathy_Sickness</dt>
+
+<dd class="dlentry">Sympathy sickness occurs when the performance of one CICS
+region is affected as a result of problems in an adjoining CICS region. <p>Use the Connections analysis workspace to examine the status of the connection
+between CICS and its remote regions. Check that the remote
+systems are available with connections that are in service.</p>
+
+<p><strong>Formula:</strong> If the value of Transaction_Rate is less than 10 and ((the value of
+Worst_ISC_Connection_Percent_of_Links_in_Use equals 100 and the value of
+Worst_ISC_Connection_Number_of_AIDs is greater than 0)or (the value of
+Worst_MRO_Connection_Percent_of_Links_in_Use is greater than 99 and the value of
+Worst_MRO_Connection_Number_of_AIDs is greater than 0)) then situation CICSplex_Sympathy_Sickness is
+true.</p>
+</dd>
+
+
+<dt class="dlterm" id="sit_con__sitmrolw">CICSplex_MROPctLink_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for MRO connection percent. <p>If the link usage regularly reaches
+100% and there are one or more tasks waiting, the configuration for that connection can need to be
+altered, with an increase in the number of links defined. Effectively, there is an MRO bottleneck
+caused by a lack of paths available for work to be scheduled cross-system.</p>
+
+<p><strong>Formula:</strong> If the value of Worst_MRO_Connection_Percent_of_Links_in_Use is greater than 80
+and the value of Worst_MRO_Connection_Percent_of_Links_in_Use is less than or equal to 90 then
+situation CICSplex_MROPctLink_Warning is true. </p>
+</dd>
+
+
+<dt class="dlterm" id="sit_con__sitmrolc">CICSplex_MROPctLink_Critical</dt>
+
+<dd class="dlentry">If the link usage is regularly reaches 100% and there are one or more tasks waiting, the
+configuration for that connection can need to be altered, with an increase in the number of links
+defined. Effectively, there is an MRO bottleneck caused by a lack of paths available for work to be
+scheduled cross-system. <p><strong>Formula:</strong> If the value of
+Worst_MRO_Connection_Percent_of_Links_in_Use is greater than 90 then situation
+CICSplex_MROPctLink_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm" id="sit_con__sitmroaw">CICSplex_MROAIDs_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for MRO AID count. <p>If the link usage is regularly reaches 100% and
+there are one or more tasks waiting, the configuration for that connection can need to be altered,
+with an increase in the number of links defined. Effectively, there is an MRO bottleneck caused by a
+lack of paths available for work to be scheduled cross-system. Check that the remote system is
+available and that the connections are in service.</p>
+
+<p><strong>Formula:</strong> If the value of Worst_MRO_Connection_Number_of_AIDs is greater than 5 and the
+value of Worst_MRO_Connection_Number_of_AIDs is less than or equal to 10 then situation
+CICSplex_MROAIDs_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm" id="sit_con__sitmroac">CICSplex_MROAIDs_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for MRO AID count. <p>If the link usage is regularly hitting 100%
+and there are one or more tasks waiting, the configuration for that connection can need to be
+altered, with an increase in the number of links defined. Effectively, there is an MRO bottleneck
+caused by a lack of paths available for work to be scheduled cross-system. Check that the remote
+system is available and that the connections are in service.</p>
+
+<p><strong>Formula:</strong> If the value of Worst_MRO_Connection_Number_of_AIDs is greater than 10 then
+situation CICSplex_MROAIDs_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_con.html#attr_con">CICSplex Connection Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

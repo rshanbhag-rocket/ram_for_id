@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Transaction Manager Statistics workspace monitors the number of tasks in your CICS regions. By using this data you can monitor the number of tasks compared with the MAXTASK value.">
+<meta name="keywords" content="workspaces, Transaction Manager Statistics">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transaction Manager Statistics workspace</title>
+</head>
+<body id="rpt_cicstmr"><main role="main"><article role="article" aria-labelledby="d13708e11">
+<h1 class="topictitle1" id="d13708e11">Transaction Manager Statistics workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Transaction Manager Statistics workspace monitors the
+number of tasks in your CICS® regions.
+By using this data you can monitor the number of tasks compared with
+the MAXTASK value.</p>
+
+<div class="section"><p>Use this workspace to do the following tasks:</p>
+</div>
+
+<div class="section"> <ul>
+<li>Set a Threshold to warn when the MAXTASK value is being reached.</li>
+
+<li>Define a situation that increases the MAXTASK value when the number
+of Tasks is close to the MAXTASK limit.</li>
+
+</ul>
+</div>
+
+<div class="section"><p>The predefined Transaction Manager Statistics workspace
+contains these views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The CICS Backlog Monitor
+graph shows the Current MAXTASK value, active user transactions, queued
+transactions and the peak user transactions. Using this graph you
+can see the relationship between the number of active transactions
+and when that number approaches the MAXTASK value. </li>
+
+<li>The Transaction Manager Statistics table view shows the following
+information: <ul>
+<li> The current MAXTASK value and the number of active, queued transactions
+for each region. </li>
+
+<li> Peak and total active user transactions </li>
+
+<li> Peak and total queued user transactions </li>
+
+<li> The suspended transaction and system transaction count. </li>
+
+<li> The average MAXTASK queuing time, the average current queuing
+time, the total MAXTASK time, and the current MAXTASK time. </li>
+
+</ul>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicstmr.html#attr_cicstmr">CICSplex Transaction Manager Statistics attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

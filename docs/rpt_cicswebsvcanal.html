@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Web Services Analysis workspace determines the status of the various aspects of the connectivity between your CICS regions and your Web services (software systems designed to support interoperable, machine-to-machine interaction over a network).">
+<meta name="keywords" content="workspaces, Web Services Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Web Services Analysis workspace</title>
+</head>
+<body id="rpt_cicswebsvcanal"><main role="main"><article role="article" aria-labelledby="d24094e11">
+<h1 class="topictitle1" id="d24094e11">Web Services Analysis workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Web Services Analysis workspace determines the status
+of the various aspects of the connectivity between your CICS® regions and your Web services (software
+systems designed to support interoperable, machine-to-machine interaction
+over a network).</p>
+
+<div class="section"><p>With Web services, your CICS applications
+can communicate with heterogeneous Web applications as a Web services
+requester, a Web services provider, or both. If you are experiencing
+problems integrating your CICS applications
+with other business applications using the Worldwide Web, use this
+workspace to quickly verify that all the Web service components are
+defined and available.</p>
+<p>The predefined Web Services Analysis
+workspace contains the following table views:</p>
+<ul>
+<li>The Web Services Summary table view provides a summary of all
+the Web services currently available. From the Web Services Summary
+table view you can link to the following workspaces: <ul>
+<li><a href="rpt_cicswbd.html#rpt_cicswbd" title="The Web Services Details workspace provides a detailed look at a selected Web service.">Web Services Details workspace</a></li>
+
+<li><a href="rpt_cicswbtrans.html#rpt_cicswbtrans" title="Depending on your link filtering (Web Services Transactions or All Web Services Transactions), you can use the Web Services Transactions workspace to view Web service and transaction details for a specific Web service or for all Web services and transactions.">Web Services Transactions workspace</a> (All
+Web Services Transactions depending on your filtering)</li>
+
+</ul>
+If the latest version of the ITCAM for SOA product is also installed
+and running, you can link to the Performance Summary workspace, that
+is filtered by the Web Service name and Operation attributes. With
+this feature, you can track a transaction's activity as it moves between
+the CICS and ITCAM for SOA
+products.</li>
+
+<li>The Pipeline Summary view summarizes information about pipelines
+referenced by your Web services. From the Pipeline Summary workspace,
+you can link to the <a href="rpt_cicspid.html#rpt_cicspid" title="The Pipeline Details workspace provides a detailed look at a selected pipeline.">Pipeline Details workspace</a>.</li>
+
+<li>The Virtual Host Detail view provides a summary of all your currently
+defined virtual hosts.</li>
+
+<li>The Document Template Details view provides detailed information
+about all document templates defined for your Web services. From the
+Document Template Details view, depending on the Source Type for the
+view row you select when linking, you can link to the following workspaces: <ul>
+<li><a href="rpt_cicsexd_2.html#rpt_cicsexd_2" title="The Exit Details workspace provides detailed information about the exit program started by a selected document template.">Exit Details workspace</a>, if the
+Source Type is EXIT</li>
+
+<li><a href="rpt_cicsfcd_2.html#rpt_cicsfcd_2" title="The File Details workspace provides detailed information about a specific file referenced by a selected document template.">File Details workspace</a>, if the
+Source Type is FILE</li>
+
+<li><a href="rpt_cicspgd.html#rpt_cicspgd" title="The Program Details workspace provides detailed information about the program started by a selected document template.">Program Details workspace</a>, if the Source
+Type is PROGRAM</li>
+
+<li><a href="rpt_cicstsd.html#rpt_cicstsd" title="The Temporary Storage Queue Details workspace provides detailed information about the temporary storage queues referenced by a selected document template.">Temporary Storage Queue Details workspace</a>, if the Source
+Type is TSQ</li>
+
+<li><a href="rpt_cicstdd.html#rpt_cicstdd" title="The Transient Data Details workspace provides detailed information about the transient data queues referenced by a selected document template.">Transient Data Details workspace</a>, if the Source
+Type is TDQ</li>
+
+</ul>
+</li>
+
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="attr_cicswbs.html#attr_cicswbs">CICSplex Web Service Summary attribute group</a></li>
+
+<li><a href="attr_cicspis.html#attr_cicspis">CICSplex Pipeline Summary attribute group</a></li>
+
+<li><a href="attr_cicsodv.html#attr_cicsodv">CICSplex Online Data Viewing attribute group</a></li>
+
+<li><a href="attr_cicshsd.html#attr_cicshsd">CICSplex Virtual Host Detail attribute group</a></li>
+
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

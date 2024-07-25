@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="These predefined situations in this category monitors transient data.">
+<meta name="keywords" content="situations, Transient Data Analysis, CICSplex_TDBuffer_Warning, CICSplex_TDBuffer_Critical, CICSplex_TDCIs_Warning, CICSplex_TDCIs_Critical, CICSplex_TDActStr_Warning, CICSplex_TDActStr_Critical, CICSplex_TDBufWait_Warning, CICSplex_TDBufWait_Critical, CICSplex_TDStrWait_Warning, CICSplex_TDStrWait_Critical, CICSplex_TDTrigger_Warning, CICSplex_TDTrigger_Critical, CICSplex_TDQueueLen_Warning, CICSplex_TDQueueLen_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transient Data Analysis situations</title>
+</head>
+<body id="sit_tdata"><main role="main"><article role="article" aria-labelledby="d40149e11">
+<h1 class="topictitle1" id="d40149e11">Transient Data Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">These predefined situations in this category monitors transient
+data.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_Transient_Data_Summary. except where stated.</div>
+<dl>
+
+<dt class="dlterm">CICSplex_TDBuffer_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD buffer usage. <p>Select the Transient Data Summary workspace
+to determine if transient data buffer waits are a persistent problem. If you find that a shortage of
+transient data buffers is the primary cause of degradation in your system, consider changing the
+value in the SIT and recycle your region. Increasing the number of transient data buffers increases
+your overall virtual storage requirements.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Buffers_in_Use is greater than 80 and the value of
+Percent_Buffers_in_Use is less than or equal to 90 then situation CICSplex_TDBuffer_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDBuffer_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD buffer usage. <p>Select the <a href="rpt_transdatasum.html#rpt_transdatasum" title="The predefined Transient Data Summary workspace shows data on the current use of intrapartition resources, transient data VSAM data for a specific CICS region as well as wait count data.">Transient Data Summary workspace</a> to determine if transient data buffer waits are a
+persistent problem. If you find that a shortage of transient data buffers is the primary cause of
+degradation in your system, consider changing the value in the SIT and recycle your region.
+Increasing the number of transient data buffers increases your overall virtual storage
+requirements.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Buffers_in_Use is greater than 90 then situation
+CICSplex_TDBuffer_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDCIs_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD CI usage. <p>Consider reallocating the DFHINTRA data set with
+more space to accommodate your peak transaction rate. Unlike temporary storage, each CI of the
+intrapartition data set only contains records belonging to the same queue. Specifying REUSE for a
+destination allows a different queue to use the CI when all records in the CI have been read. This
+significantly improves performance because tasks have to incur the overhead of handling NOSPACE
+conditions less often.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_CIs_in_Use is greater than 80 and the value of
+Percent_CIs_in_Use is less than or equal to 90 then situation CICSplex_TDCIs_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDCIs_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD CI usage. <p>Consider reallocating the DFHINTRA data set with
+more space to accommodate your peak transaction rate. Unlike temporary storage, each CI of the
+intrapartition data set only contains records belonging to the same queue. Specifying REUSE for a
+destination allows a different queue to use the CI when all records in the CI have been read.This
+significantly improves performance because tasks have to incur the overhead of handling NOSPACE
+conditions less often.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_CIs_in_Use is greater than 90 then situation
+CICSplex_TDCIs_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDActStr_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD active strings. <p>Increase the number of strings as needed.
+Occasional peaks are not a problem, but should be kept to a minimum to avoid response time
+degradation. The Transient Data Summary workspace is used to monitor the status of TD strings and
+buffers.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Active_Strings is greater than 80 and the value of
+Percent_Active_Strings is less than or equal to 90 then situation CICSplex_TDActStr_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDActStr_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD active strings. <p>Increase the number of strings as needed.
+Occasional peaks are not a problem, but should be kept to a minimum to avoid response time
+degradation. The Transient Data Summary workspace is used to monitor the status of TD strings and
+buffers.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Active_Strings is greater than 90 then situation
+CICSplex_TDActStr_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDBufWait_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD buffer waits. <p>Select the Transient Data Summary workspace
+to determine if transient data buffer waits are a persistent problem. If you find that a shortage of
+transient data buffers is the primary cause of degradation in your system, consider changing the
+value in the SIT and recycle your region. Increasing the number of transient data buffers increases
+your overall virtual storage requirements.</p>
+
+<p><strong>Formula:</strong> If the value of Buffer_Waits is greater than 1 and the value of Buffer_Waits is
+less than or equal to 2 then situation CICSplex_TDBufWait_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDBufWait_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD buffer waits. <p>Select the Transient Data Summary workspace
+to determine if transient data buffer waits are a persistent problem. If you find that a shortage of
+transient data buffers is the primary cause of degradation in your system, consider changing the
+value in the SIT and recycle your region. Increasing the number of transient data buffers increases
+your overall virtual storage requirements.</p>
+
+<p><strong>Formula:</strong> If the value of Buffer_Waits is greater than 2 then situation
+CICSplex_TDBufWait_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDStrWait_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD string waits. <p>Increase the number of strings as needed.
+Occasional peaks are not a problem, but should be kept to a minimum to avoid response time
+degradation. The Transient Data Summary workspace is used to monitor the status of TD strings and
+buffers.</p>
+
+<p><strong>Formula:</strong> If the value of Current_String_Waits is greater than 1 and the value of
+Current_String_Waits is less than or equal to 2 then situation CICSplex_TDStrWait_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDStrWait_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD string waits. <p>Increase the number of strings as needed.
+Occasional peaks are not a problem, but should be kept to a minimum to avoid response time
+degradation. The Transient Data Summary workspace is used to monitor the status of TD strings and
+buffers.</p>
+
+<p><strong>Formula:</strong> If the value of Current_String_Waits is greater than 2 then situation
+CICSplex_TDStrWait_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDTrigger_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD queue over trigger. <p>It is necessary to raise the priority
+of the task that removes the transient data records in order to avoid exceeding the trigger level.
+If the destination is associated with a terminal, check the terminal printer to make sure that it is
+available.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_Transient_Data_Queues.Queue_Over_Trigger is greater than
+0 and the value of CICSplex_Transient_Data_Queues.Queue_Over_Trigger less than or equal to 1 then
+situation CICSplex_TDTrigger_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDTrigger_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD queue over trigger. <p>It is necessary to raise the priority
+of the task that removes the transient data records in order to avoid exceeding the trigger level.
+If the destination is associated with a terminal, check the terminal printer to make sure that it is
+available.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_Transient_Data_Queues.Queue_Over_Trigger is greater than
+1 then situation CICSplex_TDTrigger_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDQueueLen_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for TD queue length. <p>Ensure that the predicate in this situation
+specifies the highest trigger level or the number of queues that can fill DFHINTRA. CICS® abnormally terminates if the data set overflows. Use the transaction
+history component of <span class="keyword">IBM Z OMEGAMON for CICS</span> to verify
+that the task that reads and deletes the queue is not being terminated with an abend.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_Transient_Data_Queues.Queue_Length is greater than 100
+and the value of CICSplex_Transient_Data_Queues.Queue_Length is less than or equal to 300 then
+situation CICSplex_TDQueueLen_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TDQueueLen_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for TD queue length. <p>Ensure that the predicate in this situation
+specifies the highest trigger level or the number of queues that can fill DFHINTRA. CICS abnormally terminates if the data set overflows. Use the transaction
+history component of <span class="keyword">IBM Z OMEGAMON for CICS</span> to verify
+that the task that reads and deletes the queue is not being terminated with an abend.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_Transient_Data_Queues.Queue_Length is greater than 300
+then situation CICSplex_TDQueueLen_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_cicstds.html#attr_cicstds">CICSplex Transient Data Summary attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Task DB2 Statistics">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex TS Models Summary attribute group</title>
+</head>
+<body id="attr_cicstsl"><main role="main"><article role="article" aria-labelledby="d15793e10">
+<h1 class="topictitle1" id="d15793e10">CICSplex TS Models Summary attribute group</h1>
+
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstsl__CICSTSL"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex TS Models Summary attributes provide a summary of all
+TS Models defined to the system.</span></p>
+
+<p id="attr_cicstsl__CICSNAME"><strong>CICS Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Identifies the name of the CICS region that is being
+monitored.</span></p>
+
+<p id="attr_cicstsl__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID) and CICS region
+name.</span> The value format is a case-sensitive, alphanumeric string, maximum 32 bytes</p>
+
+<p id="attr_cicstsl__MODELNAME"><strong>Model Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The name of the temporary storage model.</span></p>
+
+<p id="attr_cicstsl__PREFIX"><strong>TS Queue Prefix</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The prefix used for evaluating the temporary storage queues to which
+this model is to be applied.</span></p>
+
+<p id="attr_cicstsl__LOCATION"><strong>Queue Location</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Location of temporary storage queues matching this model as
+AUXILIARY (the CICS temporary storage VSAM data set, DFHTEMP) or MAIN (Main storage).</span></p>
+
+<p id="attr_cicstsl__RECOVSTAT"><strong>Recovery Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Defines the recovery characteristics for temporary storage queues
+matching this model.</span> Has a value of RECOVERABLE or NOTRECOVABLE.</p>
+
+<p id="attr_cicstsl__REMPREFIX"><strong>Remote Queue Prefix</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The prefix of the queues on the remote system that this model is
+applied to.</span></p>
+
+<p id="attr_cicstsl__REMOTESYS"><strong>Remote System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The name of the Remote CICS System on which the queues matching this
+model is defined.</span></p>
+
+<p id="attr_cicstsl__SECURITYST"><strong>Security Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The security characteristics for temporary storage queues matching
+this model. as a value of EXTSECURITY (EXT) or NOSECURITY.</span></p>
+
+<p id="attr_cicstsl__POOLNAME"><strong>Shared Pool Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The name of the shared temporary storage pool to be used by this TS
+Model.</span></p>
+
+<p id="attr_cicstsl__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely identifies an active
+z/OS operating system within a given CICSplex.</span></p>
+
+<p id="attr_cicstsl__EXPIRYINT"><strong>Expiry Interval in Minutes</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Specifies the last used interval limit time, in minutes, which is
+used to determine whether a temporary storage queue based on this TSMODEL has expired and is
+eligible to be automatically deleted.</span></p>
+
+</div>
+
+</article></main></body></html>

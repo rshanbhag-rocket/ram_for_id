@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction Details attribute group</title>
+</head>
+<body id="attr_cicstrd"><main role="main"><article role="article" aria-labelledby="d1207e10">
+<h1 class="topictitle1" id="d1207e10">CICSplex Transaction Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstrd__CICSTRD"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transaction Details attributes provide detailed
+information about a running transaction.</span> Use the CICSplex Transaction Details attributes to see
+how much CPU and storage the task is using, and to determine its current state. High CPU and storage
+consumption are indicators of a looping task which can seriously degrade performance. A looping task
+can lock up the entire CICS region, or exhaust available CICS storage causing a short on storage
+condition.</p>
+
+<p>If you want to view how the task has spent its time so far, select the Transaction Timings link
+in the Transaction Analysis workspace. If you want to see details about the amount of storage a task
+is currently using or statistics about the storage it has used throughout its life, select the
+Transaction Storage Analysis link in Transaction Analysis workspace.</p>
+
+<p id="attr_cicstrd__ATCHTIME"><strong>Attach Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the date and time when the transaction was
+attached.</span></p>
+
+<p id="attr_cicstrd__CICSNAME"><strong>CICS Region Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the CICS region being
+monitored.</span> Each CICS region in a z/OS operating system has a unique name. This name is an
+alphanumeric string, with a maximum of eight characters, and case-sensitive. CICS region names are
+always in uppercase characters.</p>
+
+<p id="attr_cicstrd__CPUTIME"><strong>CPU Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of CPU time (in thousandths of a second) used
+by the transaction.</span></p>
+
+<p id="attr_cicstrd__CPUTIME_MS"><strong>CPU Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of accumulated CPU time (in seconds) used by
+this task.</span></p>
+
+<p id="attr_cicstrd__CURRPGM"><strong>Current Program ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the program currently being executed by this
+transaction.</span></p>
+
+<p id="attr_cicstrd__QUEUE"><strong>Dispatcher Queue</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates in which of the dispatcher queues this transaction is
+found.</span></p>
+
+<p id="attr_cicstrd__ELAPTIME"><strong>Elapsed Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the time elapsed, accurate to three decimal places, since
+the transaction was attached.</span> The value can be entered in the HH:MM:SS.DDD format, for example,
+00:20:00.567, or as SSSSSSS.DDD, for example 1200.567. If you are using variable substitution, the
+value in this example would display as 1200567. See the online help for more details on variable
+substitution or inputting values in situations and filters.</p>
+
+<p id="attr_cicstrd__ELAPTIM_MS"><strong>Elapsed Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds) the transaction had been
+executing at the time this information was collected (current time minus transaction start
+time).</span></p>
+
+<p id="attr_cicstrd__EXECCMD"><strong>EXEC CICS Command</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the function code of the current or last EXEC CICS command issued
+by the running application program.</span></p>
+
+<p id="attr_cicstrd__FACID"><strong>Facility ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the unique identifier of the facility to which the
+transaction is attached.</span></p>
+
+<p id="attr_cicstrd__FACTYPE"><strong>Facility Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the type of facility to which the transaction is
+attached.</span></p>
+
+<p id="attr_cicstrd__FIRSTPGM"><strong>First Program ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the program first invoked when the transaction started.</span></p>
+
+<p id="attr_cicstrd__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID) and CICS region
+name.</span> The value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name in the attribute to the names
+of managed systems assigned to the item. If the origin node name matches the name of a managed
+system, the status of the item changes accordingly. If the names of the origin node and the managed
+systems do not match, the status of the item remains unchanged.</p>
+
+<p id="attr_cicstrd__ORIGTRID"><strong>Originating Transaction ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the transaction ID used to originate this transaction.</span></p>
+
+<p id="attr_cicstrd__PURGSTAT"><strong>Purge Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates whether the transaction is purged.</span></p>
+
+<p id="attr_cicstrd__PURGEABL"><strong>Purgeable Suspend</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates whether or not the suspended transaction is purged.</span>
+</p>
+
+<p id="attr_cicstrd__RNAME"><strong>Resource Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the resource the transaction is waiting to
+access.</span></p>
+
+<p id="attr_cicstrd__RTYPE"><strong>Resource Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the category of resource for which the transaction is
+waiting.</span></p>
+
+<p id="attr_cicstrd__USEDA16"><strong>Storage Used Above 16 MB</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of storage (in kilobytes) above the 16 megabyte
+line used by the transaction.</span></p>
+
+<p id="attr_cicstrd__USEDB16"><strong>Storage Used Below 16 MB</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of storage (in kilobytes) below the 16 megabyte
+line used by the transaction.</span></p>
+
+<p id="attr_cicstrd__SUSPDUE"><strong>Suspend Timeout Due</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the time and date this transaction is because of be purged
+if the suspend does not end.</span></p>
+
+<p id="attr_cicstrd__SUSPTYPE"><strong>Suspend Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the type of request that is causing this transaction to
+wait.</span></p>
+
+<p id="attr_cicstrd__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely identifies an active
+z/OS operating system within a given CICSplex.</span> The value format is an alphanumeric string,
+maximum four characters, and case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstrd__TASKNO"><strong>Task Number</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number sequentially assigned by CICS to uniquely identify
+each task.</span></p>
+
+<p id="attr_cicstrd__STATE"><strong>Task State</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates whether the transaction is currently running and if not,
+why.</span></p>
+
+<p id="attr_cicstrd__SUSPTIME"><strong>Time in Suspend</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (accurate to three decimal places) the
+transaction has spent waiting.</span> The value can be entered in the HH:MM:SS.DDD format, for
+example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567. If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstrd__SUSPTIM_MS"><strong>Time in Suspend</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (in seconds) the transaction has spent
+waiting.</span></p>
+
+<p id="attr_cicstrd__TIMEOFSU"><strong>Time of Suspend</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the time at which this transaction started the current
+wait.</span></p>
+
+<p id="attr_cicstrd__TRACEACT"><strong>Trace Active</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates if trace has been collected for the task.</span></p>
+
+
+<p id="attr_cicstrd__TRACESIZE"><strong>Trace Size</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total amount of trace data recorded by this transaction. This
+may be greater than the allowed trace size, in which case the trace collected will contain the most
+recent data allowed.</span></p>
+
+<p id="attr_cicstrd__TRANID"><strong>Transaction ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the four character name of the transaction.</span></p>
+
+<p id="attr_cicstrd__UMBTRID"><strong>Umbrella Transaction ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the transaction ID assigned to the transaction by the
+application that is calling the umbrella transaction services.</span></p>
+
+<p id="attr_cicstrd__UOWSTATE"><strong>UOW State</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The state of the unit of work.</span></p>
+
+<p id="attr_cicstrd__USERID"><strong>User ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the one to eight character identifier of the CICS
+user.</span></p>
+
+</div>
+
+</article></main></body></html>

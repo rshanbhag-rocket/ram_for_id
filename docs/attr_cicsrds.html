@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Region Dataset Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Region Dataset Analysis attribute group</title>
+</head>
+<body id="attr_cicsrds"><main role="main"><article role="article" aria-labelledby="d29869e10">
+<h1 class="topictitle1" id="d29869e10">CICSplex Region Dataset Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsrds__CICSRDS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Region Dataset Analysis attributes
+report on the internal resources of CICS regions.</span></p>
+
+<p id="attr_cicsrds__ACTSTRNG"><strong>Active Strings</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the current number of updates against the data set.</span></p>
+
+<p id="attr_cicsrds__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsrds__CONCATNO"><strong>Concatenation Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the data set concatenation number as
+specified in the Job JCL.</span></p>
+
+<p id="attr_cicsrds__FILEDISP"><strong>Data Set Disposition</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the Data Set Disposition.</span></p>
+
+<p id="attr_cicsrds__DATASET"><strong>Data Set Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of data set allocated to the CICS region.</span></p>
+
+<p id="attr_cicsrds__FILETYPE"><strong>Data Set Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the type of data set.</span></p>
+
+<p id="attr_cicsrds__DDNAME"><strong>DDNAME</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+DDNAME as specified in region JCL.</span></p>
+
+<p id="attr_cicsrds__FILEACCE"><strong>File Access</strong> <span class="ph" data-hd-otherprops="flyover_string">Returns
+a value identifying the access method used with this data set.</span> These
+are the values:</p>
+
+<dl>
+<dt class="dlterm">BDAM</dt>
+
+<dd class="dlentry">The access method is BDAM.</dd>
+
+
+<dt class="dlterm">NOTAPPLIC</dt>
+
+<dd class="dlentry">The data set has not been opened by the CICS region in which the
+command is issued.</dd>
+
+
+<dt class="dlterm">VSAM</dt>
+
+<dd class="dlentry">The access method is VSAM.</dd>
+
+</dl>
+
+<p id="attr_cicsrds__FILEATTR"><strong>File Attributes</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies
+whether the file is to be accessed in RLS mode.</span> The file must
+be closed, and either disabled or unenabled, to change the access
+mode to RLS access or to non-RLS access. The non-RLS mode becomes
+either LSR or NSR, depending on the value specified for LSRPOOLID
+in the file resource definition.</p>
+
+<p id="attr_cicsrds__MAXSTRNG"><strong>Number of Strings</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of VSAM strings allocated.</span></p>
+
+<p id="attr_cicsrds__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsrds__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsrds__VOLSER"><strong>Volser</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+volume serial number of the data set.</span></p>
+
+<p id="attr_cicsrds__ENASTA"><strong>VSAM Enable status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the enable status of a VSAM file.</span></p>
+
+<p id="attr_cicsrds__OPNSTA"><strong>VSAM Open Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the Open/Close status of a VSAM file.</span></p>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Transaction Umbrella Information workspace allows you to view details of a transaction that uses IBM Z OMEGAMON for CICS umbrella services; these services are useful when tracking either long-running tasks that perform multiple functions or tasks where many programs might be invoked through a single transaction ID (a characteristic of many fourth-generation language packages). The umbrella user data is a work area available for use by an application for reading and storing information. It is displayed in this workspace in both character and hexadecimal formats.">
+<meta name="keywords" content="workspaces, Transaction Umbrella Information">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transaction Umbrella Information workspace</title>
+</head>
+<body id="rpt_cicstru"><main role="main"><article role="article" aria-labelledby="d42435e11">
+<h1 class="topictitle1" id="d42435e11">Transaction Umbrella Information workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Transaction Umbrella Information workspace allows you
+to view details of a transaction that uses <span class="keyword">IBM Z OMEGAMON for CICS</span> umbrella
+services; these services are useful when tracking either long-running
+tasks that perform multiple functions or tasks where many programs
+might be invoked through a single transaction ID (a characteristic
+of many fourth-generation language packages). The umbrella user data
+is a work area available for use by an application for reading and
+storing information. It is displayed in this workspace in both character
+and hexadecimal formats. </p>
+
+<div class="section"><p>The Transaction Umbrella Information workspace is accessed
+as a link from the <a href="rpt_trananal.html#rpt_trananal" title="The Transaction Analysis workspace shows a comprehensive view of transactions, which enables you to identify problem transactions across CICS regions and z/OS images for the CICSplex.">Transaction Analysis workspace</a>.
+ </p>
+</div>
+
+<div class="section"><p>The predefined Transaction Umbrella Data workspace contains
+the following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Umbrella Information for Transaction <strong>tranid</strong> table view
+displays the following information about the transaction that you
+have selected if it is an umbrella transaction: <ul>
+<li> The transaction ID, umbrella transaction ID, the task number,
+and the umbrella program ID. </li>
+
+<li> User Work Area, and User Work Area (Hex) for the selected transaction. </li>
+
+</ul>
+</li>
+
+<li>The Transactions Using Umbrella Services table view displays the
+following details for all umbrella transactions in the selected CICS region: <ul>
+<li> The transaction ID, umbrella transaction ID, the task number,
+and the umbrella program ID. </li>
+
+<li> The resource type and name. </li>
+
+<li> The suspended time, CPU time, and elapsed time. </li>
+
+<li> The storage above and below the 16-megabyte line. </li>
+
+<li> The attach time, the time of the suspend, and the Suspend timeout
+due. </li>
+
+<li> The Facility ID and type. </li>
+
+<li> The originating Transaction ID, task state, and dispatcher queue. </li>
+
+<li> The first program ID, the current program ID. </li>
+
+<li> The user ID. </li>
+
+<li> The EXEC CICS command. </li>
+
+<li> The purge status, whether it is purged or not.</li>
+
+<li> The suspend state and the UOW state. </li>
+
+</ul>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicstru.html#attr_cicstru">CICSplex Transaction Umbrella Data attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The LSR Pool Status predefined workspace enables you to view the general state of the Local Shared Resource (LSR) pools and provides information related to their impact on performance. For example, the Lookaside Ratio information indicates what percentage of records are being retrieved from buffers rather than disks. A low Lookaside Ratio is a negative performance indicator because the disk retrievals are causing I/O. This workspace also provides statistical data regarding the numbers of strings being used and the amount of string waits.">
+<meta name="keywords" content="workspaces, LSR Pool Status">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>LSR Pool Status workspace</title>
+</head>
+<body id="rpt_lsrpoolstat"><main role="main"><article role="article" aria-labelledby="d14688e11">
+<h1 class="topictitle1" id="d14688e11">LSR Pool Status workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The LSR Pool Status predefined workspace  enables you to
+view the general state of the Local Shared Resource (LSR) pools and
+provides information related to their impact on performance. For example,
+the Lookaside Ratio information indicates what percentage of records
+are being retrieved from buffers rather than disks. A low Lookaside
+Ratio is a negative performance indicator because the disk retrievals
+are causing I/O. This workspace also provides statistical data regarding
+the numbers of strings being used and the amount of string waits.</p>
+
+<div class="section"><p>The predefined LSR Pool Status workspace contains the
+following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Local Shared Resource Pools table view provides information
+about the LSR pools that have been built in CICS® for VSAM files</li>
+
+<li>The LSR Pool Performance bar chart provides the following data
+for each LSR pool: <ul>
+<li> Percent of Active Strings</li>
+
+<li> Lookaside Ratio </li>
+
+</ul>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><div class="p">The  Local Shared Resource Pools table view provides the
+following information: <ul>
+<li>The percentage of VSAM read requests that were satisfied without
+initiating I/O because the Control Interval (CI) was already resident
+in the buffer pool</li>
+
+<li>The status of the LSR pool</li>
+
+<li>The number of current string waits</li>
+
+</ul>
+</div>
+</div>
+
+<div class="section"><p>You can use the CICSPlex LSR Pool Details attribute group
+to customize your workspace by adding a table view to the existing
+LSR Pool Status workspace that provides details on a specific LSR
+pool, with regard to buffer type, and size within a CICS region. For
+example, if you had users that were reporting degraded performance
+and poor response times, you would check in the Local Shared Resource
+Pools table view and see what CICS region LSR pool has a high number
+of buffer reads and a low lookaside ratio. Then, using your newly
+created details view, you see all the details for that specific LSR
+pool. You notice that one file is using many more strings than the
+other files. You investigate the file and find that the control interval
+size index was increased causing a shortage of buffers. You resolve
+the problem by adjusting the LSR pool buffer distribution accordingly.</p>
+</div>
+
+<div class="section"><p>See the Tivoli Enterprise Portal on line help or the <em>IBM
+Tivoli Enterprise Portal User's Guide</em> for instructions on how
+to add a view to a workspace.</p>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicslps.html#attr_cicslps">CICSplex LSR Pool Status attribute group</a></li>
+
+<li><a href="attr_cicslpd.html#attr_cicslpd">CICSplex LSR Pool Details attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

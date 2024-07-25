@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Overview">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Overview attribute group</title>
+</head>
+<body id="attr_kcpplx"><main role="main"><article role="article" aria-labelledby="d69113e10">
+<h1 class="topictitle1" id="d69113e10">CICSplex Overview attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_kcpplx__KCPPLX"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Overview
+attribute group displays the key metrics that identifies the health
+for the collection of CICS regions in your CICSplex environment.</span></p>
+
+<p id="attr_kcpplx__ALLACB"><strong>All VTAM ACBs Open</strong> <span class="ph" data-hd-otherprops="flyover_string">The value that indicates if all the CICS regions
+have VTAM ACBs that are open.</span> The valid values are Yes and No.</p>
+
+<p id="attr_kcpplx__ANYSOS"><strong>Any SOS Regions</strong> <span class="ph" data-hd-otherprops="flyover_string">The value that indicates if any CICS regions
+are marked Short On Storage in the CICSplex.</span> The valid values
+are Yes and No.</p>
+
+<p id="attr_kcpplx__AGSMFID"><strong>CICSplex Agent SMFID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">SMFID of the agent that manages this CICSplex.</span>
+</p>
+
+<p id="attr_kcpplx__AGJOBNAME"><strong>CICSplex Agent Job Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Job name of the agent that manages this CICSplex.</span>
+</p>
+
+<p id="attr_kcpplx__CICSPLEX"><strong>CICSplex Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the CICSplex that is being monitored.</span> This
+name is an alphanumeric string, with a maximum of eight characters,
+and case-sensitive. CICSplex names are always uppercase characters.</p>
+
+<p id="attr_kcpplx__PLEXVER"><strong>CICSplex Version</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The lowest version of the CICS agents reporting to this
+CICSplex.</span></p>
+
+<p id="attr_kcpplx__CPUUTIL"><strong>CPU Utilization</strong> <span class="ph" data-hd-otherprops="flyover_string">The total CPU utilization percentage rate of
+all the CICS regions in the CICSplex.</span> The value is a percentage
+in the range of 0-999. </p>
+
+<p id="attr_kcpplx__CBUFFW"><strong>Current Buffer Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The current number of buffer waits for all
+the files in the CICSplex.</span> The value format is a positive integer,
+maximum four characters in length.</p>
+
+<p id="attr_kcpplx__CSTRINGW"><strong>Current String Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The current number of string waits for all
+the files in the CICSplex.</span> The value format is a positive integer,
+maximum four characters in length.</p>
+
+<p id="attr_kcpplx__ENQWAIT"><strong>Enqueue Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of enqueue waits in all the CICS
+regions of the CICSplex.</span> The value format is a positive integer,
+maximum four characters in length.</p>
+
+<p id="attr_kcpplx__HIMAXTP"><strong>Highest MAXT Percent</strong> <span class="ph" data-hd-otherprops="flyover_string">The highest maximum tasks percentage of any
+CICS region in the CICSplex.</span> The value is a percentage in the
+range of 0-999. The value format is a positive integer, maximum two
+characters in length.</p>
+
+<p id="attr_kcpplx__HIMAXTR"><strong>Highest MAXT Region</strong> <span class="ph" data-hd-otherprops="flyover_string">The CICS region with the highest maximum percentage
+in the CICSplex.</span> This value is an alphanumeric string, with a
+maximum of eight characters.</p>
+
+<p id="attr_kcpplx__IORATE"><strong>I/O Rate</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+total input and output message rate per second of all the CICS regions
+in the CICSplex.</span> </p>
+
+<p id="attr_kcpplx__NREGIONS"><strong>Number of Regions</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of CICS regions that are currently
+active in the CICSplex.</span> The value format is a positive integer,
+maximum four characters in length.</p>
+
+<p id="attr_kcpplx__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The unique identifier that describes the CICSplex.</span> It
+consists of the CICSplex name and a string to identify it as a CICSplex.
+The value format is an alphanumeric string, maximum 32 bytes, and
+case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_kcpplx__PAGERATE"><strong>Page Rate</strong> <span class="ph" data-hd-otherprops="flyover_string">The total paging rate per second of all the
+CICS regions in the CICSplex.</span> </p>
+
+<p id="attr_kcpplx__SOSREGION"><strong>SOS Region</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the CICS region that is Short on
+Storage.</span> This value is an alphanumeric string, with a maximum
+of eight characters. The valid values are n/a or Multiple.</p>
+
+<p id="attr_kcpplx__STGVIOL"><strong>Storage Violations in Last Hour</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of storage violations that occurred
+in the last hour for all the CICS regions in the CICSplex.</span> The
+value format is a positive integer, maximum four characters in length.</p>
+
+<p id="attr_kcpplx__AIDS"><strong>Total AIDs</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+total number of Auto Initiate Descriptors in all the CICS regions
+of the CICSplex.</span> The value format is a positive integer, maximum
+four characters in length.</p>
+
+<p id="attr_kcpplx__ICES"><strong>Total ICEs</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+number of Interval Control Elements in all the CICS regions of the
+CICSplex.</span> The value format is a positive integer, maximum four
+characters in length.</p>
+
+<p id="attr_kcpplx__TRANRATE"><strong>Transaction Rate</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the average number of transactions executed in one minute
+of elapsed time. </span>
+</p>
+
+<p id="attr_kcpplx__TRANRATES"><strong>Transaction Rate</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the average number of transactions executed in one second
+of elapsed time.</span></p>
+
+<p id="attr_kcpplx__WPERFINDX"><strong>Worst Performance Index</strong> <span class="ph" data-hd-otherprops="flyover_string">The worst performance index for the CICSplex.</span> The
+performance index is calculated using the average response for a service
+class and the service class goal. The number is presented as a percentage,
+accurate to two decimal places.</p>
+
+<p id="attr_kcpplx__WSERVCLAS"><strong>Worst Service Class Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the service class whose transaction
+response times are performing worst with respect to the user defined
+goals in the CICSplex.</span> This value is an alphanumeric string,
+with a maximum of eight characters.</p>
+
+</div>
+</article></main></body></html>

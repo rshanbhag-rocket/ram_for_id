@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Unit-of-work DSN Failure Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Unit-of-work DSN Failure Details attribute group</title>
+</head>
+<body id="attr_cicsudf"><main role="main"><article role="article" aria-labelledby="d28098e10">
+<h1 class="topictitle1" id="d28098e10">CICSplex Unit-of-work DSN Failure Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsudf__CICSUDF"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Unit-of-work DSN Failure
+Details attribute group enables you to inquire on the reasons why
+UOWs were shunted because of a failure during syncpoint associated
+with a specified data set.</span> Failures during syncpoint processing
+result in locks held by the UOW against the data set (or data sets)
+which suffered the failure being retained. Thus, when a failure is
+reported by this command, it also indicates the presence of retained
+locks.</p>
+
+<p id="attr_cicsudf__CAUSE"><strong>Cause</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+which failed component has caused the UOW to have retained locks for
+this data set.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">CACHE</dt>
+
+<dd class="dlentry">A VSAM RLS cache structure, or connection to it, has failed.</dd>
+
+
+<dt class="dlterm">CONNECTION</dt>
+
+<dd class="dlentry">An intersystem connection error has caused the UOW to fail while
+indoubt. The name of the system to which connectivity was lost is
+returned on the SYSID parameter and its netname is returned on the
+NETNAME parameter. CICS returns additional information in the REASON
+parameter about the connection failure.</dd>
+
+
+<dt class="dlterm">DATASET</dt>
+
+<dd class="dlentry">The backout of a UOW has failed for this data set. The reason
+for the data set failure is returned in the REASON parameter.</dd>
+
+
+<dt class="dlterm">RLSSERVER</dt>
+
+<dd class="dlentry">The SMSVSAM server has failed. The reason for the data set failure
+is returned in the REASON parameter.</dd>
+
+
+<dt class="dlterm">UNDEFINED</dt>
+
+<dd class="dlentry"> The UOW is probably being retried. This occurs following a SET
+DSN RETRY command, or automatically when the failed resource returns.
+It also occurs following an emergency restart.</dd>
+
+</dl>
+
+<p id="attr_cicsudf__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsudf__DSNAME"><strong>Dataset name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the data set that has suffered a backout failure in the
+current UOW.</span> It is a 44 character value.</p>
+
+<p id="attr_cicsudf__CSYSID"><strong>Connected System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the ID of the connected CICS region.</span></p>
+
+<p id="attr_cicsudf__NETNAME"><strong>Network name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the network name of the remote system to which connectivity has been
+lost.</span> It is an eight character netname.</p>
+
+<p id="attr_cicsudf__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsudf__REASON"><strong>Reason</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+specific failure reason indicator.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">BACKUPNONBWO</dt>
+
+<dd class="dlentry">Backout of the updates made to the data set by the UOW failed
+because a non-BWO backup of the data set was in progress while the
+UOW was being backed out. When the backup completes, CICS automatically
+retries the UOW.</dd>
+
+
+<dt class="dlterm">COMMITFAIL</dt>
+
+<dd class="dlentry">An error occurred at some point when RLS locks were in the process
+of being released. This is an error that is typically be resolved
+by recycling the SMSVSAM server (which should happen automatically).
+The locks were acquired as a result of recoverable requests having
+been issued against the data set.</dd>
+
+
+<dt class="dlterm">DATASETFULL</dt>
+
+<dd class="dlentry">No space is available on the direct access device for adding records
+to a data set. You need to reallocate the data set with more space
+and then retry the backout using the SET DSNAME RETRY command.</dd>
+
+
+<dt class="dlterm">DEADLOCK</dt>
+
+<dd class="dlentry">(For non-RLS data sets only.) A deadlock was detected during backout.
+This is a transient condition that goes away if the backout is retried. </dd>
+
+
+<dt class="dlterm">DELEXITERROR</dt>
+
+<dd class="dlentry">Backout of a write to an ESDS failed because a logical delete
+global user exit program was not enabled, or a logical delete global
+user exit program decided not to execute the logical delete.</dd>
+
+
+<dt class="dlterm">FAILEDBKOUT</dt>
+
+<dd class="dlentry">This occurs as a result of a severe error being identified during
+backout, and is possibly an error in either CICS or VSAM. The problem
+might go away if the backout is retried. Note that CICS performs some
+first-failure data capture (FFDC) at the point where the error is
+first detected.</dd>
+
+
+<dt class="dlterm">INDEXRECFULL</dt>
+
+<dd class="dlentry">A larger alternate index record size needs to be defined for the
+data set. This error occurs when a unique alternate index key, for
+a non-RLS data set, has been reused and CICS is now backing out the
+request which had removed that key value. </dd>
+
+
+<dt class="dlterm">INDOUBT</dt>
+
+<dd class="dlentry">The unit of work had issued recoverable requests against the data
+set, and has now failed indoubt. The connection to the coordinating
+system needs to be reestablished.</dd>
+
+
+<dt class="dlterm">IOERROR</dt>
+
+<dd class="dlentry">A hard I/O error occurred during backout. To correct this error,
+restore a full backup copy of the data set and perform forward recovery.
+If you use CICSVR as your forward recovery utility, the backout is
+automatically retried for an RLS data set. For a non-RLS data set,
+use the SET DSNAME (...) RETRY command to drive the backout retry.</dd>
+
+
+<dt class="dlterm">LCKSTRUCFULL</dt>
+
+<dd class="dlentry">An attempt to acquire a lock during backout of an update to this
+data set failed because the RLS lock structure was full. You must
+allocate a larger lock structure in an available coupling facility
+and rebuild the existing lock structure into it, then use the SET
+DSNAME (...) RETRY command to drive the backout retry.</dd>
+
+
+<dt class="dlterm">NOTAPPLIC</dt>
+
+<dd class="dlentry">The CVDA for CAUSE is not CONNECTION, RLSSERVER, or DATASET.</dd>
+
+
+<dt class="dlterm">OPENERROR</dt>
+
+<dd class="dlentry">Error on opening the file for backout. A console message notifies
+you of the reason for the open error. One likely reason could be that
+the data set was quiesced.</dd>
+
+
+<dt class="dlterm">RLSGONE</dt>
+
+<dd class="dlentry">An error occurred when backing out of the UOW because the SMSVSAM
+RLS server was inactive. This might also be the reason why the UOW
+went into backout originally. This is an error is resolved by recycling
+the server (which should happen automatically). Generally, when the
+server recovers, the units of work are retried automatically. In very
+exceptional circumstances, it might be necessary to issue a SET DSNAME(...)
+RETRY command to retry the units of work that were not retried when
+the server returned.</dd>
+
+
+<dt class="dlterm">RRCOMMITFAIL</dt>
+
+<dd class="dlentry">An error occurred while RLS locks for the unit of work were being
+released. For this data set, the locks being released were all repeatable
+read locks, so if the failure was because of the RLS server being
+unavailable, the locks are released. If the failure was because of
+some other error from the SMSVSAM server, the locks might still be
+held.</dd>
+
+
+<dt class="dlterm">RRINDOUBT</dt>
+
+<dd class="dlentry">The unit of work had issued repeatable read requests against the
+data set, and has now failed with an indoubt condition. The locks
+are released, so this failure does not prevent you from running a
+batch job against the data set. However, if you want to open the data
+set in non-RLS mode from CICS, you need to resolve the indoubt failure
+before you define the file as having RLSACCESS(NO). If the unit of
+work has updated any other data sets, or any other resources, try
+to resolve the indoubt failure correctly. If the unit of work has
+only performed repeatable reads against VSAM data sets and has made
+no updates to other resources, it is safe to force the unit of work
+using the SET DSNAME or SET UOW commands.</dd>
+
+</dl>
+
+<p id="attr_cicsudf__RLSACCESS"><strong>RLS Access</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the RLS indicator for the connection.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">NOTRLS</dt>
+
+<dd class="dlentry">The last open in this CICS region was in non-RLS mode.</dd>
+
+
+<dt class="dlterm">RLS</dt>
+
+<dd class="dlentry">The last open in this CICS region was in RLS mode.</dd>
+
+</dl>
+
+<p id="attr_cicsudf__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsudf__UOWID"><strong>Unit-of-work ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the identifier token for the current unit-of-work.</span></p>
+
+</div>
+
+</article></main></body></html>

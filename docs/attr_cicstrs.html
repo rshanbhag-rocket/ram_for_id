@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction Storage Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction Storage Analysis attribute group</title>
+</head>
+<body id="attr_cicstrs"><main role="main"><article role="article" aria-labelledby="d9191e10">
+<h1 class="topictitle1" id="d9191e10">CICSplex Transaction Storage Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstrs__CICSTRS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Transaction Storage Analysis report attributes consist of statistics
+for a transaction collected by the Storage Manager and the CICS monitoring
+facility.</span> Use the CICSplex Transaction Storage Analysis attributes
+to examine whether the transaction might be issuing an excessive number
+of storage requests.</p>
+
+<p id="attr_cicstrs__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicstrs__GETMA16"><strong>GETMAIN Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of GETMAIN requests for
+storage above the 16 megabyte line issued by the transaction.</span></p>
+
+<p id="attr_cicstrs__GETMB16"><strong>GETMAIN Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of GETMAIN requests for
+storage below the 16 megabyte line issued by the transaction.</span></p>
+
+<p id="attr_cicstrs__PGMTOT"><strong>HWM of Total Program Storage</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates, in kilobytes, the maximum amount
+of program storage in use by the transaction.</span></p>
+
+<p id="attr_cicstrs__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstrs__PGMHWMA"><strong>Program Storage HWM Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates, in kilobytes, the maximum amount
+(high water mark) of program storage in use by the transaction above
+the 16 MB line.</span></p>
+
+<p id="attr_cicstrs__PGMHWMB"><strong>Program Storage HWM Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates, in kilobytes, the maximum amount
+(high water mark) of program storage in use by the transaction below
+the 16 MB line.</span></p>
+
+<p id="attr_cicstrs__PGMHCDSA"><strong>Program Storage HWM in CDSA</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum amount (high water mark) of
+program storage in the CDSA, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__PGMHECDS"><strong>Program Storage HWM in ECDSA</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum amount (high water mark) of
+program storage in the ECDSA, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__PGMHERDS"><strong>Program Storage HWM in ERDSA</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum amount (high water mark) of
+program storage in the ERDSA, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__PGMHESDS"><strong>Program Storage HWM in ESDSA</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum amount (high water mark) of
+program storage in the ESDSA, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__PGMHRDSA"><strong>Program Storage HWM in RDSA</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum amount (high water mark) of
+program storage in the RDSA, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__PGMHSDSA"><strong>Program Storage HWM in SDSA</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum amount (high water mark) of
+program storage in the SDSA, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__ALLOCA16"><strong>Storage Allocated Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of kilobytes of storage
+currently allocated to the transaction above the 16 megabyte line.</span></p>
+
+<p id="attr_cicstrs__ALLOCB16"><strong>Storage Allocated Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of kilobytes of storage
+currently allocated to the transaction below the 16 megabyte line.</span></p>
+
+<p id="attr_cicstrs__ELEMA16"><strong>Storage Elements Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of pieces of storage above the
+16 megabyte line currently allocated to the transaction.</span></p>
+
+<p id="attr_cicstrs__ELEMB16"><strong>Storage Elements Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of pieces of storage below the
+16 megabyte line currently allocated to the transaction.</span></p>
+
+<p id="attr_cicstrs__HWMA16"><strong>Storage HWM Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum number (high water mark) of
+kilobytes allocated to the transaction above the 16 megabyte line.</span></p>
+
+<p id="attr_cicstrs__HWMB16"><strong>Storage HWM Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum number (high water mark) of
+kilobytes allocated to the transaction below the 16 megabyte line.</span></p>
+
+<p id="attr_cicstrs__OCCUPA16"><strong>Storage Occupancy Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the storage occupancy above the 16
+megabyte line, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__OCCUPA16_D"><strong>Storage Occupancy Above 16 MB Long</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the storage occupancy above the 16 megabyte line, in
+kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__OCCUPB16"><strong>Storage Occupancy Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the storage occupancy below the 16
+megabyte line, in kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__OCCUPB16_D"><strong>Storage Occupancy Below 16 MB Long</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the storage occupancy below the 16 megabyte line, in
+kilobytes, for the transaction.</span></p>
+
+<p id="attr_cicstrs__USEDA16"><strong>Storage Used Above 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of kilobytes of storage above
+the 16 megabyte line currently in use by the transaction.</span></p>
+
+<p id="attr_cicstrs__USEDB16"><strong>Storage Used Below 16 MB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of kilobytes of storage below
+the 16 megabyte line currently in use by the transaction.</span></p>
+
+<p id="attr_cicstrs__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active CICS z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstrs__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number sequentially assigned by CICS
+to uniquely identify each task.</span></p>
+
+<p id="attr_cicstrs__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the four character name of the transaction.</span></p>
+
+</div>
+</article></main></body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor DB2 task activity.">
+<meta name="keywords" content="situations, Database Analysis, CICSplex_DB2MaxThreads_Warning, CICSplex_DB2MaxThreads_Critical, CICSplex_DB2Abort_Warning, CICSplex_DB2Abort_Critical, CICSplex_DB2Wait_Warning, CICSplex_DB2Wait_Critical, CICSplex_DB2ThreadHWM_Warning, CICSplex_DB2ThreadHWM_Critical, CICSplex_DB2ThreadUse_Warning, CICSplex_DB2ThreadUse_Critical, CICSplex_DB2Attached_Warning, CICSplex_DB2Attached_Critical, CICSplex_DBCTLAct_Warning, CICSplex_DBCTLAct_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Database Analysis situations</title>
+</head>
+<body id="sit_db2"><main role="main"><article role="article" aria-labelledby="d49083e11">
+<h1 class="topictitle1" id="d49083e11">Database Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor DB2® task activity.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_DB2_Task_Activity except where stated.</div>
+<dl>
+<dt class="dlterm">CICSplex_DB2MaxThreads_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DB2 maximum threads. <p>It
+is not detrimental to reach a high percentage of the maximum active thread limit. However, when the
+ratio frequently nears 100%, increase the value specified in the THRDA keyword of the DSNCRCT macro
+used to define the CICS®
+DB2 Resource Control Table for the transaction. You can also
+increase it dynamically using the MODIFY option of the DSNC transaction. Increasing the number of
+threads increases the overhead of the z/OS® dispatcher
+scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Maximum_Active_Threads is greater than 20 and the value of
+Maximum_Active_Threads is less than or equal to 54 then situation CICSplex_DB2MaxThreads_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2MaxThreads_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DB2 maximum threads. <p>It
+is not detrimental to reach a high percentage of the maximum active thread limit. However, when the
+ratio frequently nears 100%, increase the value specified in the THRDA keyword of the DSNCRCT macro
+used to define the CICS
+DB2 Resource Control for the transaction. You can also
+increase it dynamically using the MODIFY option of the DSNC transaction. Increasing the number of
+threads increases the overhead of the z/OS dispatcher
+scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Maximum_Active_Threads is greater than 54 then situation
+CICSplex_DB2MaxThreads_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2Abort_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DB2 abort percent.
+<p>Consider changing the WAIT parameter in the DSNCRCT table to specify WAIT=YES or WAIT=POOL for
+this transaction. WAIT=YES allows a task to be queued when no threads are available; WAIT=POOL
+allows a task to use a pool thread. Increase the value specified in the THRDA keyword of the DSNCRCT
+macro used to define the CICS
+DB2 Resource Control for the transaction, or increase it
+dynamically using the MODIFY option of the DSNC transaction. Increasing the number of threads
+increases the overhead of the z/OS dispatcher scanning the
+TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Abort_Percent is greater than 40 and the value of Abort_Percent
+is less than or equal to 65 then situation CICSplex_DB2Abort_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2Abort_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DB2 abort percent.
+<p>Consider changing the TWAIT parameter in the DSNCRCT table to specify WAIT=YES or WAIT=POOL for
+this transaction. WAIT=YES allows a task to be queued when no threads are available; WAIT=POOL
+allows a task to use a pool thread. Increase the value specified in the THRDA keyword of the DSNCRCT
+macro used to define the CICS
+DB2 Resource Control for the transaction, or increase it
+dynamically using the MODIFY option of the DSNC transaction. Increasing the number of threads
+increases the overhead of the z/OS dispatcher scanning the
+TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Abort_Percent is greater than 65 then situation
+CICSplex_DB2Abort_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2Wait_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DB2 wait percent. <p>To
+reduce the percentage of waits, you can increase the maximum number of active threads for this
+transaction temporarily using either the MODIFY option of the DSNC transaction, or permanently by
+changing the THRDA parameter in the DSNCRCT. Increasing the number of threads, however, increases
+the overhead of the z/OS dispatcher scanning the TCB
+chain.</p>
+
+<p><strong>Formula:</strong> If the value of Wait_Percent is greater than 40 and the value of Wait_Percent is
+less than or equal to 65 then situation CICSplex_DB2Wait_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2Wait_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DB2 wait percentage. <p>To
+reduce the percentage of waits, increase the maximum number of active threads for this transaction
+temporarily using either the MODIFY option of the DSNC transaction, or permanently by changing the
+THRDA parameter in the DSNCRCT. Increasing the number of threads, however, increases the overhead of
+the z/OS dispatcher scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Wait_Percent is greater than 65 then situation
+CICSplex_DB2Wait_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2ThreadHWM_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DB2 thread HWM. <p>If the
+problem is intermittent, increase the maximum number of active tasks for this transaction
+temporarily with the MODIFY option of the DSNC transaction. If the threshold is exceeded frequently,
+consider raising the maximum number of active threads by changing the THRDA parameter in the
+DSNCRCT. Increasing the number of threads, however, increases the overhead of the z/OS dispatcher scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Threads_in_Use_Percent_HWM is greater than 70 and the value of
+Threads_in_Use_Percent_HWM is less than or equal to 90 then situation CICSplex_DB2ThreadHWM_Warning
+is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2ThreadHWM_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DB2 thread HWM. <p>If the
+problem is intermittent, increase the maximum number of active tasks for this transaction
+temporarily with the MODIFY option of the DSNC transaction. If the threshold is exceeded frequently,
+consider raising the maximum number of active threads by changing the THRDA parameter in the
+DSNCRCT. Increasing the number of threads, however, increases the overhead of the z/OS dispatcher scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Threads_in_Use_Percent_HWM is greater than 90 then situation
+CICSplex_DB2ThreadHWM_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2ThreadUse_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DB2 thread use. <p>If the
+problem is intermittent, increase the maximum number of active tasks for this transaction
+temporarily with the MODIFY option of the DSNC transaction. If the threshold is exceeded frequently,
+consider raising the maximum number of active threads by changing the THRDA parameter in the
+DSNCRCT. Increasing the number of threads, however, increases the overhead of the z/OS dispatcher scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Threads_in_Use_Percent is greater than 70 and the value of
+Threads_in_Use_Percent is less than or equal to 90 then situation CICSplex_DB2ThreadUse_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2ThreadUse_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DB2 thread use. <p>If the
+problem is intermittent, increase the maximum number of active tasks for this transaction
+temporarily with the MODIFY option of the DSNC transaction. If the threshold is exceeded frequently,
+consider raising the maximum number of active threads by changing the THRDA parameter in the
+DSNCRCT. Increasing the number of threads, however, increases the overhead of the z/OS dispatcher scanning the TCB chain.</p>
+
+<p><strong>Formula:</strong> If the value of Threads_in_Use_Percent is greater than 90 then situation
+CICSplex_DB2ThreadUse_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2Attached_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DB2 attach status.
+<p>Verify that DB2 is required for this CICS region. If DB2 is needed, attach
+DB2 for this region using DSNC STRT<em>c</em>, where<em>c</em> is
+the appropriate RCT suffix. Include the DB2 startup program in
+the CICS startup PLT.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_DB2_Summary.Attached_to_DB2 equals No then situation
+CICSplex_DB2Attached_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DB2Attached_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DB2 attach status.
+<p>Verify that DB2 is required for this CICS region. If DB2 is needed, attach
+DB2 for this region using DSNC STRT<em>c</em>, where<em>c</em> is
+the appropriate RCT suffix. Include the DB2 startup program in
+the CICS startup PLT.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_DB2_Summary.Attached_to_DB2 equals No then situation
+CICSplex_DB2Attached_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DBCTLAct_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DBCTL active status. <p>Use the CICS transaction CDBC to connect CICS to DBCTL.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_DBCTL_Summary.DBCTL_Active equals No then situation
+CICSplex_DBCTLAct_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DBCTLAct_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DBCTL active status. <p>Use the CICS transaction CDBC to connect CICS
+to DBCTL.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_DBCTL_Summary.DBCTL_Active equals No then situation
+CICSplex_DBCTLAct_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the:</p>
+<ul>
+<li><a href="attr_cicsd2s.html#attr_cicsd2s">CICSplex DB2 Summary attribute group</a></li>
+
+<li><a href="attr_cicsd2t.html#attr_cicsd2t">CICSplex DB2 Task Activity attribute group</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

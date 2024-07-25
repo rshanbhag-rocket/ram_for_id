@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The situations in this category notify you if your site's URIMAP destinations are unreachable and why.">
+<meta name="keywords" content="situations, URIMAP Analysis, CICSplex_HostStatus_Warning, CICSplex_URIMAPDisCnt_Warning, CICSplex_URIMAPHostDis_Warning, CICSplex_URIMAPStatus_Warning, CICSplex_URIMAPUnmatch_Warning">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>URIMAP Analysis situations</title>
+</head>
+<body id="sit_urianal"><main role="main"><article role="article" aria-labelledby="d41653e10">
+<h1 class="topictitle1" id="d41653e10">URIMAP Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The situations in this category notify you if your site's
+URIMAP destinations are unreachable and why.</p>
+
+<div class="section"> <dl>
+<dt class="dlterm">CICSplex_HostStatus_Warning</dt>
+
+<dd class="dlentry">Virtual host definition is disabled. <p>The virtual host associated with this alert is showing a
+status other than ENABLED. A disabled status means that the URIMAP definitions that make up the
+virtual host cannot be accessed by applications. Check your virtual host definitions to ensure that
+the virtual host is enabled, and either enable it or redefine your URIMAP as necessary.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_Virtual_Host_Detail.Status does not equal Enabled then
+situation CICSplex_HostStatus_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_URIMAPDisCnt_Warning</dt>
+
+<dd class="dlentry">URIMAP definition disabled during request. <p>The URIMAP associated with this alert is showing a
+disabled count greater than zero. One or more requests against the host and path associated with
+this URIMAP were made while the URIMAP was disabled. Check your URIMAP definitions to ensure the
+URIMAP is enabled; consider enabling or redefining your URIMAP if necessary.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_URIMAP_Summary.Disable_count is greater than 0 then
+situation CICSplex_URIMAPDisCnt_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_URIMAPHostDis_Warning</dt>
+
+<dd class="dlentry">The URIMAP's associated virtual hosts are disabled. <p>The URIMAP associated with this alert is
+showing a Virtual Host Disabled count greater than zero. This means that at least one search was
+made for a host and path for which the URIMAP definition was found, but the virtual host associated
+with the URIMAP was disabled. Check your virtual host definitions to ensure that the virtual host
+exists and that it is enabled. If necessary, consider redefining your URIMAP.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_URIMAP_Global.Hosts_disabled is greater than 0 then
+situation CICSplex_URIMAPHostDis_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_URIMAPStatus_Warning</dt>
+
+<dd class="dlentry">URIMAP definition is disabled or unavailable. <p>The URIMAP associated with this alert is
+showing a status other than ENABLED. The URIMAP definition may be disabled or unavailable because
+its virtual host has been disabled. Check your URIMAP and Virtual Host definitions to ensure that
+the URIMAP and its associated virtual host are enabled. If necessary, enable or redefine the
+definitions.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_URIMAP_Summary.Enable_status does not equal Enabled then
+situation CICSplex_URIMAPStatus_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_URIMAPUnmatch_Warning</dt>
+
+<dd class="dlentry">URIMAP HOST/PATH search has failed. <p>The URIMAP associated with this alert is showing an
+unmatched count greater than zero. This means that at least one search was made for a matching
+URIMAP definition for which no host and path could be found. Review your current URIMAP definitions
+to ensure the host and path specifications are correct.</p>
+
+<p><strong>Formula:</strong> If the value of CICSplex_URIMAP_Global.Unmatched_count is greater than 0 then
+situation CICSplex_URIMAPUnmatch_Warning is true.</p>
+</dd>
+
+</dl>
+</div>
+
+</div>
+
+</article></main></body></html>

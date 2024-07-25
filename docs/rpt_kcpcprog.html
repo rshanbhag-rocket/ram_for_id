@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The CICS Task Program Detail Control workspace allows you to control how IBM Z OMEGAMON for CICS collects task program details. With this feature, IBM Z OMEGAMON for CICS provides statistics about each program that has executed in the course of a task.">
+<meta name="keywords" content="workspaces, Connections Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICS Task Program Detail Control</title>
+</head>
+<body id="rpt_cicscos"><main role="main"><article role="article" aria-labelledby="d74211e11">
+<h1 class="topictitle1" id="d74211e11">CICS Task Program Detail Control</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The CICS Task Program Detail Control workspace allows you to control how <span class="keyword">IBM Z OMEGAMON for CICS</span> collects task program details. With this
+feature, <span class="keyword">IBM Z OMEGAMON for CICS</span> provides statistics about
+each program that has executed in the course of a task.</p>
+
+<section class="section" role="region" aria-labelledby="d74211e54"><h2 class="sectiontitle" id="d74211e54">Task Program Detail Status for CICS </h2>
+
+<p>This feature is typically requested via the <span class="keyword">IBM Z OMEGAMON for CICS</span> Global Data area. The CICS Task Program
+Detail Control panel allows you to update the requested settings for an active CICS region. Changes
+made here are not permanent; they last only until the CICS region is recycled.</p>
+
+<div class="p">To navigate to this panel:<ol>
+<li>From the <span class="keyword wintitle">All Active CICSplexes</span> panel (the <span class="keyword wintitle">CICS</span> tab on
+the <span class="keyword wintitle">OMEGAMON Products</span> panel), select a CICSplex from the <span class="ph uicontrol">CICSplex
+Name</span> column.</li>
+
+<li>Find the CICS region you want to work with, on the <span class="keyword wintitle">CICSples Regions Summary</span>
+panel, and enter <span class="ph uicontrol">C</span> to the left of the region name; this brings up the
+<span class="keyword wintitle">CICS Control Functions</span> menu.</li>
+
+<li>Select <span class="ph uicontrol">T CICS Task Program Detail Control</span> to bring up the <span class="keyword wintitle">CICS
+Task Program Detail Control</span> panel. </li>
+
+</ol>
+</div>
+
+<div class="sectiondiv">Task Program Detail</div>
+<p>This option collects usage information about each EXEC CICS program the task has used. This
+information details the metrics for the time when the program was in control. If a program Links to
+another program, that second program is assumed to be in control, and metrics are no longer
+collected for the first program until control returns to it.</p>
+
+<div class="sectiondiv">Aggregate Program Detail</div>
+<p>This option will allow users to see the metrics for program usage across the entire CICS region.
+These metrics are accumulated as of when the task ends. Looking at programs used within a CICS
+region, the Used tab will show the collective metrics for all programs which have had data collected
+since the region started or program manager statistics were reset.</p>
+
+<div class="sectiondiv">Write to Task History</div>
+<p>This option will record the collected program data for a task to Task History. This will provide
+the Programs tab when looking at the details for a task. This will provide information about all
+programs used during the time covered by the history record. </p>
+
+<div class="sectiondiv">Write to SMF</div>
+<p>This option will record the collected information to SMF. The data can then be processed offline
+by utilities such as IBM CICS Performance Analyzer. </p>
+
+</section>
+
+</div>
+
+</article></main></body></html>

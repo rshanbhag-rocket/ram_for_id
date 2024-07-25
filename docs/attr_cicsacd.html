@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex BTS Activity Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex BTS Activity Details attribute group</title>
+</head>
+<body id="attr_cicsacd"><main role="main"><article role="article" aria-labelledby="d3972e10">
+<h1 class="topictitle1" id="d3972e10">CICSplex BTS Activity Details attribute group</h1>
+
+
+<div class="body">
+  <p><span class="ph synph" id="attr_cicsacd__CICSACD"></span>
+   <span class="ph" data-hd-otherprops="flyover_string">The CICSplex BTS Activity Details attribute group returns the
+    activity details of specific CICS business transaction services (BTS) objects.</span> Other BTS
+   details can be monitored, for example, activities, data containers, events, processes, process
+   types, and timers.</p>
+
+<p id="attr_cicsacd__ABCODE"><strong>Abend Code</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the abend code, if the activity terminated abnormally.</span></p>
+
+<p id="attr_cicsacd__ABPROG"><strong>Abending Program</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+name of the program that was in control at the time of the abend,
+if the activity terminated abnormally.</span></p>
+
+<p id="attr_cicsacd__ACTIVITY"><strong>Activity Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the name of the current activity.</span></p>
+
+<p id="attr_cicsacd__ACTIVITYID"><strong>Activity Identifier</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies the name of the activity.</span></p>
+
+<p id="attr_cicsacd__ACTLEVEL"><strong>Activity Tree Level</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the depth in the activity-tree at which
+the next activity lies.</span></p>
+
+<p id="attr_cicsacd__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsacd__COMPOSITE"><strong>Composite</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the Sub-Event name (if present).</span></p>
+
+<p id="attr_cicsacd__COMPSTAT"><strong>Completion status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the completion status of the activity.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">No activity has been identified.</dd>
+
+
+<dt class="dlterm">Abend</dt>
+
+<dd class="dlentry">The program that implements the activity terminated. Any children
+of the activity have been canceled.</dd>
+
+
+<dt class="dlterm">Forced</dt>
+
+<dd class="dlentry">The activity was forced to complete, for example, it was canceled
+with a CANCEL ACTIVITY command.</dd>
+
+
+<dt class="dlterm">Incomplete</dt>
+
+<dd class="dlentry">The named activity is incomplete. This could mean: <ul>
+<li>That it has not yet been run</li>
+
+<li>That it has returned from one or more activations but needs to
+be reattached in order to complete all its processing steps</li>
+
+<li>That it is currently active.</li>
+
+</ul>
+</dd>
+
+
+<dt class="dlterm">Normal</dt>
+
+<dd class="dlentry">The named activity completed successfully.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__EVENT"><strong>Event Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the completion event that is sent to the requester of
+this activity when the activity completes asynchronously with the
+requester.</span></p>
+
+<p id="attr_cicsacd__EVENTTYPE"><strong>Event Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the type of the Event associated with the Activity.</span> These are
+the values:  </p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">No event associated with this type.</dd>
+
+
+<dt class="dlterm">Activity</dt>
+
+<dd class="dlentry">Activity completion.</dd>
+
+
+<dt class="dlterm">Composite</dt>
+
+<dd class="dlentry">Composite.</dd>
+
+
+<dt class="dlterm">Input</dt>
+
+<dd class="dlentry">Input.</dd>
+
+
+<dt class="dlterm">System</dt>
+
+<dd class="dlentry">System.</dd>
+
+
+<dt class="dlterm">Timer</dt>
+
+<dd class="dlentry">Timer.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__FIRESTAT"><strong>Fire Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the status of the event associated with the activity.</span> These are
+the values:  </p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">Not applicable.</dd>
+
+
+<dt class="dlterm">Fired</dt>
+
+<dd class="dlentry">The event has fired typically.</dd>
+
+
+<dt class="dlterm">Not_fired</dt>
+
+<dd class="dlentry">The event has not fired.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__SUSPSTAT"><strong>Suspend status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the suspension status of the activity.</span> These are the values:
+ </p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">Not applicable.</dd>
+
+
+<dt class="dlterm">Suspended</dt>
+
+<dd class="dlentry">The activity has been suspended.</dd>
+
+
+<dt class="dlterm">Not_suspended</dt>
+
+<dd class="dlentry">The activity has not been suspended.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__MODE"><strong>Mode</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the current state (mode) of the activity.</span> These are the values:
+ </p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">Not applicable.</dd>
+
+
+<dt class="dlterm">Active</dt>
+
+<dd class="dlentry">An activation of the activity is running.</dd>
+
+
+<dt class="dlterm">Cancelling</dt>
+
+<dd class="dlentry">CICS is waiting to cancel the activity. A CANCEL ACTIVITY command
+has been issued, but CICS cannot cancel the activity immediately because
+one or more of the activity's children are inaccessible. No further
+operations on the activity are permitted until it has been canceled.</dd>
+
+
+<dt class="dlterm">Complete</dt>
+
+<dd class="dlentry">The activity has completed, either successfully or unsuccessfully.
+The value returned on the COMPSTATUS option tells you how it completed.</dd>
+
+
+<dt class="dlterm">Dormant</dt>
+
+<dd class="dlentry">The activity is waiting for an event to fire its next activation.</dd>
+
+
+<dt class="dlterm">Initial</dt>
+
+<dd class="dlentry">No RUN or LINK command has yet been issued against the activity;
+or the activity has been reset by means of a RESET ACTIVITY command.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsacd__PREDICAT"><strong>Predicate</strong> <span class="ph" data-hd-otherprops="flyover_string">indicates,
+if the named event is composite, the Boolean operator applied to its
+predicate.</span> These are the values:  </p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">Not applicable.</dd>
+
+
+<dt class="dlterm">AND</dt>
+
+<dd class="dlentry">The Boolean operator applied to the predicate is AND.</dd>
+
+
+<dt class="dlterm">OR</dt>
+
+<dd class="dlentry">The Boolean operator applied to the predicate is OR.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__PROCNAME"><strong>Process Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies
+the name (1-36 characters) to identify the new process (business transaction
+instance).</span> The name is unique within the BTS repository data
+set on which details of the process are to be stored.</p>
+
+<p id="attr_cicsacd__PROCTYPE"><strong>Process Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the process-type.</span> The length of the name can be 1-8
+characters. Each process-type maps to a VSAM data set (the repository),
+on which information about processes of the named type is stored.</p>
+
+<p id="attr_cicsacd__PROGNAME"><strong>Program Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Returns
+the eight-character name of the program that executes when this activity
+is run.</span></p>
+
+<p id="attr_cicsacd__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsacd__TRANSID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the transaction under which this activity runs.</span></p>
+
+<p id="attr_cicsacd__TIMER"><strong>Timer Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the Timer associated with the current activity.</span></p>
+
+<p id="attr_cicsacd__TSTATUS"><strong>Timer Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the status of the event timer.</span> These are the values:  </p>
+
+<dl>
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">Not applicable.</dd>
+
+
+<dt class="dlterm">Expired</dt>
+
+<dd class="dlentry">The timer expired typically.</dd>
+
+
+<dt class="dlterm">Forced</dt>
+
+<dd class="dlentry">Expiry of the timer was forced by means of a FORCE TIMER command.</dd>
+
+
+<dt class="dlterm">Unexpired</dt>
+
+<dd class="dlentry">The timer has not yet expired.</dd>
+
+</dl>
+
+<p id="attr_cicsacd__TVALUE"><strong>Timer value</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the absolute time value for the timer associated with the current
+activity.</span></p>
+
+<p id="attr_cicsacd__USERID"><strong>User Id</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+identifier of the user under whose authority this activity runs.</span></p>
+
+</div>
+
+</article></main></body></html>

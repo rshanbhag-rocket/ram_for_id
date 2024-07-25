@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined Dispatcher Summary workspace shows the level of activity across the TCBs that CICS runs.">
+<meta name="keywords" content="workspaces, Dispatcher Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Dispatcher Summary workspace</title>
+</head>
+<body id="rpt_cicscds"><main role="main"><article role="article" aria-labelledby="d47135e11">
+<h1 class="topictitle1" id="d47135e11">Dispatcher Summary workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined Dispatcher Summary workspace shows the level
+of activity across the TCBs that CICS® runs.</p>
+
+<div class="section"><p>It shows the start and stop time of given tasks, the peak
+and current number of tasks, and the current number of TCBs that are
+in use by the CICS region.</p>
+</div>
+
+<div class="section"><p>This predefined workspace contains the following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>Dispatcher Summary table view showing the attributes of the task
+and transaction activity within each TCB. It shows the runaway task
+intervals, and number of tasks active.</li>
+
+<li>Dispatcher TCB Modes table view showing the all the TCB statistics
+associated with each of the modes. There are several clocks that give
+you the amount of real time used by either z/OS® waits or dispatches and also CPU time used
+by either a task or a TCB.</li>
+
+<li>Dispatcher TCB Pools table view. This shows the number of TCBs
+that are allocated to a particular pool (JVM, OPEN, or HP), whether
+they are attached or in use, as well as both the total and the current
+waiting time associated with that pool. This groups the TCBs in a
+logical way: it shows the number of current tasks that are waiting
+and the peak number of tasks that have been waiting for each TCB.</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicscds.html#attr_cicscds">CICSplex Dispatcher Summary attribute group</a></li>
+
+<li><a href="attr_cicscdm.html#attr_cicscdm">CICSplex Dispatcher TCB Modes attribute group</a></li>
+
+<li><a href="attr_cicscdp.html#attr_cicscdp">CICSplex Dispatcher TCB Pools attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex JVMProfile Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex JVMProfile Analysis attribute group</title>
+</head>
+<body id="attr_cicsjpr"><main role="main"><article role="article" aria-labelledby="d15953e10">
+<h1 class="topictitle1" id="d15953e10">CICSplex JVMProfile Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsjpr__CICSJPR"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex JVMProfile Analysis attributes report the full path
+name of the HFS file that contains a JVM profile, and indicates whether or not a JVM with this
+profile uses the shared class cache.</span> It returns only JVM profiles that have been used during
+the lifetime of this CICS region, for those JVMs that can run applications. It does not report
+either JVM profiles that have not been used or JVM profiles that have been used only for the main
+JVM that initializes the shared class cache.</p>
+
+<p id="attr_cicsjpr__CICSNAME"><strong> CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsjpr__CLASSCACHE"><strong>Classcache Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether JVMs that use this JVM
+profile are worker JVMs dependent on the shared class cache.</span> These
+are the values:</p>
+
+<dl>
+<dt class="dlterm">CLASSCACHE</dt>
+
+<dd class="dlentry">Indicates that the JVM profile specifies the use of the shared
+class cache.</dd>
+
+
+<dt class="dlterm">NOCLASSCACHE</dt>
+
+<dd class="dlentry">Indicates that the JVM profile does not specify the use of the
+shared class cache.</dd>
+
+</dl>
+
+<p id="attr_cicsjpr__HFSFILE"><strong>HFS file</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the full path name of the HFS file for the JVM profile.</span></p>
+
+<p id="attr_cicsjpr__JVMPROFILE"><strong>JVM Profile</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the eight character name of the JVM profile, as used in a program
+definition.</span> When you use the name of a JVM profile anywhere in
+CICS, you must enter it using the same combination of uppercase and
+lowercase characters present in the HFS file name.</p>
+
+<p id="attr_cicsjpr__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of the z/OS System ID (SMFID) and the CICS region
+name.</span> The value format is an alphanumeric string, maximum 32
+bytes and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsjpr__REUSEST"><strong>Reuse Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the level of reusability for JVMs that are created using this JVM
+profile.</span> It returns a value indicating the level of reusability
+for JVMs that are created using this JVM profile. These are the values:</p>
+
+<dl>
+<dt class="dlterm">RESET</dt>
+
+<dd class="dlentry">JVMs with this JVM profile can be reset.</dd>
+
+
+<dt class="dlterm">REUSE</dt>
+
+<dd class="dlentry">JVMs with this JVM profile are continuous.</dd>
+
+
+<dt class="dlterm">NOREUSE</dt>
+
+<dd class="dlentry">JVMs with this JVM profile are single-use.</dd>
+
+</dl>
+
+<p id="attr_cicsjpr__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+</div>
+
+</article></main></body></html>

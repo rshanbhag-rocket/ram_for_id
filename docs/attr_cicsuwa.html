@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex UOW Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex UOW Analysis attribute group</title>
+</head>
+<body id="attr_cicsuwa"><main role="main"><article role="article" aria-labelledby="d6361e10">
+<h1 class="topictitle1" id="d6361e10">CICSplex UOW Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsuwa__CICSUWA"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+UOW Analysis attribute group provides a summary of the recovery manager
+domain.</span></p>
+
+<p id="attr_cicsuwa__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicsuwa__UOWFORCE"><strong>Forced Decisions</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of forced heuristic decisions.</span> A
+forced decision occurs after an indoubt unit of work remains unresolved
+for a user-defined time period. CICS unconditionally backs out or
+commits the changes made by the unit of work to release the resources
+held by the indoubt unit of work. The value format is an integer of
+maximum four bytes.</p>
+
+<p id="attr_cicsuwa__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 characters, that is case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsuwa__UOWSHUNT"><strong>Shunted UOWs</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of shunted UOWs that currently
+exist in the CICS region.</span> The value format is an integer of maximum
+four bytes.</p>
+
+<p id="attr_cicsuwa__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicsuwa__UOWSTIM"><strong>Total Time Shunted</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the accumulated time, expressed in
+minutes, that all shunted UOWs have been shunted.</span> The value format
+is an integer of maximum four bytes.</p>
+
+</div>
+</article></main></body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Bottleneck Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Bottleneck Analysis attribute group</title>
+</head>
+<body id="attr_cicsbna"><main role="main"><article role="article" aria-labelledby="d519e10">
+<h1 class="topictitle1" id="d519e10">CICSplex Bottleneck Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsbna__CICSBNA"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Bottleneck Analysis attribute
+group shows the various wait reasons encountered by CICS tasks over
+a fixed time interval.</span> Use the CICSplex Bottleneck Analysis attributes
+in situations to determine where bottlenecks are occurring.</p>
+
+<p>These attributes provide data for the Bottleneck Analysis table
+view.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex Bottleneck Analysis group
+are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicsbna__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsbna__DLTPCT"><strong>Detailed Long Term Percentage</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percent of time transactions spent
+waiting on specific resources during the long-term collection interval.</span> The
+value format is 0 - 100.</p>
+
+<p id="attr_cicsbna__DSTPCT"><strong>Detailed Short Term Percentage</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percent of time transactions spent
+waiting on specific resources during the short-term collection interval.</span> The
+value format is 0 - 100.</p>
+
+<p id="attr_cicsbna__DSPCAL"><strong>Dispatcher Call</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the specific type of wait performed by the dispatcher on behalf of
+a wait request.</span> The valid format is an alphanumeric string with
+a maximum of nine characters.</p>
+
+<p id="attr_cicsbna__DTHRESH"><strong>Display Threshold</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the filter used to screen out resources that have a low wait percentage.</span> The
+valid format is an integer, in the range 0-100.</p>
+
+<p id="attr_cicsbna__GROUPNUM"><strong>Group Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the numeric identifier of the selected OMEGAMON group.</span> If all
+groups are requested, this value is zero. The valid format is an integer,
+with a maximum of two digits, in the range 1-30.</p>
+
+<p id="attr_cicsbna__MODULE"><strong>Issuing Module</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the CICS module that issues the wait, or MULTIPLE, if
+more than one CICS module can issue the wait.</span> The valid format
+is an alphanumeric string with a maximum of eight characters.</p>
+
+<p id="attr_cicsbna__ELAPLT"><strong>Long Term Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time that has passed
+during the long-term collection interval.</span> The valid format is
+either seconds, or HH:MM:SS.</p>
+
+<p id="attr_cicsbna__INTLT"><strong>Long Term Interval</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the time span over which long-term bottleneck samples are collected.</span> The
+valid format is either seconds, or HH:MM:SS.</p>
+
+<p id="attr_cicsbna__TOTWTA"><strong>Long Term Sample Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of transactions that have
+participated in the long-term collection interval sample.</span> The
+valid format is an integer.</p>
+
+<p id="attr_cicsbna__RNTYPE"><strong>Name Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+type of resource name that transactions are waiting on.</span> The valid
+format is an alphanumeric string with one character.</p>
+
+<p id="attr_cicsbna__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsbna__RNAME"><strong>Resource Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the resource on which transactions are waiting.</span> The
+valid format is an alphanumeric string with a maximum of eight characters.</p>
+
+<p id="attr_cicsbna__RSTYPE"><strong>Resource Subtype</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the CICS designation for the variable resource type on which transactions
+are waiting.</span> The valid format is an alphanumeric string with
+a maximum of eight characters.</p>
+
+<p id="attr_cicsbna__RTYPE"><strong>Resource Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the CICS designation for the type of resource on which transactions
+are waiting.</span> The valid format is an alphanumeric string with
+a maximum of eight characters.</p>
+
+<p id="attr_cicsbna__RTYPNAM"><strong>Resource Type/Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the concatenation of the resource type and resource name values.</span> The
+valid format is an alphanumeric string with a maximum of 17 characters.</p>
+
+<p id="attr_cicsbna__ELAPST"><strong>Short Term Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time that has passed
+during the short-term collection interval.</span> The valid format is
+either seconds, or HH:MM:SS.</p>
+
+<p id="attr_cicsbna__INTST"><strong>Short Term Interval</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the time span over which short-term bottleneck samples are collected.</span> The
+valid format is either seconds, or HH:MM:SS.</p>
+
+<p id="attr_cicsbna__TOTWT"><strong>Short Term Sample Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of transactions that have
+participated in the short-term collection interval sample.</span> The
+valid format is an integer.</p>
+
+<p id="attr_cicsbna__SSTPCT"><strong>Summary Short Term Percentage</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percent of time transactions spent
+waiting on generic resources during the short-term collection interval.</span> The
+valid format is 0 - 100.</p>
+
+<p id="attr_cicsbna__SLTPCT"><strong>Summary Long Term Percentage</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percent of time transactions spent
+waiting on generic resources during the long-term collection interval.</span> The
+valid format is 0 - 100.</p>
+
+<p id="attr_cicsbna__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsbna__TSKTYP"><strong>Task Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+category of tasks that can apply to this type of wait.</span> Valid
+values are User, System, and Both.</p>
+
+<p id="attr_cicsbna__TWTRSN"><strong>Translated Wait Reason</strong> <span class="ph" data-hd-otherprops="flyover_string">The brief outline of the value found in
+the resource type.</span> The valid format is an alphanumeric string
+of four characters.</p>
+
+<p id="attr_cicsbna__WAITYP"><strong>Wait Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the descriptive rendition of the CICS resource type.</span> The valid
+format is an alphanumeric string with a maximum of eight characters.</p>
+
+</div>
+
+</article></main></body></html>

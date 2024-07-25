@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex File Control Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex File Control Analysis attribute group</title>
+</head>
+<body id="attr_cicsfca"><main role="main"><article role="article" aria-labelledby="d73583e10">
+<h1 class="topictitle1" id="d73583e10">CICSplex File Control Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsfca__CICSFCA"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+File Control Analysis Task attribute group provides status information
+about the VSAM data sets allocated to the CICS region.</span> You can
+use this to determine the number of tasks that are waiting to access
+VSAM data sets because of a shortage of either buffers or strings.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex File Control Analysis
+group are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicsfca__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight  characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicsfca__FILBUFWT"><strong>Number of Tasks with Buffer Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of tasks that are waiting
+on buffers for VSAM files.</span> If there are multiple buffer waits,
+you can allocate more buffers. The value format is a positive integer
+of maximum four bytes.</p>
+
+<p id="attr_cicsfca__FILSTRWT"><strong>Number of Tasks with String Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of tasks that are waiting
+on strings for VSAM files.</span> If there are multiple string waits,
+you can allocate more strings. The value format is a positive integer
+of maximum four bytes.</p>
+
+<p id="attr_cicsfca__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 characters, that is case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsfca__RLSENA"><strong>RLS Enabled</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether CICS is registered with the
+SMS VSAM control ACB.</span> These are the values: Yes and No</p>
+
+<p id="attr_cicsfca__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+</div>
+</article></main></body></html>

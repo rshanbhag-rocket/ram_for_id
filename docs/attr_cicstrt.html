@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction Timings">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction Timings attribute group</title>
+</head>
+<body id="attr_cicstrt"><main role="main"><article role="article" aria-labelledby="d29202e10">
+<h1 class="topictitle1" id="d29202e10">CICSplex Transaction Timings attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstrt__CICSTRT"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transaction Timings attributes
+report where the time was spent during the life of this transaction,
+based on data collected by the CICS Monitoring Facility.</span> Use
+the CICSplex Transaction Timings attributes to find which timing is
+a large percent of the transaction response time, then determine which
+conditions might cause the timing to be excessive.</p>
+
+<p id="attr_cicstrt__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicstrt__CPUTIME"><strong>CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of CPU time (accurate to two decimal, places) used by the
+transaction.</span> The value can be entered in the HH:MM:SS.DD format,
+for example, 00:20:00.56 or as SSSSSSS.DD, for example, 1200.56. 
+If you are using variable substitution, the value in this example
+would display as 120056.</p>
+
+<p id="attr_cicstrt__DISPTIME"><strong>Dispatch Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (in thousandths of a second) that this transaction
+spent dispatched on a CICS TCB.</span> It includes QR TCB Elapsed Time
+and Other TCBs Elapsed Time attributes.</p>
+
+<p id="attr_cicstrt__ELAPTIME"><strong>Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the time elapsed, accurate to three decimal places, since the transaction
+was attached.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567. See the online help for more details on
+variable substitution or inputting values in situations and filters.</p>
+
+<p id="attr_cicstrt__EXCEPT"><strong>Exception Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the accumulated time (in thousandths of a second) that this transaction
+waited on exception conditions.</span></p>
+
+<p id="attr_cicstrt__FDELAY"><strong>First Dispatch Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total time (accurate to three decimal
+places) that this transaction waited prior to first dispatch.</span> The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567. </p>
+
+<p id="attr_cicstrt__JVMELAPS"><strong>JVM Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of time (accurate to three decimal places) that the transaction
+spent in a Java Virtual Machine.</span> The value can be entered in
+the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicstrt__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstrt__OTHTCBS"><strong>Other TCBs Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of time (accurate to three
+decimal places) that this transaction spent dispatched on CICS TCBs
+other than the QR TCB.</span> The value can be entered in the HH:MM:SS.DDD
+format, for example, 00:20:00.567 or as SSSSSSS.DDD, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstrt__PLOAD"><strong>Program Load Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the time (accurate to three
+decimal places) that this transaction waited for program library fetches
+from DFHRPL.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstrt__QRELAPS"><strong>QR TCB Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the elapsed time (accurate to three
+decimal places) that this transaction spent dispatched on the CICS
+QR TCB.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstrt__REDISP"><strong>Re-Dispatch Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of time (accurate to three decimal places) that this transaction
+waited between the completion of a request and being re dispatched
+by CICS.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstrt__RLSCPU"><strong>RLS CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of SRB CPU time (accurate to three decimal places) that
+this transaction spent processing VSAM Record Level Sharing file requests.</span> The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstrt__RMIELAPS"><strong>RMI Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total amount of time (accurate to three decimal places) that this
+transaction spent in all task-related user exits (TRUEs) invoked by
+the transaction using the Resource Manager Interface (RMI).</span> The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstrt__SYNELAPS"><strong>Syncpoint Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (accurate
+to three decimal places) that this transaction spent processing syncpoint
+requests.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstrt__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicstrt__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number sequentially assigned by CICS to uniquely identify each
+task.</span></p>
+
+<p id="attr_cicstrt__SUSPTIME"><strong>Time in Suspend</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total amount of time (accurate to three decimal places) that this
+transaction spent waiting (suspended).</span> It includes the times
+reported in the attributes: 1st Dispatch Delay, Re-Dispatch Wait,
+Total I/O Wait Times, and Total Other Wait Times. The value can be
+entered in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as
+SSSSSSS.DDD, for example, 1200.567.  If you are using variable substitution,
+the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstrt__TIOWAIT"><strong>Total I/O Wait Times</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total amount of time (accurate
+to three decimal places) this transaction waited as a result of I/O
+operations.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSSS.DDD, for example, 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstrt__TOTWAIT"><strong>Total Other Wait Times</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total amount of time (accurate
+to three decimal places) that this transaction waited other than what
+is reported in the attributes Total I/O Wait Times and Exception Wait
+Time.</span> The value can be entered in the HH:MM:SS.DDD format, for
+example, 00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.  If
+you are using variable substitution, the value in this example would
+display as 1200567.</p>
+
+<p id="attr_cicstrt__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the four character name of the transaction.</span></p>
+
+</div>
+
+</article></main></body></html>

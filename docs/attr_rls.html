@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex RLS Lock Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex RLS Lock Analysis attribute group</title>
+</head>
+<body id="attr_rls"><main role="main"><article role="article" aria-labelledby="d70363e10">
+<h1 class="topictitle1" id="d70363e10">CICSplex RLS Lock Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_rls__RLS"></span> <span class="ph" data-hd-otherprops="flyover_string">The
+CICSplex RLS Lock Analysis attributes report on tasks waiting for
+a Record Level Sharing (RLS) resource and tasks holding the records.</span> Use
+the CICSplex RLS Lock Analysis attributes in situations to help identify
+applications that are making poor use of serially reusable resources
+and degrading system performance.</p>
+
+<p>These attributes provide data for the VSAM RLS Lock Analysis table
+view.</p>
+
+<p id="attr_rls__KEY"><strong>Argument or Key</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+one of following identifiers: the complete record key for the VSAM
+KSDS files, the relative byte address for the VSAM RRDS files, or
+the record number for the VSAM ESDS files.</span> The value format is
+an alphanumeric string, a maximum of 256 characters, and is case-sensitive.</p>
+
+<p id="attr_rls__CICSNAME"><strong>CICS Region Jobname</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates either the job name or modify
+ID of the CICS region being monitored or the job name of the CICS
+region running a transaction that is holding an RLS record being waited
+on by transactions running in the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique job name. This
+job name is used for operations initiated from the z/OS system console.
+The value format is an alphanumeric string, maximum eight characters,
+and is case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_rls__DSN"><strong>Dataset Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the name of the VSAM data set allocated to the selected CICS region.</span> The
+value format is an alphanumeric string, a maximum of 44 characters,
+and is case-sensitive.</p>
+
+<p id="attr_rls__FILETYPE"><strong>Dataset Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the name of the type of VSAM data set.</span> These are the valid values:</p>
+
+<dl>
+<dt class="dlterm">ESDS</dt>
+
+<dd class="dlentry">Entry sequence data set</dd>
+
+
+<dt class="dlterm">KSDS</dt>
+
+<dd class="dlentry">Key sequence data set</dd>
+
+
+<dt class="dlterm">RRDS</dt>
+
+<dd class="dlentry">Relative record data set</dd>
+
+
+<dt class="dlterm">VRRDS</dt>
+
+<dd class="dlentry">VSAM relative record data set</dd>
+
+
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry"></dd>
+
+</dl>
+
+<p id="attr_rls__KEYLEN"><strong>Key Length</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the length of the record key.</span> The value format is an integer,
+maximum two bytes, and in the range 0-32767.</p>
+
+<p id="attr_rls__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of the z/OS System ID (SMFID) and the CICS region
+name.</span> The value format is an alphanumeric string, maximum 32
+bytes, and case-sensitive.</p>
+
+<p id="attr_rls__SYSTEMID"><strong> z/OS System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> z/OS System IDs are always in
+uppercase characters. The value is an alphanumeric string, a maximum
+of four characters and case-sensitive.</p>
+
+<p id="attr_rls__TASKNO"><strong>Task No.</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number sequentially assigned by CICS to uniquely identify each
+task.</span> The value format is an alphanumeric string, a maximum of
+five characters, and is case-sensitive.</p>
+
+<p id="attr_rls__TASKSTAT"><strong>Task State</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the task is waiting for a record or holding one.</span> These
+are the values: Holder, Retained, and Waiter.</p>
+
+<p id="attr_rls__SUSPTIME"><strong>Time in Suspend</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the length of time the task has been in a waiting or holding state.</span> The
+value format is an alphanumeric string, maximum 11 characters. In
+the example, format is hh:mm:ss:hh Indicates the amount of time is
+zero hours, 14 minutes, 7 seconds, and 42 hundredths of a second.
+Example: 00:14:07.42.</p>
+
+<p id="attr_rls__SUSPHH"><strong>Time in Suspend Hours</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the hours portion of the length
+of time the task has been in a waiting or holding state.</span> The
+value format is a numeric string with a maximum of two characters.</p>
+
+<p id="attr_rls__SUSPMM"><strong>Time in Suspend Minutes</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the minutes portion of the length
+of time the task has been in a waiting or holding state.</span> These
+are the values: 0-59.</p>
+
+<p id="attr_rls__TIMESUSP"><strong>Time in Suspend Numeric</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the length of time (accurate
+to two decimal places) the task has been in a waiting state or a holding
+state.</span> This attribute allows the time to be presented graphically.
+The value can be entered in the hh:mm:ss.dd format, for example, 00:20:00.56
+or as sssssss.dd, for example, 1200.56.  If you are using variable
+substitution, the value in this example would display as 120056.</p>
+
+<p id="attr_rls__SUSPSS"><strong>Time in Suspend Seconds</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the seconds portion of the length
+of time the task has been in a waiting or holding state.</span> These
+are the values: 0-59.</p>
+
+<p id="attr_rls__SUSPTT"><strong>Time in Suspend Hundredths of a Second</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the hundredths-of-a-second portion
+of the length of time the task has been in a waiting or holding state.</span> The
+value format is a numeric string with a maximum of two characters.</p>
+
+<p id="attr_rls__TRANID"><strong>Transaction ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name of the transaction.</span> The
+format is an alphanumeric string with a maximum of four characters, and is case-sensitive.</p>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The situations in this category alert you to possible errors relating to Java resources.">
+<meta name="keywords" content="situations, Enterprise Java Analysis, CICSplex_Corbaserver_Warning, CICSplex_DJAR_Warning, CICSplex_DJAR_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Enterprise Java Analysis situations</title>
+</head>
+<body id="sit_eja"><main role="main"><article role="article" aria-labelledby="d29004e10">
+<h1 class="topictitle1" id="d29004e10">Enterprise Java Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The situations in this category alert you to possible errors
+relating to Java™ resources.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_DJAR_Details.</div>
+<dl>
+<dt class="dlterm">CICSplex_Corbaserver_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded; CORBA server not enabled. <p>The CORBA server identified in the
+alert is not enabled. Determine why the CORBA server is not enabled, and take the appropriate
+action.</p>
+
+<p><strong>Formula:</strong> If the value of State does not equal Discarding then situation
+CICSplex_Corbaserver_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DJAR_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded; deployed JAR being discarded. <p>The deployed JAR identified in the
+alert is being discarded. Determine why the DJAR is being discarded, and take the appropriate
+action.</p>
+
+<p><strong>Formula:</strong> If the value of State equals Discarding then situation CICSplex_DJAR_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DJAR_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded; DJAR not usable or resolved. <p>The deployed JAR identified in the
+alert is either UNRESOLVED or UNUSABLE. Determine why the DJAR is in this state, and take the
+appropriate action. Verify that the DJAR is present in the directory specified in the HFS file
+parameter and that it has been correctly built. Examine the output from the DJAR resolution process
+in the CICS® job log for full details of the error.</p>
+
+<p><strong>Formula:</strong> If the value of State equals Unresolved or the value of State equals Unusable
+then situation CICSplex_DJAR_Critical is true.</p>
+</dd>
+
+</dl>
+</div>
+
+</div>
+
+</article></main></body></html>

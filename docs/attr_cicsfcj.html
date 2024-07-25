@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex File Control Journal and Logging">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex File Control Journal and Logging attribute group</title>
+</head>
+<body id="attr_cicsfcj"><main role="main"><article role="article" aria-labelledby="d25394e10">
+<h1 class="topictitle1" id="d25394e10">CICSplex File Control Journal and Logging attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsfcj__CICSFCJ"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex File Control Journal and
+Logging attribute group reports the journaling and logging options
+of a given VSAM file as it is defined in the File Control Table.</span></p>
+
+<p id="attr_cicsfcj__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsfcj__FILEID"><strong>File Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the file.</span> It is an eight character alphanumeric string.</p>
+
+<p id="attr_cicsfcj__JOURFWDR"><strong>Journal Forward Recovery</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the journal that corresponds
+to the z/OS system logger log stream that is to be used for forward
+recovery.</span> This attribute is ignored for coupling facility data
+tables and, if there are any recovery attributes defined in the ICF
+catalog for a source data set associated with the table, these also
+are ignored. A CFDT is not forward recoverable.</p>
+
+<p id="attr_cicsfcj__JOURID"><strong>Journal ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number that identifies the journal that CICS can use for the forward
+recovery log.</span> CICS journal names are of the form DFHJ<strong>nn</strong> where<strong>nn</strong> is
+in the range 1 through 99. The after images for forward recovery are
+written to the z/OS log stream that corresponds to journal name DFHJ<strong>nn</strong>.</p>
+
+<p id="attr_cicsfcj__JOURLOG"><strong>Journal Logging</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+if journal logging in effect.</span> These are the values: Yes, No,
+and n/a (Not Applicable).</p>
+
+<p id="attr_cicsfcj__JOURREQ"><strong>Journal Request Types</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies the type of operations you want
+recorded on the journal nominated by the JOURNAL attribute.</span> These
+are the values:</p>
+
+<dl>
+<dt class="dlterm">All</dt>
+
+<dd class="dlentry">Journal all file activity with READ asynchronous and WRITE synchronous.</dd>
+
+
+<dt class="dlterm">Read Only (RO)</dt>
+
+<dd class="dlentry">Journal READ ONLY operations.</dd>
+
+
+<dt class="dlterm">Read Update (RU)</dt>
+
+<dd class="dlentry">Journal READ UPDATE operations.</dd>
+
+
+<dt class="dlterm">Write New (WN)</dt>
+
+<dd class="dlentry">Indicates WRITE ADD options.</dd>
+
+
+<dt class="dlterm">Write Update (WU)</dt>
+
+<dd class="dlentry">Indicates WRITE UPDATE options.</dd>
+
+
+<dt class="dlterm">Synch Read (SYN)</dt>
+
+<dd class="dlentry">Specifies synchronous journal operation for READ operations. The
+default is No.</dd>
+
+
+<dt class="dlterm">Asynch Write (ASY)</dt>
+
+<dd class="dlentry">Specifies asynchronous journal operation for WRITE operations.
+The default is Yes.</dd>
+
+
+<dt class="dlterm">Journal Logging</dt>
+
+<dd class="dlentry">Specifies whether you want automatic journaling for this file.
+The journaled data is in the format of the VSAM record and is used
+for user-controlled journaling. The default is No.</dd>
+
+</dl>
+
+<p id="attr_cicsfcj__LOGOPTN"><strong>LOG Options</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the type of logging for this data set.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">None</dt>
+
+<dd class="dlentry">No logs are created for this data set.</dd>
+
+
+<dt class="dlterm">Undo</dt>
+
+<dd class="dlentry">Allows forward recovery.</dd>
+
+
+<dt class="dlterm">All</dt>
+
+<dd class="dlentry">All files are logged.</dd>
+
+
+<dt class="dlterm">Null</dt>
+
+<dd class="dlentry">Undefined or not specified.</dd>
+
+
+<dt class="dlterm">n/a</dt>
+
+<dd class="dlentry"></dd>
+
+</dl>
+
+<p id="attr_cicsfcj__LOGRECOV"><strong>LOG Recovery Required</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates that automatic log recovery
+has been defined.</span> Values are Yes and No.</p>
+
+<p id="attr_cicsfcj__LOGSTMID"><strong> z/OS Logstream Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the z/OS Logstream associated
+with this file.</span></p>
+
+<p id="attr_cicsfcj__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsfcj__LOGSRLS"><strong>RLS in SIT</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether RLS parameter was specified in the SIT or not.</span> These
+are the values: Yes and No.</p>
+
+<p id="attr_cicsfcj__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+</div>
+
+</article></main></body></html>

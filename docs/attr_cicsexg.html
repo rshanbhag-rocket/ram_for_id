@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Global User Exits">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Global User Exits attribute group</title>
+</head>
+<body id="attr_cicsexg"><main role="main"><article role="article" aria-labelledby="d2059e10">
+<h1 class="topictitle1" id="d2059e10">CICSplex Global User Exits attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsexg__CICSEXG"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Global User Exits attribute group returns details about Global User
+Exit Points, locations in a CICS module where control can be transferred
+to a user-written global user exit program.</span></p>
+
+<p id="attr_cicsexg__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string of
+up to eight characters. CICS region names are always in uppercase
+characters.</p>
+
+<p id="attr_cicsexg__ENTRYNAME"><strong>Entry Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of an exit associated with the
+exit point.</span> This name is an alphanumeric string of up to eight
+characters.</p>
+
+<p id="attr_cicsexg__EXITNAME"><strong>Exit Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the identifier of an exit point.</span> This
+name is an alphanumeric string of up to eight characters.</p>
+
+<p id="attr_cicsexg__EXITPROG"><strong>Exit Program Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of an exit program associated with
+the exit point.</span> This name is an alphanumeric string of up to
+eight characters.</p>
+
+<p id="attr_cicsexg__GWAENTRY"><strong>GWA Entry Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the exit that owns the global work area.</span> This
+name is an alphanumeric string of up to eight characters.</p>
+
+<p id="attr_cicsexg__GWALENGTH"><strong>GWA Length</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the length of the global work area for the
+exit.</span> The valid value is an integer.</p>
+
+<p id="attr_cicsexg__GWACOUNT"><strong>GWA Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of user exits that are
+using the global work area owned by this exit.</span> The valid value
+is an integer.</p>
+
+<p id="attr_cicsexg__NUMEXIT"><strong>Number of Exits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of global user exit points at
+which the exit is enabled.</span> The valid value is an integer.</p>
+
+<p id="attr_cicsexg__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string
+of up to 32 characters and case-sensitive.</p>
+
+<p id="attr_cicsexg__PROGCONCUR"><strong>Program Concurrency</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the concurrency status indicator.</span> The
+valid values are Quasirent and Threadsafe.</p>
+
+<p id="attr_cicsexg__PROGSTATUS"><strong>Program Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether the exit is available for
+execution.</span> The valid values are Started and Stopped.</p>
+
+<p id="attr_cicsexg__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS system within a given CICSplex.</span> The
+value format is an alphanumeric string of up to four characters. z/OS
+System IDs are always in uppercase characters.</p>
+
+</div>
+</article></main></body></html>

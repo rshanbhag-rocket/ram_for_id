@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Program Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Program Details attribute group</title>
+</head>
+<body id="attr_cicspgd"><main role="main"><article role="article" aria-labelledby="d31154e10">
+<h1 class="topictitle1" id="d31154e10">CICSplex Program Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicspgd__CICSPGD"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex Program Details attribute group returns details about
+an executing CICS program.</span> It provides detailed information about the program in addition to
+that provided by the CICSplex Exit Program Analysis attributes.</p>
+
+<p id="attr_cicspgd__APISTAT"><strong>API Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the API status.</span> These are the values: Unknown, CICSAPI, and
+OPENAPI.</p>
+
+<p id="attr_cicspgd__CEDFSTAT"><strong>CEDF Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the CEDF status.</span> These are the values: Unknown, Not
+Applicable, CEDF, and NO CEDF.</p>
+
+<p id="attr_cicspgd__CICSNAME"><strong>CICS Region Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the CICS region being
+monitored.</span> Each CICS region in a z/OS operating system has a unique name. This name is an
+alphanumeric string of up to eight characters. CICS region names are always in uppercase
+characters.</p>
+
+<p id="attr_cicspgd__COBOLTYPE"><strong>COBOL Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the COBOL compiler that generated this program.</span></p>
+
+
+<p id="attr_cicspgd__COMPRMVE"><strong>Compression Removals</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the program was removed because of
+compression.</span> The valid format is an integer.</p>
+
+<p id="attr_cicspgd__CONCURR"><strong>Concurrency</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the concurrency attribute of the program.</span> These are the
+values: Unknown, Quasi-reentrant, and Threadsafe.</p>
+
+<p id="attr_cicspgd__COPY"><strong>Copy</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the copy requirement indicator.</span> These are the values:
+Unknown, Required, and Not required.</p>
+
+<p id="attr_cicspgd__DYNSTAT"><strong>Dynamic Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The program's dynamic status indicator.</span> These are the values:
+Unknown, Dynamic, and Not dynamic.</p>
+
+<p id="attr_cicspgd__STATUS"><strong>Enable Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The enable status indicator.</span> These are the values: Unknown,
+Enabled, and Disabled.</p>
+
+<p id="attr_cicspgd__ENTRYPNT"><strong>Entrypoint Address</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the address of the program entry point.</span> This value is an
+alphanumeric string of up to eight characters.</p>
+
+<p id="attr_cicspgd__EXECKEY"><strong>Execution Key</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the program's execution key.</span> These are the values: Unknown,
+Not applicable, CICS key, and User key.</p>
+
+<p id="attr_cicspgd__EXECSET"><strong>Execution Set</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the program's execution set.</span> These are the values: Unknown,
+Not applicable, Full API, and DPL.</p>
+
+<p id="attr_cicspgd__FETCHCNT"><strong>Fetch Count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the program has been fetched.</span> The valid
+format is an integer.</p>
+
+<p id="attr_cicspgd__HOLDSTAT"><strong>Hold Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates whether the program was loaded with HOLD indicator.</span>
+These are the values: Unknown, Not Applicable, HOLD, and NOHOLD.</p>
+
+<p id="attr_cicspgd__JVMCLASS"><strong>JVM Class</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name of the JVM class associated with this program.</span> This
+value is an alphanumeric string of up to 255 characters.</p>
+
+<p id="attr_cicspgd__JVMDEBUG"><strong>JVM Debug</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the JVM debugging flag.</span> These are the values: Unknown and
+NODEBUG.</p>
+
+<p id="attr_cicspgd__JVMPROFILE"><strong>JVM Profile</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name of the JVM profile associated with the program.</span>
+This value is an alphanumeric string of up to 16 characters.</p>
+
+<p id="attr_cicspgd__LANGUAGE"><strong>Language</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the programming language specified for the program.</span> These
+are the values: Unknown, Not applicable, Not defined, Assembler, C, COBOL, Java, LE370, and
+PL/1.</p>
+
+<p id="attr_cicspgd__LANGDEDCD"><strong>Language Deduced</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the programming language deduced for the program.</span> These are
+the values: Unknown, Not applicable, Not defined, Assembler, C, COBOL, Java, LE370, and PL/1.</p>
+
+<p id="attr_cicspgd__LENGTH"><strong>Length</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the length of the loaded program (0 if not yet loaded).</span> The
+valid format is an integer.</p>
+
+<p id="attr_cicspgd__LOADPOINT"><strong>Loadpoint Address</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the address of the program load point.</span> This value is an
+alphanumeric string of up to eight characters.</p>
+
+<p id="attr_cicspgd__LOCATION"><strong>Location</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the location of the current copy.</span> These are the values:
+Not_loaded 0, CDSA 1, LPA 2, ECDSA 3, ERDSA 4, ELPA 5, SDSA 6, ESDSA 7, RDSA 8, PCDSA 9, PUDSA A,
+EPCDSA B, EPUDSA C, Unknown Z </p>
+
+<p id="attr_cicspgd__LPASTAT"><strong>LPA Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the program's Link Pack Area eligibility.</span> These are the
+valid values: Unknown, Not applicable, LPA, and Not LPA.</p>
+
+<p id="attr_cicspgd__NEWCOPYS"><strong>Newcopy Count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the program has been newly copied.</span> The
+valid format is an integer.</p>
+
+<p id="attr_cicspgd__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID) and CICS region
+name.</span> The value format is an alphanumeric string of up to 32 characters and case-sensitive.</p>
+
+<p id="attr_cicspgd__PROGNAME"><strong>Program Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name of the current activity.</span> This name is an
+alphanumeric string of up to eight characters.</p>
+
+<p id="attr_cicspgd__PROGTYPE"><strong>Program Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the program usage type.</span> These are the values: Unknown,
+Mapset, Partitionset, and Program.</p>
+
+<p id="attr_cicspgd__REMAPPLID"><strong>Remote APPLID </strong>
+<span class="ph" data-hd-otherprops="flyover_string">The APPLID of the CICS region where the remote program is
+defined.</span> This APPLID is an alphanumeric string of up to eight characters in length.</p>
+
+<p id="attr_cicspgd__REMNAME"><strong>Remote Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name by which the module is known in the CICS region named in
+its definition's REMOTESYSTEM option.</span> This name is an alphanumeric string of up to eight
+characters.</p>
+
+<p id="attr_cicspgd__REMSYS"><strong>Remote System</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name of the CICS region in which the program is defined.</span>
+This name is an alphanumeric string of up to four characters. CICS region names are always in
+uppercase characters.</p>
+
+<p id="attr_cicspgd__RESCOUNT"><strong>Residence Count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of separate uses of this program that were taking
+place when this information was retrieved.</span> The valid format is an integer.</p>
+
+<p id="attr_cicspgd__RPLOFFSET"><strong>RPL Offset</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the offset into the DFHRPL DD concatenation to the PDS from which
+this program was loaded; this DD statement is listed in the JCL that launches CICS.</span> The primary
+data set in the concatenation has offset 0, the second data set has offset 1, and so on. The valid
+format is an integer.</p>
+
+<p id="attr_cicspgd__RUNTIME"><strong>Runtime Environment</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the program's runtime environment.</span> These are the values:
+Unknown, Not applicable, Non LE/370, Unknown, JVM, LE/370, and XPLINK.</p>
+
+<p id="attr_cicspgd__SHARESTAT"><strong>Share Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the share status indicator.</span> These are the values: Unknown,
+Not applicable, Private, and Shared.</p>
+
+<p id="attr_cicspgd__DATALOC"><strong>Storage Location</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the storage residence location.</span> These are the values:
+Unknown, Not applicable, Any, and Below.</p>
+
+<p id="attr_cicspgd__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely identifies an active
+z/OS system within a given CICSplex.</span> The value format is an alphanumeric string of up to four
+characters. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicspgd__TIMESUSED"><strong>Times Used</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the program has been used since the start of
+the current CICS session (in other words, since the last reset).</span> The valid format is an
+integer.</p>
+
+<p id="attr_cicspgd__TRANSID"><strong>Transaction ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the name of the transaction under which this program executes
+remotely.</span> This name is an alphanumeric string of up to eight characters.</p>
+
+<p id="attr_cicspgd__USECOUNT"><strong>Use Count</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Is the number of times the program has been used.</span> The valid
+format is an integer.</p>
+
+</div>
+
+</article></main></body></html>

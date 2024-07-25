@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex IPConn Session Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex IPConn Session Details attribute group</title>
+</head>
+<body id="attr_cicsips"><main role="main"><article role="article" aria-labelledby="d73822e10">
+<h1 class="topictitle1" id="d73822e10">CICSplex IPConn Session Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsips__CICSIPS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+IPConn Sessions Details table enables you to look at the sessions
+that are available for a given IP connection, the transactions that
+are using those sessions, and determine what those transactions are
+waiting for.</span>    </p>
+
+<p id="attr_cicsips__CCSID"><strong>Client CCSID Value</strong> <span class="ph" data-hd-otherprops="flyover_string">The language's Coded Character Set Identifier
+for the client session.</span></p>
+
+<p id="attr_cicsips__STATUS"><strong>Conversation State</strong> <span class="ph" data-hd-otherprops="flyover_string">The next action on the session.</span> Receive
+indicates that the task is waiting to receive data, whereas Send indicates
+the session is waiting for the local task to send data. Valid values
+are Receive, Send, and Sending.</p>
+
+<p id="attr_cicsips__TRANNUM"><strong>Current Transaction Number</strong> <span class="ph" data-hd-otherprops="flyover_string">The task number of the transaction using this
+session.</span></p>
+
+<p id="attr_cicsips__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The combination of z/OS System ID (SMFID) and
+CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsips__RTIMEOUT"><strong>Read Timeout Value</strong> <span class="ph" data-hd-otherprops="flyover_string">The length of time this session waits for the
+partner to respond.</span></p>
+
+<p id="attr_cicsips__RNAME"><strong>Resource Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the resource the transaction is
+waiting to access.</span></p>
+
+<p id="attr_cicsips__RTYPE"><strong>Resource Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The type of category for the resource that
+the transaction is waiting to use.</span></p>
+
+<p id="attr_cicsips__IPCONN"><strong>Session Connection Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the name of the IP Connection that this
+session uses for communication.</span></p>
+
+<p id="attr_cicsips__TRANID"><strong>Session Current Tranid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the transaction ID of the transaction currently
+using this session.</span></p>
+
+<p id="attr_cicsips__ERRORCD"><strong>Session Error Code</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current error code reported against
+this session.</span></p>
+
+<p id="attr_cicsips__REGION"><strong>Session Region</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the job name or modify ID of the CICS region
+being monitored.</span></p>
+
+<p id="attr_cicsips__TERMID"><strong>Session Termid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the terminal ID assigned to this session.</span></p>
+
+<p id="attr_cicsips__USAGE"><strong>Session Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The type of session that is used for the IP
+connection.</span> The send sessions can only be allocated from this
+region whereas receive sessions are for incoming requests. The valid
+values are, Send and Receive.</p>
+
+<p id="attr_cicsips__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+</div>
+</article></main></body></html>

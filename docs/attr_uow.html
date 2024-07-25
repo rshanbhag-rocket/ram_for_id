@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Units of Work">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Units of Work attribute group</title>
+</head>
+<body id="attr_uow"><main role="main"><article role="article" aria-labelledby="d37838e10">
+<h1 class="topictitle1" id="d37838e10">CICSplex Units of Work attribute group</h1>
+
+
+<div class="body">
+<div class="p"><span class="ph synph" id="attr_uow__UOW"></span> <span class="ph" data-hd-otherprops="flyover_string">The
+CICSplex Units of Work attributes report on active or completed transactions
+in a given CICS region for a particular unit of work.</span> They report
+the total amount of time transactions spend in various processing
+states for each region and the transactions that run in a particular
+CICS region. <div class="note"><span class="notetitle">Note:</span> These attributes are not available for situations.
+They provide data only for the Unit of Work by Region and Unit of
+Work by Transaction table views within the Units of Work workspace.</div>
+</div>
+
+<p id="attr_uow__ASYNC"><strong>Asynchronous Transaction</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates if this task used the ASYNC API.</span></p>
+
+<p id="attr_uow__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_uow__VERSION"><strong>CICS Version</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the version of CICS running in the address space.</span></p>
+
+<p id="attr_uow__CPUTIME"><strong>CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of accumulated CPU time (accurate to three decimal places)
+for this task.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.
+If you are using variable substitution, the value in this example
+would display as 1200567. The value format is a positive integer,
+maximum four bytes.</p>
+
+<p id="attr_uow__CPUTIME_MS"><strong>CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of accumulated CPU
+time (in microseconds) used by this task.</span></p>
+
+<p id="attr_uow__DB2LUWDS"><strong>DB2 LUWDS</strong> <span class="ph" data-hd-otherprops="flyover_string"> The
+Unit of Work for correlation with DB2.</span> The value format is an
+alphanumeric string, maximum 44 characters.</p>
+
+<p id="attr_uow__DISPTIME"><strong>Dispatch Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) that the tasks
+in the unit-of-work spent dispatched.</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567. If you are using variable substitution, the
+value in this example would display as 1200567. The value format is
+a positive integer, maximum four bytes.</p>
+
+<p id="attr_uow__EXCPWAIT"><strong>Exception Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task spent waiting for exceptions.</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567. The value format is
+a positive integer, maximum four bytes.</p>
+
+<p id="attr_uow__FEPITIME"><strong>FEPI Suspend</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task waited for all FEPI (front end programming interface) services.</span> 
+The value can be entered in the HH:MM:SS.DDD format, for example,
+00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.  If you are
+using variable substitution, the value in this example would display
+as 1200567. The value format is a positive integer with a maximum
+of four bytes. This data is available in CICS version 4.0 and higher.</p>
+
+<p id="attr_uow__FILEWAIT"><strong>File Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) that the task
+waited for file I/O to complete.</span> The value can be entered in
+the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567. If you are using variable substitution, the
+value in this example would display as 1200567. The value format is
+a positive integer with a maximum of four bytes.</p>
+
+<p>A high percentage of elapsed time spent waiting for file control
+requests indicates inefficient local shared resource (LSR) specifications,
+too few strings, or lockout conditions.</p>
+
+<p id="attr_uow__DELAY"><strong>First Dispatch Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) that the task
+spent waiting for the first dispatch.</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567. The value format is
+a positive integer with a maximum of four bytes.</p>
+
+<p id="attr_uow__FDMXT"><strong>First Dispatch Delay MXT </strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (accurate
+to three decimal places) that the task waited for the first dispatch
+because the number of executing tasks reached the MAXTASK limit.</span> The
+value format is a positive integer with a maximum of four bytes. The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_uow__FDOTHER"><strong>First Dispatch Delay Other</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (accurate
+to three decimal places) that the task was delayed before the first
+dispatch because of conditions other than MAXTASK or CMXT.</span> For
+example, this item indicates a delay caused by CPU contention. The
+value format is a positive integer with a maximum of four bytes. The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_uow__FDTCLASS"><strong>First Dispatch Delay TCLASS</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of elapsed time (accurate
+to three decimal places) that the task was delayed before the first
+dispatch because the TCLASS limit was exceeded.</span> The value format
+is a positive integer with a maximum of four bytes. The value can
+be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567 or
+as SSSSSSS.DDD, for example 1200.567.  If you are using variable substitution,
+the value in this example would display as 1200567.</p>
+
+<p id="attr_uow__HTOKEN"><strong>History Token</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+parameter for history record selection.</span> This attribute is used
+for internal use only. The value format is an alphanumeric string,
+maximum 16 characters.</p>
+
+<p id="attr_uow__JOURWAIT"><strong>Journal Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) the task waited
+for journal requests to complete.</span> Journal waits occur as a task
+waits for Journal I/O to complete. The value can be entered in the
+ HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example 1200.567. If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p>Explicit journal I/O includes any journal switching, buffering,
+and intervention that occurs between the time the journal requests
+were issued and the time they completed. Implicit journaling occurs
+when you define a file to CICS with the logging option. Updates to
+the file trigger journal operations, the elapsed time percentage for
+which is included under File Control Percentage.</p>
+
+<p>A high percentage of elapsed time spent waiting for journal I/O
+indicates disk contention or reserves, elongated journal switching
+times, excessive journal buffer sizes, or inappropriate journal options.</p>
+
+<p id="attr_uow__KCENQ"><strong>KC ENQ Delay</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task waited for a CICS task control enqueue.</span> The value format
+is a positive integer with a maximum of four bytes. The value can
+be entered in the  HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567. If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_uow__LU61WAIT"><strong>LU6.1 I/O Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task waited for control at this end of an LU6.1 link.</span> The
+value can be entered in the  HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.
+The value format is a positive integer with a maximum of four bytes.</p>
+
+<p id="attr_uow__LU62WAIT"><strong>LU6.2 I/O Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task waited for control at this end of an LU6.2 link.</span> The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.
+The value format is a positive integer with a maximum of four bytes.</p>
+
+<p id="attr_uow__MROWAIT"><strong>MRO Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) that the task
+waited for an MRO request to another region to complete.</span> The
+value format is a positive integer with a maximum of four bytes. The
+value can be entered in the  HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p>A high percentage of time spent waiting for MRO operations indicates
+problems in a connected CICS region that caused the originating transaction
+to wait for an extended period of time.</p>
+
+<p id="attr_uow__TRANCNT"><strong>Number of Transactions</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the total number of tasks that
+executed in a CICS region on behalf of the unit of work.</span> The
+value format is a positive integer with a maximum of four bytes.</p>
+
+<p id="attr_uow__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case
+sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_uow__ALLTIME"><strong>Overall Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the total elapsed time (accurate
+to three decimal places) between a task being attached and the current
+time for every transaction that makes up the unit-of-work.</span> The
+value can be entered in the  HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.
+The value format is a positive integer with a maximum of four bytes.</p>
+
+<p>Long running transactions produce performance records at regular
+intervals, if you have specified the MNFREQ parameter with the SIT.
+If you have specified this parameter, this item indicates the elapsed
+time from the start of the interval.</p>
+
+<p id="attr_uow__ALLTIME_MS"><strong>Overall Elapsed Time MS</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the total elapsed time (in microseconds)
+between a task being attached and the current time for every transaction
+that makes up the unit-of-work.</span></p>
+
+<p id="attr_uow__RUOWID"><strong>Recovery Token</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+recovery token used for correlation with IMS.</span> The value format
+is an alphanumeric string, maximum 16 characters.</p>
+
+<p id="attr_uow__RDSPWAIT"><strong>Redispatch Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) that the task
+waited between a request completing and the task being re dispatched
+by CICS.</span> The value format is a positive integer with a maximum
+of four bytes. The value can be entered in the  HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p>This is the aggregate of the wait times between each event completion
+and user task re dispatch, but it does not include the time spent
+waiting for the first dispatch. A high percentage of elapsed time
+spent waiting for re dispatch indicates that you have looping transactions
+or that you have reached the CMXT limit.</p>
+
+<p id="attr_uow__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string with a maximum of four characters, and is case sensitive. z/OS
+System IDs are always in uppercase characters.</p>
+
+<p id="attr_uow__TASKNUM"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the number sequentially assigned by CICS to uniquely identify each
+task.</span> The value format is an alphanumeric string with a maximum
+of four characters, and case sensitive.</p>
+
+<p id="attr_uow__TASKSTAT"><strong>Task Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the task is running or complete.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">ACTIVE</dt>
+
+<dd class="dlentry">The task is currently running.</dd>
+
+
+<dt class="dlterm">DONE</dt>
+
+<dd class="dlentry">The task is complete.</dd>
+
+</dl>
+
+<p id="attr_uow__TSWAIT"><strong>Temporary Storage Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of time (accurate
+to three decimal places) that the task waited for VSAM temporary storage
+I/O.</span> The value format is a positive integer, maximum four bytes.
+The value can be entered in the HH:MM:SS.DDD format, for example,
+00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.  If you are
+using variable substitution, the value in this example would display
+as 1200567.</p>
+
+<p>A high percentage of elapsed time spent waiting for this type of
+I/O indicates inadequacies in the configuration of the temporary storage
+data set DFHTEMP. These are the typical causes:</p>
+
+<ul>
+<li>Insufficient strings</li>
+
+<li>Incorrectly defined VSAM control interval size (CISZ)</li>
+
+<li>Inefficient or conflicting disk allocation</li>
+
+</ul>
+
+<p id="attr_uow__TERMWAIT"><strong>Terminal I/O Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task waited for user input from the terminal.</span> The value can
+be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567 or
+as SSSSSSS.DDD, for example 1200.567.  If you are using variable substitution,
+the value in this example would display as 1200567. The value format
+is a positive integer, maximum four bytes. This time value does not
+include the first dispatch wait time.</p>
+
+<p id="attr_uow__RMIELAP"><strong>Total RMI Elapsed</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task spent in task related user exits (TRUE).</span> The value format
+is a positive integer, maximum four bytes. The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567. This includes the
+RMI (resource manager interface) calls to DBCTL and DB2®.</p>
+
+<p id="attr_uow__RMISUSP"><strong>Total RMI Suspend</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) that
+the task was suspended while within the task related user exits (TRUE).</span> The
+value format is a positive integer, maximum four bytes. The value
+can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.
+This includes the RMI (resource manager interface) calls to DBCTL
+and DB2.</p>
+
+<p id="attr_uow__WAITTIME"><strong>Total Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of elapsed time (accurate to three decimal places) the
+tasks in the unit of work spent waiting for various operations to
+complete.</span> The time does not include the first dispatch wait time.
+The value can be entered in the HH:MM:SS.DDD format, for example,
+00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.  If you are
+using variable substitution, the value in this example would display
+as 1200567. The value format is a positive integer with a maximum
+of four bytes.</p>
+
+<p id="attr_uow__TRACEACT"><strong>Trace Active</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+if trace has been collected for the task.</span> These are the valid
+values: Yes and No.</p>
+
+<p id="attr_uow__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character identifier for the task.</span> The value format
+is an alphanumeric string with a maximum four characters, and is case
+sensitive. If OMEGAMON II for CICS umbrella transaction IDs are defined,
+the umbrella transaction ID is displayed here.</p>
+
+<p id="attr_uow__TDWAIT"><strong>Transient Data Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the amount of time (accurate to three decimal places) that the task
+waited for VSAM transient data I/O.</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p>A high percentage of elapsed time spent waiting for this type of
+I/O indicates inadequacies in the configuration of the transient data
+set DFHINTRA. These are the causes:</p>
+
+<ul>
+<li>Insufficient strings</li>
+
+<li>Bad VSAM control interval size (CISZ)</li>
+
+<li>Inefficient or conflicting disk allocation</li>
+
+</ul>
+
+<p id="attr_uow__LUWDS"><strong>Unit of Work Identifier</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the CICS logical unit of work
+identifier.</span> The value format is an alphanumeric string, maximum
+52 characters.</p>
+
+</div>
+
+</article></main></body></html>

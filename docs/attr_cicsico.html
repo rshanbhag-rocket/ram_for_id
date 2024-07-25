@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Intercommunication Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Intercommunication Summary attribute group</title>
+</head>
+<body id="attr_cicsico"><main role="main"><article role="article" aria-labelledby="d2954e10">
+<h1 class="topictitle1" id="d2954e10">CICSplex Intercommunication Summary attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsico__CICSICO"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Intercommunication Summary
+attribute group provides information about the connection status of
+the CICS regions.</span></p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex Intercommunication Summary
+group are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicsico__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsico__SYSIDNT"><strong>CICS SYSIDNT</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+four character CICS system ID assigned to the CICS region.</span> The
+value format is an alphanumeric string, maximum four characters, that
+is case-sensitive. CICS system IDs are always in uppercase characters.</p>
+
+<p id="attr_cicsico__NUMCONNS"><strong>Connection Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the number of connections among this region and others.</span> This
+value includes MRO and ISC connections. The value format is an integer
+of maximum four bytes.</p>
+
+<p id="attr_cicsico__CPUUTIL"><strong>CPU Utilization</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the percentage of CPU time consumed by the CICS address space.</span> The
+value is a percentage in the range of 0-999. When specifying a fractional
+value, include a decimal point and either zero or one decimal place;
+for example, 5.2.</p>
+
+<p>The accumulated CPU time for the CICS address space is noted at
+the beginning and end of a short elapsed-time interval. The difference
+between these two values is the amount of CPU consumed in the CICS
+address space during that interval; this difference is then represented
+as a percentage of the elapsed-time interval. Example: If the:</p>
+
+<ul>
+<li>Accumulated CPU time at the start of the time interval equals
+2 seconds.</li>
+
+<li>Length of the interval equals 10 seconds.</li>
+
+<li>Accumulated CPU time at the end of the time interval equals 5
+seconds</li>
+
+<li>CPU consumed during the 10-second time interval equals 5-2 seconds,
+which equals 3.</li>
+
+</ul>
+
+<p>Then percent of CPU used during the time interval equals 3/10,
+or 30%.</p>
+
+<p>A low-to-zero value indicates the absence of a workload or non
+dispatch by the z/OS system. A high-to-100% (or greater) value indicates
+a heavy workload or a potential loop in either the application or
+CICS code. If the workload is running on multiple CPUs, the CPU utilization
+can exceed 100%.</p>
+
+<p id="attr_cicsico__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 characters, that
+is case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsico__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsico__TRANRATE"><strong>Transaction Rate</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the average number of transactions executed in one minute of elapsed
+time.</span> The value format is an integer of maximum four bytes.</p>
+
+<p>Example: If the statistics are collected every 10 minutes and the
+number of transactions during the last 10 minutes is 300, the average
+number of transactions per minute is 30.</p>
+
+<p id="attr_cicsico__CICSAPPL"><strong>VTAM Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the eight character, VTAM applid of the CICS region.</span> Each CICS
+region has a unique VTAM applid. The value format is an alphanumeric
+string, maximum eight characters, that is case-sensitive. The VTAM
+applid is always in uppercase characters.</p>
+
+<p id="attr_cicsico__CICSGAPL"><strong>VTAM Generic Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the generic VTAM applid of the
+CICS region.</span> Each CICS region has a unique VTAM applid. The value
+format is an alphanumeric string, maximum eight characters, that is
+case-sensitive. The generic VTAM applid is always in uppercase characters.</p>
+
+<p id="attr_cicsico__WCISCSYS"><strong>Worst Case ISC System</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the connection with
+the highest percentage of ISC links in use.</span> The value format
+is an alphanumeric string of maximum four characters.</p>
+
+<p id="attr_cicsico__WCMROSYS"><strong>Worst Case MRO System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the connection with
+the highest percentage of MRO links in use.</span> The value format
+is an alphanumeric string of maximum four characters.</p>
+
+<p id="attr_cicsico__WCISCAID"><strong>Worst ISC Connection Number of AIDs</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of AIDs for the worst
+case ISC system.</span> The value format is an integer of maximum two
+bytes.</p>
+
+<p id="attr_cicsico__WCISCLNK"><strong>Worst ISC Connection Number of Links Defined</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of links defined
+for the worst case ISC system.</span> The value format is an integer
+of maximum four bytes.</p>
+
+<p id="attr_cicsico__WCISCPCT"><strong>Worst ISC Connection Percent of Links in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of ISC links
+in use for the worst case ISC system.</span> The value format is a percentage
+in the range of 0-100.</p>
+
+<p id="attr_cicsico__WCMROAID"><strong>Worst MRO Connection Number of AIDs</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of AIDs for the worst
+case MRO system ID.</span> The value format is an integer of maximum
+four bytes.</p>
+
+<p id="attr_cicsico__WCMROLNK"><strong>Worst MRO Connection Number of Links Defined</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of links defined
+for the worst case MRO system ID.</span> The value format is an integer
+of maximum two bytes.</p>
+
+<p id="attr_cicsico__WCMROPCT"><strong>Worst MRO Connection Percent of Links in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of links in use
+for the worst case MRO system ID.</span> The value format is a percentage
+in the range of 0-100.</p>
+
+</div>
+
+</article></main></body></html>

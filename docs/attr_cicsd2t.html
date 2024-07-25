@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex DB2 Task Activity">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex DB2 Task Activity attribute group</title>
+</head>
+<body id="attr_cicsd2t"><main role="main"><article role="article" aria-labelledby="d2416e10">
+<h1 class="topictitle1" id="d2416e10">CICSplex DB2 Task Activity attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsd2t__CICSD2T"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+DB2 Task Activity attributes report on the task activity for each
+monitored CICS region.</span> Use the CICSplex DB2 Task Activity attributes
+in situations to determine if the percentage of waits per DB2 resource
+control table (RCT) entry is high. These attributes provide data for
+the DB2 Task Activity table view.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex DB2 Task Activity
+group are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicsd2t__ABORTPCT"><strong>Abort Percent</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of DB2 transactions
+that ended abnormally.</span> The value format is a percentage in the
+range 0-100.</p>
+
+<p id="attr_cicsd2t__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight  characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicsd2t__DB2ENTNM"><strong>DB2 Entry Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the installed DB2ENTRY that is
+known to CICS.</span> The value format is an alphanumeric string, maximum
+eight bytes.</p>
+
+<p id="attr_cicsd2t__THREADS"><strong>Maximum Active Threads</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the maximum active threads per DB2
+resource control table (RCT) entry.</span> This attribute does not report
+values in releases of CICS Transaction Server 1.2 and later. The value
+format is an integer, maximum 2 bytes, and in the range of 0-32767.</p>
+
+<p id="attr_cicsd2t__NUMABORT"><strong>Number of Aborts</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of SQL requests that were aborted.</span> The
+value is in the range of 0 - NOLIMIT.</p>
+
+<p id="attr_cicsd2t__NUMCALLS"><strong>Number of Calls</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of calls to the CICS-DB2 RMI
+adapter.</span> </p>
+
+<p id="attr_cicsd2t__NUMTASKS"><strong>Number of Tasks</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of tasks to the CICS-DB2 RMI
+adapter.</span> </p>
+
+<p id="attr_cicsd2t__NUMWAITS"><strong>Number of Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of SQL requests that waited
+for resources.</span> The value is in the range of 0 - NOLIMIT.</p>
+
+<p id="attr_cicsd2t__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsd2t__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicsd2t__NUMTHDU"><strong>Threads in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of threads currently in use
+for SQL requests.</span> The value is in the range of 0 - NOLIMIT.</p>
+
+<p id="attr_cicsd2t__NUMTHDUH"><strong>Threads in Use HWM</strong> <span class="ph" data-hd-otherprops="flyover_string">The peak number of threads currently in use
+for SQL requests HWM (high-water-mark).</span> The value is in the range
+of 0 - NOLIMIT.</p>
+
+<p id="attr_cicsd2t__USEDPCT"><strong>Threads in Use Percent</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of DB2 threads in
+use per DB2 resource control table (RCT) entry.</span> The value format
+is a percentage in the range 0-100.</p>
+
+<p id="attr_cicsd2t__THPCTHWM"><strong>Threads in Use Percent HWM</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of the peak number
+(high water mark) of active threads for the DB2 entry.</span> The value
+format is a percentage in the range 0-100.</p>
+
+<p id="attr_cicsd2t__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the ID of the transaction that is
+using the CICS-DB2 attachment facility.</span> The value format is an
+alphanumeric string, maximum four characters, and case-sensitive.</p>
+
+<p id="attr_cicsd2t__WAITPCT"><strong>Wait Percent</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of waits per DB2 resource
+control table (RCT) entry.</span> The value format is a percentage in
+the range 0-100.</p>
+
+</div>
+</article></main></body></html>

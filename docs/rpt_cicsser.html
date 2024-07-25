@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Service Task Details workspace monitors the service task within the OMEGAMON agent that must be running for IBM Z OMEGAMON for CICS to provide information about several CICS components.">
+<meta name="keywords" content="workspaces, Service Task Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Service Task Details workspace</title>
+</head>
+<body id="rpt_cicsser"><main role="main"><article role="article" aria-labelledby="d62589e11">
+<h1 class="topictitle1" id="d62589e11">Service Task Details workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Service Task Details workspace monitors the service
+task within the OMEGAMON® agent
+that must be running for <span class="keyword">IBM Z OMEGAMON for CICS</span> to
+provide information about several CICS® components. </p>
+
+<div class="section"><p>This workspace includes some of the following information:</p>
+</div>
+
+<div class="section"> <ul>
+<li>Common Interface information</li>
+
+<li>OMEGAMON initialization status</li>
+
+<li>Application trace status</li>
+
+<li>DEXAN status</li>
+
+<li>RLIM status</li>
+
+<li>ONDV status</li>
+
+<li>Web services</li>
+
+<li>Work requests</li>
+
+<li>WLM blocks usage</li>
+
+<li>CICSPlex defined name and source</li>
+
+</ul>
+</div>
+
+<div class="section"><p>The predefined Service Task Details workspace contains
+the following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Message Log table view shows the status, the ID, the name,
+the display item, Origin node, Global Time stamp and the Local times
+for each message. </li>
+
+<li>The OMEGAMON Service
+Task Diagnostics table view returns data relating to the status of
+the OMEGAMON agent. It
+displays the CICS region name, the defined CICSPlex name, the source
+of the defined CICSPlex name, agent's initialization status, Global
+Data Area, XMIT DD name, and name of the common interface started
+task. The service task execution result tells you if the last request
+serviced completed successfully. If this workspace tells you the service
+task is not running, you need to check your agent installation and
+configuration. <div class="p">The CICS region name, which is being monitored by
+OMEGAMON CICS, can be classified into a CICSPlex. The CICSPlex definition
+is obtained from CPSM, and the OMEGAMON value. If these sources are
+not available, the OMEGPLEX default value is used. The CICSPlex name
+can be the OMEGPLEX default value or the eight character CICSPLEX_NAME=<em>aaaaaaaa</em> that
+you defined in your global data parameter. The source of the defined
+CICSPlex name can be one of the following values: <ul>
+<li>CPSM</li>
+
+<li>Default</li>
+
+<li>OMEGAMON</li>
+
+</ul>
+</div>
+</li>
+
+<li>The OMEGAMON WLM Blocks Usage view displays data on the number
+of WLM blocks requested, the current percentage in use for transaction
+records, the peak percentage of usage for transaction records, the
+current percentage of WLM storage in use for the accumulated summary
+records, and the peak percentage of WLM storage in use for the accumulated
+summary records. <p>The attributes current percentage values have
+their thresholds set to turn Red for values greater or equal to 70%
+and the peak percentage is set to turn Red for values greater or equal
+to 80%.</p>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicsser.html#attr_cicsser">CICSplex Service Task Details attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

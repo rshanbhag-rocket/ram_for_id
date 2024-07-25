@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex CICS Memory Addresses">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex CICS Memory Addresses attribute group</title>
+</head>
+<body id="attr_cicscma"><main role="main"><article role="article" aria-labelledby="d21241e10">
+<h1 class="topictitle1" id="d21241e10">CICSplex CICS Memory Addresses attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicscma__CICSCMA"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex CICS Memory Address attribute group reports the
+addresses and lengths of CICS task storage and CICS application storage.</span> Use the CICSplex CICS
+Memory Addresses attributes to identify problems when CICS applications or CICS tasks work
+incorrectly.</p>
+
+<p id="attr_cicscma__MEMADDR"><strong>Address</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The virtual address of the memory in the CICS region.</span></p>
+
+<p id="attr_cicscma__MEMADDR_D"><strong>Address</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The virtual address of the memory in the CICS region in display
+format .</span></p>
+
+<p id="attr_cicscma__CICSNAME"><strong>CICS Region Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the CICS region being
+monitored. </span> CICS region names are always uppercase characters. </p>
+
+<p id="attr_cicscma__CRZONEOK"><strong>Crumple Zone OK</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the type of storage.</span></p>
+
+<p id="attr_cicscma__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the combination of MVS System ID (SMFID) and CICS region
+name.</span> The value format is an alphanumeric string, and is case-sensitive.</p>
+
+<p id="attr_cicscma__MEMLOC"><strong>Location</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the location of the storage within the CICS address
+space.</span></p>
+
+<p id="attr_cicscma__MEMLEN"><strong>Length</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The length of the area of storage.</span></p>
+
+<p id="attr_cicscma__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The name that uniquely identifies an active MVS operating
+system.</span> MVS System IDs are always uppercase characters.</p>
+
+<div class="p" id="attr_cicscma__MEMTYPE"><strong>Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string"> Indicates the type of storage.</span> These are the key storage types:<ul>
+<li>CICS</li>
+
+<li>Protected CICS</li>
+
+<li>READ</li>
+
+<li>SHARED</li>
+
+<li>USER</li>
+
+<li>Program USER: CICS C, Program_CICS P, Read_Only R, Shared S, USER U, Program_USER X, n/a 0</li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

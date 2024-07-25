@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Enqueue Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Enqueue Analysis attribute group</title>
+</head>
+<body id="attr_cicsnqa"><main role="main"><article role="article" aria-labelledby="d35526e10">
+<h1 class="topictitle1" id="d35526e10">CICSplex Enqueue Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsnqa__CICSNQA"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Enqueue Analysis attribute group displays the number of tasks waiting
+for an enqueue and each enqueue name or address.</span></p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex Enqueue Analysis
+group are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicsnqa__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight  characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicsnqa__ENQRES"><strong>Enqueue Resource</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the enqueued resource.</span> The
+value format is an alphanumeric string of maximum 255 characters.</p>
+
+<p id="attr_cicsnqa__ENQRESH"><strong>Enqueue Resource Hex</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the serially reusable resource name
+in hexadecimal format.</span> The value format is an alphanumeric string
+of maximum 510 characters.</p>
+
+<p id="attr_cicsnqa__ENQSCOPE"><strong>Enqueue Scope</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the scope of the resource enqueue.</span> The
+valid values are Local and Sysplex.</p>
+
+<p id="attr_cicsnqa__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 characters, that is case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsnqa__OWNREG"><strong>Owning Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region that owns the resource.</span> The value format is an alphanumeric
+string of maximum eight  characters.</p>
+
+<p id="attr_cicsnqa__OWNSYS"><strong>Owning System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the SMF ID of the z/OS operating
+system which runs the CICS region that owns the resource.</span> The
+value format is an alphanumeric string of maximum four characters.</p>
+
+<p id="attr_cicsnqa__QEA"><strong>Queue Element</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the address of the resource queue
+element.</span> The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicsnqa__RESLEN"><strong>Resource Length</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the length of the resource name.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicsnqa__RESTYPE"><strong>Resource Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the format of the serially reusable
+resource name.</span> These are the values: Address or Variable.</p>
+
+<p id="attr_cicsnqa__SCOPENAM"><strong>Scope Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name assigned in the ENQSCOPE
+resource definition of CICS that is appended to the characters "DFHE"
+for the QNAME.</span> The value format is an alphanumeric string of
+maximum four characters.</p>
+
+<p id="attr_cicsnqa__PLEXNAME"><strong>Sysplex Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name assigned to the SYSPLEX
+configuration that owns the serially reusable resource.</span> The value
+format is an alphanumeric string of maximum eight  characters.</p>
+
+<p id="attr_cicsnqa__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicsnqa__WAITNBR"><strong>Wait Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of enqueue conflicts,
+which are tasks waiting for an available resource.</span> The value
+format is an integer of maximum four bytes.</p>
+
+</div>
+</article></main></body></html>

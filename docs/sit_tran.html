@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor transactions across CICS regions and the z/OS images that the CICSplex spans.">
+<meta name="keywords" content="situations, Transaction Analysis, CICSplex_TranCPUTime_Warning, CICSplex_TranCPUTime_Critical, CICSRegion_Tran_DSNC_Inactive, CICSRegion_Tran_Elapsed_CPU">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transaction Analysis situations</title>
+</head>
+<body id="sit_tran"><main role="main"><article role="article" aria-labelledby="d32575e11">
+<h1 class="topictitle1" id="d32575e11">Transaction Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor transactions
+across CICS® regions and the z/OS® images that the CICSplex spans.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_Transaction_Analysis. except where stated.</div>
+<dl>
+
+<dt class="dlterm">CICSplex_TranCPUTime_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for transaction CPU time. <div class="p">A CICS transaction can be using more CPU than normal. If the Transaction Analysis workspace
+indicates that the processor time associated with a transaction is rising rapidly, the task can be
+in a loop. Looping transactions can be stopped automatically using one of the following actions: <ul>
+<li>A situation with a CEKL action to end a transaction that exceeds a CPU threshold</li>
+
+<li>The Resource Limiting function of <span class="keyword">IBM Z OMEGAMON for CICS</span> or manually using the KILL command.</li>
+
+</ul>
+</div>
+
+<p><strong>Formula:</strong> If the value of CPU_Time is greater than 0.500 and the value of CPU_Time is less
+than or equal to 1.000 then situation CICSplex_TranCPUTime_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TranCPUTime_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for transaction CPU time. <div class="p">A CICS transaction can be using more CPU than normal. If the Transaction Analysis workspace
+indicates that the processor time associated with a transaction is rising rapidly, the task can be
+in a loop. Looping transactions can be stopped automatically using one of the following actions: <ul>
+<li>A situation with a CEKL action to terminate a transaction that exceeds a CPU threshold</li>
+
+<li>The Resource Limiting function of <span class="keyword">IBM Z OMEGAMON for CICS</span> or manually using the KILL command.</li>
+
+</ul>
+</div>
+
+<p><strong>Formula:</strong> If the value of CPU_Time is greater than 1.000 then situation
+CICSplex_TranCPUTime_Critical is true.</p>
+
+<p>The predefined situations in this category monitor transactions across CICS regions and the z/OS images that
+the CICS spans. These are the descriptions and formulas for
+each of these situations:</p>
+</dd>
+
+
+<dt class="dlterm">CICSRegion_Tran_DSNC_Inactive</dt>
+
+<dd class="dlentry">Tests whether the DSNC interface between CICS and DB2® is still active and rolls up to the enterprise when the
+interface is found inactive. This situation uses attributes from the CICS Transaction Analysis group. This situation is distributed automatically
+to all CICS regions being monitored by OMEGAMON® for CICS on z/OS.
+<p><strong>Formula:</strong> If the value of Transaction_ID equals DSNC and the value of Status equals
+inactive then situation CICSRegion_Tran_DSNC_Inactive is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSRegion_Tran_Elapsed_CPU</dt>
+
+<dd class="dlentry">Tests whether the amount of CPU taken by a given transaction has passed a specified threshold.
+This situation uses an attribute from the CICS Transaction
+Analysis group. This situation is distributed automatically to all CICS regions being monitored by OMEGAMON for CICS on z/OS. <div class="note"><span class="notetitle">Note:</span> If fractional values are desired, you must
+manually modify this product-provided situation to include decimal points and up to two decimal
+places. For example, if you want 5.2 seconds, add the decimal point.</div>
+
+<p><strong>Formula:</strong> If the value of CPU_Time is greater than 1 then situation
+CICSRegion_Tran_Elapsed_CPU is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_tran.html#attr_tran">CICSplex Transaction Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

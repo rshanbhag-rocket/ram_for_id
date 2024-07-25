@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The JVM Analysis workspace allows you to monitor the number of Java Virtual Machine (JVM) tokens that are used in your system, the status of your JVM servers and the threads in use.">
+<meta name="keywords" content="workspaces, JVM Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>JVM Analysis workspace</title>
+</head>
+<body id="rpt_cicsjvm"><main role="main"><article role="article" aria-labelledby="d37642e11">
+<h1 class="topictitle1" id="d37642e11">JVM Analysis workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The JVM Analysis workspace allows you to monitor the number
+of Java™ Virtual Machine (JVM)
+tokens that are used in your system, the status of your JVM servers
+and the threads in use.</p>
+
+<div class="section"><p> You might set a threshold to indicate when the number
+of JVM tokens approaches the allocated number. Through this workspace
+you might then increase the allocated number using the Take Action
+function.</p>
+</div>
+
+<div class="section"><p>The predefined JVM Analysis workspace contains the following
+views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Java Virtual Machine
+Analysis table view, which displays the following information: <ul>
+<li> JVM token used, and the allocated age of that token for each CICS® region. </li>
+
+<li> The task and the profile that is using the JVM is reported together
+with the Phasing out status, the execution key, class cache status,
+and the reuse status. </li>
+
+</ul>
+</li>
+
+<li>The JVM Servers Analysis table view, which displays details on
+thread use, the current status of the JVM server and the runtime options
+that are associated with the JVM server in the managed CICS region. <p>The <strong>Runtime
+Options</strong> column contains the name of a program defined to CICS,
+which contains the LE Runopts variables that are used to start the
+JVM Server. A dynamic workspace link is available to the <a href="rpt_cicspgd.html#rpt_cicspgd" title="The Program Details workspace provides detailed information about the program started by a selected document template.">Program Details workspace</a>, filtered on this program
+name. The Thread Limit and Current Threads columns refer to T8 TCBs,
+and links to the <a href="rpt_cicscds.html#rpt_cicscds" title="The predefined Dispatcher Summary workspace shows the level of activity across the TCBs that CICS runs.">Dispatcher Summary workspace</a>,
+with the <strong>Dispatcher Pools </strong> column filtered on the Threaded
+TCB Pool Name, and the Dispatcher TCB Modes filtered on T8 TCB Mode.</p>
+</li>
+
+<li>The JVMPOOL Statistics table view, which displays the total number
+of JVM requests, the current JVM request count, and the peak number
+of JVM requests. In addition, it shows the current, peak, and total
+class cache requests.  <p> The JVM Pool Statistics allows you to monitor
+the level of activity in your JVM by reporting the total number of
+JVM requests, the current, peak and total number of requests. If you
+think that the number is excessive then you can use the statistics
+to analyze the type of request that can be causing the heavy load
+on your system. </p>
+</li>
+
+</ul>
+</div>
+
+<div class="section"> <ul>
+<li>The JVMProfile Analysis table view reports the JVM profile name,
+classcache status, reuse status, and the HFS file name for each CICS region.</li>
+
+<li>The JVM Classcache Details table view displays the status, the
+classcache size, the cache free, the start date and time and the total
+JVMs. Other details include the Reuse status, whether autostart is
+enabled or not, the associated profile name, the number of old caches,
+and the phasing out JVMs.  <p>The JVM Classcache allows you to monitor
+the size of the JVM Classcache that is used in your system. You might
+set a threshold to indicate when the amount of cache that is free
+approaches the cache size for your CICS region.
+Through this workspace you might increase the cache size using the
+Take Action function. </p>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicsjvm.html#attr_cicsjvm">CICSplex JVM Analysis attribute group</a></li>
+
+<li><a href="attr_cicsjcc.html#attr_cicsjcc">CICSplex JVM Classcache Details attribute group</a></li>
+
+<li><a href="attr_cicsjvp.html#attr_cicsjvp">CICSplex JVMPOOL Statistics attribute group</a></li>
+
+<li><a href="attr_cicsjpr.html#attr_cicsjpr">CICSplex JVMProfile Analysis attribute group</a></li>
+
+<li><a href="attr_cicsjvs.html#attr_cicsjvs">CICSplex JVM Server Analysis attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

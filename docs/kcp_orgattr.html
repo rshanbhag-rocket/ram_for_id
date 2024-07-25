@@ -1,0 +1,978 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attributes, workspaces, used">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Attribute groups used by the predefined workspaces</title>
+</head>
+<body id="kcp_orgattr"><main role="main"><article role="article" aria-labelledby="d64244e10">
+<h1 class="topictitle1" id="d64244e10">Attribute groups used by the predefined workspaces</h1>
+
+
+<div class="body refbody">
+<div class="section"><p>In most cases, there is a one to one correspondence between a workspace
+and an attribute group; in other words, a workspace contains data
+or columns whose contents are extracted from the attributes in a single
+attribute group (although there is no such requirement, it is certainly
+possible for a single workspace to be built from multiple attribute
+groups and for a single group's attributes to populate more than one
+workspace). <a href="#kcp_orgattr__wkspattrgrp">Table 1</a> shows the relationships between
+the predefined workspaces and the attribute groups. The workspaces
+are listed in alphabetical order.</p>
+</div>
+
+
+<div class="tablenoborder"><table summary="" id="kcp_orgattr__wkspattrgrp" class="defaultstyle"><caption><span class="tablecap">Table 1. The predefined workspaces and the attribute
+groups that are used to populate them</span></caption><colgroup><col style="width:55.83756345177665%"><col style="width:44.16243654822335%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d64244e63" class="thbot">Workspace name</th>
+
+<th id="d64244e66" class="thbot">Related attribute groups</th>
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsbnd.html#rpt_cicsbnd" title="The Application Bundle Details workspace provides data for a specific CICS bundle resource and bundle part that is deployed in a CICS region.">Application Bundle Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsbns.html#attr_cicsbns">CICSplex Application Bundle Summary attribute group</a></li>
+
+<li><a href="attr_cicsbnd.html#attr_cicsbnd">CICSplex Application Bundle Detail attribute group</a></li>
+
+<li><a href="attr_cicsbnp.html#attr_cicsbnp">CICSplex Application Bundle Parts attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsbns.html#rpt_cicsbns" title="The predefined Application Bundle Summary workspace provides summary data and usage counts of CICS bundle resources that are deployed in a CICS region to represent an application.">Application Bundle Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsbns.html#attr_cicsbns">CICSplex Application Bundle Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsapptrace.html#rpt_cicsapptrace" title="The Application Trace workspace displays the application trace data for a specific transaction.">Application Trace workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsotr.html#attr_cicsotr">CICSplex Application Trace attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsafd.html#rpt_cicsafd" title="The Atom Feed Details workspace provides detailed information for a specific CICS Atom Service definition.">Atom Feed Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsafd.html#attr_cicsafd">CICSplex Atom Feed Detail attribute group</a></li>
+
+<li><a href="attr_cicsafc.html#attr_cicsafc">CICSplex Atom Feed Summary attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsafc.html#rpt_cicsafc" title="The Atom Feed Summary workspace provides all the summary data for a CICS Atom Feed definition.">Atom Feed Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsafc.html#attr_cicsafc">CICSplex Atom Feed Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsaid.html#rpt_cicsaid" title="The Automatic Initiate Descriptors workspace displays summary information on all the Automatic Initiate Descriptors in the CICS region. It shows you the work waiting on terminals and remote systems.">Automatic Initiate Descriptor workspace</a> </td>
+
+<td headers="d64244e66 "><a href="attr_cicsaid.html#attr_cicsaid">CICSplex AID Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstsa.html#rpt_cicstsa" title="The predefined Auxiliary Temporary Storage Details workspace is accessed from the Temporary Storage Summary workspace.">Auxiliary Temporary Storage Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstsa.html#attr_cicstsa">CICSplex Auxiliary Temporary Storage Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_botanal.html#rpt_botanal" title="The Bottleneck Analysis workspace displays information for all eligible CICS transactions.">Bottleneck Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsbna.html#attr_cicsbna">CICSplex Bottleneck Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsbts.html#rpt_cicsbts" title="You can use this workspace to determine the status of your applications that use the ACID (atomicity, consistency, isolation, and durability) properties of Business Transaction Services. These processes can be extended over time. If these processes seem to be stalled or not executing in the correct sequence, the details available in this workspace can help you determine the cause.">Business Transaction Services Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicscnd.html#attr_cicscnd">CICSplex BTS Container Details attribute group</a></li>
+
+<li><a href="attr_cicsacd.html#attr_cicsacd">CICSplex BTS Activity Details attribute group</a></li>
+
+<li><a href="attr_cicspnd.html#attr_cicspnd">CICSplex BTS Process Details attribute group</a></li>
+
+<li><a href="attr_cicsptd.html#attr_cicsptd">CICSplex BTS ProcessType Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicscapactrk.html#rpt_cicscapactrk" title="The predefined CICS Capacity Tracking workspace is located at the CICS region level and provides key performance and utilization information for active transactions in the CICS address space as well as the CPU time consumed by each transaction. Use this workspace as a tracking system to project future workloads in terms of transaction rates, to analyze trends and variations and to identify times when capacity is exceeded.">CICS Capacity Tracking workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsrov.html#attr_cicsrov">CICSplex Region Overview attribute group</a></li>
+
+<li><a href="attr_tran.html#attr_tran">CICSplex Transaction Analysis attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicspersumm.html#rpt_cicspersumm" title="The predefined CICS Performance Summary workspace is located at the CICS node level and provides key summary information for each monitored CICS region and displays an overview of the maximum tasks percentage, transaction rate, and the amount of CPU usage. This workspace is populated from the CICSplex Region Overview and CICSplex Service Class Analysis attribute groups.">CICS Performance Summary workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsrov.html#attr_cicsrov">CICSplex Region Overview attribute group</a></li>
+
+<li><a href="attr_wss.html#attr_wss">CICSplex Service Class Analysis attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsplexsumm.html#rpt_cicsplexsumm" title="The predefined CICSplex Summary workspace is located at the CICSplex level and provides key summary information for the internal resources of each monitored CICSplex within the CICS region or regions. This workspace displays the key metrics with regard to storage, files, maximum task percentage, and CPU usage and transaction rate for all CICS regions within a CICSplex.">CICSplex Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_kcpplx.html#attr_kcpplx">CICSplex Overview attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsregion.html#rpt_cicsregion" title="The CICS Region Name workspace displays data provided by the CICSplex Region Overview attribute group including capacity tracking and transaction activity information.">CICS Region Name workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsrov.html#attr_cicsrov">CICSplex Region Overview attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_connanal.html#rpt_connanal" title="The predefined Connections Analysis workspace contains information on link utilization activity and workloads across terminal owning regions (TORs).">Connections Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_con.html#attr_con">CICSplex Connection Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicscos.html#rpt_cicscos" title="The Connections Summary workspace provides a detailed look at connections and send sessions. with it you can view overall status of your connections.">Connections Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicscos.html#attr_cicscos">CICSplex Connections Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicscbd.html#rpt_cicscbd" title="The Corbaserver Details workspace provides a detailed look at a selected CORBA server resource.">Corbaserver Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicscbd.html#attr_cicscbd">CICSplex Corbaserver Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsd2s.html#rpt_cicsd2s" title="The predefined DB2 Summary workspace contains the DB2 Summary table view, which shows whether or not a CICS region is attached to DB2.">DB2 Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsd2s.html#attr_cicsd2s">CICSplex DB2 Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsd2t.html#rpt_cicsd2t" title="The predefined DB2 Task Activity workspace shows task activity for each monitored CICS region and information on threads.">DB2 Task Activity workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsd2t.html#attr_cicsd2t">CICSplex DB2 Task Activity attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsdls.html#rpt_cicsdls" title="The predefined DBCTL Summary workspace shows the status of the CICS database control (DBCTL) interface for the monitored CICS region.">DBCTL Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsdls.html#attr_cicsdls">CICSplex DBCTL Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicscds.html#rpt_cicscds" title="The predefined Dispatcher Summary workspace shows the level of activity across the TCBs that CICS runs.">Dispatcher Summary workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicscds.html#attr_cicscds">CICSplex Dispatcher Summary attribute group</a></li>
+
+<li><a href="attr_cicscdm.html#attr_cicscdm">CICSplex Dispatcher TCB Modes attribute group</a></li>
+
+<li><a href="attr_cicscdp.html#attr_cicscdp">CICSplex Dispatcher TCB Pools attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_dumpanal.html#rpt_dumpanal" title="The predefined Dump Analysis workspace shows information on dump activity within CICS regions.">Dump Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsdat.html#attr_cicsdat">CICSplex Dump Analysis attribute group</a></li>
+
+<li><a href="attr_cicsdmp.html#attr_cicsdmp">CICSplex Dump Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicscsd.html#rpt_cicscsd" title="The predefined Dynamic Storage Detail workspace allows you to investigate any of the DSAs that can be heavily loaded.">Dynamic Storage Detail workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicscsd.html#attr_cicscsd">CICSplex Dynamic Storage Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_enqanal.html#rpt_enqanal" title="The predefined Enqueue Analysis workspace enables you to monitor problems with application throughput where the applications are known to link to other system components.">Enqueue Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsnqa.html#attr_cicsnqa">CICSplex Enqueue Analysis attribute group</a></li>
+
+<li><a href="attr_cicsepd.html#attr_cicsepd">CICSplex Enqueue Pool Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsnqt.html#rpt_cicsnqt" title="The Enqueue Conflicts workspace shows the tasks waiting on the enqueued resource.">Enqueue Conflicts workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsnqa.html#attr_cicsnqa">CICSplex Enqueue Analysis attribute group</a></li>
+
+<li><a href="attr_cicsnqt.html#attr_cicsnqt">CICSplex Enqueue Analysis Tasks attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicseja.html#rpt_cicseja" title="The Enterprise Java Analysis workspace displays the resources needed to invoke Java beans from a CICS-specific Enterprise Java environment.">Enterprise Java Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicscbs.html#attr_cicscbs">CICSplex Corbaserver Summary attribute group</a></li>
+
+<li><a href="attr_cicsdjd.html#attr_cicsdjd">CICSplex DJAR Details attribute group</a></li>
+
+<li><a href="attr_cicsebd.html#attr_cicsebd">CICSplex Enterprise Java Bean Details attribute group</a></li>
+
+<li><a href="attr_cicsrqs.html#attr_cicsrqs">CICSplex Request Model Summary attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsevd.html#rpt_cicsevd" title="The Event Processing Details workspace displays the detailed data for a specific installed event processing resource of a managed CICS region.">Event Processing Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsevd.html#attr_cicsevd">CICSplex Event Processing Details attribute group</a></li>
+
+<li><a href="attr_cicsevs.html#attr_cicsevs">CICSplex Event Processing Summary attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsevs.html#rpt_cicsevs" title="The Event Processing Summary workspace displays the summary data and the status for the installed event binding resources of a managed CICS region.">Event Processing Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsevs.html#attr_cicsevs">CICSplex Event Processing Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsexd_2.html#rpt_cicsexd_2" title="The Exit Details workspace provides detailed information about the exit program started by a selected document template.">Exit Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+<li><a href="attr_cicsexd.html#attr_cicsexd">CICSplex Exit Program Analysis attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsexa.html#rpt_cicsexa" title="The predefined Exit Program Analysis workspace is used to determine the status of your CICS Global User Exit (GLUE) and Task-Related User Exit (TRUE) applications. Using this workspace you can also check the status of the CICS User Exit services.">Exit Program Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsexd.html#attr_cicsexd">CICSplex Exit Program Analysis attribute group</a></li>
+
+<li><a href="attr_cicsexg.html#attr_cicsexg">CICSplex Global User Exits attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsexd.html#rpt_cicsexd" title="The Exit Program Detail workspace provides a detailed look at a selected exit program.">Exit Program Detail workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsexd.html#attr_cicsexd">CICSplex Exit Program Analysis attribute group</a></li>
+
+<li><a href="attr_cicspgd.html#attr_cicspgd">CICSplex Program Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstsx.html#rpt_cicstsx" title="The Extended Temporary Storage Summary workspace monitors the CICS response to temporary-storage constraints, such as when applications are failing due to TS-related errors.">Extended Temporary Storage Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstsx.html#attr_cicstsx">CICSplex Temporary Storage Extended attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfca.html#rpt_cicsfca" title="The predefined File Control Analysis workspace shows the number of tasks with string waits and the number of tasks with buffer waits.">File Control Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsfca.html#attr_cicsfca">CICSplex File Control Analysis attribute group</a>
+<ul>
+<li><a href="attr_cicsfcd.html#attr_cicsfcd">CICSplex File Control Details attribute group</a></li>
+
+<li><a href="attr_cicsfst.html#attr_cicsfst">CICSplex File Control Statistics attribute group</a></li>
+
+<li><a href="attr_cicsfcj.html#attr_cicsfcj">CICSplex File Control Journal and Logging attribute group</a></li>
+
+<li><a href="attr_cicsfdt.html#attr_cicsfdt">CICSplex File Control Data Table Statistics attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfdt.html#rpt_cicsfdt" title="The predefined File Control Data Table Statistics workspace shows those files that are defined as data tables and provides details related to the file associated with each data table.">File Control Data Table Statistics workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsfdt.html#attr_cicsfdt">CICSplex File Control Data Table Statistics attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfcd.html#rpt_cicsfcd" title="You access the File Control Details workspace through the File Control Analysis workspace; this adds more detail about each file.">File Control Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsfcd.html#attr_cicsfcd">CICSplex File Control Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfcj.html#rpt_cicsfcj" title="The predefined File Control Journal and Logging workspace shows information on file control journals and logging. For example, the number of journal requests, forward recovery log requests and log options.">File Control Journal and Logging workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsfcj.html#attr_cicsfcj">CICSplex File Control Journal and Logging attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfst.html#rpt_cicsfst" title="The predefined File Control Statistics workspace provides data about the detailed activity for each file.">File Control Statistics workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsfst.html#attr_cicsfst">CICSplex File Control Statistics attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfcs.html#rpt_cicsfcs" title="The File Control Summary workspace provides a summary of activity and the properties of the files in your CICS regions.">File Control Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsfcs.html#attr_cicsfcs">CICSplex File Control Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsfcd_2.html#rpt_cicsfcd_2" title="The File Details workspace provides detailed information about a specific file referenced by a selected document template.">File Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+<li><a href="attr_cicsfcd.html#attr_cicsfcd">CICSplex File Control Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsexg.html#rpt_cicsexg" title="The predefined Global User Exits workspace displays detailed information about the GLUEs referenced by your CICS transactions.">Global User Exit Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsexg.html#attr_cicsexg">CICSplex Global User Exits attribute group</a></li>
+
+<li><a href="attr_cicspgd.html#attr_cicspgd">CICSplex Program Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_intercomsum.html#rpt_intercomsum" title="The predefined Intercommunication Summary workspace shows such data as the number of connections among the CICS region and the status.">Intercommunication Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsico.html#attr_cicsico">CICSplex Intercommunication Summary attribute group</a> (not available for
+situations)</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_internet.html#rpt_internet" title="The predefined Internet Status workspace shows the status of the Web interface and the URL of the Web site being viewed.">Internet Status workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsist.html#attr_cicsist">CICSplex Internet Status attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsice.html#rpt_cicsice" title="The predefined Interval Control Elements (ICE) workspace allows you to identify scheduled work in your system. This workspace allows you to analyze ICE problems, displays a summary list of all ICEs in the system, displays detailed information about a specific ICE, and allows you to request that an ICE address be removed from the system.">Interval Control Elements workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsice.html#attr_cicsice">CICSplex ICE Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsips.html#rpt_cicsips" title="The IP Connection Session Details workspace provides a detailed look at a particular IP connection (IPCONN).">IP Connection Session Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsips.html#attr_cicsips">CICSplex IPConn Session Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsipc.html#rpt_cicsipc" title="The IP Connection Session Details workspace shows such IPCONN data as the connected network ID of a connected region, number of defined sessions, and connection status.">IP Connections Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsipc.html#attr_cicsipc">CICSplex IPConnection Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_iscconn.html#rpt_iscconn" title="The ISC Connection Analysis workspace shows such intersystem communication (ISC) connection data as the connection name and type, the connection status, and the applid of the connected CICS region.">ISC Connections Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_con.html#attr_con">CICSplex Connection Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsjpg.html#rpt_cicsjpg" title="The Java Program Analysis workspace monitors the Java programs in your CICS regions. For example, it can show you that a particular program is being very heavily used and that you should take action to reduce the dependency on that program.">Java Program Analysis workspace</a> </td>
+
+<td headers="d64244e66 "><a href="attr_cicsjpg.html#attr_cicsjpg">CICSplex Java Program Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_journanal.html#rpt_journanal" title="The predefined Journal Analysis workspace shows write requests per journal and shows such data as the connection status of the CICS journal and whether or not the journal has a current status of Waiting for an Outstanding WTOR (Write-To-Operator-with-Reply).">Journal Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsjat.html#attr_cicsjat">CICSplex Journal Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsjvm.html#rpt_cicsjvm" title="The JVM Analysis workspace allows you to monitor the number of Java Virtual Machine (JVM) tokens that are used in your system, the status of your JVM servers and the threads in use.">JVM Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsjvm.html#attr_cicsjvm">CICSplex JVM Analysis attribute group</a></li>
+
+<li><a href="attr_cicsjcc.html#attr_cicsjcc">CICSplex JVM Classcache Details attribute group</a></li>
+
+<li><a href="attr_cicsjvp.html#attr_cicsjvp">CICSplex JVMPOOL Statistics attribute group</a></li>
+
+<li><a href="attr_cicsjpr.html#attr_cicsjpr">CICSplex JVMProfile Analysis attribute group</a></li>
+
+<li><a href="attr_cicsjvs.html#attr_cicsjvs">CICSplex JVM Server Analysis attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_lsrpoolstat.html#rpt_lsrpoolstat" title="The LSR Pool Status predefined workspace enables you to view the general state of the Local Shared Resource (LSR) pools and provides information related to their impact on performance. For example, the Lookaside Ratio information indicates what percentage of records are being retrieved from buffers rather than disks. A low Lookaside Ratio is a negative performance indicator because the disk retrievals are causing I/O. This workspace also provides statistical data regarding the numbers of strings being used and the amount of string waits.">LSR Pool Status workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicslps.html#attr_cicslps">CICSplex LSR Pool Status attribute group</a></li>
+
+<li><a href="attr_cicslpd.html#attr_cicslpd">CICSplex LSR Pool Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_linksum.html#rpt_linksum" title="The predefined Link Summary workspace shows such data as the number of link transactions for each link terminal identifier and detailed information about each link within a selected connection.">Link Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_lnk.html#attr_lnk">CICSplex Link Analysis attribute group</a> (not available for situations)</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_logstream.html#rpt_logstream" title="The predefined Log Stream Analysis workspace shows such data as the SIT parameters that affect log stream operation; this table view helps you analyze the configuration of connected logs and log stream configuration and performance data.">Log Stream Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicslsa.html#attr_cicslsa">CICSplex Log Stream Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_mroconn.html#rpt_mroconn" title="The MRO Connection Analysis workspace and shows such multiregion operation (MRO) connection data as the connection name and type, the connection status, and the applid of the connected CICS region.">MRO Connections Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_con.html#attr_con">CICSplex Connection Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_mqconn.html#rpt_mqconn" title="The predefined Message Queuing Analysis workspace shows such data as 10 different types of request activity, busy TCBs and how the WebSphere MQ connection for message queuing can affect operations in your CICS environment.">Message Queuing Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_mqconn.html#attr_mqconn">CICSplex MQ Connection Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_mroconn.html#rpt_mroconn" title="The MRO Connection Analysis workspace and shows such multiregion operation (MRO) connection data as the connection name and type, the connection status, and the applid of the connected CICS region.">MRO Connections Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_con.html#attr_con">CICSplex Connection Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsmtg.html#rpt_cicsmtg" title="The MVS TCB Summary workspace compares the CICS and non-CICS use of the TCBs in your system. If your z/OS system is running slowly, this can be caused by heavy use of a non-CICS resource.">MVS TCB Summary workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsmtg.html#attr_cicsmtg">CICSplex MVS TCB Global Details attribute group</a></li>
+
+<li><a href="attr_cicsmtr.html#attr_cicsmtr">CICSplex MVS TCB Resource Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsodv.html#rpt_cicsodv" title="The Online Data Viewing workspace displays the information collected from the historical data analysis that has been set for each CICS region.">Online Data Viewing workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsodv.html#attr_cicsodv">CICSplex Online Data Viewing attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicspph.html#rpt_cicspph" title="The Pagepool Summary workspace reports the status of storage areas in your CICS regions. There are a large number of attributes associated with the views and they all provide good tuning opportunities. If you need more information about specific details, use the Pagepool Details table view.">Pagepool Summary workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicspph.html#attr_cicspph">CICSplex Pagepool Summary attribute group</a></li>
+
+<li><a href="attr_cicsppd.html#attr_cicsppd">CICSplex Pagepool Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicspid.html#rpt_cicspid" title="The Pipeline Details workspace provides a detailed look at a selected pipeline.">Pipeline Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicspid.html#attr_cicspid">CICSplex Pipeline Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicspgd.html#rpt_cicspgd" title="The Program Details workspace provides detailed information about the program started by a selected document template.">Program Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+<li><a href="attr_cicspgd.html#attr_cicspgd">CICSplex Program Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsrmg.html#rpt_cicsrmg" title="The predefined Recovery Manager Analysis workspace to monitor application performance tuning; it reports primarily on the status of system wide units-of-work (UOW).">Recovery Manager Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsrmg.html#attr_cicsrmg">CICSplex Recovery Manager Details attribute group</a></li>
+
+<li><a href="attr_cicsuwl.html#attr_cicsuwl">CICSplex Unit-of-work Link Details attribute group</a></li>
+
+<li><a href="attr_cicsudf.html#attr_cicsudf">CICSplex Unit-of-work DSN Failure Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsrds.html#rpt_cicsrds" title="The Region Datasets workspace shows all the information about your CICS data sets. The more important RPL data sets are shown in their own table.">Region Datasets workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsrds.html#attr_cicsrds">CICSplex Region Dataset Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_regover.html#rpt_regover" title="The Region Overview workspace lets you review operations for every region of a CICSplex. You can analyze this data to detect system problems before they have a negative impact on your operations. For example, you can use the current number of VSAM buffer and string waits to determine if the file definitions in your CICS region are causing delays.">Region Overview workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsrov.html#attr_cicsrov">CICSplex Region Overview attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_regsvclvlan.html#rpt_regsvclvlan" title="The Region Service Level Analysis workspace lets you see the service level analysis data summaries and the response time for particular CICS regions; it uses the CICSplex Service Class Analysis attribute group to populate the views.">Region Service Level Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_wss.html#attr_wss">CICSplex Service Class Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsrqd.html#rpt_cicsrqd" title="The Request Model Details workspace provides a detailed look at a selected request model.">Request Model Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsrqd.html#attr_cicsrqd">CICSplex Request Model Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_resptimanal.html#rpt_resptimanal" title="The predefined Response Time Analysis workspace shows such data as response times for the active groups that have registered activity within the current minute and response times for active groups defined with OMEGAMON. Data is displayed for only those groups that have registered activity within the last nine minutes.">Response Time Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsrts.html#attr_cicsrts">CICSplex Response Time Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_resptimedet.html#rpt_resptimedet" title="The predefined Response Time Details workspace provides the previous nine minutes of response time data for the active group selected from the Response Time Analysis workspace and response time data for the selected active group that has registered activity within the current minute.">Response Time Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsrte.html#attr_cicsrte">CICSplex Response Time Elements attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_srvclasssum.html#rpt_srvclasssum" title="The predefined Service Class Summary workspace has the Service Class by Region Summary table view populated by the Service Class by Region query and the Service Class by Transaction Summary table view that is populated by the Service Class by Transaction query; both views use the information from the CICSplex Service Class Analysis attribute group.">Service Class Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_wss.html#attr_wss">CICSplex Service Class Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_srvlevel.html#rpt_srvlevel" title="The predefined Service Level Analysis workspace shows the overall performance of each service class defined within a workload. A high percentage of time spent for different types of waits can indicate potential problem areas. It also shows the response times for each service class.">Service Level Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_wss.html#attr_wss">CICSplex Service Class Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsser.html#rpt_cicsser" title="The Service Task Details workspace monitors the service task within the OMEGAMON agent that must be running for IBM Z OMEGAMON for CICS to provide information about several CICS components.">Service Task Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsser.html#attr_cicsser">CICSplex Service Task Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsstor.html#rpt_cicsstor" title="The predefined Storage Analysis workspace shows an overview of the dynamic storage area being used for a single CICS region, the percentages of dynamic storage and the extended dynamic storage areas being used and a comparison of how much storage is in use for DSA and EDSA.">Storage Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsstor.html#attr_cicsstor">CICSplex Storage Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicssdp.html#rpt_cicssdp" title="The Subpool Details workspace is provided to aid you in all aspects of storage management.">Subpool Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicssdp.html#attr_cicssdp">CICSplex Subpool Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_sysinit.html#rpt_sysinit" title="The predefined System Initialization Table workspace contains data on all of the keyword settings that are used to control the operation of your CICSplex. SIT keywords, their descriptions, and associated values are displayed. You can use this workspace to quickly verify that all of your SIT keywords are properly defined.">System Initialization Table workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicssia.html#attr_cicssia">CICSplex System Initialization Table attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstcs.html#rpt_cicstcs" title="The predefined Task Class Analysis workspace shows what percentages of the class limits are being used by active and queued tasks and the activity limits reached within a transaction class or within a queue for a transaction class.">Task Class Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstca.html#attr_cicstca">CICSplex Task Class Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstip.html#rpt_cicstip" title="The TCPIP Statistics workspace is used to monitor the activity of your CICS regions' TCP/IP connections. The statistics report the volume of inbound and outbound activity. These statistics can be accessed online using the EXEC CICS COLLECT STATISTICS TCPIP command.">TCPIP Statistics workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicstip.html#attr_cicstip">CICSplex TCPIP Statistics attribute group</a></li>
+
+<li><a href="attr_cicstps.html#attr_cicstps">CICSplex TCPIP Service Statistics attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstsq.html#rpt_cicstsq" title="The Temporary Storage Details workspace allows you to monitor the number of times temporary-storage limits have been reached and their potential performance impact on your CICS regions.">Temporary Storage Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstsg.html#attr_cicstsg">CICSplex Temporary Storage Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstsd.html#rpt_cicstsd" title="The Temporary Storage Queue Details workspace provides detailed information about the temporary storage queues referenced by a selected document template.">Temporary Storage Queue Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+<li><a href="attr_cicstsd.html#attr_cicstsd">CICSplex Temporary Storage Detail attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_tmpstorq.html#rpt_tmpstorq" title="The predefined Temporary Storage Queues workspace provides data on the number of items in the temporary storage queue, by queue identifier and lists the temporary storage pools and queues that exist in the monitored CICS system.">Temporary Storage Queues workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstsd.html#attr_cicstsd">CICSplex Temporary Storage Detail attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstss.html#rpt_cicstss" title="The Temporary Storage Summary workspace allows you to monitor the number of times that temporary-storage limits have been reached and therefore their potential performance impact on your CICS regions.">Temporary Storage Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstss.html#attr_cicstss">CICSplex Temporary Storage Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_termstorviol.html#rpt_termstorviol" title="The predefined Terminal Storage Violations shows data on the total number of storage violations that have occurred for each terminal and the number of storage violations for specific terminals.">Terminal Storage Violations workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstsv.html#attr_cicstsv">CICSplex Terminal Storage Violations attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_trananal.html#rpt_trananal" title="The Transaction Analysis workspace shows a comprehensive view of transactions, which enables you to identify problem transactions across CICS regions and z/OS images for the CICSplex.">Transaction Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_tran.html#attr_tran">CICSplex Transaction Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstrn.html#rpt_cicstrn" title="The Transaction and Program Definitions workspace is accessed from a link in the Transaction Analysis workspace and shows the transaction and program definitions for the transaction that you have selected.">Transaction and Program Definitions workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicstrn.html#attr_cicstrn">CICSplex Transaction Definition Information attribute group</a></li>
+
+<li><a href="attr_cicstrg.html#attr_cicstrg">CICSplex Program Definition Information attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstrd.html#rpt_cicstrd" title="The Transaction Details workspace is accessed from the Transaction Analysis workspace. The EXEC interface block (EIB) summary table accesses all the fields in the EIB by name. The EIB contains information that is useful during the execution of an application program, such as the transaction identifier, the time and date (initially when the task is started, and subsequently, if updated by the application program using ASKTIME), and the cursor position on a display device. The EIB also contains information that is helpful when a dump is used to debug a program.">Transaction Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicscad.html#attr_cicscad">CICSplex Association Data Details attribute group</a></li>
+
+<li><a href="attr_cicstrd.html#attr_cicstrd">CICSplex Transaction Details attribute group</a></li>
+
+<li><a href="attr_cicstre.html#attr_cicstre">CICSplex Transaction EIB Summary attribute group</a></li>
+
+<li><a href="attr_cicstrp.html#attr_cicstrp">CICSplex Transaction Application Program attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstrf.html#rpt_cicstrf" title="The predefined Transaction EIB Details workspace displays detailed information about each EIB and application program details.">Transaction EIB Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstrf.html#attr_cicstrf">CICSplex Transaction EIB Detail attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstfl.html#rpt_cicstfl" title="The Transaction File Details workspace compares the total number of file requests with the total file request time for the transaction and compares the total file I//O wait time with the RLS-mode wait time and the Coupling Facility Data Table (CFDT) wait time for the transaction that you selected; it also shows other file detail information.">Transaction File Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicstfl.html#attr_cicstfl">CICSplex Transaction File Details attribute group</a></li>
+
+<li><a href="attr_cicstrp.html#attr_cicstrp">CICSplex Transaction Application Program attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstr2.html#rpt_cicstr2" title="The Transaction I/O Waits Analysis workspace is accessed as a link from the Transaction Timings workspace. This information is derived from two attributes groups: The Transaction I/O Waits attribute group and the Transaction I/O Other Waits attribute group; it allows you to examine in more detail the causes for a long wait by a particular task.">Transaction I/O Waits Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicstr2.html#attr_cicstr2">CICSplex Transaction I/O Waits Analysis attribute group</a></li>
+
+<li><a href="attr_cicstr3.html#attr_cicstr3">CICSplex Transaction Wait Other Analysis attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstmr.html#rpt_cicstmr" title="The Transaction Manager Statistics workspace monitors the number of tasks in your CICS regions. By using this data you can monitor the number of tasks compared with the MAXTASK value.">Transaction Manager Statistics workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstmr.html#attr_cicstmr">CICSplex Transaction Manager Statistics attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstrr.html#rpt_cicstrr" title="The Transaction Remote workspace is accessed as a link from the Transaction Analysis workspace. If the transaction that you selected is communicating with or accessing resources at a remote CICS region, its details are shown here.">Transaction Remote Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstrr.html#attr_cicstrr">CICSplex Transaction Remote Information attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstr1.html#rpt_cicstr1" title="The Transaction Statistics workspace provides statistics on transactions including among others, transient data PUTs, GETs and purges, intercommunication (IC) starts (table only) and requests as well as attached TCBs and the number of TCB mode switches.">Transaction Statistics workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstr1.html#attr_cicstr1">CICSplex Transaction Statistics attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstrs.html#rpt_cicstrs" title="The Transaction Storage Analysis workspace displays the amount of storage used by the transaction that you selected from the Transaction Analysis workspace, including program storage HWM in CDSA, ECDSA, RDSA, ERDSA, SDSA and ESDSA; it also shows storage above and below the 16 MB line.">Transaction Storage Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstrs.html#attr_cicstrs">CICSplex Transaction Storage Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_transtorviol.html#rpt_transtorviol" title="The predefined Transaction Storage Violations workspace shows data on the total number of storage violations that have occurred for each transaction and the number of storage violations per transaction.">Transaction Storage Violations workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsxsv.html#attr_cicsxsv">CICSplex Transaction Storage Violations attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstrt.html#rpt_cicstrt" title="The Transaction Timings workspace compares the current CPU time with the time in suspend for your selected CICS region, the Total I/O wait time, the Total Other wait time, first dispatch delay, Re-dispatch delay, and the Exception Wait time; it also shows the time spent by the transaction you selected from the Transaction Analysis workspace.">Transaction Timings workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstrt.html#attr_cicstrt">CICSplex Transaction Timings attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstru.html#rpt_cicstru" title="The Transaction Umbrella Information workspace allows you to view details of a transaction that uses IBM Z OMEGAMON for CICS umbrella services; these services are useful when tracking either long-running tasks that perform multiple functions or tasks where many programs might be invoked through a single transaction ID (a characteristic of many fourth-generation language packages). The umbrella user data is a work area available for use by an application for reading and storing information. It is displayed in this workspace in both character and hexadecimal formats.">Transaction Umbrella Information workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstru.html#attr_cicstru">CICSplex Transaction Umbrella Data attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstts.html#rpt_cicstts" title="The Transaction TSQueue Details workspace displays the tasks that have had significant wait time for Temporary Storage queues.">Transaction TSQueue Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstts.html#attr_cicstts">CICSplex Transaction TSQUEUE Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstdd.html#rpt_cicstdd" title="The Transient Data Details workspace provides detailed information about the transient data queues referenced by a selected document template.">Transient Data Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+<li><a href="attr_cicstdq.html#attr_cicstdq">CICSplex Transient Data Queues attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicstdq.html#rpt_cicstdq" title="The Transient Data Queues workspace provides information about trigger level settings for transient data queues and the length of transient data queues and the queue level of the intrapartition destination and number of records by which the queue exceeds the trigger level.">Transient Data Queues workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstdq.html#attr_cicstdq">CICSplex Transient Data Queues attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_transdatasum.html#rpt_transdatasum" title="The predefined Transient Data Summary workspace shows data on the current use of intrapartition resources, transient data VSAM data for a specific CICS region as well as wait count data.">Transient Data Summary workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicstds.html#attr_cicstds">CICSplex Transient Data Summary attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_uow.html#rpt_uow" title="The predefined Units of Work workspace lists the units of work running in the CICS region for the selected transaction.">Units of Work workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_uow.html#attr_uow">CICSplex Units of Work attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_uowanal.html#rpt_uowanal" title="The UOW Analysis workspace shows the data about the forced decisions, the shunted UOWs that currently exist in the CICS region, and the accumulated time that all shunted UOWs have been shunted. It also displays data on the number of forced heuristic decisions and the number of minutes that all shunted UOWs have been shunted.">UOW Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsuwa.html#attr_cicsuwa">CICSplex UOW Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_uowenquanal.html#rpt_uowenquanal" title="The UOW Enqueue Analysis workspace provides data, for example, the total number of enqueue failures that have occurred against a UOW, the current state of the UOW, and the total time that each UOW has been shunted. It also displays the total time, in seconds, that a specific UOW has been shunted pending resolution and the number of enqueue failures that have occurred against a particular UOW.">UOW Enqueue Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsuwe.html#attr_cicsuwe">CICSplex UOW Enqueue Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsurianal.html#rpt_cicsurianal" title="The URIMAP Analysis workspace displays information about Universal Resource Identifier (URI) mappings within your CICS environment. A URI identifies and locates resources on the World Wide Web.">URIMAP Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsurs.html#attr_cicsurs">CICSplex URIMAP Summary attribute group</a></li>
+
+<li><a href="attr_cicsurg.html#attr_cicsurg">CICSplex URIMAP Global attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsurd.html#rpt_cicsurd" title="The URIMAP Detail workspace provides detailed information about a selected URIMAP definition.">URIMAP Detail workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicsurd.html#attr_cicsurd">CICSplex URIMAP Detail attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_vsamanal.html#rpt_vsamanal" title="The predefined VSAM Analysis workspace shows the percentage of strings being used to process I/O requests to this VSAM file and details about the VSAM data sets allocated to a selected CICS region.">VSAM Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_vsam.html#attr_vsam">CICSplex VSAM Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_rlslock.html#rpt_rlslock" title="The predefined VSAM RLS Lock Analysis workspace contains the VSAM Record Level Sharing Lock Analysis table view; it provides information about tasks that are waiting for a locked VSAM record.">VSAM RLS Lock Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_rls.html#attr_rls">CICSplex RLS Lock Analysis attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicswebsvcanal.html#rpt_cicswebsvcanal" title="The Web Services Analysis workspace determines the status of the various aspects of the connectivity between your CICS regions and your Web services (software systems designed to support interoperable, machine-to-machine interaction over a network).">Web Services Analysis workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicswbs.html#attr_cicswbs">CICSplex Web Service Summary attribute group</a></li>
+
+<li><a href="attr_cicspis.html#attr_cicspis">CICSplex Pipeline Summary attribute group</a></li>
+
+<li><a href="attr_cicshsd.html#attr_cicshsd">CICSplex Virtual Host Detail attribute group</a></li>
+
+<li><a href="attr_cicsdtd.html#attr_cicsdtd">CICSplex Document Template Details attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicswbd.html#rpt_cicswbd" title="The Web Services Details workspace provides a detailed look at a selected Web service.">Web Services Details workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicswbd.html#attr_cicswbd">CICSplex Web Service Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 " class="tdbot"><a href="rpt_cicswbtrans.html#rpt_cicswbtrans" title="Depending on your link filtering (Web Services Transactions or All Web Services Transactions), you can use the Web Services Transactions workspace to view Web service and transaction details for a specific Web service or for all Web services and transactions.">Web Services Transactions workspace</a></td>
+
+<td headers="d64244e66 " class="tdbot"><a href="attr_cicsodv.html#attr_cicsodv">CICSplex Online Data Viewing attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicswrd.html#rpt_cicswrd" title="The Workrequest Analysis workspace is used to determine where an EJB or SOAP request originated and the system with which it is communicating. Typically it is used to determine the identity of the system that a request is waiting on for a reply.">Workrequest Analysis workspace</a></td>
+
+<td headers="d64244e66 "><a href="attr_cicswrd.html#attr_cicswrd">CICSplex Workrequest Details attribute group</a></td>
+</tr>
+
+<tr>
+<td headers="d64244e63 "><a href="rpt_cicsxmd.html#rpt_cicsxmd" title="The XML Transforms Details workspace provides summary and detailed information about CICS XML transform resources.">XML Transforms Details workspace</a></td>
+
+<td headers="d64244e66 ">
+<ul>
+<li><a href="attr_cicsxmd.html#attr_cicsxmd">CICSplex XML Transforms Detail attribute group</a></li>
+
+<li><a href="attr_cicsxms.html#attr_cicsxms">CICSplex XML Transforms Object Summary attribute group</a></li>
+
+</ul>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+</article></main></body></html>

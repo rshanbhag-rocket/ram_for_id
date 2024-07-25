@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex LSR Pool Status">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex LSR Pool Status attribute group</title>
+</head>
+<body id="attr_cicslps"><main role="main"><article role="article" aria-labelledby="d40539e10">
+<h1 class="topictitle1" id="d40539e10">CICSplex LSR Pool Status attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicslps__CICSLPS"></span>
+<span class="ph" data-hd-otherprops="flyover_string">The CICSplex LSR Pool Status attribute group provides information
+about the Local Shared Resource (LSR) pools that have been built in CICS for VSAM files and their
+impact on performance.</span></p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex LSR Pool Status group are stored for historical retrieval
+within the Tivoli Data Warehouse. Selected attributes within this group are candidates for the
+Tivoli Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicslps__CURACTIVE"><strong>Active Strings</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of currently active strings within the LSR pool.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicslps__MAXACTIVE"><strong>Active Strings HWM</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The highest number of concurrently active strings within the LSR
+pool.</span> The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicslps__CICSNAME"><strong>CICS Region Name</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the CICS region being
+monitored.</span> Each CICS region in a z/OS operating system has a unique name. This name is an
+alphanumeric string, with a maximum of eight characters, and case-sensitive. CICS region names are
+always in uppercase characters.</p>
+
+<p id="attr_cicslps__CRETIME"><strong>Create Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The time the LSR pool was created in the CICS region.</span></p>
+
+<p id="attr_cicslps__DELTIME"><strong>Delete Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The time the LSR pool was deleted from the CICS region.</span></p>
+
+<p id="attr_cicslps__HSBUFFER"><strong>Hiperspace Buffers</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The indicator of whether hiperspace buffers are being used in the
+CICS region.</span> The values are Yes or No.</p>
+
+<p id="attr_cicslps__LOOKAH"><strong>Lookaside Hits</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of successful read requests that VSAM was able to satisfy
+without initiating an I/O operation; that is, the requested index record was already present in one
+of the buffer resident Control Intervals.</span> The value format is an integer of maximum four
+bytes.</p>
+
+<p id="attr_cicslps__LOOKAH8"><strong>Lookaside Hits 8</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of successful read requests that VSAM was able to satisfy
+without initiating an I/O operation; that is, the requested index record was already present in one
+of the buffer resident Control Intervals.</span> The value format is an integer of maximum eight
+bytes.</p>
+
+<p id="attr_cicslps__LOOKAR"><strong>Lookaside Ratio</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of VSAM read requests that were satisfied
+without initiating I/O because the Control Interval (CI) was already resident in the buffer
+pool.</span> The value format is a percentage in the range of 0-100.</p>
+
+<p id="attr_cicslps__MAXKEY"><strong>Maximum Key Length</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The length of the largest key of a VSAM data set which might use
+this LSR pool.</span> The value format is an integer of maximum two bytes. The range can be 0 -
+255.</p>
+
+<p id="attr_cicslps__OPENACB"><strong>Open ACBs</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of open application control blocks in the CICS
+region.</span> The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicslps__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The combination of z/OS System ID (SMFID) and CICS region name.</span>
+The value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name in the attribute to the names
+of managed systems assigned to the item. If the origin node name matches the name of a managed
+system, the status of the item changes accordingly. If the names of the origin node and the managed
+systems do not match, the status of the item remains unchanged.</p>
+
+<p id="attr_cicslps__PACTIVE"><strong>Percent of Active Strings</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the percentage of strings that are currently active.</span>
+The value format is a percentage in the range of 0-100.</p>
+
+<p>This value is computed by dividing the number of active strings by the total number of
+strings.</p>
+
+<p id="attr_cicslps__POOLID"><strong>Pool ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Identifies the LSR pool with an integer value of maximum two bytes
+in the 1 to 255 range.</span></p>
+
+<p id="attr_cicslps__POOLLOC"><strong>Pool Location</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The location of the application control blocks and buffers.</span>
+</p>
+
+<p id="attr_cicslps__POOLSTAT"><strong>Pool Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the status of the LSR pool.</span> These are the values:</p>
+
+
+<ul>
+<li>Created</li>
+
+<li>Deleted</li>
+
+<li>Not built</li>
+
+</ul>
+
+<p id="attr_cicslps__POOLTYPE"><strong>Pool Type</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the type of subsystem using the LSR pool.</span> The value
+is CICS.</p>
+
+<p id="attr_cicslps__CISZSRC"><strong>Source of CI Size</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The source either computed or defined, of the control interval size
+for the buffer pool.</span> The D (defined) value states that the control interval size is explicitly
+specified in the LSR Pool definition. The C (computed) value states that the source for the control
+interval size is computed by CICS.</p>
+
+<p id="attr_cicslps__STNUMSRC"><strong>Source of String Number</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The source either computed or defined, for the number of strings in
+the LSR pool.</span> The D (defined) value states that the source of the number of strings is
+explicitly specified in the LSR Pool definition. The C (computed) value states that the source for
+the number of strings is computed by CICS.</p>
+
+<p id="attr_cicslps__MAXWAIT"><strong>String Wait HWM</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The peak number of tasks concurrently waiting for strings against
+the file.</span> The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicslps__SYSTEMID"><strong>System ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely identifies an active
+z/OS operating system within a given CICSplex.</span> The value format is an alphanumeric string,
+maximum four characters, and case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicslps__TASKWAIT"><strong>Tasks Waiting</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the number of current string waits in the system.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicslps__BUFNUM"><strong>Total Buffers</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total number of buffers.</span> The value format is an integer of
+maximum four bytes.</p>
+
+<p id="attr_cicslps__TOTREAD"><strong>Total Reads</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total number of buffer reads, which is number of times a Control
+Interval has to be read from disk.</span> Increasing the buffer allocation decreases this activity.
+The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicslps__TOTREAD8"><strong>Total Reads 8</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total number of buffer reads, which is number of times a Control
+Interval has to be read from disk.</span> Increasing the buffer allocation decreases this activity.
+The value format is an integer of maximum eight bytes.</p>
+
+<p id="attr_cicslps__STRINGNUM"><strong>Total Strings </strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total number of strings.</span> The value format is an integer of
+maximum four bytes.</p>
+
+<p id="attr_cicslps__TOTWAIT"><strong>Total String Waits</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total number of requests that were queued because all the
+strings within this LSR pool were in use.</span> The value format is an integer of maximum four bytes </p>
+
+<p id="attr_cicslps__TOTWRITE"><strong>Total Writes</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of buffer WRITEs to the temporary storage data set.</span>
+This includes both WRITEs necessitated by recovery requirements and WRITEs forced by the buffer
+being needed to accommodate another Control Interval. The value format is an integer of maximum four
+bytes.</p>
+
+</div>
+
+</article></main></body></html>

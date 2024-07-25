@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The CICSplex Resource Limiting Definitions attribute group provides information about the resource limits that determine when a resource-limiting action will be initiated.">
+<meta name="keywords" content="attribute groups, CICSplex Resource Limiting Definition">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Resource Limiting Definitions attribute group</title>
+</head>
+<body id="attr_cicsrlm"><main role="main"><article role="article" aria-labelledby="d7543e10">
+<h1 class="topictitle1" id="d7543e10">CICSplex Resource Limiting Definitions attribute group</h1>
+
+
+
+<div class="body"><p class="shortdesc">The CICSplex Resource Limiting Definitions attribute group provides information about the
+resource limits that determine when a resource-limiting action will be initiated.</p>
+
+<p><span class="ph synph" id="attr_cicsrlm__CICSRLM"></span>
+<span class="ph" data-hd-otherprops="flyover_string">These attributes provide details of the rules that control the
+amount of resources a task is permitted to use before OMEGAMON takes action.</span></p>
+
+<p id="attr_cicsrlm__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The job name or modify ID of the CICS region
+being monitored.</span> Each CICS region in a z/OS operating system
+ has a unique name. This name is an alphanumeric string, with a maximum
+of eight characters, and case-sensitive. CICS region names are always
+in uppercase characters.</p>
+
+<p id="attr_cicsrlm__KILLLIM"><strong>Kill Limit</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The value at which OMEGAMON will attempt to KILL the task whose use
+of this resource exceeds the limit.</span></p>
+
+<p id="attr_cicsrlm__KILLLIMM"><strong>Kill Limit Milli</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The value at which OMEGAMON will attempt to KILL the task whose use
+of this resource exceeds the limit.</span></p>
+
+<p id="attr_cicsrlm__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The combination of z/OS System ID (SMFID) and
+CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsrlm__RESOURCE"><strong>Resource</strong> <span class="ph" data-hd-otherprops="flyover_string">The type of resource that this rule applies
+to.</span> The valid format is an alphanumeric string, with a maximum
+of eight characters.</p>
+
+<p id="attr_cicsrlm__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">The SMF identifier that uniquely identifies
+an active CICS operating system within a specific CICSplex.</span> The
+valid format is an alphanumeric string, with a maximum of four characters.</p>
+
+<p id="attr_cicsrlm__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">The transaction ID mask that this rule applies
+to.</span> The valid format is an alphanumeric string, with a maximum
+of four characters.</p>
+
+<p id="attr_cicsrlm__TYPE"><strong>Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the rule is included or excluded for the program application.</span></p>
+
+<p id="attr_cicsrlm__WARNLIM"><strong>Warn Limit</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The limit at which OMEGAMON will take the defined warning action if
+the use of this resource by the task exceeds the limit.</span></p>
+
+<p id="attr_cicsrlm__WARNLIMM"><strong>Warn Limit Milli</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The limit at which OMEGAMON will take the defined warning action if
+the use of this resource by the task exceeds the limit.</span></p>
+
+</div>
+</article></main></body></html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transient Data Queues">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transient Data Queues attribute group</title>
+</head>
+<body id="attr_cicstdq"><main role="main"><article role="article" aria-labelledby="d35713e10">
+<h1 class="topictitle1" id="d35713e10">CICSplex Transient Data Queues attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstdq__CICSTDQ"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transient Data Queues attributes
+report on the status of transient data queues for each monitored CICS
+region.</span> Use these attributes in situations to determine if the
+length of a transient data queue or number of data records in a transient
+data queue exceed a threshold. These attributes provide data for the
+Transient Data Queues table view.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex Transient Data Queues group
+are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicstdq__ATIFACLT"><strong>ATI Facility</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the facility associated with this destination.</span> This name is an
+alphanumeric string of eight characters.</p>
+
+<p id="attr_cicstdq__ATITERM"><strong>ATI Term ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the terminal associated with this destination.</span> This name is an
+alphanumeric string of four characters.</p>
+
+<p id="attr_cicstdq__ATITRAN"><strong>ATI Tran ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the transaction ID associated with this destination.</span> This name
+is an alphanumeric string, four characters, and case-sensitive.</p>
+
+<p id="attr_cicstdq__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicstdq__DESTID"><strong>Dest ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the intrapartition identifier.</span> The value format is alphanumeric,
+maximum four characters, and case-sensitive.</p>
+
+<p id="attr_cicstdq__DESTSTAT"><strong>Destination Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the current status of this destination.</span> These
+are the valid values:</p>
+
+<ul>
+<li>Enabled</li>
+
+<li>Disabled</li>
+
+<li>Open</li>
+
+<li>Closed</li>
+
+<li>Open_in_progress</li>
+
+<li>Close_in_progress </li>
+
+<li>FEOV_in_progress</li>
+
+<li>n/a</li>
+
+</ul>
+
+<p id="attr_cicstdq__DESTTYPE"><strong>Destination Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the type of destination.</span> These are the values:</p>
+
+<ul>
+<li>Intrapartition</li>
+
+<li>Extrapartition</li>
+
+<li>Remote</li>
+
+<li>Indirect</li>
+
+<li>n/a</li>
+
+</ul>
+
+<p id="attr_cicstdq__DESTESTA"><strong>Enable Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the status has been enabled or disabled for the destination.</span></p>
+
+<p id="attr_cicstdq__INDQNAME"><strong>Indirect Queue Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the indirect queue
+that is associated with this queue.</span> The value format is alphanumeric,
+maximum four characters, and case-sensitive.</p>
+
+<p id="attr_cicstdq__DESTOSTA"><strong>Open Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the status is open or closed for the destination.</span></p>
+
+<p id="attr_cicstdq__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstdq__QUEUELEN"><strong>Queue Length</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the queue length of the intrapartition destination.</span> The value
+format is a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicstdq__OVERTRIG"><strong>Queue Over Trigger</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of records by which
+the queue length exceeds the trigger level.</span> The value format
+is a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicstdq__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicstdq__TRIGGER"><strong>Trigger Level</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the intrapartition trigger level.</span> The value format is an integer,
+maximum two bytes, and in the range 0-32767.</p>
+
+<p id="attr_cicstdq__USECOUNT"><strong>Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the number of times this destination has been used.</span> The value
+format is either a nonnegative integer, maximum four bytes, or n/a.</p>
+
+</div>
+
+</article></main></body></html>

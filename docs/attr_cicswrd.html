@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Workrequest Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Workrequest Details attribute group</title>
+</head>
+<body id="attr_cicswrd"><main role="main"><article role="article" aria-labelledby="d32992e10">
+<h1 class="topictitle1" id="d32992e10">CICSplex Workrequest Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicswrd__CICSWRD"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Workrequest Details attribute
+group allows you to track the various EJB tasks that are started as
+a result of action by a request receiver.</span></p>
+
+<p id="attr_cicswrd__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicswrd__CLIENTIP6A"><strong>Client Address</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the TCP/IP address of the client that originated the request and can
+be in the version 4 or version 6 bit format.</span> It is a 39 character
+value.</p>
+
+<p id="attr_cicswrd__CLIENTIPAD"><strong>Client IP Address</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the TCP/IP address of the client that
+originated the request.</span> It is a 15 character value.</p>
+
+<p id="attr_cicswrd__CORBASERVR"><strong>Corbaserver Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the identifier of the associated CORBA
+server.</span> It is a four character value</p>
+
+<p id="attr_cicswrd__LISTENPORT"><strong>Listener Port</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the host port that received the request.</span></p>
+
+<p id="attr_cicswrd__OAPPLID"><strong>Originating Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the application ID of the originating task.</span> It is an eight character
+field.</p>
+
+<p id="attr_cicswrd__OTASK"><strong>Originating Task</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of the task (RequestReceiver) that received the request.</span></p>
+
+<p id="attr_cicswrd__OTRANSID"><strong>Originating Transaction</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the transaction associated with the
+original request.</span> It is an four character field.</p>
+
+<p id="attr_cicswrd__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicswrd__REQUESTID"><strong>Request Id</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the current request number.</span> A client can send more than one request
+at a time.</p>
+
+<p id="attr_cicswrd__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicswrd__STACK"><strong>Stack Level</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the stack level of the current call.</span></p>
+
+<p id="attr_cicswrd__TASK"><strong>Task</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number
+of the local task (RequestProcessor).</span></p>
+
+<p id="attr_cicswrd__TRANSID"><strong>Transaction Id</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the local transaction identifier.</span></p>
+
+<p id="attr_cicswrd__TSYSTEM"><strong>Target System</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies
+the applid of the target CICS system as a 21-byte field.</span> This
+field contains one of the following values:</p>
+
+<ul>
+<li>The dotted decimal TCP/IP address and port number of the target
+system</li>
+
+<li>Up to eight characters followed by blanks. In this case these
+eight characters, or less, are the VTAM applid of the target system</li>
+
+<li>If the field contains only a string of blank characters (spaces),
+the target is not CICS over MRO</li>
+
+<li>Another value; CICS does not know about any other possibilities.
+Any other value must be meaningful to other software at your installation
+which expects to work with the value obtained from this parameter
+of this CICS command</li>
+
+</ul>
+
+<p id="attr_cicswrd__TARGETSYS"><strong>Target System Address</strong> <span class="ph" data-hd-otherprops="flyover_string">The address of the Target System.</span> It
+is a 39 character value.</p>
+
+<p id="attr_cicswrd__WRKREQUEST"><strong>Work request</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the identifier token of the work request.</span></p>
+
+<p id="attr_cicswrd__WORKTYPE"><strong>Work Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the indicator to show the work request type.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">IIOP</dt>
+
+<dd class="dlentry">Specifies that the work is being executed for an IIOP request.</dd>
+
+
+<dt class="dlterm">SOAP</dt>
+
+<dd class="dlentry">Specifies that the work is being executed for a Web service request.</dd>
+
+</dl>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Auxiliary Temporary Storage Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Auxiliary Temporary Storage Details attribute group</title>
+</head>
+<body id="attr_cicstsa"><main role="main"><article role="article" aria-labelledby="d27695e10">
+<h1 class="topictitle1" id="d27695e10">CICSplex Auxiliary Temporary Storage Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstsa__CICSTSA"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Auxiliary Temporary Storage Details attributes report on the list
+of the auxiliary temporary storage pools and queues that exist in
+the monitored CICS system.</span></p>
+
+<p id="attr_cicstsa__AVAILBCI"><strong>Available Bytes per CI</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of bytes available for use in
+the TS data set control interval.</span></p>
+
+<p id="attr_cicstsa__BUFFN"><strong>Buffers Allocated</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of temporary storage buffers
+specified in the TS= system initialization parameter or in the overrides.</span> The
+number of buffers allocated can exceed the number requested.</p>
+
+<p id="attr_cicstsa__BUFFU"><strong>Buffers in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of buffers containing
+active data.</span></p>
+
+<p id="attr_cicstsa__TSCISIZE"><strong>CI Size</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the size of VSAM's unit of transmission between disk and main storage.</span> It
+is specified in the CONTROLINTERVALSIZE parameter in the VSAM CLUSTER
+definition for the temporary storage data set. In general, using large
+CIs permits more data to be transferred at one time, resulting in
+less system overhead.</p>
+
+<p id="attr_cicstsa__RECOCIW"><strong>CI Writes from Recovery</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of writes to control interval
+from recovery.</span></p>
+
+<p id="attr_cicstsa__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job NAME or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique NAME. This NAME is an alphanumeric string, with
+a maximum of eight characters, and case-sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicstsa__TSCINUSE"><strong>CIs in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of control intervals
+containing active data.</span></p>
+
+<p id="attr_cicstsa__BUFFW"><strong>Current Buffer Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of times a request was queued
+because all buffers were allocated to other tasks.</span> A buffer wait
+also occurs if the required control interval is already in a locked
+buffer, and therefore unavailable, even if there are other buffers
+available.</p>
+
+<p id="attr_cicstsa__TSCWAITS"><strong>Current String Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of I/O requests that
+are queued because all strings are in use.</span></p>
+
+<p id="attr_cicstsa__BUFCW"><strong>Current Write Buffers</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of WRITE requests to the auxiliary
+temporary storage data set.</span> This includes both WRITE requests
+necessitated by recovery requirements and WRITE requests forced because
+the buffer must accommodate another CI.</p>
+
+<p id="attr_cicstsa__FORMCIW"><strong>Formatted CI Writes</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of times a new CI was successfully
+written at the end of the data set to increase the amount of available
+space in the data set.</span> A formatted write is attempted only if
+the current number of CIs available in the auxiliary data set have
+all been used.</p>
+
+<p id="attr_cicstsa__HWMBUFWT"><strong>HWM Buffer Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of requests queued because
+no buffers were available.</span></p>
+
+<p id="attr_cicstsa__HWMCINUS"><strong>HWM CIs in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of CIs containing active
+data.</span></p>
+
+<p id="attr_cicstsa__HWMSTRWT"><strong>HWM of String Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the HWM of Auxiliary Temporary Storage string
+waits.</span></p>
+
+<p id="attr_cicstsa__HWMSTRIU"><strong>HWM of Strings in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the HWM of Auxiliary Temporary Storage strings
+in use.</span></p>
+
+<p id="attr_cicstsa__LONGAXRL"><strong>Longest Aux Record Length</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the longest Auxiliary Temporary Storage
+record length.</span></p>
+
+<p id="attr_cicstsa__BUFMW"><strong>Max Write Buffers</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of WRITE requests to the
+temporary storage data set.</span> This includes both WRITE requests
+necessitated by recovery requirements and WRITE requests forced because
+the buffer must accommodate another CI.</p>
+
+<p id="attr_cicstsa__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region NAME.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node NAME
+in the attribute to the names of managed systems assigned to the item.
+If the origin node NAME matches the NAME of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstsa__AUXBUF"><strong>Percent Buffers in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of auxiliary temporary storage
+buffers in use.</span></p>
+
+<p id="attr_cicstsa__TSCIS"><strong>Percent CIs in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of auxiliary temporary storage
+control intervals in use.</span></p>
+
+<p id="attr_cicstsa__SEGIUP"><strong>Percent Segments in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of auxiliary temporary storage
+segments in use.</span></p>
+
+<p id="attr_cicstsa__TSSTRING"><strong>Percent Strings in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the percentage of active auxiliary temporary
+storage strings.</span></p>
+
+<p id="attr_cicstsa__PUTSLCIS"><strong>PUTs larger than CI size</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of writes of records whose
+length was greater than the control interval (CI) size.</span> If the
+reported value is large, increase the CI size. If the value is zero,
+consider reducing the CI size until a small value is reported.</p>
+
+<p id="attr_cicstsa__SEGSIZE"><strong>Segment Size</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of bytes per segment.</span></p>
+
+<p id="attr_cicstsa__SEGINUSE"><strong>Segments in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of segments in use.</span></p>
+
+<p id="attr_cicstsa__SEGPCI"><strong>Segments per CI</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of segments in each TS data set
+control interval.</span></p>
+
+<p id="attr_cicstsa__STRALLOC"><strong>Strings Allocated</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of temporary storage strings
+specified in the TS= system initialization parameter or in the overrides.</span> The
+number of strings allocated can exceed the number requested.</p>
+
+<p id="attr_cicstsa__STRINUSE"><strong>Strings in Use</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of auxiliary temporary storage
+strings containing active data.</span></p>
+
+<p id="attr_cicstsa__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character NAME that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, a maximum of four characters,
+and is case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstsa__BUFTWT"><strong>Total Buffer Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of times a request was
+queued because all buffers were allocated to other tasks.</span> A buffer
+wait also occurs if the required control interval is already in a
+locked buffer, and therefore unavailable, even if there are other
+buffers available.</p>
+
+<p id="attr_cicstsa__TOTALCIR"><strong>Total CI Reads</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of control interval Reads.</span></p>
+
+<p id="attr_cicstsa__TOTALCIW"><strong>Total CI Writes</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of control interval Writes.</span></p>
+
+<p id="attr_cicstsa__TOTALCI"><strong>Total CIs</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of Control Intervals.</span></p>
+
+<p id="attr_cicstsa__TOTIOER"><strong>Total I/O Error</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of I/O errors.</span></p>
+
+<p id="attr_cicstsa__SEGTOT"><strong>Total Segments</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of segments.</span></p>
+
+<p id="attr_cicstsa__TSTRWAIT"><strong>Total String Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">The HWM of Auxiliary Temporary Storage string
+waits.</span></p>
+
+</div>
+</article></main></body></html>

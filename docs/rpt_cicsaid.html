@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Automatic Initiate Descriptors workspace displays summary information on all the Automatic Initiate Descriptors in the CICS region. It shows you the work waiting on terminals and remote systems.">
+<meta name="keywords" content="workspaces, Automatic Initiate Descriptor">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Automatic Initiate Descriptor workspace</title>
+</head>
+<body id="rpt_cicsaid"><main role="main"><article role="article" aria-labelledby="d30107e11">
+<h1 class="topictitle1" id="d30107e11">Automatic Initiate Descriptor workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Automatic Initiate Descriptors workspace displays summary
+information on all the Automatic Initiate Descriptors in the CICS® region. It shows you the work
+waiting on terminals and remote systems.</p>
+
+<div class="section"><p>This workspace allows bottlenecks involving terminals
+or printers to be identified. For example, a request to start a task
+connected to a printer shows as an Automatic Initiate Descriptor when
+the target printer is not available. If many Automatic Initiate Descriptors
+have accumulated, response time can be adversely affected because CICS attempts to start each Automatic
+Initiate Descriptor on every dispatch of the terminal control program.</p>
+<p>The
+predefined Automatic Initiate Descriptor workspace contains the following
+views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Take Action view allows you to purge an Automatic Initiate
+Descriptor either directly or using the CICS-supplied transaction
+CEKL. Selecting either of these options prompts you for the Automatic
+Initiate Descriptor address. Alternatively you can select the Automatic
+Initiate Descriptor from the table view, right-click, and a popup
+window shows the Take Action options.</li>
+
+<li>The Table view shows all the attributes. From the table view you
+can select one of the definitions, right-click and a popup window
+shows all the options listed in the Take Action window. The information
+allows you to purge an Automatic Initiate Descriptor using the <span class="keyword">OMEGAMON XE</span> agent.</li>
+
+</ul>
+</div>
+
+<div class="section"><p>You can end Automatic Initiate Descriptors in your CICS region when they accumulate
+because of a printer, terminal, or remote connection error. You can
+do this by using the Take Action view to purge the Automatic Initiate
+Descriptor or by using the CEKL transaction. Alternatively, you can
+select one of the definitions, right-click and a popup window lists
+all the options displayed in the Take Action window.</p>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicsaid.html#attr_cicsaid">CICSplex AID Analysis attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Enqueue Analysis Tasks">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Enqueue Analysis Tasks attribute group</title>
+</head>
+<body id="attr_cicsnqt"><main role="main"><article role="article" aria-labelledby="d68133e10">
+<h1 class="topictitle1" id="d68133e10">CICSplex Enqueue Analysis Tasks attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsnqt__CICSNQT"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Enqueue Analysis Tasks attribute group displays the transactions that
+are either holding or waiting for a particular resource.</span></p>
+
+<p id="attr_cicsnqt__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique job name. This job name is used for operations
+initiated from the z/OS system console. CICS region names are always
+in uppercase characters. The value is an alphanumeric string, maximum
+eight  characters and case-sensitive.</p>
+
+<p id="attr_cicsnqt__ENQRESH"><strong>Enqueue Resource Hex</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the serially reusable resource name
+in hexadecimal format.</span> The value format is an alphanumeric string
+of maximum 510 characters.</p>
+
+<p id="attr_cicsnqt__ENQSCOPE"><strong>Enqueue Scope</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the scope of the resource enqueue.</span> These
+are the values: Local and Sysplex.</p>
+
+<p id="attr_cicsnqt__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 characters, that is case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsnqt__RESLEN"><strong>Resource Length</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the length of the resource name.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicsnqt__TASRNAME"><strong>Resource Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the CICS resource upon
+which the task is waiting.</span> The value format is an alphanumeric
+string of maximum eight  characters.</p>
+
+<p id="attr_cicsnqt__TASRTYPE"><strong>Resource Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the format of the serially reusable
+resource name.</span> These are the values: Address or Variable.</p>
+
+<p id="attr_cicsnqt__SCOPENAM"><strong>Scope Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name assigned in the ENQSCOPE
+resource definition of CICS that is appended to the characters "DFHE"
+for the QNAME.</span> The value format is an alphanumeric string of
+maximum four characters.</p>
+
+<p id="attr_cicsnqt__PLEXNAME"><strong>Sysplex Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the name assigned to the SYSPLEX
+configuration that owns the serially reusable resource.</span> The value
+format is an alphanumeric string of maximum eight  characters.</p>
+
+<p id="attr_cicsnqt__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> This
+value is a concatenation z/OS System ID (SMFID) and the CICS region
+name. The value format is an alphanumeric string, maximum four characters,
+that is case-sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicsnqt__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number that was sequentially
+assigned by CICS to uniquely identify the task.</span> The value format
+is an integer of maximum four bytes.</p>
+
+<p id="attr_cicsnqt__TASKSTAT"><strong>Task Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates whether the task is holding or waiting
+for the serially reusable resource.</span> Values include: Owning or
+Waiting.</p>
+
+<p id="attr_cicsnqt__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-letter transaction identifier
+from the Program Control Table (PCT).</span> The value format is an
+alphanumeric string of maximum four characters.</p>
+
+</div>
+</article></main></body></html>

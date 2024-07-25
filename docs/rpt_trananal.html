@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Transaction Analysis workspace shows a comprehensive view of transactions, which enables you to identify problem transactions across CICS regions and z/OS images for the CICSplex.">
+<meta name="keywords" content="workspaces, Transaction Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transaction Analysis workspace</title>
+</head>
+<body id="rpt_trananal"><main role="main"><article role="article" aria-labelledby="d22079e11">
+<h1 class="topictitle1" id="d22079e11">Transaction Analysis workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Transaction Analysis workspace shows a comprehensive
+view of transactions, which enables you to identify problem transactions
+across CICS® regions and z/OS® images for the CICSplex. </p>
+
+<div class="section"><p>This workspace displays data provided by the <a href="attr_tran.html#attr_tran">CICSplex Transaction Analysis attribute group</a>.</p>
+</div>
+
+<div class="section"><p>The predefined Transaction Analysis workspace contains
+the following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Transaction Processor Utilization bar chart shows the amount
+of CPU time being used by each task.</li>
+
+<li>The Transaction Analysis table view provides a system-wide view
+of executing transactions. <p> You can add the <strong>System Task</strong> filtering
+column to the table view to identify CICS system tasks and non CICS
+system tasks. You modify the query for the Transaction Analysis workspace
+to include the appropriate setting (Yes or No) for the <strong>System Task</strong> column.</p>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><p>The Transaction Analysis table view provides links to
+these workspaces:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="rpt_uow.html#rpt_uow" title="The predefined Units of Work workspace lists the units of work running in the CICS region for the selected transaction.">Units of Work workspace</a></li>
+
+<li><a href="rpt_cicsapptrace.html#rpt_cicsapptrace" title="The Application Trace workspace displays the application trace data for a specific transaction.">Application Trace workspace</a></li>
+
+<li><a href="rpt_cicsodv.html#rpt_cicsodv" title="The Online Data Viewing workspace displays the information collected from the historical data analysis that has been set for each CICS region.">Online Data Viewing workspace</a></li>
+
+<li><a href="rpt_cicstsq.html#rpt_cicstsq" title="The Temporary Storage Details workspace allows you to monitor the number of times temporary-storage limits have been reached and their potential performance impact on your CICS regions.">Temporary Storage Details workspace</a></li>
+
+<li><a href="rpt_cicstrd.html#rpt_cicstrd" title="The Transaction Details workspace is accessed from the Transaction Analysis workspace. The EXEC interface block (EIB) summary table accesses all the fields in the EIB by name. The EIB contains information that is useful during the execution of an application program, such as the transaction identifier, the time and date (initially when the task is started, and subsequently, if updated by the application program using ASKTIME), and the cursor position on a display device. The EIB also contains information that is helpful when a dump is used to debug a program.">Transaction Details workspace</a>, showing: <ul>
+<li> EIB Summary, with a link to the <a href="rpt_cicstrf.html#rpt_cicstrf" title="The predefined Transaction EIB Details workspace displays detailed information about each EIB and application program details.">Transaction EIB Details workspace</a></li>
+
+<li> Transaction Applications</li>
+
+</ul>
+</li>
+
+<li><a href="rpt_cicstrs.html#rpt_cicstrs" title="The Transaction Storage Analysis workspace displays the amount of storage used by the transaction that you selected from the Transaction Analysis workspace, including program storage HWM in CDSA, ECDSA, RDSA, ERDSA, SDSA and ESDSA; it also shows storage above and below the 16 MB line.">Transaction Storage Analysis workspace</a></li>
+
+<li><a href="rpt_cicstrt.html#rpt_cicstrt" title="The Transaction Timings workspace compares the current CPU time with the time in suspend for your selected CICS region, the Total I/O wait time, the Total Other wait time, first dispatch delay, Re-dispatch delay, and the Exception Wait time; it also shows the time spent by the transaction you selected from the Transaction Analysis workspace.">Transaction Timings workspace</a>, showing I/O
+and Others Waits Details</li>
+
+<li><a href="rpt_cicstr1.html#rpt_cicstr1" title="The Transaction Statistics workspace provides statistics on transactions including among others, transient data PUTs, GETs and purges, intercommunication (IC) starts (table only) and requests as well as attached TCBs and the number of TCB mode switches.">Transaction Statistics workspace</a></li>
+
+<li><a href="rpt_cicstrn.html#rpt_cicstrn" title="The Transaction and Program Definitions workspace is accessed from a link in the Transaction Analysis workspace and shows the transaction and program definitions for the transaction that you have selected.">Transaction and Program Definitions workspace</a></li>
+
+<li><a href="rpt_cicstru.html#rpt_cicstru" title="The Transaction Umbrella Information workspace allows you to view details of a transaction that uses IBM Z OMEGAMON for CICS umbrella services; these services are useful when tracking either long-running tasks that perform multiple functions or tasks where many programs might be invoked through a single transaction ID (a characteristic of many fourth-generation language packages). The umbrella user data is a work area available for use by an application for reading and storing information. It is displayed in this workspace in both character and hexadecimal formats.">Transaction Umbrella Information workspace</a></li>
+
+<li><a href="rpt_cicstrr.html#rpt_cicstrr" title="The Transaction Remote workspace is accessed as a link from the Transaction Analysis workspace. If the transaction that you selected is communicating with or accessing resources at a remote CICS region, its details are shown here.">Transaction Remote Summary workspace</a></li>
+
+<li><a href="rpt_cicstfl.html#rpt_cicstfl" title="The Transaction File Details workspace compares the total number of file requests with the total file request time for the transaction and compares the total file I//O wait time with the RLS-mode wait time and the Coupling Facility Data Table (CFDT) wait time for the transaction that you selected; it also shows other file detail information.">Transaction File Details workspace</a></li>
+
+<li><a href="rpt_cicstts.html#rpt_cicstts" title="The Transaction TSQueue Details workspace displays the tasks that have had significant wait time for Temporary Storage queues.">Transaction TSQueue Details workspace</a></li>
+
+</ul>
+</div>
+
+<div class="section"><p>It also provides links to the Transaction Details in 3270
+and Online Data Viewing in 3270 views of the OMEGAMON 3270 interface.
+When you right-click a link icon in the Transaction Analysis table
+view and select Transaction Details in 3270 or Online Data Viewing
+in 3270, you must enter your terminal session user credentials in
+the dialog and click <strong>OK</strong>. A terminal view is displayed within
+the workspace, with the appropriate details. Using this panel, you
+can examine much more historical data than is available in the <span class="keyword">Tivoli Enterprise Portal</span> workspace.</p>
+</div>
+
+<div class="section"><p>Note that each of these predefined workspace links to
+a 3270 session has an associated sample script. You should review
+these scripts prior to using them in your environment.</p>
+</div>
+
+<div class="section"><p>You can link to the Detailed Thread Exception workspace
+provided by the <span class="keyword">OMEGAMON for DB2 on z/OS</span> product
+for the selected DB2® Correlation
+identifier, which allows you to track a transaction and the activity
+as it moves between the CICS and DB2 products.</p>
+</div>
+
+<div class="section"><p>Likewise, you can link to its Single DB2 Thread Summary workspace, of the <span class="keyword">OMEGAMON for DB2 on z/OS</span> product
+filtered by the DB2 Correlation
+identifier. With this feature, you retrieve detail data about the
+running transaction.</p>
+</div>
+
+<div class="section"><p>If the <span class="keyword">OMEGAMON for IMS on z/OS</span> product
+is also installed and running, you can link to its DBCTL Detailed
+Thread Activity (Active) workspace, filtered by the CICS Jobname and CICS Task
+Number columns. With this feature, you track a transaction and the
+activity as it moves between the CICS and IMS products.</p>
+</div>
+
+<div class="section"><p></p>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_tran.html#attr_tran">CICSplex Transaction Analysis attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

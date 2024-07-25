@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Journal Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Journal Analysis attribute group</title>
+</head>
+<body id="attr_cicsjat"><main role="main"><article role="article" aria-labelledby="d24520e10">
+<h1 class="topictitle1" id="d24520e10">CICSplex Journal Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsjat__CICSJAT"></span>
+   <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Journal Analysis attribute group provides
+    information about the system log and the general logs.</span> It includes all of the statistics
+   and failure codes currently offered by the <span class="keyword">OMEGAMON AI for CICS</span> (3270) interface.</p>
+
+<p id="attr_cicsjat__JRNLAVGW"><strong>Average Bytes Written</strong> <span class="ph" data-hd-otherprops="flyover_string">The average number of bytes written to
+this journal per request.</span> If the journal is a System Log, this
+field contains the n/a value; the statistics for System Logs are kept
+with their associated Log Stream.</p>
+
+<p id="attr_cicsjat__JRNLFLUS"><strong>Buffer Flushes</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+number of buffer flush requests issued for this journal.</span> If the
+journal is a System Log, this field contains the n/a value; the statistics
+for System Logs are kept with their associated Log Stream.</p>
+
+<p id="attr_cicsjat__JRNLBYTE"><strong>Bytes Written</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+number of bytes written to this journal.</span> If the journal is a
+System Log, this field contains the n/a value; the statistics for
+System Logs are kept with their associated Log Stream.</p>
+
+<p id="attr_cicsjat__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsjat__JRNLFAIL"><strong>Failure Reason</strong> <span class="ph" data-hd-otherprops="flyover_string">Provides
+the reason behind a log stream error when the Journal Status column
+indicates the journal has failed.</span> These are the values:</p>
+
+<ul>
+<li>System log conflict</li>
+
+<li>Journal has failed</li>
+
+<li>Error opening log</li>
+
+<li>Unable to create</li>
+
+<li>n/a</li>
+
+</ul>
+
+<p id="attr_cicsjat__JRNLNAME"><strong>Journal Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the eight character name of the CICS journal.</span> The value format
+is an alphanumeric string of maximum eight characters.</p>
+
+<p id="attr_cicsjat__JRNLSTAT"><strong>Journal Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the connection status of the journal.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">Ena Conn</dt>
+
+<dd class="dlentry">Journal is enabled and connected. It is mapped onto a z/OS log
+stream. Only user journals can have this status.</dd>
+
+
+<dt class="dlterm">Ena Disc</dt>
+
+<dd class="dlentry">Journal is enabled but disconnected. It is no longer mapped onto
+a z/OS log stream. DFHLOG, DFHSHUNT, file control forward recovery
+logs, and auto journals typically display with the Enabled Disconnected
+status, even if the stream name is in use.</dd>
+
+
+<dt class="dlterm">Failed</dt>
+
+<dd class="dlentry">Journal has experienced a log stream failure. It cannot be used
+until it is re-enabled.</dd>
+
+
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">The status of the journal cannot be determined.</dd>
+
+
+<dt class="dlterm">Disabled</dt>
+
+<dd class="dlentry">Journal has been disabled. It cannot be used until it is re-enabled.</dd>
+
+</dl>
+
+<p id="attr_cicsjat__JRNLTYPE"><strong>Journal Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the type of journal.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">Dummy</dt>
+
+<dd class="dlentry">No log records are written to a z/OS log stream.</dd>
+
+
+<dt class="dlterm">MVS</dt>
+
+<dd class="dlentry">Journal records are written to a z/OS log stream.</dd>
+
+
+<dt class="dlterm">SMF</dt>
+
+<dd class="dlentry">Journal records are written in SMF format to the z/OS SMF log.
+Note that the SMF type is not used for the CICS system log or for
+forward recovery logs.</dd>
+
+
+<dt class="dlterm">Unknown</dt>
+
+<dd class="dlentry">The type of journal cannot be determined.</dd>
+
+</dl>
+
+<p id="attr_cicsjat__JRNLLOGN"><strong>MVS Log Stream Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the z/OS log stream to which
+the journal is mapped.</span> The value format is an alphanumeric string
+of maximum 26 characters.</p>
+
+<p id="attr_cicsjat__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsjat__JRNLSTLR"><strong>Statistics Last Reset</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the last time that journal statistics
+were reset, possibly because of interval statistics collection.</span> If
+the journal is a System Log, this field contains the n/a value; the
+statistics for System Logs are kept with their associated Log Stream.</p>
+
+<p id="attr_cicsjat__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsjat__JRNLSLOG"><strong>System Log</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether the journal is a system log.</span> There can be only one system
+log in each CICS region. These are the values: Yes or No.</p>
+
+<p id="attr_cicsjat__JRNLWAIT"><strong>WTOR Wait</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether or not the journal has a current status of Waiting for an
+Outstanding WTOR (Write-To-Operator-with-Reply).</span> When a journal
+becomes full, a WTOR is sent to the system console, and the journal's
+status is set to waiting for an outstanding WTOR if the Switch option
+is set to Pause in the journal control table (JCT). In this case,
+respond immediately to the WTOR to confirm that an existing journal
+can be reused and overwritten because CICS transactions using a journal
+with this status cannot continue until the WTOR is resolved. This
+attribute only applies to CICS version 4 and earlier. These are the
+valid values: Yes or No.</p>
+
+<p id="attr_cicsjat__JRNLWRIT"><strong>Write Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+number of write requests for this journal.</span> If the journal is
+a System Log, this field contains the n/a value; the statistics for
+System Logs are kept with their associated Log Stream.</p>
+
+</div>
+
+</article></main></body></html>

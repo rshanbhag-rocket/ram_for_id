@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction TSQUEUE Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction TSQUEUE Details attribute group</title>
+</head>
+<body id="attr_cicstts"><main role="main"><article role="article" aria-labelledby="d16819e10">
+<h1 class="topictitle1" id="d16819e10">CICSplex Transaction TSQUEUE Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstts__CICSTTS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transaction TSQUEUE Details
+attributes provide detailed resource information about the Temporary
+Storage queues accessed by the transaction.</span> Use the CICSplex
+Transaction TSQUEUE Details attributes to determine whether the transaction
+is issuing too many Temporary Storage requests, which might indicate
+an error in the transaction, or waiting too long to get the requests
+serviced.</p>
+
+<p id="attr_cicstts__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicstts__TSGETCN"><strong>Get Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of temporary storage queue GET requests.</span></p>
+
+<p id="attr_cicstts__TSGETTM"><strong>Get Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) of temporary storage
+queue GET requests.</span> The value can be entered in the HH:MM:SS.DDD
+format, for example, 00:20:00.567 or as SSSSSSS.DDD, for example 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstts__TSQNAMEX"><strong>Hex TSQueue ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the Temporary Storage Queue ID in hexadecimal format.</span></p>
+
+<p id="attr_cicstts__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstts__TSPUTACN"><strong>Put To AUX Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of temporary storage queue
+PUT requests to auxiliary temporary storage.</span></p>
+
+<p id="attr_cicstts__TSPUTATM"><strong>Put To Aux Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total time (accurate to three decimal
+places) of temporary storage queue PUT requests to auxiliary temporary
+storage.</span> The value can be entered in the HH:MM:SS.DDD format,
+for example, 00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.
+ If you are using variable substitution, the value in this example
+would display as 1200567.</p>
+
+<p id="attr_cicstts__TSPUTMCN"><strong>Put To Main Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of temporary storage queue
+PUT requests to main temporary storage.</span></p>
+
+<p id="attr_cicstts__TSPUTMTM"><strong>Put To Main Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total time (accurate to three decimal
+places) of temporary storage queue PUT requests to main temporary
+storage.</span> The value can be entered in the HH:MM:.DDD format, for
+example, 00:20:00.567 or as SSSSSSS.DDD, for example, 1200.567.  If
+you are using variable substitution, the value in this example would
+display as 1200567.</p>
+
+<p id="attr_cicstts__TSSHWAIN"><strong>Shared TSQ I/O Wait Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the shared temporary storage I/O wait
+count.</span></p>
+
+<p id="attr_cicstts__TSSHWAIM"><strong>Shared TSQ I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the shared temporary storage I/O wait
+time (accurate to three decimal places).</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicstts__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicstts__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number sequentially assigned by CICS to uniquely identify each
+task.</span></p>
+
+<p id="attr_cicstts__TSGETIL"><strong>Total Length Of Items Obtained</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total length of ALL the items obtained
+from temporary storage.</span></p>
+
+<p id="attr_cicstts__TSPUTAIL"><strong>Total Length Of Items Written To Aux</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total length of ALL the items written
+to auxiliary temporary storage.</span></p>
+
+<p id="attr_cicstts__TSPUTMIL"><strong>Total Length Of Items Written To Main</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total length of ALL the items written
+to main temporary storage.</span></p>
+
+<p id="attr_cicstts__TSIOWTTN"><strong>Total TSQ I/O Wait Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the temporary storage I/O wait count.</span></p>
+
+<p id="attr_cicstts__TSIOWTTM"><strong>Total TSQ I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the temporary storage I/O wait time
+(accurate to three decimal places).</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicstts__TSTOTCTM"><strong>Total TSQ Request Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total time (accurate to three decimal
+places) of all requests against the temporary storage queue.</span> The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstts__TSTOTCTN"><strong>Total TSQ Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of all requests against
+the temporary storage queue.</span></p>
+
+<p id="attr_cicstts__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the transaction ID.</span></p>
+
+<p id="attr_cicstts__TSQNAME"><strong>TSQueue Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the temporary storage queue name.</span></p>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Agent Preferences">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Agent Preferences attribute group</title>
+</head>
+<body id="attr_pagprefs"><main role="main"><article role="article" aria-labelledby="d53098e10">
+<h1 class="topictitle1" id="d53098e10">CICSplex Agent Preferences attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_pagprefs__PAGPREFS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Agent Preferences attribute
+group holds either the OMEGAMON-provided defaults in the PAGPREFS
+table or the values the user specified to control which OMEGAMON
+for CICS on z/OS agent will monitor a CICSplex.</span></p>
+
+<p id="attr_pagprefs__WHOSE"><strong>CICSplex Agent Defined By</strong> <span class="ph" data-hd-otherprops="flyover_string">Whether this is an OMEGAMON-defined CICSplex
+or assumed to be a CPSM CICSplex.</span> Four characters set to either <kbd class="ph userinput">OMEG</kbd> or <kbd class="ph userinput">CPSM</kbd>.
+If the preferences are entered as a result of a classification rule
+for a new CICSplex, then CICSplex Agent Defined By is set to <kbd class="ph userinput">OMEG</kbd>.</p>
+
+<p id="attr_pagprefs__PREFSMFID"><strong>CICSplex Agent Preferred SMF Identifier</strong> <span class="ph" data-hd-otherprops="flyover_string">The SMF Identifier where the CICSplex
+agent is to be initialized.</span> Valid input is up to four characters,
+a mixture of 0-9, A-Z, $, #, @. It can consist solely of numbers.
+It might be a single asterisk but not have asterisks otherwise (no
+generic specification allowed).</p>
+
+<p id="attr_pagprefs__PREFXMNO"><strong>CICSplex Agent Preferred XM Number</strong> <span class="ph" data-hd-otherprops="flyover_string">The number in the RKCPXM<var class="keyword varname">nn</var> DD
+card to be used, if there are multiple agent address spaces started
+at the LPAR indicated by CICSplex Agent Preferred SMF Identifier.</span> Valid
+input is 00-15.</p>
+
+<p id="attr_pagprefs__PLEXTIMOUT"><strong>CICSplex Agent Timeout</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">The number of minutes that a CICS agent will wait for the
+    CICSplex agent to initialize at the indicated LPAR.</span> If the CICSplex agent does not start up
+   in that period of time, any other <span class="keyword">OMEGAMON AI for CICS</span> address space will initialize it.
+   Valid input is 0-30.</p>
+
+<p id="attr_pagprefs__PLEXNAME"><strong>CICSplex Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+name of the CICSplex whose agent preferences are being displayed.</span></p>
+
+<p id="attr_pagprefs__PRODUCT"><strong>Product</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">The product that owns this table (always <span class="keyword">IBM Z OMEGAMON AI for CICS</span>).</span></p>
+
+<p id="attr_pagprefs__TABLE"><strong>Table</strong> <span class="ph" data-hd-otherprops="flyover_string">The table
+being processed (always PAGREFS for CICSplex Agent Preferences).</span></p>
+
+</div>
+
+</article></main></body></html>

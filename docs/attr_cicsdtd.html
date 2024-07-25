@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Document Template Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Document Template Details attribute group</title>
+</head>
+<body id="attr_cicsdtd"><main role="main"><article role="article" aria-labelledby="d75960e10">
+<h1 class="topictitle1" id="d75960e10">CICSplex Document Template Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsdtd__CICSDTD"></span> <span class="ph" data-hd-otherprops="flyover_string">This attribute group shows detailed information
+about a currently installed document template.</span></p>
+
+<p id="attr_cicsdtd__CCDCNT"><strong>Cached Copy Deleted</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the count of how many cached copies have been deleted.</span> The value
+is an integer with a maximum of four characters.</p>
+
+<p id="attr_cicsdtd__CACHECNT"><strong>Cached Copy Used</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of times the cached copy of this document template has
+been used.</span> The value is an integer with a maximum of four characters.</p>
+
+<p id="attr_cicsdtd__SIZE"><strong>Cached Size</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of storage, in bytes, used by the cached copy of the document
+template.</span> The value is an integer with a maximum of four characters.</p>
+
+<p id="attr_cicsdtd__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight  characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsdtd__CICSVER"><strong>CICS Version</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the version number of the CICS region.</span> The version is an alphanumeric
+string, with a maximum of four characters.</p>
+
+<p id="attr_cicsdtd__CRLFAPP"><strong>CR/LF Append</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+whether CICS is to delete trailing blanks from and append carriage-return/line-feed
+sequences to each logical record of the template.</span> These are the
+values:</p>
+
+<dl>
+<dt class="dlterm">YES</dt>
+
+<dd class="dlentry">Delete trailing blanks from and append carriage-return line-feed
+to each logical record of the template.</dd>
+
+
+<dt class="dlterm">NO</dt>
+
+<dd class="dlentry">Do not delete trailing blanks from or append carriage-return line-feed
+to each logical record of the template</dd>
+
+</dl>
+
+<p id="attr_cicsdtd__DTMPNAM"><strong>Document Template</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the current document template.</span> It can be up to eight
+characters.</p>
+
+<p id="attr_cicsdtd__EXTNAME"><strong>Extended Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the extended template-name by which the document template is to be
+known outside the resource definition function.</span></p>
+
+<p id="attr_cicsdtd__FORTYPE"><strong>Format</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+format of the template contents.</span> Values are BINARY and EBCDIC.</p>
+
+<p id="attr_cicsdtd__NEWCNT"><strong>Newcopy Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of times a new copy of this document template has been
+loaded.</span> The valid format is an integer with maximum four bytes.</p>
+
+<p id="attr_cicsdtd__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsdtd__READCNT"><strong>Read Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of times this document template has been read.</span> The
+valid format is an integer with a maximum of four bytes.</p>
+
+<p id="attr_cicsdtd__SOUNAME"><strong>Source Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the resource on which this template is stored.</span> The
+value format is an alphanumeric string, maximum 255 bytes.</p>
+
+<p id="attr_cicsdtd__TEMPTYP"><strong>Source Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the type of the resource where this template is stored.</span> These
+are the valid values:</p>
+
+<dl>
+<dt class="dlterm">EXIT</dt>
+
+<dd class="dlentry">An exit program.</dd>
+
+
+<dt class="dlterm">FILE</dt>
+
+<dd class="dlentry">The CICS file name for a data set.</dd>
+
+
+<dt class="dlterm">HFSFILE</dt>
+
+<dd class="dlentry">A z/OS UNIX System Services HFS file.</dd>
+
+
+<dt class="dlterm">PDSMEMBER</dt>
+
+<dd class="dlentry">The name of the member in the PDS described in DDNAME.</dd>
+
+
+<dt class="dlterm">PROGRAM</dt>
+
+<dd class="dlentry">The name of a program.</dd>
+
+
+<dt class="dlterm">TDQ</dt>
+
+<dd class="dlentry">The name of a temporary dynamic queue.</dd>
+
+
+<dt class="dlterm">TSQ</dt>
+
+<dd class="dlentry">The name of a temporary storage queue.</dd>
+
+</dl>
+
+<p id="attr_cicsdtd__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four-character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsdtd__USECNT"><strong>Use Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Shows
+the number of times this document template has been used.</span></p>
+
+</div>
+
+</article></main></body></html>

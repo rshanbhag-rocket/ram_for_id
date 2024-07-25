@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The single predefined situation in this category monitors RLS resources to identify problems that can degrade performance.">
+<meta name="keywords" content="situations, RLS Lock Analysis, CICSplex_Held_RLS_Locks">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>RLS Lock Analysis situation</title>
+</head>
+<body id="sit_rls"><main role="main"><article role="article" aria-labelledby="d29118e11">
+<h1 class="topictitle1" id="d29118e11">RLS Lock Analysis situation</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The single predefined situation in this category monitors
+RLS resources to identify problems that can degrade performance. </p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_RLS_Lock_Analysis. except where stated.</div>
+<dl>
+
+<dt class="dlterm">CICSplex_Held_RLS_Locks</dt>
+
+<dd class="dlentry">Monitors the existence of locks on RLS resources. It issues an alert whenever it detects a task
+that is holding an RLS resource. This situation uses attributes from the CICSplex RLS Lock Analysis
+group. This situation is distributed automatically to the *hub <span class="keyword">Tivoli Monitoring Server</span>; distribute it to all <span class="keyword">Tivoli Monitoring Server</span>s where <span class="keyword">IBM Z OMEGAMON for CICS</span> is running. <p>Use the RLS Lock Analysis
+workspace to find any tasks that can be waiting for an RLS lock to become available. If a lock is
+not being released, use the Transaction Analysis workspace to display the owning task's wait type to
+determine whether it is looping, waiting on a resource, or deadlocked with another task. You can
+invoke the CEKL command using the Take Action feature to free the lock and allow waiting tasks to
+continue. To limit the number of lock conflicts, consider transaction classes.</p>
+
+<p><strong>Formula:</strong> If the value of Task_State equals H and the value of Time_in_Suspend_Numeric is
+greater than or equal to 60 then situation CICSRegion_Held_RLS_Locks is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_rls.html#attr_rls">CICSplex RLS Lock Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

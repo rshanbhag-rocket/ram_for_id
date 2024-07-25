@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction Statistics">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction Statistics attribute group</title>
+</head>
+<body id="attr_cicstr1"><main role="main"><article role="article" aria-labelledby="d31584e10">
+<h1 class="topictitle1" id="d31584e10">CICSplex Transaction Statistics attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstr1__CICSTR1"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transaction Statistics attributes
+report the number of requests by a transaction for CICS services such
+as program control, journal control, temporary storage, transient
+data and non 3270 requests.</span></p>
+
+<p>Use the CICSplex Transaction Statistics attributes to determine whether requests that imply I/O
+activity such as journal control, transient data or temporary storage, are a major factor in
+response time degradation.</p>
+
+<p id="attr_cicstr1__ABENDS"><strong>Abends</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of abends taken by this task.</span></p>
+
+<p id="attr_cicstr1__CHBRWCCT"><strong>Browse Channel Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of browse requests for channel
+containers issued by this task.</span></p>
+
+<p id="attr_cicstr1__LOGRWRTS"><strong>CICS Logger Writes</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of CICS logger write requests
+issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicstr1__TCBSATT"><strong>CICS TCBs Attached</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of CICS TCBs attached by or on behalf of this
+transaction.</span></p>
+
+<p id="attr_cicstr1__CIP6ADDR"><strong>Client Address</strong> <span class="ph" data-hd-otherprops="flyover_string"> The
+IP address of the WEB client that the transaction was attached for.</span> This
+can be version 4 or version 6 bit format. The value format is an alphanumeric
+string, maximum 40 characters.</p>
+
+<p id="attr_cicstr1__CIPADDR"><strong>Client IP Address</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The IP address of the WEB client which this transaction was attached
+for.</span></p>
+
+<p id="attr_cicstr1__CLIPPORT"><strong>Client Port</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The port number which the client used to connect to CICS.</span></p>
+
+<p id="attr_cicstr1__CPUTIME"><strong>CPU Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the amount of accumulated CPU time (in thousandths of a
+second) used by this task.</span></p>
+
+<p id="attr_cicstr1__DB2REQS"><strong>DB2 Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of DB2 (EXEC SQL and IFI) requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__DPLREQS"><strong>DPL Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of DPL (Distributed Program Link) requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__ELAPTIME"><strong>Elapsed Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the time elapsed, accurate to two decimal places, since the transaction
+was attached.</span> The value can be entered in the HH:MM:SS.DD format,
+for example, 00:20:00.56, or as SSSSSSS.DD, for example, 1200.56.
+ If you are using variable substitution, the value in this example
+would display as 120056. See the online help for more details on variable
+substitution or inputting values in situations and filters.</p>
+
+<p id="attr_cicstr1__CHGETCCT"><strong>Get Channel Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of Get requests for channel
+containers issued by this task.</span></p>
+
+<p id="attr_cicstr1__ICREQS"><strong>IC Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The sum of interval control START, CANCEL, DELAY and RETRIEVE
+requests issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__ICSTARTS"><strong>IC Starts</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of interval control START requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__DBCREQS"><strong>IMS/DBCTL Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of IMS (DBCTL) requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__JCWRTS"><strong>Journal Writes</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of journal output requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__DBCRTYPE"><strong>Last DBCTL Request</strong> <span class="ph" data-hd-otherprops="flyover_string">The category type of the last DBCTL request
+issued by the transaction.</span></p>
+
+<p id="attr_cicstr1__CHMOVCCT"><strong>Move Channel Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of Move requests for channel
+containers issued by this task.</span></p>
+
+<p id="attr_cicstr1__TCBMSWIT"><strong>Number of TCB Mode Switches</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of CICS TCB Mode Switches performed on behalf of this
+transaction.</span></p>
+
+<p id="attr_cicstr1__OOCREQS"><strong>OO Class Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of CICS Object Oriented foundation class requests,
+including the Java API for CICS (JCICS) classes, issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__ORIGINNODE"><strong>Origin Node</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The combination of z/OS System ID (SMFID) and CICS region name.</span>
+The value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstr1__PROLURMS"><strong>Program Link URMs</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of program LINK URM (User-Replaceable Modules) requests
+issued by, or on behalf of, this transaction.</span></p>
+
+<p id="attr_cicstr1__PROLINKS"><strong>Program Links</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of program LINK requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__PROLOADS"><strong>Program Loads</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of program LOAD requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__PROXCTLS"><strong>Program XCTLs</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of program XCTL requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__CHPUTCCT"><strong>Put Channel Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">The number of Put requests for channel
+containers issued by this task.</span></p>
+
+<p id="attr_cicstr1__RNAME"><strong>Resource Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the name of the resource the transaction is waiting to access.</span></p>
+
+<p id="attr_cicstr1__RTYPE"><strong>Resource Type</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+category of resource for which the transaction is waiting.</span></p>
+
+<p id="attr_cicstr1__SSLBDCRY"><strong>SSL Bytes Decrypted</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of bytes decrypted by the secure sockets layer for this
+transaction.</span></p>
+
+<p id="attr_cicstr1__SSLBNCRY"><strong>SSL Bytes Encrypted</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of bytes encrypted by the secure sockets layer for this
+transaction.</span></p>
+
+<p id="attr_cicstr1__SYNCPTS"><strong>Syncpoints</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of SYNCPOINT requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicstr1__TASKNO"><strong>Task Number</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number sequentially assigned by CICS to uniquely identify each
+task.</span></p>
+
+<p id="attr_cicstr1__TCPPORT"><strong>TCPIP Port</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The TCP/IP service port number.</span></p>
+
+<p id="attr_cicstr1__TCPSERV"><strong>TCPIP Service</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The name of the TCP/IP service used.</span></p>
+
+<p id="attr_cicstr1__TDGETS"><strong>TD GETs</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of Transient Data GET requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__TDPURGES"><strong>TD Purges</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of Transient Data PURGE requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__TDPUTS"><strong>TD PUTs</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of Transient Data PUT requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__CHGETCDL"><strong>Total Bytes for Gets</strong> <span class="ph" data-hd-otherprops="flyover_string">The total length, in bytes, of the data
+in the containers of all the Get requests for channel containers issued
+by this task.</span></p>
+
+<p id="attr_cicstr1__CHPUTCDL"><strong>Total Bytes for Puts</strong> <span class="ph" data-hd-otherprops="flyover_string">The total length, in bytes, of the data
+in the containers of all the Put requests for channel containers issued
+by this task.</span></p>
+
+<p id="attr_cicstr1__CHTOTCCT"><strong>Total Channel Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">The total number of requests for channel
+containers issued by this task.</span></p>
+
+<p id="attr_cicstr1__GROUPIDX"><strong>Transaction Group ID hex</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The hex representation of the identifier CICS creates to correlate
+transactions attached to service the same incoming work request originated through the CICS Web,
+IIOP, or 3270 Bridge interface.</span></p>
+
+<p id="attr_cicstr1__GROUPID"><strong>Transaction Group ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The identifier CICS creates to correlate transactions attached to
+service the same incoming work request originated through the CICS Web, IIOP, or 3270 Bridge
+interface.</span></p>
+
+<p id="attr_cicstr1__TRANID"><strong>Transaction ID</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The four character name of the transaction.</span></p>
+
+<p id="attr_cicstr1__TSGETS"><strong>TS GETs</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of temporary storage GET requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__TSPUTSX"><strong>TS PUTs to Auxiliary Storage</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of PUT to auxiliary temporary storage requests issued by
+this transaction.</span></p>
+
+<p id="attr_cicstr1__TSPUTSM"><strong>TS PUTs to Main</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of PUT to main temporary storage requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__TSTREQS"><strong>TS Total Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The sum of all temporary storage requests (GET, PUT to main, PUT to
+auxiliary and TS DELETE) issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__WEBCHARR"><strong>Web Chars Received</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of characters received by the CICS Web interface RECEIVE
+requests issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__WEBCHARS"><strong>Web Chars Sent</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of characters sent by the CICS Web interface SEND
+requests issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__WEBRREQS"><strong>Web Receive Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of CICS Web interface RECEIVE requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__WEBREPR"><strong>Web Repository Reads</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of reads from the repository in shared temporary storage
+issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__WEBREPW"><strong>Web Repository Writes</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of writes to the repository in shared temporary storage
+issued by this transaction.</span></p>
+
+<p id="attr_cicstr1__WEBSREQS"><strong>Web Send Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The number of CICS Web interface SEND requests issued by this
+transaction.</span></p>
+
+<p id="attr_cicstr1__WEBTREQS"><strong>Web Total Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The sum of all CICS Web interface requests issued by this
+transaction.</span></p>
+
+</div>
+
+</article></main></body></html>

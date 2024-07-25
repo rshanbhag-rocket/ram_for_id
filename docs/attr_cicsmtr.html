@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex MVS TCB Resource Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex MVS TCB Resource Details attribute group</title>
+</head>
+<body id="attr_cicsmtr"><main role="main"><article role="article" aria-labelledby="d19701e10">
+<h1 class="topictitle1" id="d19701e10">CICSplex MVS TCB Resource Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsmtr__CICSMTR"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex MVS TCB Resource Details
+attribute group reports addresses, storage, tasks, and transactions
+running on a CICS TCB.</span></p>
+
+<p id="attr_cicsmtr__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsmtr__CICSTASK"><strong>CICS Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the CICS task number (1 to 99999) of the current task running on this
+TCB, if any.</span></p>
+
+<p id="attr_cicsmtr__TYPE"><strong>CICS TCB</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies
+whether this is a CICS owned TCB or not.</span> CICS owned TCBs are
+the CICS job step TCB and those that were attached by CICS system
+code. Non CICS TCBs are those that were attached by other products
+in the CICS address space.</p>
+
+<p id="attr_cicsmtr__CPU"><strong>CPU Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+accumulated CPU time (accurate to three decimal places) for this TCB,
+taken from the TCBTTIME TCB field.</span> The value can be entered in
+the HH:MM:SS.DDD  format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicsmtr__CPUPC"><strong>CPU percent</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the percentage of the CPU time for all current TCBs of this type (CICS
+or non-CICS) that this TCB has taken.</span> Note that only currently
+attached TCBs are listed; there might have been others that have ended.</p>
+
+<p id="attr_cicsmtr__DAUGHTER"><strong>Daughter TCB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the address of this TCB's daughter TCB, that is, one that it attached.</span> The
+range that is allotted is 0 to No limit. </p>
+
+<p id="attr_cicsmtr__MOTHER"><strong>Mother TCB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the address of this TCB's mother TCB, that is, the one that attached
+it.</span> The range that is allotted is 0 to No limit.</p>
+
+<p id="attr_cicsmtr__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsmtr__STGBELOW"><strong>Private Storage Below 16M</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of private storage below
+the 16 megabyte line currently allocated to this TCB.</span> This consists
+of whole pages allocated to the TCB by z/OS. Each page typically contains
+bytes that are not in use (have not been returned in response to a
+GETMAIN request) and are only available to GETMAIN requests from this
+TCB.</p>
+
+<p id="attr_cicsmtr__STGABOVE"><strong>Private Storage Above 16M</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the amount of private storage above
+the 16 megabyte line currently allocated to this TCB.</span> This consists
+of whole pages allocated to the TCB by z/OS. Each page typically contains
+bytes that are not in use (have not been returned in response to a
+GETMAIN request) and are only available to GETMAIN requests from this
+TCB.</p>
+
+<p id="attr_cicsmtr__SISTER"><strong>Sister TCB</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the address of this TCB's sister TCB, that is, the next one attached
+by its mother.</span> The range that is allotted is 0 to No limit.</p>
+
+<p id="attr_cicsmtr__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsmtr__RUNSTAT"><strong>Task Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the run status of the CICS task on this TCB.</span> These are the possible
+values: DISPATCHABLE, RUNNING or SUSPENDED.</p>
+
+<p id="attr_cicsmtr__ADDR"><strong>TCB Address</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the address of the z/OS Task Control Block (TCB).</span></p>
+
+<p id="attr_cicsmtr__NAME"><strong>TCB Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the
+name of TCB, such as QR, RO, DFHTRTCB for CICS owned TCBs otherwise
+the value non CICS is used for TCBs running in the CICS address space
+but not owned by CICS.</span></p>
+
+<p id="attr_cicsmtr__TRANID"><strong>Transaction Identifier</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the transaction ID of the CICS task
+currently running on this TCB.</span></p>
+
+</div>
+
+</article></main></body></html>

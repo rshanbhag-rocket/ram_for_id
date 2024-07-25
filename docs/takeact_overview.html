@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The Take Action command feature enables you to enter a command or stop or start a process at any CICS region in your network where one or more Tivoli Enterprise Monitoring Agents are running.">
+<meta name="keywords" content="Take Action commands">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Take Action commands</title>
+</head>
+<body id="takeact_overview"><main role="main"><article role="article" aria-labelledby="d58454e11">
+<h1 class="topictitle1" id="d58454e11">Take Action commands</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The Take Action command feature enables you to enter a
+command or stop or start a process at any CICS® region in your network where one or more Tivoli® Enterprise Monitoring
+Agents are running. </p>
+
+<div class="section"><p><span class="keyword">IBM Z OMEGAMON for CICS</span> provides several predefined Take
+Actions that you can invoke to respond to unusual situations occurring within your CICS regions or to pass commands to CICS. All of these commands can be used in the Take Action response when a situation fires.
+For example, you might write a situation that checks whether a temporary storage queue contains more
+then 32500 entries and, if it does, deletes it. In that case the situation passes a CP:TSQD command
+to the Take Action command.</p>
+</div>
+
+<div class="section"><p>For more information about creating and using Take Action
+commands, see the <span class="keyword">Tivoli Enterprise Portal</span> online
+help.</p>
+</div>
+
+<div class="section"><p>This section covers these predefined  <span class="keyword">IBM Z OMEGAMON for CICS</span>
+Take Action commands:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="takeact_aidpurge.html#takeact_aidpurge" title="The AID Purge predefined Take Action command stops one or more CICS Automatic Initiate Descriptors (AIDs).">AID Purge</a></li>
+
+<li><a href="takeact_ceklpurge.html#takeact_ceklpurge" title="The CEKL Purge predefined Take Action command requests the cancellation of a user task.">CEKL Purge</a></li>
+
+<li><a href="takeact_icecancel.html#takeact_icecancel" title="The ICE Cancel predefined Take Action command stops one or more CICS Interval Control Elements (ICEs).">ICE Cancel</a></li>
+
+<li><a href="takeact_cemtset.html#takeact_cemtset" title="The Sample CEMT SET predefined Take Action command illustrates how to pass commands to CICS regions using the CEMT SET command.">Sample CEMT SET command</a></li>
+
+<li><a href="takeact_samtdqpurge.html#takeact_samtdqpurge" title="The Sample TD queue purge predefined Take Action command illustrates how to use the TDDL commands to manipulate your CICS transient data queues.">Sample TD queue purge command</a></li>
+
+<li><a href="takeact_samtracetask.html#takeact_samtracetask" title="The Sample Trace Task predefined Take Action command is for use in the Transactions Analysis workspace and activates a trace for a specific transaction.">Sample Trace Task command</a></li>
+
+<li><a href="takeact_samtracetrans.html#takeact_samtracetrans" title="The Sample Trace Transaction predefined Take Action command is for use in the Transactions Analysis workspace and activates a trace for a transaction ID in the default setting of 30 minutes.">Sample Trace Transaction command</a></li>
+
+<li><a href="takeact_samtsqdel.html#takeact_samtsqdel" title="The Sample TS queue delete predefined Take Action command illustrates how to run TSQD commands to manipulate your CICS transient storage queues; in this particular case, the Take Action command deletes a named temporary storage queue.">Sample TS queue delete command</a></li>
+
+<li><a href="takeact_samtsqdelhex.html#takeact_samtsqdelhex" title="The Sample TS queue delete using the hex queue ID predefined Take Action command illustrates how to run TSQD commands to manipulate your CICS transient storage queues.">Sample TS queue delete command using the hex queue ID</a></li>
+
+<li><a href="takeact_samwto.html#takeact_samwto" title="The Sample WTO message issued by a command or situation predefined Take Action command allows you to send mixed-case WTO commands to the z/OS operator console.">Sample WTO message issued by a command or situation</a></li>
+
+</ul>
+</div>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> Security for the native <span class="keyword">IBM Z OMEGAMON AI for CICS</span>
+    commands (those prefixed by <em>CP:</em>) is determined by its own set of security profiles; for
+    detailed information, including implementation instructions and guidelines, see the <em>Planning
+     and Configuration Guide</em>. However, security for z/OS console commands (for example, the CEKL
+    command passed to CICS through the Modify command) is controlled by the general Take Action
+    command security your site implements with NetView.</div>
+</div>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d58454e11"><nav role="navigation">
+<ul class="ullinks">
+<li class="ulchildlink"><strong><a href="takeact_aidpurge.html">AID Purge</a></strong><br>
+The <strong>AID Purge</strong> predefined Take Action command stops one or more CICS Automatic Initiate Descriptors (AIDs).</li>
+<li class="ulchildlink"><strong><a href="takeact_ceklpurge.html">CEKL Purge</a></strong><br>
+The <strong>CEKL Purge</strong> predefined Take Action command requests the cancellation of a user task.</li>
+<li class="ulchildlink"><strong><a href="takeact_icecancel.html">ICE Cancel</a></strong><br>
+The <strong>ICE Cancel</strong> predefined Take Action command stops one or more CICS Interval Control Elements (ICEs).</li>
+<li class="ulchildlink"><strong><a href="takeact_cemtset.html">Sample CEMT SET command</a></strong><br>
+The <strong>Sample CEMT SET</strong> predefined Take Action command illustrates how to pass commands to CICS regions using the CEMT SET command.</li>
+<li class="ulchildlink"><strong><a href="takeact_samtdqpurge.html">Sample TD queue purge command</a></strong><br>
+The <strong>Sample TD queue purge</strong> predefined Take Action command illustrates how to use the TDDL commands to manipulate your CICS transient data queues.</li>
+<li class="ulchildlink"><strong><a href="takeact_samtracetask.html">Sample Trace Task command</a></strong><br>
+The <strong>Sample Trace Task</strong> predefined Take Action command is for use in the Transactions Analysis workspace and activates a trace for a specific transaction. </li>
+<li class="ulchildlink"><strong><a href="takeact_samtracetrans.html">Sample Trace Transaction command</a></strong><br>
+The <strong>Sample Trace Transaction </strong> predefined Take Action command is for use in the Transactions Analysis workspace and activates a trace for a transaction ID in the default setting of 30 minutes.</li>
+<li class="ulchildlink"><strong><a href="takeact_samtsqdel.html">Sample TS queue delete command</a></strong><br>
+The <strong>Sample TS queue delete</strong> predefined Take Action command illustrates how to run TSQD commands to manipulate your CICS transient storage queues; in this particular case, the Take Action command deletes a named temporary storage queue.</li>
+<li class="ulchildlink"><strong><a href="takeact_samtsqdelhex.html">Sample TS queue delete command using the hex queue ID</a></strong><br>
+The <strong>Sample TS queue delete using the hex queue ID</strong> predefined Take Action command illustrates how to run TSQD commands to manipulate your CICS transient storage queues.</li>
+<li class="ulchildlink"><strong><a href="takeact_samwto.html">Sample WTO message issued by a command or situation</a></strong><br>
+The <strong>Sample WTO message issued by a command or situation</strong> predefined Take Action command allows you to send mixed-case WTO commands to the z/OS operator console.</li>
+</ul>
+</nav></aside></article></main></body></html>

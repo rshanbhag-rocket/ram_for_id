@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex TCPIP Statistics">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex TCPIP Statistics attribute group</title>
+</head>
+<body id="attr_cicstip"><main role="main"><article role="article" aria-labelledby="d8571e10">
+<h1 class="topictitle1" id="d8571e10">CICSplex TCPIP Statistics attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstip__CICSTIP"></span> <span class="ph" data-hd-otherprops="flyover_string">The data returned
+by the CICSplex TCPIP Statistics attribute group monitors the activity
+of your TCP/IP services.</span> It includes the current and peak numbers
+for individual sockets and indicates when the limit set by MAXSOCKETS
+has been reached. Most of this data is accessed online using the EXEC
+CICS COLLECT STATISTICS TCPIP CICS Transaction Server command.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex TCPIP Statistics
+group are stored for historical retrieval within the Tivoli Data Warehouse.
+Selected attributes within this group are candidates for the Tivoli
+Data Warehouse summarization and pruning features.</div>
+
+<p id="attr_cicstip__AVMXTDT"><strong>Average MAXSOCKETS delay time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the average length of time (in seconds accurate
+to thousandths of a second) that current requests have been waiting
+because the CICS regions has reached the MAXSOCKETS limit.</span> The
+valid format is a floating-point number, accurate to three decimal
+places.</p>
+
+<p id="attr_cicstip__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system  has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicstip__ACTSOCKS"><strong>Current Active IP SOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of active IP sockets
+managed by the CICS sockets domain.</span> The value format is an integer
+of maximum four bytes.</p>
+
+<p id="attr_cicstip__ASSLTCB"><strong>Current Active SSL SOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of SSL sockets.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__CURRDELM"><strong>Current Delayed at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of create socket requests
+delayed because the system is at the MAXSOCKETS limit.</span> The value
+format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__CURRDTIM"><strong>Current Delay Time at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the delay time (accurate to three decimal
+places) for the current create socket request that was delayed because
+the system is at the MAXSOCKETS limit.</span> The value can be entered
+in the hh:mm:ss.ddd format, for example, 00:20:00.567 or as sssssss.ddd,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicstip__CURRIN"><strong>Current  Inbound Sockets</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of inbound sockets.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__AVCCDLT"><strong>Current  MAXSOCKETS delay time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current length of time (accurate to
+three decimal places) that create socket requests are waiting because
+the CICS regions has reached the MAXSOCKETS limit.</span> The value
+can be entered in the hh:mm:ss.ddd format, for example, 00:20:00.567
+or as sssssss.ddd, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstip__CURROUT"><strong>Current  Outbound Sockets</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of outbound sockets.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__CURRPOUT"><strong>Current  Persistent Sockets Outbound</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the current number of persistent outbound
+sockets.</span> The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__MAXLIMIT"><strong>Maximum Sockets Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum number of TCP/IP sockets.</span> The
+maximum number of IP sockets is managed by the CICS sockets domain.
+The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__MSSLTCB"><strong>Maximum SSL TCBs</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the maximum number of TCP/IP SSL sockets.</span> The
+maximum number of SSL sockets is managed by the CICS sockets domain.
+The value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__NUMIN"><strong>Number Inbound Sockets Created</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of inbound sockets created.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__NUMOUT"><strong>Number Outbound Sockets Created</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of outbound sockets created.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__NUMOUTCL"><strong>Number Outbound Sockets Closed</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of outbound sockets closed.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__TIMEMAX"><strong>Number Times at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the number of times the maximum number of
+IP sockets limit (MAXSOCKETS) was reached.</span> The value format is
+an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__OSTAT"><strong>Open Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the status of the TCP/IP service.</span> These
+are the values: Open, Closed, Closing, ImmClosing.</p>
+
+<p id="attr_cicstip__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstip__PEAKDELM"><strong>Peak Delayed at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of create socket requests
+delayed because the system has reached the MAXSOCKETS limit.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__PEAKIN"><strong>Peak Inbound Sockets</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of inbound sockets.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__PEAKOUT"><strong>Peak Outbound Sockets</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of outbound sockets.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__PEAKPOUT"><strong>Peak Persistent Sockets Outbound</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the peak number of persistent outbound sockets.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four character name that uniquely
+identifies an active z/OS operating system within a given CICSplex.</span> The
+value format is an alphanumeric string, maximum four characters, and
+case sensitive. z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstip__TIMOMAX"><strong>Timeouts while at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of create socket requests
+that were timed out while delayed because the system had reached the
+MAXSOCKETS limit.</span> The value format is an integer of maximum four
+bytes.</p>
+
+<p id="attr_cicstip__TOTDELMX"><strong>Total Delayed at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of create socket requests
+that were delayed because the system had reached the MAXSOCKETS limit.</span> The
+value format is an integer of maximum four bytes.</p>
+
+<p id="attr_cicstip__TOTDELTM"><strong>Total Delay Time at MAXSOCKETS</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total delay time (accurate to three
+decimal places) for the create socket requests that were delayed because
+the system is at the MAXSOCKETS limit.</span> The value can be entered
+in the hh:mm:ss.ddd format, for example, 00:20:00.567 or as sssssss.ddd,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicstip__TOTCRIO"><strong>Total Sockets Created</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of inbound and outbound
+sockets created.</span> The value format is an integer of maximum four
+bytes.</p>
+
+<p id="attr_cicstip__SSLCACHE"><strong>SSLcache setting</strong> <span class="ph" data-hd-otherprops="flyover_string">Specifies whether SSL is to use the local or
+sysplex caching of session IDs.</span> Sysplex caching is only allowed
+if multiple CICS socket-owning regions accept SSL connections at the
+same IP address. These are the values: CICS or SYSPLEX. The default
+value is CICS.</p>
+
+</div>
+</article></main></body></html>

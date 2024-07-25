@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The single predefined situation in this category monitors that OMEGAMON is correctly configured to provide the required monitoring functions.">
+<meta name="keywords" content="situations, Service Task Details, CICSplex_WLM_Blocks_Usage_High">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Service Task Details situation</title>
+</head>
+<body id="sit_svctaskdetails"><main role="main"><article role="article" aria-labelledby="d22634e11">
+<h1 class="topictitle1" id="d22634e11">Service Task Details situation</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The single predefined situation in this category monitors
+that OMEGAMON® is correctly
+configured to provide the required monitoring functions.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All attribute names in this group are prefixed with
+CICSplex_Service_Task_Details.</div>
+<dl>
+<dt class="dlterm">CICSplex_WLM_Blocks_Usage_High</dt>
+
+<dd class="dlentry">WLM blocks usage is approaching the maximum configured level. <p>Use the OMEGAMON WLM Blocks
+       Usage view on the Service Task Details workspace or the F <em>agentname</em>,OC
+       STATUS,WLMBLOCKS diagnostic command to determine the peak usage that the system has
+       experienced for <span class="ph" data-hd-otherprops="deleted">either transaction or the</span>
+       accumulation records. Use the <code class="ph codeph">KC5_WLM_BLOCKS</code> parameter in PARMGEN <span class="ph" data-hd-otherprops="ICAT">Configuration Tool</span> to adjust the WLM Blocks parameter so the peak
+       value of no more that 80% is ever experienced.</p>
+<p>Accumulation records are used
+       to hold summaries for service classes. There is an accumulation record for each combination
+       of service <span class="ph">class</span>, CICS region, <span class="ph">CICSplex,</span> and transaction ID received, as well as one extra record for each CICS
+       region. The volume depends upon the number of service classes defined, transactions that are
+       categorized in those service classes, and CICS regions.
+        <span class="ph">When this situation fires, the number of accumulations being collected is more than the
+        defined space allows, probably because the number of regions and the number of different
+        types of transactions being collected have been increased.</span></p>
+<p>There is a direct
+       relationship between the WLM Blocks parameter and the maximum number of accumulation records.
+       For example, if 500 blocks results in a consistent usage of 80%, changing the value to 1000
+       blocks results in a usage of 40%.</p>
+<p><strong>Formula:</strong> If the value of the attribute
+       WLM_Accumulation_Data_Current_percent is greater than 70 or the value of the attribute
+       WLM_Accumulation_Data_Peak_percent is greater than 80 then situation
+       CICSplex_WLM_Blocks_Usage_High is true</p>
+<div class="p"><strong>User response:</strong> Increase the CICS OMEGAMON agent’s WLM BLOCKS
+       parameter. WLM blocks can be increased dynamically (and thereby avoid recycling the <span class="keyword">OMEGAMON AI for CICS</span> agent) by using OMEGAMON CICS
+       WLM Modify commands to stop the WLM subtask and then restart it with new parameter
+       values:<pre class="codeblock"><code>/F <var class="keyword varname">jobname</var>,OC STOP ID=WLM
+/F <var class="keyword varname">jobname</var>,OC START ID=WLM,BLOCKS=2560</code></pre></div>
+<div class="note"><span class="notetitle">Note:</span> If you specify only the BLOCKS parameter, WLM will be restarted using
+       defaults for RESP and GOAL. If your CICS agent is running in its own address space, look at
+       the KC5AGST member in the RKANCMDU library to determine what your WLM startup options
+       are:<pre class="codeblock"><code>OC START ID=WLM,BLOCKS=2560,RESP=2.00,GOAL=A</code></pre>If you are using
+       something other than the default startup options for RESP and GOAL, you will also need to
+       include those on the START ID=WLM Modify command.</div>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_cicsser.html#attr_cicsser">CICSplex Service Task Details attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

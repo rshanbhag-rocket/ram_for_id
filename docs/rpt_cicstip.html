@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The TCPIP Statistics workspace is used to monitor the activity of your CICS regions' TCP/IP connections. The statistics report the volume of inbound and outbound activity. These statistics can be accessed online using the EXEC CICS COLLECT STATISTICS TCPIP command.">
+<meta name="keywords" content="workspaces, TCPIP Statistics">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>TCPIP Statistics workspace</title>
+</head>
+<body id="rpt_cicstip"><main role="main"><article role="article" aria-labelledby="d41523e11">
+<h1 class="topictitle1" id="d41523e11">TCPIP Statistics workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The TCPIP Statistics workspace is used to monitor the activity
+of your CICS® regions' TCP/IP
+connections. The statistics report the volume of inbound and outbound
+activity. These statistics can be accessed online using the EXEC CICS COLLECT STATISTICS TCPIP command.</p>
+
+<div class="section"><p>You can use this workspace to warn you when the MAXSOCKETS
+value is being reached by comparing the Maximum sockets limit with
+the Current inbound and outbound sockets. Alternatively you can set
+a threshold to warn you when the number of times that MAXSOCKETS has
+been reached or if any time outs have occurred while at MAXSOCKETS.</p>
+</div>
+
+<div class="section"><p>The predefined TCPIP Statistics workspace contains the
+following views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Inbound Socket Activity bar chart compares the current inbound
+sockets, the number of inbound sockets created, and the peak number
+of inbound sockets.</li>
+
+<li>The Outbound Socket Activity bar chart compares the current outbound
+sockets, current persistent sockets outbound, the number of outbound
+sockets closed, the number of outbound sockets created, the peak number
+of outbound sockets, and the peak number of persistent sockets outbound.</li>
+
+<li>The TCP/IP Statistics table view displays maximum number of sockets
+available and reports current and peak number of sockets in use for
+both inbound and outbound activity. It also reports current and peak
+number of persistent sockets in use for both inbound and outbound
+activity. To help monitor the performance of your system it reports
+the number of times at MAXSOCKETS, the total, current and peak number
+delayed at MAXSOCKETS, and the total and current delay time at MAXSOCKETS.
+The SLSCache setting, and the current active SSL sockets and the maximum
+number of SSL TCBs is displayed. The average and current MAXSOCKETS
+delay time is calculated.</li>
+
+<li>The TCP/IP Service Statistics table view lists the status, the
+service open, TCP/IP service IP address, the port number in use, the
+protocol, the backlog, the attach time security, SSL type, client
+authentication, TCP/IP Service privacy, TCP/IP Service WLM DNS group,
+TCP/IP service prefix, transaction ID, URM, number of transactions,
+current and peak number of transactions, the number of sends and receives,
+and the number of bytes sent and received for each TCP/IP service. </li>
+
+</ul>
+</div>
+
+<div class="section"><p>You can link to the Application TCP Listeners workspace
+provided by the <span class="keyword">OMEGAMON for Mainframe Networks</span> product
+to investigate the TCP/IP stack, filtered by the CICS Application Name.</p>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicstip.html#attr_cicstip">CICSplex TCPIP Statistics attribute group</a></li>
+
+<li><a href="attr_cicstps.html#attr_cicstps">CICSplex TCPIP Service Statistics attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

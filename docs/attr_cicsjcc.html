@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex JVM Classcache Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex JVM Classcache Details attribute group</title>
+</head>
+<body id="attr_cicsjcc"><main role="main"><article role="article" aria-labelledby="d15112e10">
+<h1 class="topictitle1" id="d15112e10">CICSplex JVM Classcache Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsjcc__CICSJCC"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex JVM Classcache Details attributes
+report information about the size, amount of free space, date and
+time when it was started, and related profile name for the given class
+cache.</span></p>
+
+<p id="attr_cicsjcc__AUTOSTART"><strong>Autostart</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the current status of autostart for the shared class cache.</span> These
+are the values:</p>
+
+<dl>
+<dt class="dlterm">ENABLED</dt>
+
+<dd class="dlentry">The shared class cache is started as soon as CICS receives a request
+to run a Java application in a JVM whose profile requires the use
+of the shared class cache.</dd>
+
+
+<dt class="dlterm">DISABLED</dt>
+
+<dd class="dlentry">An explicit EXEC CICS PERFORM CLASSCACHE INITIALIZE(START) command
+(or the equivalent CEMT command) is required to start the shared class
+cache. If the status of the shared class cache is STOPPED and autostart
+is disabled, and CICS receives a request to run a Java application
+in a JVM whose profile requires the use of the shared class cache,
+the request fails.</dd>
+
+</dl>
+
+<p id="attr_cicsjcc__CACHEFREE"><strong>Cache Free</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the free space in the shared class cache, in kilobytes.</span></p>
+
+<p id="attr_cicsjcc__CACHESIZE"><strong>Cache Size</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the size of the cache in kilobytes.</span></p>
+
+<p id="attr_cicsjcc__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of theCICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicsjcc__OLDCACHES"><strong>Number of old caches</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of old caches that
+are still present in the region because they are waiting for worker
+JVMs that are dependent on them to be phased out.</span> If the status
+of the current shared class cache is STOPPED, and worker JVMs are
+still dependent on it, then that shared class cache is included in
+the number of old shared class caches.</p>
+
+<p id="attr_cicsjcc__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of the z/OS System ID (SMFID) and the CICS region
+name.</span> The value format is an alphanumeric string, maximum 32
+bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicsjcc__PHASINGO"><strong>Phasing Out</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the number of JVMs that are phasing out.</span> This is the number of
+working JVMs that are dependent on an old shared class cache and are
+being phased out. If the status of the current shared class cache
+is STOPPED, then any worker JVMs that are still dependent on it are
+included in the number of worker JVMs being phased out.</p>
+
+<p id="attr_cicsjcc__PROFILE"><strong>Profile</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the name of the JVM profile used for the main JVM.</span>
+The name of the JVM profile that is to be used to start the main JVM. If the main JVM is in use,
+this is the name of the JVM profile for that main JVM.</p>
+
+<p id="attr_cicsjcc__REUSEST"><strong>Reuse Status</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the reuse status of the main JVM.</span> These are the valid
+values: RESET, REUSE, or UNKNOWN. The RESET value indicates that the JVMs can be reused after they
+have been reset. The REUSE value indicates that the JVMs can be reused without being reset. The
+UNKNOWN value indicates that the class cache has not been started.</p>
+
+<p id="attr_cicsjcc__STARTDATE"><strong>Start Date</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the date when the current class cache was started.</span> This is an
+alphanumeric string, with a maximum of 10 characters.</p>
+
+<p id="attr_cicsjcc__STARTTIME"><strong>Start Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the time when the current class cache was started.</span> This is an
+alphanumeric string, with a maximum of eight characters.</p>
+
+<p id="attr_cicsjcc__STARTTD"><strong>Start Time and Date</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicateds the time and date when the current shared class cache was
+started.</span></p>
+
+<p id="attr_cicsjcc__STATUS"><strong>Status</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the current status of the shared class cache.</span> These are the values:</p>
+
+<dl>
+<dt class="dlterm">STARTING</dt>
+
+<dd class="dlentry">The shared class cache is being initialized. If autostart is enabled,
+the shared class cache is starting either because CICS received a
+request to run a Java application in a JVM whose profile requires
+the use of the shared class cache, or because an explicit <code class="ph codeph">EXEC
+CICS PERFORM CLASSCACHE INITIALIZE(START)</code> command (or the
+equivalent CEMT command) was issued. If autostart is disabled, the
+shared class cache is starting because an explicit <code class="ph codeph">EXEC CICS
+PERFORM CLASSCACHE INITIALIZE(START)</code> command (or the equivalent
+CEMT command) was issued. Worker JVMs that require the use of the
+shared class cache must wait until the startup process is complete
+and the shared class cache is ready. If initialization of the shared
+class cache is unsuccessful, any waiting requests for worker JVMs
+fail.</dd>
+
+
+<dt class="dlterm">STARTED</dt>
+
+<dd class="dlentry">The shared class cache is ready, and it can be used by worker
+JVMs.</dd>
+
+
+<dt class="dlterm">RELOADING</dt>
+
+<dd class="dlentry">An <code class="ph codeph">EXEC CICS PERFORM CLASSCACHE INITIALIZE(RELOAD)</code> command
+(or the equivalent CEMT command) has been issued, and a new shared
+class cache is being loaded to replace the existing shared class cache.
+Worker JVMs, both those that were already allocated to tasks and those
+that were allocated to tasks after the command was issued, continue
+to use the existing shared class cache until the new shared class
+cache is ready.</dd>
+
+
+<dt class="dlterm">STOPPED</dt>
+
+<dd class="dlentry">The shared class cache has either not been initialized on this
+CICS execution, or it has been stopped by an <code class="ph codeph">EXEC CICS PERFORM
+CLASSCACHE TERMINATE</code> command or an <code class="ph codeph">EXEC CICS SET
+JVMPOOL TERMINATE</code> command (or the equivalent CEMT commands).
+If autostart is disabled, requests to run a Java application in a
+JVM whose profile requires the use of the shared class cache (that
+is, requests for worker JVMs) fails. If autostart is enabled, a new
+shared class cache is initialized as soon as CICS receives a request
+to run a Java application in a JVM whose profile requires the use
+of the shared class cache.</dd>
+
+</dl>
+
+<p id="attr_cicsjcc__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicsjcc__TOTALJVMS"><strong>Total JVMs</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the number of working JVMs in the CICS region that are dependent on
+the shared class cache.</span></p>
+
+</div>
+
+</article></main></body></html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Classification Rules">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Classification Rules attribute group</title>
+</head>
+<body id="attr_pclass"><main role="main"><article role="article" aria-labelledby="d30570e10">
+<h1 class="topictitle1" id="d30570e10">CICSplex Classification Rules attribute group</h1>
+
+
+<div class="body">
+<div class="p"><span class="ph synph" id="attr_pclass__PCLASS"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Classification
+Rules attributes are used to classify which of your CICS regions will
+become part of your CICSplex environment.</span> For example, Job Name
+or VTAM Applid. The CICS region is assigned to a CICSplex when the
+attributes match the rules definition.  The CICSplexes you define
+are displayed on the OMEGAMON enhanced 3270 user interface and on
+the Tivoli Enterprise Portal. The CICSplexes are displayed as nodes
+on the Physical Navigator of the Tivoli Enterprise Portal and the
+CICSplex information is displayed on the CICSplex Summary workspace.
+The OMEGAMON enhanced 3270 user interface provides the CICSplex Classification
+Rule Definitions panel for entering your rule classifications and
+CICSplex summary panels and detail panels are used for various problem
+solving scenarios. 
+<div class="note"><span class="notetitle">Note:</span> You can only use the OMEGAMON enhanced
+3270 user interface to classify CICSplex rules. This attribute group
+might be displayed in the Tivoli Enterprise Portal Query Editor and
+Situation Editor under the name PCLASS, however, it cannot be used
+to create user-defined queries or situations and should be
+ignored.</div>
+</div>
+
+<p id="attr_pclass__PLEXNAME"><strong>CICSplex Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the CICSplex that is made of CICS
+regions that is being monitored.</span></p>
+
+<p id="attr_pclass__JOBNAME"><strong>Job Name</strong> <span class="ph" data-hd-otherprops="flyover_string"> The
+name of the CICS region that is being monitored and is part of the
+CICSplex.</span></p>
+
+<p id="attr_pclass__SMFID"><strong>SMF Identifier</strong> <span class="ph" data-hd-otherprops="flyover_string">The active z/OS operating system within a specific
+CICSplex.</span></p>
+
+<p id="attr_pclass__SYSPLEX"><strong>SYSplex Name</strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the z/OS Sysplex where the CICS
+region is running.</span></p>
+
+<p id="attr_pclass__APPLID"><strong>VTAM Applid </strong> <span class="ph" data-hd-otherprops="flyover_string">The name of the unique or specific VTAM Applid
+within the CICS region.</span></p>
+
+<p id="attr_pclass__GAPPLID"><strong>VTAM Generic Applid</strong> <span class="ph" data-hd-otherprops="flyover_string">The generic name of the VTAM Applid within
+the CICS region.</span></p>
+
+<p id="attr_pclass__XCFGROUP"><strong>XCF Group</strong> <span class="ph" data-hd-otherprops="flyover_string">The XCF Group where the CICS region belongs.</span></p>
+
+</div>
+</article></main></body></html>

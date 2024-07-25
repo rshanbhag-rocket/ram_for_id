@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Application Trace">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Application Trace attribute group</title>
+</head>
+<body id="attr_cicsotr"><main role="main"><article role="article" aria-labelledby="d20284e10">
+<h1 class="topictitle1" id="d20284e10">CICSplex Application Trace attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicsotr__CICSOTR"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Application Trace attribute
+group provides details of events for a transaction.</span> Use these
+attributes to get detail information on CICS requests that their applications
+have made. </p>
+
+<p>These attributes provide data for the Application Trace Details
+table view in the Application Trace workspace.</p>
+
+<p>The CICSplex Application Trace attribute group cannot be used in
+situations or for historical data collection.</p>
+
+<p id="attr_cicsotr__COMPONENT"><strong>Component</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the type of monitor that produced the trace event.</span> This parameter
+is an alphanumeric string, with a maximum of eight characters.</p>
+
+<p id="attr_cicsotr__DATETIME"><strong>Date and time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the date and time of the job name that you are monitoring.</span> This
+timestamp has a maximum of 23 characters.</p>
+
+<p id="attr_cicsotr__FUNCTION"><strong>Function</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the function invoked by the transaction.</span> This parameter is an
+alphanumeric string, with a maximum of 16 characters.</p>
+
+<p id="attr_cicsotr__NAME"><strong>Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the job
+name or modify ID of the CICS region that you are monitoring.</span> This
+parameter is an alphanumeric string, with a maximum of eight characters.</p>
+
+<p id="attr_cicsotr__OFFSET"><strong>Offset</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the offset (in hexadecimal) within the program where the traced event
+occurred.</span> This parameter is an alphanumeric string, with a maximum
+of eight characters.</p>
+
+<p id="attr_cicsotr__ORIGINNODE"><strong>Origin node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p id="attr_cicsotr__PROGRAM"><strong>Program</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the program that is in control when the request was initiated.</span> This
+parameter is an alphanumeric string, with a maximum of eight characters.</p>
+
+<p id="attr_cicsotr__RESOURCE"><strong>Resource</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the name of the CICS resource that is being acted on.</span> This parameter
+is an alphanumeric string, with a maximum of 16 characters.</p>
+
+<p id="attr_cicsotr__RESPONSE"><strong>Response</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the type of response that is returned from the request that produced
+this entry.</span> This parameter is an alphanumeric string, with a
+maximum of 12 characters.</p>
+
+<p id="attr_cicsotr__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the system name that uniquely identifies an active z/OS operating
+system within a specific CICSplex.</span> This parameter is an alphanumeric
+string, with a maximum of four characters.</p>
+
+<p id="attr_cicsotr__TCBNAME"><strong>TCB Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the MVS TCB name under which the CICS task was running when the traced
+event occurred.</span> This parameter is an alphanumeric string, with
+a maximum of eight characters.  </p>
+
+<p id="attr_cicsotr__TIME"><strong>Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the time of day when the traced event occurred.</span> This timestamp
+has a maximum of 19 characters.</p>
+
+<p id="attr_cicsotr__TYPE"><strong>Type</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the event type that produced this trace entry.</span> This parameter
+is an alphanumeric string, with a maximum of eight characters.</p>
+
+</div>
+
+</article></main></body></html>

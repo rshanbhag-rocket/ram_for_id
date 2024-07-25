@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined Dump Analysis workspace shows information on dump activity within CICS regions.">
+<meta name="keywords" content="workspaces, Dump Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Dump Analysis workspace</title>
+</head>
+<body id="rpt_dumpanal"><main role="main"><article role="article" aria-labelledby="d44308e11">
+<h1 class="topictitle1" id="d44308e11">Dump Analysis workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined Dump Analysis workspace shows information
+on dump activity within CICS regions.</p>
+
+<div class="section"><p>The predefined Dump Analysis workspace contains the following
+views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The CICS® Dump Analysis
+table view that shows data on current dump activity and statistics
+on any dumps.</li>
+
+<li>The Recent CICS Dump Activity
+bar chart that shows the number of dumps for a CICS region and that gives data for system dumps
+and transaction dumps in the last hour.</li>
+
+<li>The Total CICS Dumps bar
+chart that shows the total number of dumps for a CICS region and that gives data for both system
+and transaction dumps.</li>
+
+<li>The CICS Dump Details table
+view that shows a list of the abends that have occurred in a CICS region and divides them into
+system and transaction abends. This information comes through the <span class="keyword">IBM Z OMEGAMON for CICS</span> service
+task that runs within CICS (OMEG
+INIT). If you do not have the service task running, this view is empty.
+The service task is activated either through OMEG INIT or through
+the PLT. Verify that the service task is running and refer to the <a href="rpt_cicsser.html#rpt_cicsser" title="The Service Task Details workspace monitors the service task within the OMEGAMON agent that must be running for IBM Z OMEGAMON for CICS to provide information about several CICS components.">Service Task Details workspace</a>.</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicsdat.html#attr_cicsdat">CICSplex Dump Analysis attribute group</a></li>
+
+<li><a href="attr_cicsdmp.html#attr_cicsdmp">CICSplex Dump Details attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

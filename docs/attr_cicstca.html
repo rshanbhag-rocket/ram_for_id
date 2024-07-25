@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Task Class Analysis">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Task Class Analysis attribute group</title>
+</head>
+<body id="attr_cicstca"><main role="main"><article role="article" aria-labelledby="d957e10">
+<h1 class="topictitle1" id="d957e10">CICSplex Task Class Analysis attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstca__CICSTCA"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex
+Task Class Analysis attributes provide details about the transaction
+classes defined to CICS.</span> They enable you to see how close your
+CICS systems are to the limits set for the number of tasks in a given
+class. Use the Task Class Analysis attributes in situations to monitor
+activity for a specific transaction class. If the percentage for a
+class consistently runs at 100%, it indicates that tasks defined in
+a class are not initiated because the maximum number of tasks in a
+class has been reached. If CICS is under utilizing the processor resources,
+you might want to consider an increase in the class limits to allow
+more work to flow through the system.</p>
+
+<p>These attributes provide data for the Task Class Analysis table
+view.</p>
+
+<div class="note"><span class="notetitle">Note:</span> The attributes within the CICSplex Task Class Analysis group are stored for historical
+retrieval within the Tivoli Data Warehouse. Selected attributes within this group are candidates for
+the Tivoli Data Warehouse summarization and pruning features. There might be an attribute group that
+is displayed in the Tivoli Enterprise Portal Query Editor and Situation Editor under the name,
+CICSplex Service Class Raw; however, it cannot be used to create user-defined queries or situations
+and should be ignored.</div>
+
+<p id="attr_cicstca__TOTAT"><strong>Attach Requests</strong>
+<span class="ph" data-hd-otherprops="flyover_string">The total number of tasks that had executed and are currently
+executing in this class.</span> The value format is a positive integer.</p>
+
+<p id="attr_cicstca__AVGWT"><strong>Average Queuing Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the average time spent waiting by those tasks that were
+queued. This metric does not include the wait time for tasks that are currently queuing.</span> The
+value format is a number of seconds, to three decimal places.</p>
+
+<p id="attr_cicstca__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the job name or modify ID of the
+CICS region being monitored.</span> Each CICS region in a z/OS operating
+system has a unique name. This name is an alphanumeric string, with
+a maximum of eight characters, and case sensitive. CICS region names
+are always in uppercase characters.</p>
+
+<p id="attr_cicstca__CLIMIT"><strong>Class Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the maximum number of tasks allowed
+to run in the transaction class.</span> The value format is a positive
+integer, maximum four bytes.</p>
+
+<p id="attr_cicstca__CNAME"><strong>Class Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the transaction class name.</span> The value format is an alphanumeric
+string, maximum eight characters.</p>
+
+<p id="attr_cicstca__CTASKS"><strong> Current Tasks</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the current task count in the transaction
+class.</span> The value format is a positive integer, maximum four bytes.</p>
+
+<p id="attr_cicstca__NQUEUE"><strong>Number Queued</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of transactions that are
+queued.</span> The value format is a positive integer, maximum four
+bytes.</p>
+
+<p id="attr_cicstca__OTWDU"><strong>Oldest Task Queuing Duration</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the average time spent waiting by the oldest task that is
+currently queued.</span> The value format is a number of seconds, to three decimal places.</p>
+
+<p id="attr_cicstca__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the combination of z/OS System ID (SMFID)
+and CICS region name.</span> The value format is an alphanumeric string,
+maximum 32 bytes, and case sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+system changes the status of the item accordingly. If the names of
+the origin node and the managed systems do not match, the status of
+the item remains unchanged.</p>
+
+<p id="attr_cicstca__PTASKS"><strong>Peak Tasks</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the highest number of active and
+queued transactions.</span> The value format is a positive integer,
+maximum four bytes.</p>
+
+<p id="attr_cicstca__PLIMIT"><strong>Percent of Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of active tasks in a class
+divided by the class limit.</span> The value format is a percentage
+in the range 0-100.</p>
+
+<p id="attr_cicstca__PQLIM"><strong>Percent of Queue Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of queued tasks in a class
+divided by the queue limit.</span> The value format is a percentage
+in the range 0-100.</p>
+
+<p id="attr_cicstca__PURIM"><strong>Purged Immediately</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the number of tasks which were immediately purged due to
+purge threshold being reached.</span> The value format is a positive integer.</p>
+
+<p id="attr_cicstca__QLIMIT"><strong>Queue Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the maximum number of tasks that
+are queued.</span> The value format is a positive integer, maximum four
+bytes.</p>
+
+<p id="attr_cicstca__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character name that uniquely
+identifies an active z/OS operating system.</span> The value format
+is an alphanumeric string, maximum four characters, and case sensitive.
+z/OS System IDs are always in uppercase characters.</p>
+
+<p id="attr_cicstca__PURQU"><strong>Tasks Purged while Queuing</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the number of tasks which were purged while queuing.</span>
+The value format is a positive integer.</p>
+
+<p id="attr_cicstca__XLIMIT"><strong>Times at Limit</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates the number of times the transaction
+class limit has been reached.</span> The value format is a positive
+integer, maximum four bytes.</p>
+
+<p id="attr_cicstca__TPURT"><strong>Times at Purge Threshold Limit</strong>
+<span class="ph">Indicates the number of times at purge threshold limit.</span> The value format is a positive
+integer.</p>
+
+<p id="attr_cicstca__TOTQU"><strong>Total Queued</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the total number of tasks that were queued. This metric
+does not include tasks that are currently queuing.</span> The value format is a positive integer.</p>
+
+<p id="attr_cicstca__TOTQT"><strong>Total Queuing Time</strong>
+<span class="ph" data-hd-otherprops="flyover_string">Indicates the time spent waiting by those tasks that were queued.
+This metric does not include the wait time for tasks that are currently queuing.</span> The value
+format is a number of seconds, to three decimal places.</p>
+
+</div>
+</article></main></body></html>

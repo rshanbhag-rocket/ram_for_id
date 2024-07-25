@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor dumps.">
+<meta name="keywords" content="situations, Dump Analysis, CICSplex_TranDumps_Warning, CICSplex_TranDumps_Critical, CICSplex_SysDumps_Warning, CICSplex_SysDumps_Critical, CICSplex_TakingSDUMP_Warning, CICSplex_TakingSDUMP_Critical, CICSplex_TranDumpsHr_Warning, CICSplex_TranDumpsHr_Critical, CICSplex_SysDumpsHr_Warning, CICSplex_SysDumpsHr_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Dump Analysis situations</title>
+</head>
+<body id="sit_dump"><main role="main"><article role="article" aria-labelledby="d52075e11">
+<h1 class="topictitle1" id="d52075e11">Dump Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor dumps.</p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_Dump_Analysis, except where stated.</div>
+<dl>
+<dt class="dlterm">CICSplex_TranDumps_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for transaction dumps. <p>Use the transaction history component of
+<span class="keyword">IBM Z OMEGAMON for CICS</span> to determine which transactions
+have abnormally terminated. To check for storage violations, select the Region Overview workspace
+from the Navigator Physical view.</p>
+
+<p><strong>Formula:</strong> If the value of Transaction_Dumps is greater than 1 and the value of
+Transaction_Dumps is less than or equal to 2 then situation CICSplex_TranDumps_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TranDumps_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for transaction dumps. <p>Use the transaction history component of
+<span class="keyword">IBM Z OMEGAMON for CICS</span> to determine which transactions
+have abnormally terminated. To check for storage violations, select the Region Overview workspace
+from the Navigator Physical view.</p>
+
+<p><strong>Formula:</strong> If the value of Transaction_Dumps is greater than 2 then situation
+CICSplex_TranDumps_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_SysDumps_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for system dumps. <p>Inspect the operator's console for error
+messages which indicates the cause of the problem. Format the dump data set to determine what caused
+the abnormal termination. Ensure the predicate in this situation specifies a value less than the
+number of SYS1.DUMP<em>nn</em> data sets to ensure that dumps are not lost.</p>
+
+<p><strong>Formula:</strong> If the value of System_Dumps is greater than 0 and the value of System_Dumps is
+less than or equal to 1 then situation CICSplex_SysDumps_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_SysDumps_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for system dumps. <p>Inspect the operator's console for error
+messages which indicates the cause of the problem. Format the dump data set to determine what caused
+the abnormal termination. Ensure the predicate in this situation specifies a value less than the
+number of SYS1.DUMP<em>nn </em>data sets to ensure that dumps are not lost.</p>
+
+<p><strong>Formula:</strong> If the value of System_Dumps is greater than 1 then situation
+CICSplex_SysDumps_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TakingSDUMP_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for taking system dump. <p>Inspect the operator's console for error
+messages which indicates the cause of the problem. Format the contents of the dump data set to
+diagnose the CICS® abnormal termination.</p>
+
+<p><strong>Formula:</strong> If the value of Taking_SDUMP equals Yes then situation
+CICSplex_TakingSDUMP_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TakingSDUMP_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for taking system dump. <p>Inspect the operator's console for error
+messages which indicates the cause of the problem. Format the contents of the dump data set to
+diagnose the CICS abnormal termination.</p>
+
+<p><strong>Formula:</strong> If the value of Taking_SDUMP equals Yes then situation
+CICSplex_TakingSDUMP_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TranDumpsHr_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for transaction dumps per hour. <p>Use the transaction history
+component of <span class="keyword">IBM Z OMEGAMON for CICS</span> to determine which
+transactions have abnormally terminated. To check for storage violations, select the Region Overview
+view from the Navigator Physical view of the Tivoli®
+Enterprise Portal.</p>
+
+<p><strong>Formula:</strong> If the value of Transaction_Dumps_in_Last_Hour is greater than 0 and the value of
+Transaction_Dumps_in_Last_Hour is less than or equal to 1 then situation
+CICSplex_TranDumpsHr_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_TranDumpsHr_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for transaction dumps per hour. <p>Use the transaction history
+component of <span class="keyword">IBM Z OMEGAMON for CICS</span> to determine which
+transactions have abnormally terminated. To check for storage violations, select the Region Overview
+view from the Navigator Physical view of the Tivoli
+Enterprise Portal.</p>
+
+<p><strong>Formula:</strong> If the value of Transaction_Dumps_in_Last_Hour is greater than 1 then situation
+CICSplex_TranDumpsHr_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_SysDumpsHr_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for system dumps per hour. <p>Inspect the operator's console for
+error messages which indicates the cause of the problem. Format the dump data set to determine what
+caused the abnormal termination. Ensure the predicate in this situation specifies a value less than
+the number of SYS1.DUMP<em>nn</em> data sets to ensure that dumps are not lost.</p>
+
+<p><strong>Formula:</strong> If the value of System_Dumps_in_Last_Hour is greater than 0 and the value of
+System_Dumps_in_Last_Hour is less than or equal to 1 then situation CICSplex_SysDumpsHr_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_SysDumpsHr_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for system dumps per hour. <p>Inspect the operator's console for
+error messages which indicates the cause of the problem. Format the dump data set to determine what
+caused the abnormal termination. Ensure the predicate in this situation specifies a value less than
+the number of SYS1.DUMP<em>nn</em> data sets to ensure that dumps are not lost.</p>
+
+<p><strong>Formula:</strong> If the value of System_Dumps_in_Last_Hour is greater than 1 then situation
+CICSplex_SysDumpsHr_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_cicsdat.html#attr_cicsdat">CICSplex Dump Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>

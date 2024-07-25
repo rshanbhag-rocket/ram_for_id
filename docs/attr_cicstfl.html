@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+<meta name="keywords" content="attribute groups, CICSplex Transaction File Details">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Transaction File Details attribute group</title>
+</head>
+<body id="attr_cicstfl"><main role="main"><article role="article" aria-labelledby="d58740e10">
+<h1 class="topictitle1" id="d58740e10">CICSplex Transaction File Details attribute group</h1>
+
+
+<div class="body">
+<p><span class="ph synph" id="attr_cicstfl__CICSTFL"></span> <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Transaction File Details
+report attributes provide detailed resource information about the
+files a transaction has accessed.</span> Use the CICSplex Transaction
+File Details attributes to determine whether the transaction is issuing
+too many file requests, which might indicate an error in the transaction
+or a transaction waiting too long to get requests serviced.</p>
+
+<p id="attr_cicstfl__FCAMCT"><strong>Access Method Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the file access method request count.</span></p>
+
+<p id="attr_cicstfl__FCADDCN"><strong>Add Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of PUT (that is, ADD) requests issued by this transaction.</span> The
+valid format is a floating-point number, accurate to three decimal
+places.</p>
+
+<p id="attr_cicstfl__FCADDTM"><strong>Add Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) of file ADD requests
+issued by this transaction.</span> The value can be entered in the hh:mm:ss.ddd
+format, for example, 00:20:00.567 or as sssssss.ddd, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstfl__FCBRWCN"><strong>Browse Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of GETNEXT and GETPREV requests issued by this transaction.</span></p>
+
+<p id="attr_cicstfl__FCBRWTM"><strong>Browse Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) of file BROWSE requests
+issued by this transaction.</span> The value can be entered in the hh:mm:ss.ddd
+format, for example, 00:20:00.567 or as sssssss.ddd, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstfl__CFDTWTTM"><strong>CFDT I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total time (accurate to three decimal
+places) that this transaction has been waiting for access to the Coupling
+Facility Data Table (CFDT).</span> The value can be entered in the hh:mm:ss.ddd
+format, for example, 00:20:00.567 or as sssssss.ddd, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstfl__CFDTWTCN"><strong>CFDT I/O Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of times that this transaction has been waiting for access
+to the Coupling Facility data table (CFDT).</span></p>
+
+<p id="attr_cicstfl__CICSNAME"><strong>CICS Region Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the job name or modify ID of the CICS region being monitored.</span> Each
+CICS region in a z/OS operating system  has a unique name. This name
+is an alphanumeric string, with a maximum of eight characters, and
+case-sensitive. CICS region names are always in uppercase characters.</p>
+
+<p id="attr_cicstfl__FCDELCN"><strong>Del Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of file DELETE requests issued by this transaction.</span></p>
+
+<p id="attr_cicstfl__FCDELTM"><strong>Del Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) of file DELETE requests
+issued by this transaction.</span> The value can be entered in the hh:mm:ss.ddd
+format, for example, 00:20:00.567 or as sssssss.ddd, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstfl__FILENAME"><strong>File Name</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the file name or data set name.</span></p>
+
+<p id="attr_cicstfl__FCGETCN"><strong>Get Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of file GET requests issued by this transaction.</span></p>
+
+<p id="attr_cicstfl__FCGETTM"><strong>Get Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) of file GET requests
+issued by this transaction.</span> The value can be entered in the hh:mm:ss.ddd
+format, for example, 00:20:00.567 or as sssssss.ddd, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstfl__ORIGINNODE"><strong>Origin Node</strong> <span class="ph" data-hd-otherprops="flyover_string">The
+combination of z/OS System ID (SMFID) and CICS region name.</span> The
+value format is an alphanumeric string, maximum 32 bytes, and case-sensitive.</p>
+
+<p>When a situation is true, the system compares the origin node name
+in the attribute to the names of managed systems assigned to the item.
+If the origin node name matches the name of a managed system, the
+status of the item changes accordingly. If the names of the origin
+node and the managed systems do not match, the status of the item
+remains unchanged.</p>
+
+<p id="attr_cicstfl__FCPUTCN"><strong>Put Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of file PUT requests issued by this transaction.</span></p>
+
+<p id="attr_cicstfl__FCPUTTM"><strong>Put Total Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) of file PUT requests
+issued by this transaction.</span> The value can be entered in the hh:mm:ss.ddd
+format, for example, 00:20:00.567 or as sssssss.ddd, for example,
+1200.567.  If you are using variable substitution, the value in this
+example would display as 1200567.</p>
+
+<p id="attr_cicstfl__RLSWTTM"><strong>RLS Mode Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the amount of time (accurate to three decimal places) that this transaction
+has waited for access to a RLS Mode file.</span> The value can be entered
+in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as SSSSSSS.DDD,
+for example, 1200.567.  If you are using variable substitution, the
+value in this example would display as 1200567.</p>
+
+<p id="attr_cicstfl__RLSWTCN"><strong>RLS Mode Waits</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number of time that this transaction has waited for access to
+a RLS Mode file.</span></p>
+
+<p id="attr_cicstfl__SYSTEMID"><strong>System ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Indicates
+the four character name that uniquely identifies an active z/OS operating
+system within a given CICSplex.</span> The value format is an alphanumeric
+string, maximum four characters, and case-sensitive. z/OS System IDs
+are always in uppercase characters.</p>
+
+<p id="attr_cicstfl__TASKNO"><strong>Task Number</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the number sequentially assigned by CICS to uniquely identify each
+task.</span></p>
+
+<p id="attr_cicstfl__FCIOWCN"><strong>Total File I/O Wait Count</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of times that this
+transaction has waited for access to a file.</span></p>
+
+<p id="attr_cicstfl__FCIOWTM"><strong>Total File I/O Wait Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total time (accurate to three decimal
+places) that this transaction has waited to access a file.</span> The
+value can be entered in the HH:MM:SS.DDD format, for example, 00:20:00.567
+or as SSSSSSS.DDD, for example, 1200.567.  If you are using variable
+substitution, the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstfl__FCTOTCN"><strong>Total File Requests</strong> <span class="ph" data-hd-otherprops="flyover_string">Is the total number of requests that this
+transaction has made for access to all files.</span></p>
+
+<p id="attr_cicstfl__FCTOTTM"><strong>Total Request Time</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the total time (accurate to three decimal places) that this transaction
+has been waiting to have access to all files.</span> The value can be
+entered in the HH:MM:SS.DDD format, for example, 00:20:00.567 or as
+SSSSSSS.DDD, for example, 1200.567.  If you are using variable substitution,
+the value in this example would display as 1200567.</p>
+
+<p id="attr_cicstfl__TRANID"><strong>Transaction ID</strong> <span class="ph" data-hd-otherprops="flyover_string">Is
+the four-character name of the transaction.</span></p>
+
+</div>
+
+</article></main></body></html>

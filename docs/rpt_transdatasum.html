@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined Transient Data Summary workspace shows data on the current use of intrapartition resources, transient data VSAM data for a specific CICS region as well as wait count data.">
+<meta name="keywords" content="workspaces, Transient Data Summary">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Transient Data Summary workspace</title>
+</head>
+<body id="rpt_transdatasum"><main role="main"><article role="article" aria-labelledby="d14835e11">
+<h1 class="topictitle1" id="d14835e11">Transient Data Summary workspace</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined Transient Data Summary workspace shows data
+on the current use of intrapartition resources, transient data VSAM
+data for a specific CICS region as well as wait count data.</p>
+
+<div class="section"><p>The predefined Transient Data Summary workspace contains
+these views:</p>
+</div>
+
+<div class="section"> <ul>
+<li>The Transient Data Summary table view provides the following information:<ul>
+<li>The number of requests that are currently suspended pending the
+availability of a transient data buffer</li>
+
+<li>The current number of tasks that require the physical reading
+or writing of a CI and are suspended because of the lack of an available
+string </li>
+
+<li>The percentage of available strings currently being used for I/O
+to the intrapartition data set</li>
+
+<li>The number of control intervals (CIs), transient data strings,
+and temporary storage strings being used by the transient (DFHINTRA)
+and the auxiliary temporary storage (DFHTEMP) data sets</li>
+
+</ul>
+</li>
+
+<li>The Transient Data VSAM Usage bar chart shows these details for
+a specific CICS® region: <ul>
+<li> Percent Active Strings </li>
+
+<li> Percent Buffers in Use </li>
+
+<li> Percent CIs in Use </li>
+
+</ul>
+</li>
+
+<li>The Transient Data Waits bar chart shows the wait count data for
+specific CICS regions: <ul>
+<li>Buffer Waits </li>
+
+<li>Current String Waits </li>
+
+<li>Total String Waits </li>
+
+</ul>
+</li>
+
+</ul>
+</div>
+
+<div class="section"><p>See also:</p>
+</div>
+
+<div class="section"> <ul>
+<li><a href="attr_cicstds.html#attr_cicstds">CICSplex Transient Data Summary attribute group</a></li>
+
+<li><a href="attr_cicstdq.html#attr_cicstdq">CICSplex Transient Data Queues attribute group</a></li>
+
+<li><a href="kcp_orgattr.html#kcp_orgattr">Attribute groups used by the predefined workspaces</a></li>
+
+<li><a href="rpt_organization.html#rpt_organization" title="IBM Z OMEGAMON for CICS provides predefined workspaces that are displayed in the Navigator Physical view of the Tivoli Enterprise Portal.">Organization of the predefined workspaces</a></li>
+
+</ul>
+</div>
+
+</div>
+
+</article></main></body></html>

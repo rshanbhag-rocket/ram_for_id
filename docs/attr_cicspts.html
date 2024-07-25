@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+
+
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>CICSplex Previous Task Details attribute group</title>
+</head>
+<body id="attr_cicspts"><main role="main"><article role="article" aria-labelledby="d59775e10">
+ <h1 class="topictitle1" id="d59775e10">CICSplex Previous Task Details attribute group</h1>
+
+ <div class="body">
+  <p><span class="ph synph" id="attr_cicspts__CICSPTS"></span>
+   <span class="ph" data-hd-otherprops="flyover_string">The CICSplex Previous Task Details attribute group provides
+    Originating and Previous Task details within the same region or Previous Hop data from another
+    CICS region.</span>
+  </p>
+
+  <p id="attr_cicspts__CICSNAME"><strong>CICS Region Name</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">The name that identifies a CICS region.</span> Each CICS region in
+   a z/OS operating system has a unique name. This name is an alphanumeric string, with a maximum of
+   eight characters, and case sensitive. CICS region names are always in uppercase characters.</p>
+
+  <p id="attr_cicspts__ORIGINNODE"><strong>Origin Node</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">The combination of MVS System ID (SMFID) and the CICS region
+    name.</span> The value format is an alphanumeric string, maximum 32 bytes, and case sensitive.</p>
+
+  <p id="attr_cicspts__OAPPLID"><strong>Original APPLID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The APPLID of the CICS region in which this work request
+        (transaction) originated.</span></p>
+
+  <p id="attr_cicspts__ONETWKID"><strong>Original Network ID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The network identifier from which this work request
+        (transaction) originated.</span></p>
+
+  <p id="attr_cicspts__OSTART"><strong>Original Start Time</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The time at which the originating task was started.</span>
+    </p>
+
+  <p id="attr_cicspts__OTASKNUM"><strong>Original Task Number</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The number of the originating task from which this work
+        request (transaction) originated.</span></p>
+
+  <p id="attr_cicspts__OTRAN"><strong>Original Tran ID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The transaction ID (TRANID) from which this work request
+        (transaction) originated.</span></p>
+
+  <p id="attr_cicspts__PHAPPLID"><strong>Previous Hop APPLID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The APPLID from the previous hop data.</span> This is the APPLID
+      of the CICS system of a previous task in another CICS system with which this task is
+      associated.</p>
+
+  
+  <p id="attr_cicspts__PHCOUNT"><strong>Previous Hop Count</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The number of times there has been a request from one CICS
+        system to another CICS system to initiate a task with which this task is associated. </span>
+    </p>
+
+  <p id="attr_cicspts__PHNTWKID"><strong>Previous Hop Network ID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The network identifier of the CICS system of an immediately
+        previous task in another CICS system with which this task is associated.</span>
+    </p>
+
+  <p id="attr_cicspts__PHSTART"><strong>Previous Hop Start Time</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The start time of the immediately previous task in another
+        CICS system with which this task is associated.</span>
+    </p>
+
+  <p id="attr_cicspts__PHTASKNU"><strong>Previous Hop Task Number</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The task number of the immediately previous task in another
+        CICS system with which this task is associated. </span>
+    </p>
+
+  <p id="attr_cicspts__PHTRAN"><strong>Previous Hop Tran ID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The transaction ID (TRANID) of the immediately previous task
+        in another CICS system with which this task is associated. </span>
+    </p>
+
+  <p id="attr_cicspts__PTCOUNT"><strong>Previous Task Count</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">The number of times there has been a request from one task to
+    initiate another task in the same CICS system with which this task is associated.  </span>
+  </p>
+
+  <p id="attr_cicspts__PTSTART"><strong>Previous Task Start Time</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">The start time of the immediately previous or parent task in the
+    same CICS system with which the task is associated.</span>
+  </p>
+
+  <p id="attr_cicspts__PTTASKNU"><strong>Previous Task Number</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The task number of the immediately previous or parent task in
+        the same CICS system with which the task is associated.</span>
+    </p>
+
+  <p id="attr_cicspts__PTTRAN"><strong>Previous Task Tran ID</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">The transaction ID (TRANID) of the immediately previous or
+        parent task in the same CICS system with which the task is associated.</span>
+    </p>
+
+  <p id="attr_cicspts__SYSTEMID"><strong>System ID</strong><span class="ph" data-hd-otherprops="flyover_string">The four-character name that
+    uniquely identifies an active MVS operating system within a given CICSplex.</span></p>
+
+  <p id="attr_cicspts__TASKNUM"><strong>Task Number</strong>
+      <span class="ph" data-hd-otherprops="flyover_string">Indicates the task number previous task details are retrieved
+        for.</span></p>
+
+  <p id="attr_cicspts__TRNGRPID"><strong>Transaction Group Identifier</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">Indicates transaction group identifier assigned to the
+   task.</span></p>
+
+  <p id="attr_cicspts__TRANID"><strong>Transaction ID</strong>
+   <span class="ph" data-hd-otherprops="flyover_string">Indicates the four-character identifier for the task.</span></p>
+
+ </div>
+
+</article></main></body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2024">
+
+
+
+<meta name="description" content="The predefined situations in this category monitor storage analysis.">
+<meta name="keywords" content="situations, Storage Analysis, CICSplex_DSAHigh_Warning, CICSplex_DSAHigh_Critical, CICSplex_DSALow_Warning, CICSplex_DSALow_Critical, CICSplex_DSAAvail_Warning, CICSplex_DSAAvail_Critical, CICSplex_EDSAHigh_Warning, CICSplex_EDSAHigh_Critical, CICSplex_EDSALow_Warning, CICSplex_EDSALow_Critical, CICSplex_DSASOS_Warning, CICSplex_DSASOS_Critical, CICSplex_EDSASOS_Warning, CICSplex_EDSASOS_Critical, CICSplex_EDSAAvail_Warning, CICSplex_EDSAAvail_Critical">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<title>Storage Analysis situations</title>
+</head>
+<body id="sit_stor"><main role="main"><article role="article" aria-labelledby="d10922e11">
+<h1 class="topictitle1" id="d10922e11">Storage Analysis situations</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">The predefined situations in this category monitor storage
+analysis. </p>
+
+<div class="section"> <div class="note"><span class="notetitle">Note:</span> All the attribute names in this group are prefixed
+with CICSplex_Storage_Analysis. except where stated.</div>
+<dl>
+<dt class="dlterm">CICSplex_DSAHigh_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for high DSA usage. <p>Consider increasing the size of the CICS® region and make the DSA larger. Increase the region size
+only, if the Region Overview workspace shows adequate LSQA to support the change. It is also worth
+checking the current OSCOR usage. If the DSA size cannot be increased, consider reducing the CICS MAXTASK value.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is greater than 70 and the value of Percent_Used is
+less than or equal to 90 and the value of Area equals DSA then situation CICSplex_DSAHigh_Warning is
+true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSAHigh_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for high DSA usage. <p>Consider increasing the size of the CICS region and make the DSA larger. Increase the region size
+only, if the Region Overview workspace shows adequate LSQA to support the change. It is also worth
+checking the current OSCOR usage. If the DSA size cannot be increased, consider reducing the CICS MAXTASK (MXT) value.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is greater than 90 and the value of Area equals DSA
+then situation CICSplex_DSAHigh_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSALow_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for low DSA usage. <p>If this situation fires consistently, it can
+indicate an excessive DSA size. Decrease the size of the DSA for the CICS region. If there are very few tasks, there might be very little DSA in
+use. Consider increasing the maximum number of tasks (MXT CICS can process at one time).</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is less than 35 and the value of Percent_Used is
+greater than or equalto 15 and the value of Area equals DSA then situation CICSplex_DSALow_Warning
+is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSALow_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for low DSA usage. <p>If this situation fires consistently, it can
+indicate an excessive DSA size. Decrease the size of the DSA for the CICS region. If there are very few tasks, there might be very little DSA in
+use. Consider increasing the maximum number of tasks (MXT CICS can process at one time.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is less than 15 and the value of Area equals DSA
+then situation CICSplex_DSALow_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSAAvail_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for low DSA availability. <p>Ensure that the predicates in this
+situation are set to trip only when available storage before SOS is critically small. DSA extents
+are al located in units of 256KB. The exception to this is the user DSA which is 1MB when storage
+isolation is active. Change the DSALIM parameter for the CICS
+address space to increase the storage available to CICS.</p>
+
+<p><strong>Formula:</strong> If the value of Storage_Available is less than 768 and the value of
+Storage_Available is greater than or equal to 256 and the value of Area equals DSA then situation
+CICSplex_DSAAvail_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSAAvail_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for low DSA availability. <p>Ensure that the predicates in this
+situation are set to trip only when available storage before SOS is critically small. DSA extents
+are allocated in units of 256 kilobytes. The exception to this is the user DSA, which is 1 megabyte
+when storage isolation is active. Change the DSALIM parameter for the CICS address space to increase the storage available to CICS.</p>
+
+<p><strong>Formula:</strong> If the value of Storage_Available is less than 256 and the value of Area equals
+DSA then situation CICSplex_DSAAvail_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSAHigh_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for high EDSA usage. <p>Increase EDSALIM in the CICS System Initialization Table. The Storage Analysis workspace provides an
+overview of storage availability with in each constituent EDSA. For task and CICS component storage usage, consult the storage displays offered by OMEGAMON® for CICS on
+z/OS.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is greater than 70 and the value of Percent_Used is
+less than or equal to 90 and the value of Area equals EDSA then situation CICSplex_EDSAHigh_Warning
+is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSAHigh_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for high EDSA usage. <p>Increase EDSALIM in the CICS System Initialization Table. The Storage Analysis workspace provides an
+overview of storage availability with in each constituent EDSA. For task and CICS component storage usage, consult the storage views.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is greater than 90 and the value of Area equals EDSA
+then situation CICSplex_EDSAHigh_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSALow_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for low EDSA usage. <p>If this situation trips consistently, it
+indicates an excessive EDSA size. Decrease EDSALIM in the SIT. For current task storage, use the
+storage display functions found in <span class="keyword">IBM Z OMEGAMON for CICS</span>. If there are very few tasks, as shown in the Transaction Analysis workspace, there might be
+little EDSA in use.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is less than 35 and the value of Percent_Used is
+greater than or equal to 15 and the value of Area equals EDSA then situation
+CICSplex_EDSALow_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSALow_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for low EDSA usage. <p>If this situation trips consistently, it
+indicates an excessive EDSA size. Decrease EDSALIM in the SIT. For current task storage, use the
+storage display functions found in <span class="keyword">IBM Z OMEGAMON for CICS</span>. If there are very few tasks, as shown in the Transaction Analysis workspace, there might be
+little EDSA in use.</p>
+
+<p><strong>Formula:</strong> If the value of Percent_Used is less than 15 and the value of Area equals EDSA
+then situation CICSplex_EDSALow_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSASOS_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for DSA short-on-storage. <p>Use the storage views to locate tasks
+that are using a large amount of DSA. Verify that their storage requests are for a reasonable amount
+of memory. To determine if a given task is hung in a storage control request, go to the Transaction
+Analysis workspace and look at the <strong>Wait Type</strong> column; consider using the CICS CEMT transaction or the KILL option of <span class="keyword">IBM Z OMEGAMON for CICS</span> to purge the offending task.</p>
+
+<p><strong>Formula:</strong> If the value of SOS equals Yes and the value of Area equals DSA then situation
+CICSplex_DSASOS_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_DSASOS_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for DSA short-on-storage. <p>Use the storage views to locate tasks
+that are u sing a large amount of DSA. Verify that their storage requests are for a reasonable
+amount of memory. To determine if a given task is hung in a storage control request, go to the
+Transaction Analysis workspace and look at the Wait Type field; consider using the CICS CEMT transaction or the KILL option of <span class="keyword">IBM Z OMEGAMON for CICS</span> to purge the offending task.</p>
+
+<p><strong>Formula:</strong> If the value of SOS equals Yes and the value of Area equals DSA then situation
+CICSplex_DSASOS_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSASOS_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for EDSA short-on-storage. <p>Use the storage views to locate tasks
+that are using a large amount of DSA. Verify that their storage requests are for a reasonable amount
+of memory. To determine if a given task is hung in a storage control request, go to the Transaction
+Analysis workspace and look at the Wait Type field; consider using the CICS CEMT transaction or the KILL option of <span class="keyword">IBM Z OMEGAMON for CICS</span> to purge the offending task.</p>
+
+<p><strong>Formula:</strong> If the value of SOS equals Yes and the value of Area equals EDSA then situation
+CICSplex_EDSASOS_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSASOS_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for EDSA short-on-storage. <p>Use the storage views to locate tasks
+that are using a large amount of DSA. Verify that their storage requests are for a reasonable amount
+of memory. To determine if a given task is hung in a storage control request, go to the Transaction
+Analysis workspace and look at the <strong>Wait Type</strong> column. Consider using the CICS CEMT transaction or the KILL option of <span class="keyword">IBM Z OMEGAMON for CICS</span> to purge the offending task.</p>
+
+<p><strong>Formula:</strong> If the value of SOS equals Yes and the value of Area equals EDSA then situation
+CICSplex_EDSASOS_Critical is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSAAvail_Warning</dt>
+
+<dd class="dlentry">Warning threshold exceeded for low EDSA availability. <p>Ensure that the predicates in this
+situation are set to trip only when available storage before SOS is critically small. EDSA extents
+are allocated in units of 1MB. Change the EDSALIM parameter for the CICS address space to increase the storage available to CICS.</p>
+
+<p><strong>Formula:</strong> If the value of Storage_Available is less than 3072 and the value of
+Storage_Available is greater than or equal to 1024 and the value of Area equals EDSA then situation
+CICSplex_EDSAAvail_Warning is true.</p>
+</dd>
+
+
+<dt class="dlterm">CICSplex_EDSAAvail_Critical</dt>
+
+<dd class="dlentry">Critical threshold exceeded for low EDSA availability. <p>Ensure that the predicates in this
+situation are set to trip only when available storage before SOS is critically small. EDSA extents
+are allocated in units of 1MB. Change the EDSALIM parameter for the CICS address space to increase the storage available to CICS.</p>
+
+<p><strong>Formula:</strong> If the value of Storage_Available is less than 1024 and the value of Area equals
+EDSA then situation CICSplex_EDSAAvail_Critical is true.</p>
+</dd>
+
+</dl>
+<p>See also the <a href="attr_cicsstor.html#attr_cicsstor">CICSplex Storage Analysis attribute group</a>.</p>
+</div>
+
+</div>
+
+</article></main></body></html>
